@@ -1,0 +1,161 @@
+@charset "UTF-8";
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff url("./../../../images/ajax-loader.gif") center center no-repeat; }
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 48px;
+  line-height: 48px;
+  background: transparent;
+  /* font-size: 0px; */
+  cursor: pointer;
+  color: transparent;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none; }
+  .slick-prev:hover, .slick-prev:focus,
+  .slick-next:hover,
+  .slick-next:focus {
+    outline: none;
+    color: transparent; }
+    .slick-prev:hover:before, .slick-prev:focus:before,
+    .slick-next:hover:before,
+    .slick-next:focus:before {
+      opacity: 1; }
+  .slick-prev.slick-disabled:before,
+  .slick-next.slick-disabled:before {
+    opacity: 0; }
+  .slick-prev:before,
+  .slick-next:before {
+    font-family: "FontAwesome", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 48px;
+    width: 26px;
+    height: 48px;
+    color: #c1c1c1;
+    opacity: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    top: 0; }
+
+.slick-prev {
+  left: -40px; }
+  [dir="rtl"] .slick-prev {
+    left: auto;
+    right: -40px; }
+  .slick-prev:before {
+    content: '';
+    background-color: transparent;
+    background: url(../../../images/icons/ico-prev.png) no-repeat 0 0; }
+    [dir="rtl"] .slick-prev:before {
+      content: ""; }
+  @media (max-width: 1025px) {
+    .slick-prev {
+      /*left: -20px;*/
+      /*margin-top: -20px;*/
+      /*-moz-transform: scale(0.7);*/
+      /*-o-transform: scale(0.7);*/
+      /*-ms-transform: scale(0.7);*/
+      /*-webkit-transform: scale(0.7);*/
+      /*transform: scale(0.7); } }*/
+
+.slick-next {
+  right: -40px; }
+  [dir="rtl"] .slick-next {
+    left: -40px;
+    right: auto; }
+  .slick-next:before {
+    content: '';
+    background-color: transparent;
+    background: url(../../../images/icons/ico-next.png) no-repeat 0 0; }
+    [dir="rtl"] .slick-next:before {
+      content: ""; }
+  @media (max-width: 1025px) {
+    .slick-next {
+      right: -20px;
+      margin-top: -20px;
+      -moz-transform: scale(0.7);
+      -o-transform: scale(0.7);
+      -ms-transform: scale(0.7);
+      -webkit-transform: scale(0.7);
+      transform: scale(0.7); } }
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 0; }
+
+.slick-dots {
+  position: absolute;
+  bottom: 0px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  width: 100%; }
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer; }
+    .slick-dots li button {
+      border: 0;
+      background: transparent;
+      display: block;
+      height: 15px;
+      width: 15px;
+      outline: none;
+      line-height: 0px;
+      font-size: 0px;
+      color: transparent;
+      padding: 5px;
+      cursor: pointer; }
+      .slick-dots li button:hover, .slick-dots li button:focus {
+        outline: none; }
+        .slick-dots li button:hover:before, .slick-dots li button:focus:before {
+          opacity: 1;
+          background: #bc0000; }
+      .slick-dots li button:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "•";
+        width: 15px;
+        height: 15px;
+        font-family: "FontAwesome";
+        font-size: 70px;
+        line-height: 20px;
+        text-align: center;
+        color: blue;
+        opacity: 0.5;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: '';
+        border-radius: 100%;
+        background: rgba(0, 0, 0, 0.8); }
+    .slick-dots li.slick-active button:before {
+      color: #bc0000;
+      opacity: 1;
+      content: '';
+      border-radius: 100%;
+      background: #bc0000; }
+  @media (max-width: 480px) {
+    .slick-dots li {
+      margin: 0; }
+      .slick-dots li button:before {
+        width: 10px;
+        height: 10px; } }
+
+/*# sourceMappingURL=slick-theme.css.map */

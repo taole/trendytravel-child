@@ -2,7 +2,9 @@
             <?php global $dt_allowed_html_tags; ?>
             <footer id="footer">
                 <div class="subcribe-form">
+                    <div class="container">
                     <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer Top Sidebar") ) : endif; ?>
+                    </div>
                 </div>
 				<?php if(dt_theme_option('general', 'show-footer')): ?>
                     <div class="footer-widgets-wrapper type2">
@@ -33,6 +35,18 @@
                 </div>
             </footer>
             <!-- footer ends here -->
+            <style type="text/css">
+                .tab-content {
+                    display: none;
+                }
+                .tab-1 {
+                 display: block;   
+                }
+
+                .tabs-menu .current a {
+                    color: #2e7da3;
+                }
+            </style>
 		</div>
     </div>
 <?php if(dt_theme_option('integration', 'enable-body-code') != '') echo '<script type="text/javascript">'.wp_kses(stripslashes(dt_theme_option('integration', 'body-code')), $dt_allowed_html_tags).'</script>';

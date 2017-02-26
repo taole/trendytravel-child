@@ -20,6 +20,7 @@ class Connect_Us_Widget extends WP_Widget {
         $pinterest = $instance['pinterest'];
         $skype = $instance['skype'];
         $youtube = $instance['youtube'];
+        $tripAdvisor = $instance['tripAdvisor'];
         ?>
         <style type="text/css">
            
@@ -29,30 +30,34 @@ class Connect_Us_Widget extends WP_Widget {
                 <h3 class="widgettitle"><?php echo $title; ?></h3>
                 <ul class="social-list">
                     <?php if( $facebook ) : ?>
-                        <li><a href="<?php echo $facebook; ?>">facebook</a></li>
+                        <li class="facebook"><a href="<?php echo $facebook; ?>">facebook</a></li>
                     <?php endif; ?>
                     <?php if( $twitter ) : ?>
-                    <li><a href="<?php echo $twitter; ?>">twitter</a></li>
+                    <li class="twitter"><a href="<?php echo $twitter; ?>">twitter</a></li>
                     <?php endif; ?>
                     
                     <?php if( $linkedin ) : ?>
-                    <li><a href="<?php echo $linkedin; ?>">linkedin</a></li>
+                    <li class="linked"><a href="<?php echo $linkedin; ?>">linkedin</a></li>
                     <?php endif; ?>
                     
                     <?php if( $google ) : ?>
-                    <li><a href="<?php echo $google; ?>">google</a></li>
+                    <li class="google"><a href="<?php echo $google; ?>">google</a></li>
+                    <?php endif; ?>
+
+                    <?php if( $tripAdvisor ) : ?>
+                    <li class="tripAdvisor"><a href="<?php echo $tripAdvisor; ?>">tripAdvisor</a></li>
                     <?php endif; ?>
                     
                     <?php if( $pinterest ) : ?>
-                    <li><a href="<?php echo $pinterest; ?>">pinterest</a></li>
+                    <li class="pinterest"><a href="<?php echo $pinterest; ?>">pinterest</a></li>
                     <?php endif; ?>
                     
                     <?php if( $skype ) : ?>
-                    <li><a href="<?php echo $skype; ?>">skype</a></li>
+                    <li class="skype"><a href="<?php echo $skype; ?>">skype</a></li>
                     <?php endif; ?>
 
                     <?php if( $youtube ) : ?>
-                    <li><a href="<?php echo $youtube; ?>">youtube</a></li>
+                    <li class="youtube"><a href="<?php echo $youtube; ?>">youtube</a></li>
                     <?php endif; ?>
                 </ul>
             </div>
@@ -72,6 +77,7 @@ class Connect_Us_Widget extends WP_Widget {
         $instance['pinterest'] = strip_tags($new_instance['pinterest']);
         $instance['skype'] = strip_tags($new_instance['skype']);
         $instance['youtube'] = strip_tags($new_instance['youtube']);
+        $instance['tripAdvisor'] = strip_tags($new_instance['tripAdvisor']);
 
         return $instance;
     }
@@ -91,6 +97,7 @@ class Connect_Us_Widget extends WP_Widget {
         $pinterest = $instance['pinterest'];
         $skype = $instance['skype'];
         $youtube = $instance['youtube'];
+        $tripAdvisor = $instance['tripAdvisor'];
         ?>
         <p>
             <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label> 
@@ -130,6 +137,11 @@ class Connect_Us_Widget extends WP_Widget {
         <p>
             <label for="<?php echo $this->get_field_id('youtube'); ?>"><?php _e('youtube:'); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id('youtube'); ?>" name="<?php echo $this->get_field_name('youtube'); ?>" type="text" value="<?php echo esc_attr($youtube); ?>" />
+        </p>
+
+        <p>
+            <label for="<?php echo $this->get_field_id('tripAdvisor'); ?>"><?php _e('tripAdvisor:'); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id('tripAdvisor'); ?>" name="<?php echo $this->get_field_name('tripAdvisor'); ?>" type="text" value="<?php echo esc_attr($tripAdvisor); ?>" />
         </p>
 
         

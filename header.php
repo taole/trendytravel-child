@@ -83,37 +83,39 @@
 								endif; ?>
                             </nav>
                         </div>
-                        <div class="numberphone"><?php
-                             echo wp_kses(do_shortcode(stripslashes(dt_theme_option('general', 'top-bar-left-content'))), $dt_allowed_html_tags); ?>
-                        </div>
-                        <?php if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
- 
-                            $count = WC()->cart->cart_contents_count;
-                            ?><a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php 
-                            if ( $count > 0 ) {
-                                ?>
-                                <span class="cart-contents-count"><?php echo esc_html( $count ); ?></span>
-                                <?php
-                            }
-                                ?></a>
-                         
-                        <?php } ?>
-                        <div class="user-action">
-                            <ul><?php
-                            if(!is_user_logged_in()): ?>
-                                <li><a title="<?php _e('Login', 'iamd_text_domain'); ?>" href="<?php echo wp_login_url(get_permalink()); ?>">
-                                        <span class="fa fa-sign-in"></span><?php _e('Login', 'iamd_text_domain'); ?>
-                                    </a></li>
-                                <li><a title="<?php _e('Register Now', 'iamd_text_domain'); ?>" href="<?php echo wp_registration_url(); ?>">
-                                        <span class="fa fa-user"></span> <?php _e('Register Now', 'iamd_text_domain'); ?>
-                                    </a></li><?php
-                            else: ?>
-                                <li><a title="<?php _e('Logout', 'iamd_text_domain'); ?>" href="<?php echo wp_logout_url(get_permalink()); ?>">
-                                        <span class="fa fa-sign-out"></span> <?php _e('Logout', 'iamd_text_domain'); ?>
-                                    </a></li><?php
-                            endif; ?>
-                            </ul>
-                        </div>
+                        <div class="fuc-header">
+                            <div class="numberphone"><?php
+                                 echo wp_kses(do_shortcode(stripslashes(dt_theme_option('general', 'top-bar-left-content'))), $dt_allowed_html_tags); ?>
+                            </div>
+                            <?php if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+     
+                                $count = WC()->cart->cart_contents_count;
+                                ?><a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php 
+                                if ( $count > 0 ) {
+                                    ?>
+                                    <span class="cart-contents-count"><?php echo esc_html( $count ); ?></span>
+                                    <?php
+                                }
+                                    ?></a>
+                             
+                            <?php } ?>
+                            <div class="user-action">
+                                <ul><?php
+                                if(!is_user_logged_in()): ?>
+                                    <li><a title="<?php _e('Login', 'iamd_text_domain'); ?>" href="<?php echo wp_login_url(get_permalink()); ?>">
+                                            <span class="fa fa-sign-in"></span><?php _e('Login', 'iamd_text_domain'); ?>
+                                        </a></li>
+                                    <li><a title="<?php _e('Register Now', 'iamd_text_domain'); ?>" href="<?php echo wp_registration_url(); ?>">
+                                            <span class="fa fa-user"></span> <?php _e('Register Now', 'iamd_text_domain'); ?>
+                                        </a></li><?php
+                                else: ?>
+                                    <li><a title="<?php _e('Logout', 'iamd_text_domain'); ?>" href="<?php echo wp_logout_url(get_permalink()); ?>">
+                                            <span class="fa fa-sign-out"></span> <?php _e('Logout', 'iamd_text_domain'); ?>
+                                        </a></li><?php
+                                endif; ?>
+                                </ul>
+                            </div>
+                        </div><!-- fuc-header -->
                     </div>
 				</header>
 			</div><!-- header-wrapper ends here -->

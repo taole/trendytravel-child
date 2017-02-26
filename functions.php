@@ -41,6 +41,7 @@ add_action('widgets_init', 're_widgets_init');
 
 // create widget
 include ABSPATH . 'wp-content/themes/trendytravel-child/widgets/connect-with-us.php';
+include ABSPATH . 'wp-content/themes/trendytravel-child/widgets/featured-tour.php';
 
 /* Category */
 function product_destination() {  
@@ -76,5 +77,7 @@ add_action('wp_enqueue_scripts', 'base_scripts');
 
 function base_scripts() {
     wp_enqueue_script('customs_scripts', '/wp-content/themes/trendytravel-child/js/custom.js', array(), 1.0, true);
+    wp_enqueue_script('slick_scripts', '/wp-content/themes/trendytravel-child/js/slick.js', array(), 1.0, true);
+    wp_enqueue_style( 'slick', '/wp-content/themes/trendytravel-child/css/slick.css' );
 }
 ?>

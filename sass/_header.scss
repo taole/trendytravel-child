@@ -35,6 +35,9 @@
 				width: 100%;
 				&>ul.menu{
 					float: left;
+					@include screen-theme(xs){
+						display: none !important;
+					}
 					&>li{
 						line-height: normal;
 						margin-left: 27px;
@@ -79,7 +82,12 @@
 				}
 			}
 		}
-
+		@include screen-theme(xs){
+			.fuc-header{
+				float: right;
+				margin-right:104px;
+			}
+		}
 		.numberphone{
 			float: left;
 			margin-right: 20px;
@@ -101,6 +109,10 @@
 					padding-left: 34px;
 					background-size: 22px 22px;
 				}
+				@include screen-theme(xs){
+					padding-left: 34px;
+					background-size: 22px 22px;
+				}
 				@include retina(){
 					background-image: url('../images/icons/telephone-2x.png');
 				}
@@ -110,6 +122,9 @@
 						font-size: 13px;
 					}
 					@include screen-theme(sm){
+						font-size: 12px;
+					}
+					@include screen-theme(xs){
 						font-size: 12px;
 					}
 				}
@@ -129,6 +144,11 @@
 				display: inline-block;
 				margin: 0 -5px 0 0;
 				@include screen-theme(sm){
+					width: 24px;
+					height:22px;
+					background-size: 24px 22px;
+				}
+				@include screen-theme(xs){
 					width: 24px;
 					height:22px;
 					background-size: 24px 22px;
@@ -157,6 +177,12 @@
 				display: inline-block;
 				cursor: pointer;
 				@include screen-theme(sm){
+					width: 22px;
+					height:22px;
+					background-size: 22px 22px;
+					margin-top: 7px;
+				}
+				@include screen-theme(xs){
 					width: 22px;
 					height:22px;
 					background-size: 22px 22px;
@@ -229,5 +255,38 @@
 	}
 	.banner{
 		margin-top: -98px;
+	}
+}
+
+#primary-menu{
+	.dt-menu-toggle{
+		@include screen-theme(xs){
+			display: block;
+			background: transparent;
+			@include AvenirNextLTProDemi();
+			font-size: 14px;
+			width:84px;
+			padding: 0;
+			position: absolute;
+			right:0;
+			top:7px;
+			.dt-menu-toggle-icon, .dt-menu-toggle-icon:before, .dt-menu-toggle-icon:after{
+				background: transparent;
+				display: none;
+			}
+			.dt-menu-toggle-icon{
+				display: inline-block;
+				background: url('../images/icons/toggle-menu.png') no-repeat;
+				background-size:24px 24px;
+				@include border-radius(50%);
+				@include retina(){
+					background-image:url('../images/icons/toggle-menu-2x.png'); 
+				}
+				width: 24px;
+				height: 24px;
+				vertical-align: middle;
+				margin-top:0;
+			}
+		}
 	}
 }

@@ -20,6 +20,20 @@
   box-shadow:$value;
 }
 
+@mixin transition($value){
+  -webkit-transition:$value;
+  -moz-transition:$value;
+  -ms-transition:$value;
+  transition:$value;
+}
+
+@mixin box-sizing(){
+  -webkit-box-sizing:border-box !important;
+  -moz-box-sizing:border-box !important;
+  -ms-box-sizing:border-box !important;
+  box-sizing:border-box !important;
+}
+
 @mixin screen-size-max($size){
   @if $size == lg{
     @media screen and (max-width: 1280px){
@@ -86,11 +100,42 @@
   font-family: AvenirNextLTPro, Arial, sans-serif;
 }
 
+@mixin AvenirNextLTProDemi(){
+  font-family: AvenirNextLTProDemi, Arial, sans-serif;
+}
+@mixin ProximaNovaAltBold(){
+  font-family: ProximaNovaAltBold, Arial, sans-serif;
+}
+
 @mixin retina(){
   @media 
   (-webkit-min-device-pixel-ratio: 2), 
   (min-resolution: 192dpi) { 
       @content;
+  }
+}
+@mixin clearfix(){
+  &:before, &:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin placeholder($color){
+  &::-webkit-input-placeholder { // WebKit browsers
+    color: #{$color};
+  }
+  &:-moz-placeholder { // Mozilla Firefox 4 to 18
+    color: #{$color};
+    opacity:  1;
+  }
+  &::-moz-placeholder { // Mozilla Firefox 19+
+    color: #{$color};
+    opacity:  1;
+  }
+  &:-ms-input-placeholder { // Internet Explorer 10+
+    color: #{$color};
   }
 }
 
@@ -101,22 +146,26 @@
     }
   }
   @else if $size == md {
+    // .container { width:1060px; }
     @media only screen and (min-width:1120px) and (max-width:1280px) {
       @content;
     }
   }
 
   @else if $size == sm {
-    /* Note: Design for a width of 768px, Gutter: 30px, Unit: 32px */
+    /* Note: Design for a width of 768px, Gutter: 30px, Unit: 32px .container { width:900px; } */
 
     @media only screen and (min-width:960px) and (max-width:1119px) {
+      .container{
+        width: 930px;
+      }
       @content;
     }
   }
   @else if $size == xs {
     /*----*****---- << Tablet (Portrait) >> ----*****----*/ 
 
-    /* Note: Design for a width of 768px, Gutter: 30px, Unit: 32px */
+    /* Note: Design for a width of 768px, Gutter: 30px, Unit: 32px .container { width:710px; }*/
 
     @media only screen and (min-width:768px) and (max-width:959px) {
       @content;
@@ -125,19 +174,19 @@
   @else if $size == mbLan {
     /*----*****---- << Mobile (Landscape) >> ----*****----*/
 
-    /* Note: Design for a width of 480px */
+    /* Note: Design for a width of 480px  .container { width:420px; }*/
     @media only screen and (max-width:767px) {@content;}
   }
   @else if $size == mbPo {
     /*----*****---- << Mobile >> ----*****----*/  
 
-    /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+    /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) .container { width:300px; } */
     @media only screen and (min-width: 320px) and (max-width: 479px) {@content;}
   }
   @else if $size == mbPoxs {
     /*----*****---- << Mobile >> ----*****----*/  
 
-    /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+    /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers)  .container { width:200px; }*/
     @media only screen and (max-width: 319px) {@content;}
   }
 }

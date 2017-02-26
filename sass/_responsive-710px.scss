@@ -1,0 +1,156 @@
+@include screen-theme(xs){
+	.gbtn{
+		min-width: 144px;
+		font-size: 14px;
+		line-height: 38px;
+	}
+	.banner{
+		h4{
+			font-size: 30px;
+			line-height: 30px;
+		}
+		h2{
+			font-size: 136px;
+			line-height: 136px;
+		}
+		p{
+			font-size: 14px;
+		}
+	}
+	.scroll-down{
+		display: none;
+	}
+
+	.find-a-tour{
+		.uform_title{
+			font-size: 16px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		.uwpqsf_class{
+			select{
+				font-size: 12px;
+				height:42px;
+			}
+			.selection-box:after{
+				height: 41px;
+			}
+			input[type="submit"]{
+				height: 42px;
+			}
+		}
+	}
+
+	.popular-tours{
+		h2.section-title{
+			font-size: 16px;
+		}
+		.text{
+			padding-right: 15px;
+			padding-left: 15px;
+			padding-top: 10px;
+			bottom:-48px;
+			h3{
+				font-size: 11px;
+				margin-bottom: 9px;
+			}
+			h2{
+				font-size: 12px;
+				padding-bottom: 15px;
+			}
+			a{
+				margin-top: 0;
+			}
+		}
+		.column{
+			&:hover{
+				.text{
+					bottom:0;
+				}
+			}
+		}
+	}
+
+	.tour-type{
+		.text{
+			bottom:auto;
+			h2{
+				font-size: 16px;
+			}
+		}
+		.column{
+			&:hover{
+				.text{
+					h2{
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+
+	.testimonials{
+		h2.section-title{
+			font-size: 16px;
+		}
+		blockquote{
+			font-weight: normal;
+			font-size: 16px;
+		}
+		.infor{
+			font-size: 14px;
+		}
+	}
+
+	.why-travel{
+		font-size: 12px;
+		h2.section-title{
+			font-size: 16px;
+		}
+	}
+
+	.fullwidth-section.tablist{
+		.container{
+			ul{
+				li{
+					a{
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+	.popular-tours.tab-content .text a{
+		font-size: 12px;
+	}
+
+	#footer{
+		.subcribe-form{
+			h3.widget-title{
+				font-size: 18px;
+			}
+			.frm_forms .frm_form_fields fieldset .frm_form_field input{
+				font-size: 18px !important;
+				height: 70px !important;
+			}
+			.frm_forms .frm_form_fields fieldset .frm_submit button{
+				font-size: 18px !important;
+				height: 70px !important;
+			}
+		}
+		.footer-widgets-wrapper{
+			 .container{
+			 	.column{
+			 		.widget{
+			 		 	h3{
+			 		 		font-size: 12px;
+			 		 	}
+			 		 	&:first-child{
+			 		 		font-size: 12px;
+			 		 	}
+			 		}
+			 	}
+			 }
+		}
+	}
+}
