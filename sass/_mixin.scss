@@ -1,0 +1,155 @@
+
+@mixin border-radius($value){
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  -ms-border-radius: $value;
+  border-radius: $value;
+}
+
+@mixin transform($value){
+  -webkit-transform:$value;
+  -moz-transform:$value;
+  -ms-transform:$value;
+  transform:$value;
+}
+
+@mixin box-shadow($value){
+  -webkit-box-shadow:$value;
+  -moz-box-shadow:$value;
+  -ms-box-shadow:$value;
+  box-shadow:$value;
+}
+
+@mixin screen-size-max($size){
+  @if $size == lg{
+    @media screen and (max-width: 1280px){
+      @content;
+    }
+  }
+  @else if $size == md{
+    @media screen and (max-width: 1279px){
+      @content;
+    }
+  }
+  @else if $size == sm{
+    @media screen and (max-width: 991px){
+      @content;
+    }
+  }
+  @else if $size == xs{
+    @media screen and (max-width: 767px){
+      @content;
+    }
+  }
+}
+
+@mixin screen-size($size){
+  @if $size == lg{
+    @media screen and (min-width: 1280px){
+      @content;
+    }
+  }
+  @else if $size == md{
+    @media screen and (max-width: 1279px) and (min-width: 992px){
+      @content;
+    }
+  }
+  @else if $size == sm{
+    @media screen and (max-width: 991px) and (min-width:768px){
+      @content;
+    }
+  }
+  @else if $size == xs{
+    @media screen and (max-width: 767px){
+      @content;
+    }
+  }
+}
+
+@mixin screen-size-min($size) {
+  @if $size == lg {
+    @media only screen and (min-width: 1280px) { @content; }
+  }
+  @else if $size == md {
+    @media only screen and (min-width: 992px) { @content; }
+  }
+
+  @else if $size == sm {
+    @media only screen and (min-width: 768px) { @content; }
+  }
+  @else if $size == xs {
+    @content;
+  }
+}
+
+@mixin AvenirNextLTPro(){
+  font-family: AvenirNextLTPro, Arial, sans-serif;
+}
+
+@mixin retina(){
+  @media 
+  (-webkit-min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi) { 
+      @content;
+  }
+}
+
+@mixin screen-theme($size){
+   @if $size == lg {
+    @media only screen and (min-width:1281px) {
+      @content;
+    }
+  }
+  @else if $size == md {
+    @media only screen and (min-width:1120px) and (max-width:1280px) {
+      @content;
+    }
+  }
+
+  @else if $size == sm {
+    /* Note: Design for a width of 768px, Gutter: 30px, Unit: 32px */
+
+    @media only screen and (min-width:960px) and (max-width:1119px) {
+      @content;
+    }
+  }
+  @else if $size == xs {
+    /*----*****---- << Tablet (Portrait) >> ----*****----*/ 
+
+    /* Note: Design for a width of 768px, Gutter: 30px, Unit: 32px */
+
+    @media only screen and (min-width:768px) and (max-width:959px) {
+      @content;
+    }
+  }
+  @else if $size == mbLan {
+    /*----*****---- << Mobile (Landscape) >> ----*****----*/
+
+    /* Note: Design for a width of 480px */
+    @media only screen and (max-width:767px) {@content;}
+  }
+  @else if $size == mbPo {
+    /*----*****---- << Mobile >> ----*****----*/  
+
+    /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+    @media only screen and (min-width: 320px) and (max-width: 479px) {@content;}
+  }
+  @else if $size == mbPoxs {
+    /*----*****---- << Mobile >> ----*****----*/  
+
+    /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+    @media only screen and (max-width: 319px) {@content;}
+  }
+}
+
+  
+
+
+
+
+
+
+
+
+
+
