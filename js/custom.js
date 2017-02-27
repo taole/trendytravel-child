@@ -77,4 +77,8 @@ jQuery(document).ready(function($){
                     // instead of a settings object
                 ]
 	});
+
+    $('.find-a-tour .uform_title').click(function(){
+        $(this).parents('.find-a-tour').toggleClass('open-form');
+    });
 });

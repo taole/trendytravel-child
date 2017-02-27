@@ -873,6 +873,11 @@
   color: #fff;
 }
 
+/* line 295, ../sass/_footer.scss */
+.footer-widgets-wrapper.mobile-footer {
+  display: none;
+}
+
 /* line 1, ../sass/_homepage.scss */
 .banner {
   color: #fff;
@@ -2798,28 +2803,37 @@
     font-size: 16px;
     padding: 12px 0 14px 14px;
     text-align: center;
+    cursor: pointer;
   }
-  /* line 77, ../sass/_responsive-300px.scss */
+  /* line 78, ../sass/_responsive-300px.scss */
   .find-a-tour .uwpqsf_class {
     display: none;
     width: 100%;
     margin-top: 10px;
   }
-  /* line 81, ../sass/_responsive-300px.scss */
+  /* line 82, ../sass/_responsive-300px.scss */
   .find-a-tour .uwpqsf_class select {
     font-size: 12px;
     height: 42px;
   }
-  /* line 85, ../sass/_responsive-300px.scss */
+  /* line 86, ../sass/_responsive-300px.scss */
   .find-a-tour .uwpqsf_class .selection-box:after {
     height: 41px;
   }
-  /* line 88, ../sass/_responsive-300px.scss */
+  /* line 89, ../sass/_responsive-300px.scss */
   .find-a-tour .uwpqsf_class input[type="submit"] {
     height: 42px;
   }
-
   /* line 96, ../sass/_responsive-300px.scss */
+  .find-a-tour + .popular-tours .container .column:nth-child(4) {
+    clear: left;
+  }
+  /* line 103, ../sass/_responsive-300px.scss */
+  .find-a-tour.open-form .uwpqsf_class {
+    display: block;
+  }
+
+  /* line 111, ../sass/_responsive-300px.scss */
   .popular-tours .dt-sc-one-fourth {
     width: 50% !important;
     margin-left: 0 !important;
@@ -2829,155 +2843,165 @@
     -ms-box-sizing: border-box !important;
     box-sizing: border-box !important;
   }
-  /* line 103, ../sass/_responsive-300px.scss */
+  /* line 118, ../sass/_responsive-300px.scss */
   .popular-tours .dt-sc-one-fourth .featured-tour-content .text {
     left: 5px;
     right: 5px;
   }
-  /* line 106, ../sass/_responsive-300px.scss */
+  /* line 121, ../sass/_responsive-300px.scss */
   .popular-tours .dt-sc-one-fourth .featured-tour-content .text a {
     margin-left: -15px;
     margin-right: -15px;
     min-width: 100%;
   }
-  /* line 116, ../sass/_responsive-300px.scss */
+  /* line 130, ../sass/_responsive-300px.scss */
+  .popular-tours .dt-sc-one-column .dt-sc-button {
+    margin-top: 0;
+  }
+  /* line 136, ../sass/_responsive-300px.scss */
   .popular-tours .container .column.first {
     clear: inherit;
   }
-  /* line 119, ../sass/_responsive-300px.scss */
-  .popular-tours .container .column:nth-child(4) {
-    clear: left;
-  }
-  /* line 124, ../sass/_responsive-300px.scss */
+  /* line 144, ../sass/_responsive-300px.scss */
   .popular-tours .dt-sc-one-half {
     width: 100% !important;
+    margin-left: 0;
   }
-  /* line 127, ../sass/_responsive-300px.scss */
+  /* line 148, ../sass/_responsive-300px.scss */
   .popular-tours h2.section-title {
     font-size: 18px;
   }
-  /* line 130, ../sass/_responsive-300px.scss */
+  /* line 151, ../sass/_responsive-300px.scss */
   .popular-tours .text {
     padding-right: 15px;
     padding-left: 15px;
     padding-top: 10px;
     bottom: -48px;
   }
-  /* line 135, ../sass/_responsive-300px.scss */
+  /* line 156, ../sass/_responsive-300px.scss */
   .popular-tours .text h3 {
     font-size: 11px;
     margin-bottom: 9px;
   }
-  /* line 139, ../sass/_responsive-300px.scss */
+  /* line 160, ../sass/_responsive-300px.scss */
   .popular-tours .text h2 {
     font-size: 12px;
     padding-bottom: 15px;
   }
-  /* line 143, ../sass/_responsive-300px.scss */
+  /* line 164, ../sass/_responsive-300px.scss */
   .popular-tours .text a {
     margin-top: 0;
   }
-  /* line 149, ../sass/_responsive-300px.scss */
+  /* line 170, ../sass/_responsive-300px.scss */
   .popular-tours .column:hover .text {
     bottom: 0;
   }
 
-  /* line 159, ../sass/_responsive-300px.scss */
-  .tour-type .container .column:nth-child(4) {
-    clear: inherit;
+  /* line 177, ../sass/_responsive-300px.scss */
+  .tour-type {
+    background-size: auto 170px;
   }
-  /* line 164, ../sass/_responsive-300px.scss */
+  /* line 186, ../sass/_responsive-300px.scss */
   .tour-type .text {
     bottom: auto;
   }
-  /* line 166, ../sass/_responsive-300px.scss */
+  /* line 188, ../sass/_responsive-300px.scss */
   .tour-type .text h2 {
-    font-size: 16px;
+    font-size: 14px;
   }
-  /* line 169, ../sass/_responsive-300px.scss */
+  /* line 191, ../sass/_responsive-300px.scss */
   .tour-type .text a {
     min-width: 100%;
   }
-  /* line 176, ../sass/_responsive-300px.scss */
+  /* line 198, ../sass/_responsive-300px.scss */
   .tour-type .column:hover .text h2 {
-    font-size: 20px;
+    font-size: 16px;
   }
 
-  /* line 185, ../sass/_responsive-300px.scss */
+  /* line 207, ../sass/_responsive-300px.scss */
   .testimonials h2.section-title {
     font-size: 16px;
   }
-  /* line 188, ../sass/_responsive-300px.scss */
+  /* line 210, ../sass/_responsive-300px.scss */
   .testimonials blockquote {
     font-weight: normal;
     font-size: 16px;
     padding: 0;
   }
-  /* line 193, ../sass/_responsive-300px.scss */
+  /* line 215, ../sass/_responsive-300px.scss */
   .testimonials .infor {
     font-size: 14px;
   }
-  /* line 198, ../sass/_responsive-300px.scss */
+  /* line 220, ../sass/_responsive-300px.scss */
   .testimonials .dt-sc-testimonial-carousel-wrapper .carousel-arrows a {
     top: 40px;
   }
-  /* line 201, ../sass/_responsive-300px.scss */
+  /* line 223, ../sass/_responsive-300px.scss */
   .testimonials .dt-sc-testimonial-carousel-wrapper .carousel-arrows .testimonial-prev {
     left: 0;
   }
-  /* line 204, ../sass/_responsive-300px.scss */
+  /* line 226, ../sass/_responsive-300px.scss */
   .testimonials .dt-sc-testimonial-carousel-wrapper .carousel-arrows .testimonial-next {
     right: 0;
   }
 
-  /* line 211, ../sass/_responsive-300px.scss */
+  /* line 233, ../sass/_responsive-300px.scss */
   .why-travel {
     font-size: 12px;
   }
-  /* line 213, ../sass/_responsive-300px.scss */
+  /* line 235, ../sass/_responsive-300px.scss */
   .why-travel h2.section-title {
     font-size: 16px;
   }
 
-  /* line 222, ../sass/_responsive-300px.scss */
+  /* line 244, ../sass/_responsive-300px.scss */
   .fullwidth-section.tablist .container ul li a {
-    font-size: 14px;
+    font-size: 11px;
+    border-bottom-width: 3px;
+  }
+  /* line 249, ../sass/_responsive-300px.scss */
+  .fullwidth-section.tablist .container ul li.current a {
+    border-bottom-width: 3px;
   }
 
-  /* line 231, ../sass/_responsive-300px.scss */
+  /* line 260, ../sass/_responsive-300px.scss */
+  .popular-tours.tab-content .container .column:nth-child(3), .popular-tours.tab-content .container .column:nth-child(4) {
+    display: none;
+  }
+  /* line 266, ../sass/_responsive-300px.scss */
   .popular-tours.tab-content .column:hover {
     bottom: 0;
   }
-  /* line 235, ../sass/_responsive-300px.scss */
+  /* line 270, ../sass/_responsive-300px.scss */
   .popular-tours.tab-content .text {
     bottom: -38px;
   }
-  /* line 237, ../sass/_responsive-300px.scss */
+  /* line 272, ../sass/_responsive-300px.scss */
   .popular-tours.tab-content .text a {
     font-size: 12px;
   }
 
-  /* line 246, ../sass/_responsive-300px.scss */
+  /* line 281, ../sass/_responsive-300px.scss */
   #footer .subcribe-form h3.widget-title {
     font-size: 16px;
     margin-top: 20px;
     width: 100%;
     text-align: center;
   }
-  /* line 252, ../sass/_responsive-300px.scss */
+  /* line 287, ../sass/_responsive-300px.scss */
   #footer .subcribe-form .frm_forms {
     width: 100%;
   }
-  /* line 255, ../sass/_responsive-300px.scss */
+  /* line 290, ../sass/_responsive-300px.scss */
   #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_form_field input {
     font-size: 16px !important;
     height: 60px !important;
   }
-  /* line 259, ../sass/_responsive-300px.scss */
+  /* line 294, ../sass/_responsive-300px.scss */
   #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_form_field {
     width: 100%;
   }
-  /* line 262, ../sass/_responsive-300px.scss */
+  /* line 297, ../sass/_responsive-300px.scss */
   #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_submit {
     width: 100%;
     position: absolute;
@@ -2985,12 +3009,12 @@
     left: 0;
     right: 0;
   }
-  /* line 269, ../sass/_responsive-300px.scss */
+  /* line 304, ../sass/_responsive-300px.scss */
   #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_submit button {
     font-size: 16px !important;
     height: 60px !important;
   }
-  /* line 273, ../sass/_responsive-300px.scss */
+  /* line 308, ../sass/_responsive-300px.scss */
   #footer .subcribe-form .widget {
     position: relative;
     padding-bottom: 60px;
@@ -3001,61 +3025,120 @@
     display: table;
     clear: both;
   }
-  /* line 283, ../sass/_responsive-300px.scss */
+  /* line 318, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper .container .column .widget h3 {
     font-size: 12px;
   }
-  /* line 286, ../sass/_responsive-300px.scss */
+  /* line 321, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper .container .column .widget:first-child {
     font-size: 12px;
   }
-  /* line 292, ../sass/_responsive-300px.scss */
+  /* line 327, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper .container .column .social-list li a {
     margin-left: 10px;
   }
-  /* line 297, ../sass/_responsive-300px.scss */
+  /* line 332, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper .container .column.dt-sc-one-third {
     width: 50%;
   }
-  /* line 299, ../sass/_responsive-300px.scss */
+  /* line 334, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper .container .column.dt-sc-one-third:last-child {
     width: 100%;
   }
-  /* line 301, ../sass/_responsive-300px.scss */
+  /* line 336, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper .container .column.dt-sc-one-third:last-child .widget_social {
     float: left;
     width: 50%;
   }
-  /* line 304, ../sass/_responsive-300px.scss */
+  /* line 339, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper .container .column.dt-sc-one-third:last-child .widget_social + .widget {
     width: auto;
   }
+  /* line 356, ../sass/_responsive-300px.scss */
+  #footer .footer-widgets-wrapper.type2 .column.first aside + aside {
+    display: none;
+  }
+  /* line 362, ../sass/_responsive-300px.scss */
+  #footer .footer-widgets-wrapper.type2 .column:nth-child(2) h3 {
+    padding-left: 38px !important;
+    background: url(../images/icons/telephone-blue.png) no-repeat left center;
+    line-height: 28px;
+  }
+  /* line 368, ../sass/_responsive-300px.scss */
+  #footer .footer-widgets-wrapper.type2 .column:nth-child(2) aside + aside {
+    display: none;
+  }
+  /* line 372, ../sass/_responsive-300px.scss */
+  #footer .footer-widgets-wrapper.type2 .column:nth-child(2) > .widget:first-child > .textwidget {
+    background: none;
+    padding-left: 0;
+  }
+  /* line 377, ../sass/_responsive-300px.scss */
+  #footer .footer-widgets-wrapper.type2 .column:last-child {
+    display: none;
+  }
+  /* line 383, ../sass/_responsive-300px.scss */
+  #footer .footer-widgets-wrapper.mobile-footer {
+    display: block;
+    padding-top: 0;
+  }
+  /* line 386, ../sass/_responsive-300px.scss */
+  #footer .footer-widgets-wrapper.mobile-footer .column {
+    margin-left: 0;
+  }
+  /* line 388, ../sass/_responsive-300px.scss */
+  #footer .footer-widgets-wrapper.mobile-footer .column .social-list {
+    margin-bottom: 0;
+  }
+  /* line 391, ../sass/_responsive-300px.scss */
+  #footer .footer-widgets-wrapper.mobile-footer .column .widget:last-child {
+    padding-left: 0 !important;
+    background: none !important;
+    margin-top: -20px;
+  }
+  /* line 398, ../sass/_responsive-300px.scss */
+  #footer .footer-widgets-wrapper.mobile-footer .widget_social + .widget {
+    margin-bottom: 0;
+  }
+  /* line 400, ../sass/_responsive-300px.scss */
+  #footer .footer-widgets-wrapper.mobile-footer .widget_social + .widget h3 {
+    background: url(../images/send-email.png) no-repeat left 0;
+    padding-left: 27px;
+    line-height: 17px;
+    display: inline-block;
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+  /* line 408, ../sass/_responsive-300px.scss */
+  #footer .footer-widgets-wrapper.mobile-footer .widget_social + .widget .textwidget {
+    display: inline-block;
+  }
 
   /* header */
-  /* line 325, ../sass/_responsive-300px.scss */
+  /* line 425, ../sass/_responsive-300px.scss */
   .home .banner {
     margin-top: 0;
   }
-  /* line 328, ../sass/_responsive-300px.scss */
+  /* line 428, ../sass/_responsive-300px.scss */
   .home #header-wrapper {
     background-color: #10726e;
   }
 
-  /* line 333, ../sass/_responsive-300px.scss */
+  /* line 433, ../sass/_responsive-300px.scss */
   #header-wrapper {
     height: 54px;
   }
-  /* line 335, ../sass/_responsive-300px.scss */
+  /* line 435, ../sass/_responsive-300px.scss */
   #header-wrapper header#header {
     padding-top: 0;
   }
-  /* line 337, ../sass/_responsive-300px.scss */
+  /* line 437, ../sass/_responsive-300px.scss */
   #header-wrapper header#header .numberphone {
     position: absolute;
     top: 10px;
     left: 0;
   }
-  /* line 341, ../sass/_responsive-300px.scss */
+  /* line 441, ../sass/_responsive-300px.scss */
   #header-wrapper header#header .numberphone:before {
     content: "";
     min-height: 30px;
@@ -3066,7 +3149,7 @@
     display: block;
     cursor: pointer;
   }
-  /* line 354, ../sass/_responsive-300px.scss */
+  /* line 454, ../sass/_responsive-300px.scss */
   #header-wrapper header#header .numberphone ul {
     display: none;
     width: 260px;
@@ -3081,7 +3164,7 @@
     -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     z-index: 1;
   }
-  /* line 367, ../sass/_responsive-300px.scss */
+  /* line 467, ../sass/_responsive-300px.scss */
   #header-wrapper header#header .numberphone ul li {
     display: block;
     padding: 0px 15px;
@@ -3089,11 +3172,11 @@
     line-height: normal;
     color: #2c3e50;
   }
-  /* line 376, ../sass/_responsive-300px.scss */
+  /* line 476, ../sass/_responsive-300px.scss */
   #header-wrapper header#header .numberphone:hover ul {
     display: block;
   }
-  /* line 382, ../sass/_responsive-300px.scss */
+  /* line 482, ../sass/_responsive-300px.scss */
   #header-wrapper header#header #logo img {
     height: 23px;
     position: absolute;
@@ -3104,21 +3187,21 @@
     -ms-transform: inherit;
     transform: inherit;
   }
-  /* line 390, ../sass/_responsive-300px.scss */
+  /* line 490, ../sass/_responsive-300px.scss */
   #header-wrapper header#header .cart-contents {
     margin-top: 12px;
     display: none;
   }
-  /* line 394, ../sass/_responsive-300px.scss */
+  /* line 494, ../sass/_responsive-300px.scss */
   #header-wrapper header#header .user-action {
     display: none;
   }
-  /* line 396, ../sass/_responsive-300px.scss */
+  /* line 496, ../sass/_responsive-300px.scss */
   #header-wrapper header#header .user-action:before {
     margin-top: 12px;
   }
 
-  /* line 404, ../sass/_responsive-300px.scss */
+  /* line 504, ../sass/_responsive-300px.scss */
   #primary-menu .dt-menu-toggle {
     display: block;
     background: transparent;
@@ -3130,12 +3213,12 @@
     right: 0;
     top: 11px;
   }
-  /* line 414, ../sass/_responsive-300px.scss */
+  /* line 514, ../sass/_responsive-300px.scss */
   #primary-menu .dt-menu-toggle .dt-menu-toggle-icon, #primary-menu .dt-menu-toggle .dt-menu-toggle-icon:before, #primary-menu .dt-menu-toggle .dt-menu-toggle-icon:after {
     background: transparent;
     display: none;
   }
-  /* line 418, ../sass/_responsive-300px.scss */
+  /* line 518, ../sass/_responsive-300px.scss */
   #primary-menu .dt-menu-toggle .dt-menu-toggle-icon {
     display: inline-block;
     background: url("../images/icons/toggle-menu-mb.png") no-repeat;
@@ -3155,11 +3238,11 @@
     display: table;
     clear: both;
   }
-  /* line 439, ../sass/_responsive-300px.scss */
+  /* line 539, ../sass/_responsive-300px.scss */
   #header-wrapper header#header #primary-menu #main-menu {
     position: static;
   }
-  /* line 441, ../sass/_responsive-300px.scss */
+  /* line 541, ../sass/_responsive-300px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu {
     position: absolute;
     top: 53px;
@@ -3174,34 +3257,34 @@
     -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     z-index: 1;
   }
-  /* line 454, ../sass/_responsive-300px.scss */
+  /* line 554, ../sass/_responsive-300px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li {
     width: 100%;
     float: none;
     margin: 0;
     display: block;
   }
-  /* line 459, ../sass/_responsive-300px.scss */
+  /* line 559, ../sass/_responsive-300px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li > a {
     display: block;
     padding: 8px 15px 9px;
     font-size: 16px;
     color: #685e58;
   }
-  /* line 464, ../sass/_responsive-300px.scss */
+  /* line 564, ../sass/_responsive-300px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li > a:hover {
     color: #087dc2;
   }
-  /* line 469, ../sass/_responsive-300px.scss */
+  /* line 569, ../sass/_responsive-300px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li:first-child > a {
     padding-left: 15px;
   }
-  /* line 473, ../sass/_responsive-300px.scss */
+  /* line 573, ../sass/_responsive-300px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li .sub-menu {
     position: static;
     width: 100%;
   }
-  /* line 478, ../sass/_responsive-300px.scss */
+  /* line 578, ../sass/_responsive-300px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li:hover .sub-menu {
     display: block !important;
   }
@@ -3209,13 +3292,13 @@
   /* e: header */
 }
 @media only screen and (min-width: 320px) and (max-width: 639px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 639px) and (min-resolution: 192dpi) {
-  /* line 341, ../sass/_responsive-300px.scss */
+  /* line 441, ../sass/_responsive-300px.scss */
   #header-wrapper header#header .numberphone:before {
     border-image: url(../images/icons/telephone-mb-2x.png);
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 639px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 639px) and (min-resolution: 192dpi) {
-  /* line 418, ../sass/_responsive-300px.scss */
+  /* line 518, ../sass/_responsive-300px.scss */
   #primary-menu .dt-menu-toggle .dt-menu-toggle-icon {
     background-image: url("../images/icons/toggle-menu-mb-2x.png");
   }

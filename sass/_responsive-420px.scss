@@ -9,26 +9,52 @@
 	}
 	.banner{
 		h4{
-			font-size: 30px;
-			line-height: 30px;
+          font-size: 17px;
+          line-height: 17px;
+//          text-align: center;
 		}
 		h2{
-			font-size: 136px;
-			line-height: 136px;
+          font-size:70px;
+          line-height: 70px;
 		}
 		p{
-			font-size: 14px;
+		  font-size: 14px;
+          display: none;
 		}
+      .gbtn{
+        display: block;
+        width: 144px;
+        margin: 20px auto auto;
+      }
+      #slider-container{
+//        .ls-l{
+//          width: 100% !important;
+//          .title{
+//            display: block;
+//            h4{
+//              text-align: center;
+//            }
+//          }
+//        }
+        .ls-bottom-nav-wrapper{
+          left: 0;
+          right: 0;
+          bottom:40px;
+        }
+      }
+
 	}
 	.scroll-down{
 		display: none;
 	}
+    .scrollDown-social .container .connect-us{
+      display: none;
+    }
 
 	.find-a-tour{
 		.uform_title{
-			font-size: 16px;
-			padding-top: 20px;
-			padding-bottom: 20px;
+			font-size: 14px;
+			padding:12px 0 14px 14px;
 		}
 		.uwpqsf_class{
 			select{
@@ -44,9 +70,16 @@
 		}
 	}
 
+
 	.popular-tours{
+      .dt-sc-one-fourth {
+        width: 23.4% !important;
+      }
+      .dt-sc-one-half {
+        width: 48.9% !important;
+      }
 		h2.section-title{
-			font-size: 16px;
+			font-size: 18px;
 		}
 		.text{
 			padding-right: 15px;
@@ -80,6 +113,9 @@
 			h2{
 				font-size: 16px;
 			}
+          a{
+            min-width: 100%;
+          }
 		}
 		.column{
 			&:hover{
@@ -99,10 +135,21 @@
 		blockquote{
 			font-weight: normal;
 			font-size: 16px;
+          padding: 0 45px;
 		}
 		.infor{
 			font-size: 14px;
 		}
+      .dt-sc-testimonial-carousel-wrapper{
+        .carousel-arrows{
+          .testimonial-prev{
+            left: 0;
+          }
+          .testimonial-next{
+            right: 0;
+          }
+        }
+      }
 	}
 
 	.why-travel{
@@ -143,15 +190,35 @@
 			h3.widget-title{
 				font-size: 16px;
 				margin-top: 20px;
+              width: 50%;
+              text-align: center;
 			}
+          .frm_forms{
+            width: 50%;
+          }
+          .frm_forms .frm_form_fields fieldset .frm_form_field{
+            width: 100%;
+          }
 			.frm_forms .frm_form_fields fieldset .frm_form_field input{
 				font-size: 16px !important;
 				height: 60px !important;
 			}
-			.frm_forms .frm_form_fields fieldset .frm_submit button{
-				font-size: 16px !important;
-				height: 60px !important;
-			}
+          .frm_forms .frm_form_fields fieldset .frm_submit{
+            width: 100%;
+            position: absolute;
+            bottom:0;
+            left: 0;
+            right: 0;
+          }
+          .frm_forms .frm_form_fields fieldset .frm_submit button{
+              font-size: 16px !important;
+              height: 60px !important;
+          }
+          .widget{
+            position: relative;
+            padding-bottom: 60px;
+            @include clearfix();
+          }
 		}
 		.footer-widgets-wrapper{
 			 .container{
@@ -171,7 +238,21 @@
 			 				}
 			 			}
 			 		}
+                  &.dt-sc-one-third{
+                    width: 50%;
+                    &:last-child{
+                      width: 100%;
+                      .widget_social{
+                        float: left;
+                        width: 50%;
+                        &+.widget{
+                          width: auto;
+                        }
+                      }
+                    }
+                  }
 			 	}
+
 			 }
 		}
 	}
