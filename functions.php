@@ -35,6 +35,16 @@ function re_widgets_init() {
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
     ));
+
+    register_sidebar(array(
+        'name' => __('Footer bottom mobile Sidebar'),
+        'id' => 'footer-bottom-mobile-sidebar',
+        'description' => __('Footer bottom mobile Sidebar'),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
 }
 
 add_action('widgets_init', 're_widgets_init');
@@ -79,5 +89,6 @@ function base_scripts() {
     wp_enqueue_script('customs_scripts', '/wp-content/themes/trendytravel-child/js/custom.js', array(), 1.0, true);
     wp_enqueue_script('slick_scripts', '/wp-content/themes/trendytravel-child/js/slick.js', array(), 1.0, true);
     wp_enqueue_style( 'slick', '/wp-content/themes/trendytravel-child/css/slick.css' );
+    wp_enqueue_style( 'slick-theme', '/wp-content/themes/trendytravel-child/css/slick-theme.css' );
 }
 ?>

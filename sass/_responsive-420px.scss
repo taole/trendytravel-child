@@ -1,0 +1,347 @@
+@include screen-theme(mbLan){
+	.container {
+	    width: 640px !important;
+	}
+	.gbtn{
+		min-width: 144px;
+		font-size: 14px;
+		line-height: 38px;
+	}
+	.banner{
+		h4{
+			font-size: 30px;
+			line-height: 30px;
+		}
+		h2{
+			font-size: 136px;
+			line-height: 136px;
+		}
+		p{
+			font-size: 14px;
+		}
+	}
+	.scroll-down{
+		display: none;
+	}
+
+	.find-a-tour{
+		.uform_title{
+			font-size: 16px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		.uwpqsf_class{
+			select{
+				font-size: 12px;
+				height:42px;
+			}
+			.selection-box:after{
+				height: 41px;
+			}
+			input[type="submit"]{
+				height: 42px;
+			}
+		}
+	}
+
+	.popular-tours{
+		h2.section-title{
+			font-size: 16px;
+		}
+		.text{
+			padding-right: 15px;
+			padding-left: 15px;
+			padding-top: 10px;
+			bottom:-48px;
+			h3{
+				font-size: 11px;
+				margin-bottom: 9px;
+			}
+			h2{
+				font-size: 12px;
+				padding-bottom: 15px;
+			}
+			a{
+				margin-top: 0;
+			}
+		}
+		.column{
+			&:hover{
+				.text{
+					bottom:0;
+				}
+			}
+		}
+	}
+
+	.tour-type{
+		.text{
+			bottom:auto;
+			h2{
+				font-size: 16px;
+			}
+		}
+		.column{
+			&:hover{
+				.text{
+					h2{
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+
+	.testimonials{
+		h2.section-title{
+			font-size: 16px;
+		}
+		blockquote{
+			font-weight: normal;
+			font-size: 16px;
+		}
+		.infor{
+			font-size: 14px;
+		}
+	}
+
+	.why-travel{
+		font-size: 12px;
+		h2.section-title{
+			font-size: 16px;
+		}
+	}
+
+	.fullwidth-section.tablist{
+		.container{
+			ul{
+				li{
+					a{
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+	.popular-tours.tab-content{
+		.column{
+			&:hover{
+				bottom:0;
+			}
+		}
+		.text{
+			bottom:-38px;
+			 a{
+				font-size: 12px;
+			}
+		}
+	}
+	
+
+	#footer{
+		.subcribe-form{
+			h3.widget-title{
+				font-size: 16px;
+				margin-top: 20px;
+			}
+			.frm_forms .frm_form_fields fieldset .frm_form_field input{
+				font-size: 16px !important;
+				height: 60px !important;
+			}
+			.frm_forms .frm_form_fields fieldset .frm_submit button{
+				font-size: 16px !important;
+				height: 60px !important;
+			}
+		}
+		.footer-widgets-wrapper{
+			 .container{
+			 	.column{
+			 		.widget{
+			 		 	h3{
+			 		 		font-size: 12px;
+			 		 	}
+			 		 	&:first-child{
+			 		 		font-size: 12px;
+			 		 	}
+			 		}
+			 		.social-list{
+			 			li{
+			 				a{
+			 					margin-left: 10px;
+			 				}
+			 			}
+			 		}
+			 	}
+			 }
+		}
+	}
+
+
+
+	/* header */
+	// .menu-open{
+	// 	#main-menu{
+	// 		position: static;
+	// 	}
+	// }
+	.home{
+		.banner{
+			margin-top: 0;
+		}
+		#header-wrapper{
+			background-color: #10726e;
+		}
+		
+	}
+	#header-wrapper{
+		height:54px;
+		header#header{
+			padding-top: 0;
+			.numberphone{
+				position: absolute;
+				top:10px;
+				left:0;
+				&:before{
+					content: "";
+					min-height: 30px;
+				    background: url(../images/icons/telephone-mb.png) no-repeat left center;
+					background-size: 30px 30px;
+					width: 30px;
+					height:30px;
+					display: block;
+					cursor: pointer;
+					@include retina(){
+						border-image: url(../images/icons/telephone-mb-2x.png);
+					}
+				}
+				ul{
+					display: none;
+				    width: 260px;
+				    background: #fff;
+				    border-top: 3px solid #087dc2;
+				    padding: 10px 0px 10px;
+				    position: absolute;
+				    top: 100%;
+				    left: 0px;
+				    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+				    -moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+				    -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+				    z-index: 1;
+					li{
+						display: block;
+					    padding: 0px 15px;
+					    position: relative;
+					    line-height: normal;
+					    color:#2c3e50;
+					}
+				}
+				&:hover{
+					ul{
+						display: block;
+					}
+				}
+			}
+			#logo{
+				img{
+					height:27px;
+					position: absolute;
+					top:13px;
+					left:50%;
+					@include transform(translateX(-50%));
+				}
+			}
+			.cart-contents{
+				margin-top:12px;
+			}
+			.user-action:before{
+				margin-top: 12px;
+			}
+		}
+	}
+	#primary-menu{
+		.dt-menu-toggle{
+				display: block;
+				background: transparent;
+				@include AvenirNextLTProDemi();
+				font-size: 14px;
+				width:84px;
+				padding: 0;
+				position: absolute;
+				right:0;
+				top:11px;
+				.dt-menu-toggle-icon, .dt-menu-toggle-icon:before, .dt-menu-toggle-icon:after{
+					background: transparent;
+					display: none;
+				}
+				.dt-menu-toggle-icon{
+					display: inline-block;
+					background: url('../images/icons/toggle-menu-mb.png') no-repeat;
+					background-size:30px 30px;
+					@include border-radius(50%);
+					@include retina(){
+						background-image:url('../images/icons/toggle-menu-mb-2x.png'); 
+					}
+					width: 30px;
+					height: 30px;
+					vertical-align: middle;
+					margin-top:0;
+				}
+		}
+}
+	#header-wrapper{
+		header#header{
+			.container{
+				@include clearfix();
+			}
+			#primary-menu{
+				#main-menu{
+					position: static;
+					&> ul.menu{
+						position: absolute;
+					    top: 100%;
+					    left: 0;
+					    width: 100%;
+					    background: #fff;
+					    border-top: 3px solid #087dc2;
+					    padding: 10px 0px 10px;
+					    position: absolute;
+					    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+					    -moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+					    -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+					    z-index: 1;
+					    &>li{
+					    	width: 100%;
+					    	float: none;
+					    	margin:0;
+					    	display: block;
+					    	&>a{
+					    		display: block;
+					    		padding: 8px 15px 9px;
+					    		font-size: 16px;
+					    		color:#685e58;
+					    		&:hover{
+					    			color:#087dc2;
+					    		}
+					    	}
+					    	&:first-child{
+					    		&>a{
+					    			padding-left: 15px;
+					    		}
+					    	}
+					    	.sub-menu{
+					    		position: static;
+					    		width: 100%;
+					    	}
+					    	&:hover{
+					    		.sub-menu{
+					    			display: block !important;
+					    		}
+					    	}
+					    }
+					}
+				}
+			}
+		}
+	}
+	/* e: header */
+}

@@ -120,8 +120,18 @@
 			}
 		}
 	}
-	.popular-tours.tab-content .text a{
-		font-size: 12px;
+	.popular-tours.tab-content{
+		.column{
+			&:hover{
+				bottom:0;
+			}
+		}
+		.text{
+			bottom:-38px;
+			 a{
+				font-size: 12px;
+			}
+		}
 	}
 
 	#footer{

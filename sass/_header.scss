@@ -33,10 +33,14 @@
 			}
 			#main-menu{
 				width: 100%;
+				position: static;
 				&>ul.menu{
 					float: left;
 					@include screen-theme(xs){
 						display: none !important;
+						&.menu-toggle-open{
+							display: block !important;
+						}
 					}
 					&>li{
 						line-height: normal;
@@ -88,6 +92,12 @@
 				margin-right:104px;
 			}
 		}
+		@include screen-theme(mbLan){
+			.fuc-header{
+				float: right;
+				margin-right:104px;
+			}
+		}
 		.numberphone{
 			float: left;
 			margin-right: 20px;
@@ -127,6 +137,9 @@
 					@include screen-theme(xs){
 						font-size: 12px;
 					}
+					@include screen-theme(mbLan){
+						font-size: 12px;
+					}
 				}
 			}
 		}
@@ -153,6 +166,7 @@
 					height:22px;
 					background-size: 24px 22px;
 				}
+
 				@include retina(){
 					background-image: url('../images/icons/cart-2x.png');
 				}
@@ -269,7 +283,7 @@
 			padding: 0;
 			position: absolute;
 			right:0;
-			top:7px;
+			top:18px;
 			.dt-menu-toggle-icon, .dt-menu-toggle-icon:before, .dt-menu-toggle-icon:after{
 				background: transparent;
 				display: none;

@@ -78,3 +78,7 @@ Text Domain: iamd_text_domain
 .tablist ul.dt-sc-fancy-list.arrow li:before {
     content: '';
 }
+
+.why-travel-title {
+    margin-bottom: 0px;   
+}

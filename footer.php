@@ -19,7 +19,14 @@
                         </div>
                     </div>
                 <?php endif; ?>
-				<div class="copyright type2">
+
+                <div class="footer-widgets-wrapper mobile-footer">
+                    <div class="container"><div class="column">
+                    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("footer-bottom-mobile-sidebar") ) : endif; ?>
+                    </div></div>
+                </div>
+				
+                <div class="copyright type2">
                 	<div class="container"><?php
 						if(dt_theme_option('general','community-status') != ''): ?>
                             <div class="foot-site-status">
@@ -33,6 +40,8 @@
                         <?php endif; ?>    
                     </div>
                 </div>
+
+
             </footer>
             <!-- footer ends here -->
             <style type="text/css">
