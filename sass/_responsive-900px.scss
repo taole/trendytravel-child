@@ -163,4 +163,34 @@
 			 }
 		}
 	}
+
+  /* about us */
+  .about-us{
+    h2{
+      font-size: 18px;
+    }
+
+    ol{
+      font-size: 30px;
+      p{
+        font-size: 14px;
+      }
+    }
+  }
+
+  .what-we-do{
+    h2{
+      font-size: 18px;
+     }
+  }
+  /* e: about us */
+}
+
+@media screen and (max-width: 1199px){
+  .testimonials .dt-sc-testimonial-carousel-wrapper .carousel-arrows .testimonial-prev{
+    left: 0;
+  }
+  .testimonials .dt-sc-testimonial-carousel-wrapper .carousel-arrows .testimonial-next{
+    right:0;
+  }
 }

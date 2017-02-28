@@ -45,6 +45,24 @@ function re_widgets_init() {
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
     ));
+
+    register_sidebar(array(
+        'name' => __('Travel Blog Tab'),
+        'id' => 'travel-blog-tab',
+        'description' => __('Travel Blog Tab')
+    ));
+
+    register_sidebar(array(
+        'name' => __('Travel Video Tab'),
+        'id' => 'travel-video-tab',
+        'description' => __('Travel Video Tab')
+    ));
+
+    register_sidebar(array(
+        'name' => __('Travel Guilds Tab'),
+        'id' => 'travel-guild-tab',
+        'description' => __('Travel Guilds Tab')
+    ));
 }
 
 add_action('widgets_init', 're_widgets_init');
@@ -52,6 +70,8 @@ add_action('widgets_init', 're_widgets_init');
 // create widget
 include ABSPATH . 'wp-content/themes/trendytravel-child/widgets/connect-with-us.php';
 include ABSPATH . 'wp-content/themes/trendytravel-child/widgets/featured-tour.php';
+include ABSPATH . 'wp-content/themes/trendytravel-child/widgets/trip-advisor-review.php';
+include ABSPATH . 'wp-content/themes/trendytravel-child/widgets/travel_block.php';
 
 /* Category */
 function product_destination() {  
@@ -88,7 +108,10 @@ add_action('wp_enqueue_scripts', 'base_scripts');
 function base_scripts() {
     wp_enqueue_script('customs_scripts', '/wp-content/themes/trendytravel-child/js/custom.js', array(), 1.0, true);
     wp_enqueue_script('slick_scripts', '/wp-content/themes/trendytravel-child/js/slick.js', array(), 1.0, true);
+    wp_enqueue_script('bootstrap_scripts', '/wp-content/themes/trendytravel-child/js/bootstrap.min.js', array(), 1.0, true);
     wp_enqueue_style( 'slick', '/wp-content/themes/trendytravel-child/css/slick.css' );
     wp_enqueue_style( 'slick-theme', '/wp-content/themes/trendytravel-child/css/slick-theme.css' );
 }
+
+/* Woo Register Form*/
 ?>

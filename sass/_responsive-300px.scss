@@ -480,7 +480,8 @@
       }
       #logo{
         img{
-          height:23px;
+          height:23px !important;
+          width: auto !important;
           position: absolute;
           top:13px;
           left:62px;
@@ -587,5 +588,34 @@
   }
   /* e: header */
 
+  /* about us */
+  .about-us{
+    h2{
+      font-size: 16px;
+    }
+    ol{
+      font-size: 30px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      p{
+        font-size: 14px;
+      }
+    }
+    .container{
+      .column{
+        &:last-child{
+          display: none;
+        }
+      }
+    }
+  }
+
+  .what-we-do{
+    h2{
+      font-size: 16px;
+    }
+  }
+  /* e: about us */
 
 }

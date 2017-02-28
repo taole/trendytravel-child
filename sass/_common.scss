@@ -62,3 +62,53 @@
         }
     }
 }
+
+body{
+  @include AvenirNextLTPro();
+  color:#a9a8a8;
+  font-size: 14px;
+}
+
+.breadcrumb-wrapper{
+  background:none !important;
+  float:none !important;
+  padding-bottom: 7px;
+  @include clearfix();
+  @include screen-theme(mbLan){
+    display: none;
+  }
+  @include screen-theme(mbPo){
+    display: none;
+  }
+  .container{
+    .breadcrumb{
+      float: none;
+      color:#c7c6c6;
+      @include AvenirNextLTProDemi();
+      font-weight: bold;
+      @include clearfix();
+      margin-top: 0;
+      text-align: left;
+      a{
+        color:#c7c6c6;
+      }
+      h4{
+        color:#c7c6c6;
+        @include AvenirNextLTProDemi();
+        font-weight: bold;
+      }
+      span{
+        background: none;
+        margin: 0;
+        width: auto;
+        height: auto;
+        &:before{
+          content: "/";
+          display: inline-block;
+          position: relative;
+          top:-3px;
+        }
+      }
+    }
+  }
+}

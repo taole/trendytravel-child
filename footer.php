@@ -21,9 +21,11 @@
                 <?php endif; ?>
 
                 <div class="footer-widgets-wrapper mobile-footer">
-                    <div class="container"><div class="column">
-                    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("footer-bottom-mobile-sidebar") ) : endif; ?>
-                    </div></div>
+                    <div class="container">
+                        <div class="column">
+                        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer bottom mobile Sidebar") ) : endif; ?>
+                        </div>
+                    </div>
                 </div>
 				
                 <div class="copyright type2">

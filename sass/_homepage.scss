@@ -1,5 +1,8 @@
 .banner{
 	color:#fff;
+  img{
+    margin-top: 0 !important;
+  }
 	a{
 		color:#fff;
 	}
@@ -217,7 +220,7 @@
 	}
 	.uform_title{
 		text-align: left;
-		font-size: 20px;
+		font-size: 23px;
 		text-transform: uppercase;
 		@include AvenirNextLTPro();
 		padding: 22px 5px;
@@ -481,7 +484,8 @@
 	padding: 30px 0 0;
 	margin-bottom: 26px;
   &.why-travel-title{
-    margin-bottom: 0;
+    margin-bottom: -1px;
+    float: left;
   }
   &.slick-travel{
     padding-top: 0;
@@ -576,4 +580,9 @@
 			}
 		}
 	}
+  .dt-sc-one-fourth{
+    @media only screen and (min-width:1281px) {
+      width: 23.9945%;
+    }
+  }
 }

@@ -274,6 +274,10 @@
 				@include clearfix();
 			}
 			#primary-menu{
+              width: 5%;
+              .dt-menu-toggle{
+                top:5px;
+              }
 				#main-menu{
 					position: static;
 					&> ul.menu{
@@ -325,4 +329,26 @@
 		}
 	}
 	/* e: header */
+
+
+  /* about us */
+  .about-us{
+    h2{
+      font-size: 16px;
+    }
+
+    ol{
+      font-size: 30px;
+      p{
+        font-size: 14px;
+      }
+    }
+  }
+
+  .what-we-do{
+    h2{
+      font-size: 16px;
+    }
+  }
+  /* e: about us */
 }

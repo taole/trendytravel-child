@@ -1,0 +1,38 @@
+.about-us{
+  h2{
+    margin: 0 0 15px;
+    font-size: 22px;
+    @include AvenirNextLTPro();
+    font-weight: bold;
+    color:#10726e;
+    text-transform: uppercase;
+  }
+
+  ol{
+    font-size: 40px;
+    color:#13887d;
+    @include ProximaNovaAltBold();
+    padding-left: 40px;
+    p{
+      @include AvenirNextLTPro();
+      color:#a9a8a8;
+      font-size: 14px;
+    }
+  }
+
+  #CDSWIDWRL{
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.what-we-do{
+  h2{
+    margin: 0 0 15px;
+    font-size: 22px;
+    @include AvenirNextLTPro();
+    font-weight: bold;
+    color:#10726e;
+    text-transform: uppercase;
+  }
+}

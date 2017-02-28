@@ -43,10 +43,6 @@ class Connect_Us_Widget extends WP_Widget {
                     <?php if( $google ) : ?>
                     <li class="google"><a href="<?php echo $google; ?>">google</a></li>
                     <?php endif; ?>
-
-                    <?php if( $tripAdvisor ) : ?>
-                    <li class="tripAdvisor"><a href="<?php echo $tripAdvisor; ?>">tripAdvisor</a></li>
-                    <?php endif; ?>
                     
                     <?php if( $pinterest ) : ?>
                     <li class="pinterest"><a href="<?php echo $pinterest; ?>">pinterest</a></li>
@@ -58,6 +54,10 @@ class Connect_Us_Widget extends WP_Widget {
 
                     <?php if( $youtube ) : ?>
                     <li class="youtube"><a href="<?php echo $youtube; ?>">youtube</a></li>
+                    <?php endif; ?>
+
+                     <?php if( $tripAdvisor ) : ?>
+                    <li class="tripAdvisor"><a href="<?php echo $tripAdvisor; ?>">tripAdvisor</a></li>
                     <?php endif; ?>
                 </ul>
             </div>
