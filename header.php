@@ -99,22 +99,33 @@
                                     ?></a>
                              
                             <?php } ?>
-                            <div class="user-action">
-                                <ul><?php
-                                if(!is_user_logged_in()): ?>
-                                    <li><a title="<?php _e('Login', 'iamd_text_domain'); ?>" href="<?php echo wp_login_url(get_permalink()); ?>">
-                                            <span class="fa fa-sign-in"></span><?php _e('Login', 'iamd_text_domain'); ?>
-                                        </a></li>
-                                    <li><a title="<?php _e('Register Now', 'iamd_text_domain'); ?>" href="<?php echo wp_registration_url(); ?>">
-                                            <span class="fa fa-user"></span> <?php _e('Register Now', 'iamd_text_domain'); ?>
-                                        </a></li><?php
-                                else: ?>
-                                    <li><a title="<?php _e('Logout', 'iamd_text_domain'); ?>" href="<?php echo wp_logout_url(get_permalink()); ?>">
-                                            <span class="fa fa-sign-out"></span> <?php _e('Logout', 'iamd_text_domain'); ?>
-                                        </a></li><?php
-                                endif; ?>
-                                </ul>
-                            </div>
+                            
+                            <?php if(!is_user_logged_in()): ?>
+                                <div class="user-action" data-toggle="modal" data-target="#myModal"></div>
+                                <div id="myModal" class="modal fade" role="dialog">
+                                  <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <?php echo do_shortcode("[woocommerce_my_account]"); ?>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+
+                                  </div>
+                                </div>
+                            <?php else: ?>
+                                <div class="user-action"><ul>
+                                    <li><a title="<?php _e('Logout', 'iamd_text_domain'); ?>" href="<?php echo wp_logout_url(get_permalink()); ?>"><span class="fa fa-sign-out"></span> <?php _e('Logout', 'iamd_text_domain'); ?>
+                                        </a></li></ul>
+                                </div>
+                            <?php endif; ?>
                         </div><!-- fuc-header -->
                     </div>
 				</header>

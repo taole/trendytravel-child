@@ -114,4 +114,56 @@ function base_scripts() {
 }
 
 /* Woo Register Form*/
+function wooc_extra_register_fields() {?>
+            
+<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+    <label for="confirm_password">Confirm Password <span class="req">(required)</span></label>
+    <input type="password" name="confirm_password" id="confirm_password" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*Confirm Password">
+</p>
+
+<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+    <label for="first_name">First Name <span class="req">(required)</span></label>
+    <input type="text" name="first_name" id="first_name" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*First Name">
+</p>
+
+<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+    <label for="last_name">Last Name <span class="req">(required)</span></label>
+    <input type="text" name="last_name" id="last_name" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*Last Name">
+</p>
+
+<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+    <label for="phone1">Phone Number <span class="req">(required)</span></label>
+    <input type="text" name="phone1" id="phone1" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*Phone Number">
+</p>
+<div class="regis-col2">
+
+<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+    <label for="country">Country <span class="req">(required)</span></label>
+    <div class="selection-box">
+        <select name="country" id="country" class="dropdown">
+            <option value="">Select Your Country</option>
+            <option value="vietnam">Vietnam</option>
+            <option value="cambodia">Cambodia</option>
+            <option value="laos">Laos</option>
+        </select>
+    </div>
+</p>
+<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+    <label for="addr1">Address <span class="req">(required)</span></label>
+    <input type="text" name="addr1" id="addr1" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*Address">
+</p>
+
+<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+    <label for="postcode">Post Code <span class="req">(required)</span><br>
+    <input type="text" name="postcode" id="postcode" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*Post Code">
+</p>
+
+<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+    <label for="city">Town &amp; City <span class="req">(required)</span></label>
+    <input type="text" name="city" id="city" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*Town & City">
+</p>
+</div>
+<?php
+ }
+ add_action( 'woocommerce_register_form', 'wooc_extra_register_fields' );
 ?>
