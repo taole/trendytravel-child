@@ -1,6 +1,6 @@
 @include screen-theme(mbLan){
 	.container {
-	    width: 640px !important;
+	    width: 630px !important;
 	}
 	.gbtn{
 		min-width: 144px;
@@ -40,6 +40,9 @@
           left: 0;
           right: 0;
           bottom:40px;
+        }
+        h3.ls-l{
+          font-size: 30px;
         }
       }
 
@@ -456,4 +459,293 @@
     }
   }
   /* e: about us */
+
+  /* contact us */
+  .contactus-tour{
+    padding-top: 14px !important;
+    padding-bottom: 0 !important;
+    margin-bottom: -8px;
+    .column{
+      margin-right: 0;
+      margin-left: 0;
+      &.dt-sc-one-fourth{
+        width: 50% !important;
+        padding-left: 3px;
+        @include box-sizing();
+        &.first{
+          padding-right: 3px;
+          padding-left: 0;
+        }
+      }
+      &.dt-sc-one-half{
+        width: 100% !important;
+      }
+      img{
+        width: 100%;
+      }
+    }
+
+    .text{
+      position: static;
+      background-color: transparent;
+      padding-top: 0;
+
+      a{
+        margin-top: 0;
+        margin-left: -15px;
+        margin-right: -15px;
+        i{
+          width: 16px;
+          height: 16px;
+          background-size: 16px 16px;
+        }
+      }
+      h2{
+        font-size: 16px;
+        margin-top: -24px;
+        padding: 0 15px;
+      }
+    }
+  }
+
+  .contactus-form{
+    @include clearfix();
+    .container{
+      padding-right: 23px;
+      form{
+        fieldset{
+          position: relative;
+          padding-right: 0;
+          @include clearfix();
+          @include box-sizing();
+          min-height: 1px;
+          padding-bottom: 0;
+          .frm_form_field{
+            &.frm_full{
+              position: static;
+              width: 100% !important;
+              @include box-sizing();
+              padding: 0 7px 0 0;
+            }
+          }
+          .frm_submit{
+            position: static;
+            margin: 0 -23px 0 -30px;
+            input{
+              float: none;
+              display: block;
+              width: 100% !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contactus-tour-desk{
+    display: none;
+  }
+  .contactus-tour-mobile{
+    display: block;
+  }
+  .mg-top-mb{
+    margin-top: 25px;
+  }
+  /* e: contact us */
+
+
+  /* login register */
+  .modal{
+    .modal-dialog{
+      width: 630px;
+      margin: 60px auto 0;
+      .modal-content{
+        padding: 0;
+        background-color: #12887d;
+        .modal-body{
+          &>.logo-form{
+            position: static;
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+            max-width: 200px;
+            img{
+              height: 31px;
+            }
+          }
+        }
+      }
+    }
+    .woocommerce{
+      .col2-set{
+        padding-top: 67px;
+        position: relative;
+        &:before{
+          background-color: #0d6f6b;
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 52px;
+          z-index: 1;
+          top:0;
+        }
+        .col-1{
+          padding: 0;
+          margin-top: 0;
+          float: none;
+          border: none;
+          width: 100%;
+          h2{
+            left: 0;
+            background-color: #07575b;
+            color:#13887d;
+            &+p{
+              text-align: center;
+            }
+          }
+        }
+        .col-2{
+          width: 100%;
+          float: none;
+          padding: 0;
+          background-color: transparent;
+          h2{
+            right: 0;
+            padding: 0;
+            &+p{
+              display: none;
+            }
+          }
+        }
+        &.login-open{
+          .col-1{
+            h2{
+              background-color: #07575b;
+              color:#13887d;
+            }
+            form.login{
+              display: block;
+            }
+          }
+        }
+        &.register-open{
+          .col-1{
+            h2{
+              background-color: #0d6f6b;
+              &+p{
+                display: none;
+              }
+            }
+            form.login{
+              display: none;
+            }
+          }
+          .col-2{
+            h2{
+              background-color: #07575b;
+              color:#13887d;
+              &+p{
+                display: block;
+                text-align: center;
+              }
+            }
+            form.register{
+              display: block;
+            }
+          }
+        }
+      }
+      h2{
+        font-size: 16px;
+        cursor: pointer;
+        position: absolute;
+        top:0;
+        width: 50%;
+        text-align: center;
+        z-index: 3;
+        background-color: #0d6f6b;
+        line-height: 52px;
+      }
+      .form-row-wide, .form-row{
+        padding: 0 8px;
+        input, select{
+//          font-size: 14px;
+//          height: 34px;
+          background-color: #10726e !important;
+        }
+      }
+      .form-row{
+        margin-bottom: 15px;
+        input[type=submit]{
+          font-size: 24px;
+          height: 68px;
+        }
+      }
+//      .selection-box{
+//        &:after{
+//          width: 34px;
+//          height: 34px;
+//          background-size:34px 34px;
+//        }
+//      }
+
+      // register
+      form.register{
+        margin: 0 22px;
+        padding-bottom: 0;
+        display: none;
+        .register-slogan{
+          text-align: center;
+        }
+        .regis-col2{
+          &+ .form-row{
+            position: static;
+            width: auto;
+            padding: 0;
+            float: none;
+            margin-right: -22px;
+            margin-left: -22px;
+          }
+        }
+        .form-row{
+          input[type="submit"]{
+            background-color: rgba(#09565a,0.5);
+          }
+          input[type="email"], input[type="password"]{
+            background-color: #07575b !important;
+          }
+        }
+        &>p.form-row:last-child{
+          float: none;
+          width: auto;
+          padding: 0;
+          margin: 0 -22px;
+        }
+      }
+
+      // login
+      form.login{
+        margin-left: auto;
+        margin-right: auto;
+        .form-row-wide{
+          max-width: 280px;
+          padding: 0;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .form-row{
+          padding: 0;
+          .inline{
+            text-align: center;
+          }
+        }
+        .lost_password{
+          text-align: center;
+        }
+      }
+    }
+  }
+  /* e: login register */
 }

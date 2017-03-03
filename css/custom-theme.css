@@ -57,9 +57,10 @@ body {
   font-family: AvenirNextLTPro, Arial, sans-serif;
   color: #a9a8a8;
   font-size: 14px;
+  padding-right: 0 !important;
 }
 
-/* line 72, ../sass/_common.scss */
+/* line 73, ../sass/_common.scss */
 .breadcrumb-wrapper {
   background: none !important;
   float: none !important;
@@ -76,18 +77,22 @@ body {
   clear: both;
 }
 @media only screen and (max-width: 767px) {
-  /* line 72, ../sass/_common.scss */
+  /* line 73, ../sass/_common.scss */
   .breadcrumb-wrapper {
     display: none;
   }
 }
-@media only screen and (min-width: 320px) and (max-width: 640px) {
-  /* line 72, ../sass/_common.scss */
+@media only screen and (min-width: 320px) and (max-width: 639px) {
+  /* line 73, ../sass/_common.scss */
   .breadcrumb-wrapper {
     display: none;
   }
 }
 /* line 84, ../sass/_common.scss */
+.breadcrumb-wrapper h1 {
+  display: none;
+}
+/* line 88, ../sass/_common.scss */
 .breadcrumb-wrapper .container .breadcrumb {
   float: none;
   color: #c7c6c6;
@@ -102,24 +107,24 @@ body {
   display: table;
   clear: both;
 }
-/* line 92, ../sass/_common.scss */
+/* line 96, ../sass/_common.scss */
 .breadcrumb-wrapper .container .breadcrumb a {
   color: #c7c6c6;
 }
-/* line 95, ../sass/_common.scss */
+/* line 99, ../sass/_common.scss */
 .breadcrumb-wrapper .container .breadcrumb h4 {
   color: #c7c6c6;
   font-family: AvenirNextLTProDemi, Arial, sans-serif;
   font-weight: bold;
 }
-/* line 100, ../sass/_common.scss */
+/* line 104, ../sass/_common.scss */
 .breadcrumb-wrapper .container .breadcrumb span {
   background: none;
-  margin: 2px 3px 0;
+  margin: 0 3px 0;
   width: auto;
   height: auto;
 }
-/* line 105, ../sass/_common.scss */
+/* line 109, ../sass/_common.scss */
 .breadcrumb-wrapper .container .breadcrumb span:before {
   content: "/";
   display: inline-block;
@@ -127,7 +132,7 @@ body {
   top: -3px;
 }
 
-/* line 116, ../sass/_common.scss */
+/* line 120, ../sass/_common.scss */
 h2.section-title {
   font-family: AvenirNextLTPro, Arial, sans-serif;
   font-weight: 700;
@@ -142,12 +147,12 @@ h2.section-title {
   /*----*****---- << Tablet (Portrait) >> ----*****----*/
   /* Note: Design for a width of 768px, Gutter: 30px, Unit: 32px .container { width:710px; }*/
 }
-/* line 126, ../sass/_common.scss */
+/* line 130, ../sass/_common.scss */
 h2.section-title:before {
   display: none;
 }
 @media only screen and (min-width: 960px) and (max-width: 1119px) {
-  /* line 116, ../sass/_common.scss */
+  /* line 120, ../sass/_common.scss */
   h2.section-title {
     font-size: 18px;
   }
@@ -157,19 +162,19 @@ h2.section-title:before {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  /* line 116, ../sass/_common.scss */
+  /* line 120, ../sass/_common.scss */
   h2.section-title {
     font-size: 16px;
   }
 }
 
 @media only screen and (min-width: 1281px) {
-  /* line 138, ../sass/_common.scss */
+  /* line 142, ../sass/_common.scss */
   .container {
     width: 1144px !important;
   }
 }
-/* line 143, ../sass/_common.scss */
+/* line 147, ../sass/_common.scss */
 #main {
   padding-bottom: 58px !important;
 }
@@ -1072,6 +1077,13 @@ h2.section-title:before {
   display: inline-block;
 }
 /* line 51, ../sass/_homepage.scss */
+.banner #slider-container h3.ls-l {
+  color: #fff;
+  font-size: 62px;
+  font-family: ProximaNovaAltBold, Arial, sans-serif;
+  text-transform: uppercase;
+}
+/* line 57, ../sass/_homepage.scss */
 .banner #slider-container .ls-nav-prev, .banner #slider-container .ls-nav-next {
   display: block;
   width: 24px;
@@ -1084,32 +1096,32 @@ h2.section-title:before {
   transform: translateY(-50%);
   z-index: 33;
 }
-/* line 60, ../sass/_homepage.scss */
+/* line 66, ../sass/_homepage.scss */
 .banner #slider-container .ls-nav-prev {
   background: url("../images/icons/arrow-left.png") no-repeat 0 0;
   left: 50px;
 }
-/* line 63, ../sass/_homepage.scss */
+/* line 69, ../sass/_homepage.scss */
 .banner #slider-container .ls-nav-prev:hover {
   background-position: 0 -87px;
 }
-/* line 67, ../sass/_homepage.scss */
+/* line 73, ../sass/_homepage.scss */
 .banner #slider-container .ls-nav-next {
   right: 50px;
   background: url("../images/icons/arrow-right.png") no-repeat 0 -87px;
 }
-/* line 70, ../sass/_homepage.scss */
+/* line 76, ../sass/_homepage.scss */
 .banner #slider-container .ls-nav-next:hover {
   background-position: 0 0;
 }
-/* line 74, ../sass/_homepage.scss */
+/* line 80, ../sass/_homepage.scss */
 .banner #slider-container .ls-bottom-nav-wrapper {
   position: absolute;
   left: 116px;
   bottom: 40px;
   display: block;
 }
-/* line 80, ../sass/_homepage.scss */
+/* line 86, ../sass/_homepage.scss */
 .banner #slider-container .ls-bottom-nav-wrapper .ls-bottom-slidebuttons a {
   display: inline-block;
   width: 13px;
@@ -1130,25 +1142,25 @@ h2.section-title:before {
   visibility: visible;
   margin: 0 8px;
 }
-/* line 90, ../sass/_homepage.scss */
+/* line 96, ../sass/_homepage.scss */
 .banner #slider-container .ls-bottom-nav-wrapper .ls-bottom-slidebuttons a:hover, .banner #slider-container .ls-bottom-nav-wrapper .ls-bottom-slidebuttons a.ls-nav-active {
   background-color: transparent;
   border: 3px solid #1c857d;
 }
 
-/* line 101, ../sass/_homepage.scss */
+/* line 107, ../sass/_homepage.scss */
 .scrollDown-social .container {
   position: relative;
 }
-/* line 103, ../sass/_homepage.scss */
+/* line 109, ../sass/_homepage.scss */
 .scrollDown-social .container .widget {
   padding: 0;
 }
-/* line 106, ../sass/_homepage.scss */
+/* line 112, ../sass/_homepage.scss */
 .scrollDown-social .container p {
   display: none;
 }
-/* line 110, ../sass/_homepage.scss */
+/* line 116, ../sass/_homepage.scss */
 .scrollDown-social .container .scroll-down a {
   color: #fff;
   text-transform: uppercase;
@@ -1165,7 +1177,7 @@ h2.section-title:before {
   top: -65px;
   z-index: 99;
 }
-/* line 122, ../sass/_homepage.scss */
+/* line 128, ../sass/_homepage.scss */
 .scrollDown-social .container .scroll-down a span {
   display: inline-block;
   vertical-align: middle;
@@ -1176,39 +1188,39 @@ h2.section-title:before {
   font-size: 0;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  /* line 122, ../sass/_homepage.scss */
+  /* line 128, ../sass/_homepage.scss */
   .scrollDown-social .container .scroll-down a span {
     border-image: url("../images/icons/scroll-down-2x.png");
   }
 }
-/* line 137, ../sass/_homepage.scss */
+/* line 143, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us {
   position: absolute;
   right: 0;
   top: -60px;
   z-index: 3;
 }
-/* line 142, ../sass/_homepage.scss */
+/* line 148, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us h3.widgettitle {
   display: none;
 }
-/* line 145, ../sass/_homepage.scss */
+/* line 151, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us .social-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 149, ../sass/_homepage.scss */
+/* line 155, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us .social-list li {
   float: none;
   display: inline-block;
   width: auto;
 }
-/* line 153, ../sass/_homepage.scss */
+/* line 159, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us .social-list li:before {
   display: none;
 }
-/* line 156, ../sass/_homepage.scss */
+/* line 162, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us .social-list li a {
   display: inline-block;
   text-indent: -9999px;
@@ -1218,64 +1230,64 @@ h2.section-title:before {
   width: 26px;
   height: 21px;
 }
-/* line 166, ../sass/_homepage.scss */
+/* line 172, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us .social-list li.facebook a {
   background-position: 0 0;
 }
-/* line 168, ../sass/_homepage.scss */
+/* line 174, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us .social-list li.facebook a:hover {
   background-position: 0 -29px;
 }
-/* line 173, ../sass/_homepage.scss */
+/* line 179, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us .social-list li.twitter {
   padding-left: 7px;
 }
-/* line 175, ../sass/_homepage.scss */
+/* line 181, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us .social-list li.twitter a {
   background-position: -38px 0;
 }
-/* line 177, ../sass/_homepage.scss */
+/* line 183, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us .social-list li.twitter a:hover {
   background-position: -38px -29px;
 }
-/* line 191, ../sass/_homepage.scss */
+/* line 197, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us .social-list li.google a {
   background-position: -124px 0;
 }
-/* line 193, ../sass/_homepage.scss */
+/* line 199, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us .social-list li.google a:hover {
   background-position: -124px -29px;
 }
-/* line 199, ../sass/_homepage.scss */
+/* line 205, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us .social-list li.skype a {
   background-position: -208px 0;
 }
-/* line 201, ../sass/_homepage.scss */
+/* line 207, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us .social-list li.skype a:hover {
   background-position: -208px -29px;
 }
-/* line 206, ../sass/_homepage.scss */
+/* line 212, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us .social-list li.youtube {
   padding-left: 10px;
 }
-/* line 208, ../sass/_homepage.scss */
+/* line 214, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us .social-list li.youtube a {
   background-position: -243px 0;
 }
-/* line 210, ../sass/_homepage.scss */
+/* line 216, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us .social-list li.youtube a:hover {
   background-position: -243px -29px;
 }
-/* line 217, ../sass/_homepage.scss */
+/* line 223, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us .social-list li.tripAdvisor a {
   background-position: -164px 0;
 }
-/* line 219, ../sass/_homepage.scss */
+/* line 225, ../sass/_homepage.scss */
 .scrollDown-social .container .connect-us .social-list li.tripAdvisor a:hover {
   background-position: -164px -29px;
 }
 
-/* line 231, ../sass/_homepage.scss */
+/* line 237, ../sass/_homepage.scss */
 .find-a-tour {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
@@ -1283,11 +1295,11 @@ h2.section-title:before {
   color: #fff;
   margin-bottom: 35px;
 }
-/* line 237, ../sass/_homepage.scss */
+/* line 243, ../sass/_homepage.scss */
 .find-a-tour #uwpqsf_id {
   border: none;
 }
-/* line 240, ../sass/_homepage.scss */
+/* line 246, ../sass/_homepage.scss */
 .find-a-tour .uform_title {
   text-align: left;
   font-size: 23px;
@@ -1295,11 +1307,11 @@ h2.section-title:before {
   font-family: AvenirNextLTPro, Arial, sans-serif;
   padding: 22px 5px;
 }
-/* line 247, ../sass/_homepage.scss */
+/* line 253, ../sass/_homepage.scss */
 .find-a-tour form {
   margin: 0 -5px;
 }
-/* line 250, ../sass/_homepage.scss */
+/* line 256, ../sass/_homepage.scss */
 .find-a-tour .uwpqsf_class {
   float: left;
   width: 25%;
@@ -1311,11 +1323,11 @@ h2.section-title:before {
   -ms-box-sizing: border-box !important;
   box-sizing: border-box !important;
 }
-/* line 257, ../sass/_homepage.scss */
+/* line 263, ../sass/_homepage.scss */
 .find-a-tour .uwpqsf_class span {
   display: none;
 }
-/* line 260, ../sass/_homepage.scss */
+/* line 266, ../sass/_homepage.scss */
 .find-a-tour .uwpqsf_class select {
   margin: 0;
   color: #fff;
@@ -1331,12 +1343,12 @@ h2.section-title:before {
   border: none;
   width: 100%;
 }
-/* line 271, ../sass/_homepage.scss */
+/* line 277, ../sass/_homepage.scss */
 .find-a-tour .uwpqsf_class select option {
   background: transparent;
   text-transform: capitalize;
 }
-/* line 276, ../sass/_homepage.scss */
+/* line 282, ../sass/_homepage.scss */
 .find-a-tour .uwpqsf_class input[type="submit"] {
   color: #1c857d;
   font-family: AvenirNextLTProDemi, Arial, sans-serif;
@@ -1358,11 +1370,11 @@ h2.section-title:before {
   -ms-transition: all ease 0.5s;
   transition: all ease 0.5s;
 }
-/* line 290, ../sass/_homepage.scss */
+/* line 296, ../sass/_homepage.scss */
 .find-a-tour .uwpqsf_class input[type="submit"]:hover {
   color: #fff;
 }
-/* line 295, ../sass/_homepage.scss */
+/* line 301, ../sass/_homepage.scss */
 .find-a-tour .uwpqsf_class .selection-box:after {
   width: 50px;
   height: 53px;
@@ -1373,11 +1385,11 @@ h2.section-title:before {
   border-radius: 0;
 }
 
-/* line 305, ../sass/_homepage.scss */
+/* line 311, ../sass/_homepage.scss */
 .popular-tours {
   margin-bottom: 35px;
 }
-/* line 307, ../sass/_homepage.scss */
+/* line 313, ../sass/_homepage.scss */
 .popular-tours h2.section-title {
   font-family: AvenirNextLTPro, Arial, sans-serif;
   font-weight: 700;
@@ -1386,25 +1398,25 @@ h2.section-title:before {
   color: #13887d;
   border: none;
 }
-/* line 314, ../sass/_homepage.scss */
+/* line 320, ../sass/_homepage.scss */
 .popular-tours h2.section-title:before {
   display: none;
 }
-/* line 318, ../sass/_homepage.scss */
+/* line 324, ../sass/_homepage.scss */
 .popular-tours .column {
   margin-left: 10px;
   position: relative;
   overflow: hidden;
 }
-/* line 322, ../sass/_homepage.scss */
+/* line 328, ../sass/_homepage.scss */
 .popular-tours .column.first {
   margin-left: 0;
 }
-/* line 326, ../sass/_homepage.scss */
+/* line 332, ../sass/_homepage.scss */
 .popular-tours .column:hover .text {
   bottom: 0;
 }
-/* line 331, ../sass/_homepage.scss */
+/* line 337, ../sass/_homepage.scss */
 .popular-tours .text {
   color: #fff;
   background-color: #10726e;
@@ -1421,7 +1433,7 @@ h2.section-title:before {
   -ms-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }
-/* line 343, ../sass/_homepage.scss */
+/* line 349, ../sass/_homepage.scss */
 .popular-tours .text h3 {
   font-size: 14px;
   font-family: AvenirNextLTPro, Arial, sans-serif;
@@ -1429,7 +1441,7 @@ h2.section-title:before {
   color: #fff;
   margin: 0 0 12px;
 }
-/* line 350, ../sass/_homepage.scss */
+/* line 356, ../sass/_homepage.scss */
 .popular-tours .text h2 {
   font-size: 16px;
   font-weight: 700;
@@ -1438,7 +1450,7 @@ h2.section-title:before {
   padding-bottom: 24px;
   color: #fff;
 }
-/* line 358, ../sass/_homepage.scss */
+/* line 364, ../sass/_homepage.scss */
 .popular-tours .text a {
   display: block;
   font-weight: 700;
@@ -1448,15 +1460,15 @@ h2.section-title:before {
   background-color: #0f666b;
   color: #fff;
 }
-/* line 367, ../sass/_homepage.scss */
+/* line 373, ../sass/_homepage.scss */
 .popular-tours .text a:hover {
   background-color: #13757a;
 }
-/* line 373, ../sass/_homepage.scss */
+/* line 379, ../sass/_homepage.scss */
 .popular-tours .dt-sc-one-column {
   text-align: center;
 }
-/* line 375, ../sass/_homepage.scss */
+/* line 381, ../sass/_homepage.scss */
 .popular-tours .dt-sc-one-column .dt-sc-button {
   background-color: #0f666b !important;
   color: #fff;
@@ -1468,12 +1480,12 @@ h2.section-title:before {
   font-size: 18px;
   margin-top: 32px;
 }
-/* line 383, ../sass/_homepage.scss */
+/* line 389, ../sass/_homepage.scss */
 .popular-tours .dt-sc-one-column .dt-sc-button:hover {
   background-color: #13757a !important;
 }
 
-/* line 390, ../sass/_homepage.scss */
+/* line 396, ../sass/_homepage.scss */
 .tour-type {
   border-top: 6px solid #f8f8f8;
   background: url("../images/bg-tour-type.jpg") repeat-x;
@@ -1481,23 +1493,23 @@ h2.section-title:before {
   background-color: #f8f8f8;
   padding-bottom: 38px;
 }
-/* line 396, ../sass/_homepage.scss */
+/* line 402, ../sass/_homepage.scss */
 .tour-type h2.section-title {
   color: #fff;
 }
-/* line 401, ../sass/_homepage.scss */
+/* line 407, ../sass/_homepage.scss */
 .tour-type .column:hover .text {
   bottom: auto;
 }
-/* line 403, ../sass/_homepage.scss */
+/* line 409, ../sass/_homepage.scss */
 .tour-type .column:hover .text a {
   opacity: 1;
 }
-/* line 406, ../sass/_homepage.scss */
+/* line 412, ../sass/_homepage.scss */
 .tour-type .column:hover .text h2 {
   font-size: 26px;
 }
-/* line 413, ../sass/_homepage.scss */
+/* line 419, ../sass/_homepage.scss */
 .tour-type .text {
   background: transparent;
   top: 50%;
@@ -1510,7 +1522,7 @@ h2.section-title:before {
   transform: translateY(-50%);
   padding: 0 20px;
 }
-/* line 421, ../sass/_homepage.scss */
+/* line 427, ../sass/_homepage.scss */
 .tour-type .text h2 {
   font-size: 22px;
   -webkit-transition: all ease 0.3s;
@@ -1518,7 +1530,7 @@ h2.section-title:before {
   -ms-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }
-/* line 425, ../sass/_homepage.scss */
+/* line 431, ../sass/_homepage.scss */
 .tour-type .text a {
   margin: 0;
   opacity: 0;
@@ -1532,12 +1544,12 @@ h2.section-title:before {
   display: inline-block;
 }
 
-/* line 437, ../sass/_homepage.scss */
+/* line 443, ../sass/_homepage.scss */
 .testimonials {
   position: relative;
   margin-bottom: 42px;
 }
-/* line 440, ../sass/_homepage.scss */
+/* line 446, ../sass/_homepage.scss */
 .testimonials h2.section-title {
   font-family: AvenirNextLTPro, Arial, sans-serif;
   font-weight: 700;
@@ -1546,15 +1558,15 @@ h2.section-title:before {
   color: #13887d;
   border: none;
 }
-/* line 447, ../sass/_homepage.scss */
+/* line 453, ../sass/_homepage.scss */
 .testimonials h2.section-title:before {
   display: none;
 }
-/* line 451, ../sass/_homepage.scss */
+/* line 457, ../sass/_homepage.scss */
 .testimonials .column {
   position: static;
 }
-/* line 454, ../sass/_homepage.scss */
+/* line 460, ../sass/_homepage.scss */
 .testimonials blockquote {
   font-family: AvenirNextLTProDemi, Arial, sans-serif;
   font-weight: 700;
@@ -1565,34 +1577,34 @@ h2.section-title:before {
   text-align: center;
   margin-bottom: 20px;
 }
-/* line 463, ../sass/_homepage.scss */
+/* line 469, ../sass/_homepage.scss */
 .testimonials blockquote q {
   color: #adacac;
   float: none;
 }
-/* line 468, ../sass/_homepage.scss */
+/* line 474, ../sass/_homepage.scss */
 .testimonials .dt-sc-testimonial-carousel-wrapper {
   margin-top: 0;
 }
-/* line 471, ../sass/_homepage.scss */
+/* line 477, ../sass/_homepage.scss */
 .testimonials .dt-sc-testimonial-carousel-wrapper .carousel-arrows .testimonial-prev {
   left: -50px;
 }
-/* line 474, ../sass/_homepage.scss */
+/* line 480, ../sass/_homepage.scss */
 .testimonials .dt-sc-testimonial-carousel-wrapper .carousel-arrows .testimonial-next {
   right: -50px;
 }
-/* line 480, ../sass/_homepage.scss */
+/* line 486, ../sass/_homepage.scss */
 .testimonials .infor {
   text-align: center;
   color: #096368;
   font-size: 18px;
 }
-/* line 484, ../sass/_homepage.scss */
+/* line 490, ../sass/_homepage.scss */
 .testimonials .infor .author {
   margin-bottom: 11px;
 }
-/* line 486, ../sass/_homepage.scss */
+/* line 492, ../sass/_homepage.scss */
 .testimonials .infor .author img {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1603,7 +1615,7 @@ h2.section-title:before {
   margin: auto;
 }
 
-/* line 496, ../sass/_homepage.scss */
+/* line 502, ../sass/_homepage.scss */
 .why-travel {
   background-color: #10726e;
   color: #fff;
@@ -1614,16 +1626,16 @@ h2.section-title:before {
   padding: 30px 0 0;
   margin-bottom: 26px;
 }
-/* line 505, ../sass/_homepage.scss */
+/* line 511, ../sass/_homepage.scss */
 .why-travel.why-travel-title {
   margin-bottom: -1px;
   float: left;
 }
-/* line 509, ../sass/_homepage.scss */
+/* line 515, ../sass/_homepage.scss */
 .why-travel.slick-travel {
   padding-top: 0;
 }
-/* line 512, ../sass/_homepage.scss */
+/* line 518, ../sass/_homepage.scss */
 .why-travel .slick-arrow {
   position: absolute;
   top: 50%;
@@ -1641,17 +1653,17 @@ h2.section-title:before {
   background-color: transparent;
   z-index: 999;
 }
-/* line 525, ../sass/_homepage.scss */
+/* line 531, ../sass/_homepage.scss */
 .why-travel .slick-arrow.slick-prev {
   left: 0;
   background: url("../images/icons/arrow-left-sm.png") no-repeat;
 }
-/* line 530, ../sass/_homepage.scss */
+/* line 536, ../sass/_homepage.scss */
 .why-travel .slick-arrow.slick-next {
   right: 0;
   background: url("../images/icons/arrow-right-sm.png") no-repeat;
 }
-/* line 535, ../sass/_homepage.scss */
+/* line 541, ../sass/_homepage.scss */
 .why-travel h2.section-title {
   font-family: AvenirNextLTPro, Arial, sans-serif;
   font-weight: 700;
@@ -1661,23 +1673,23 @@ h2.section-title:before {
   border: none;
   margin-bottom: 30px;
 }
-/* line 543, ../sass/_homepage.scss */
+/* line 549, ../sass/_homepage.scss */
 .why-travel h2.section-title:before {
   display: none;
 }
-/* line 547, ../sass/_homepage.scss */
+/* line 553, ../sass/_homepage.scss */
 .why-travel .column {
   margin-bottom: 23px;
   margin-left: 0;
 }
-/* line 550, ../sass/_homepage.scss */
+/* line 556, ../sass/_homepage.scss */
 .why-travel .column p {
   padding: 0 20px;
   line-height: 1.3;
   margin-bottom: 6px;
 }
 
-/* line 560, ../sass/_homepage.scss */
+/* line 566, ../sass/_homepage.scss */
 .fullwidth-section.tablist .container ul {
   margin-bottom: 20px;
 }
@@ -1687,7 +1699,7 @@ h2.section-title:before {
   display: table;
   clear: both;
 }
-/* line 564, ../sass/_homepage.scss */
+/* line 570, ../sass/_homepage.scss */
 .fullwidth-section.tablist .container ul li a {
   font-family: AvenirNextLTPro, Arial, sans-serif;
   font-weight: bold;
@@ -1695,36 +1707,36 @@ h2.section-title:before {
   font-size: 18px;
   border-bottom-color: #dcdbdb;
 }
-/* line 570, ../sass/_homepage.scss */
+/* line 576, ../sass/_homepage.scss */
 .fullwidth-section.tablist .container ul li a:hover {
   color: #10726e;
 }
-/* line 575, ../sass/_homepage.scss */
+/* line 581, ../sass/_homepage.scss */
 .fullwidth-section.tablist .container ul li.current a {
   border-bottom: 9px solid #10726e;
   color: #10726e;
 }
 
-/* line 586, ../sass/_homepage.scss */
+/* line 592, ../sass/_homepage.scss */
 .popular-tours.tab-content {
   margin-bottom: 0;
 }
-/* line 588, ../sass/_homepage.scss */
+/* line 594, ../sass/_homepage.scss */
 .popular-tours.tab-content .text {
   background-color: #07575b;
   bottom: -55px;
 }
-/* line 591, ../sass/_homepage.scss */
+/* line 597, ../sass/_homepage.scss */
 .popular-tours.tab-content .text a {
   margin-top: 0;
   background-color: #10726e;
 }
-/* line 598, ../sass/_homepage.scss */
+/* line 604, ../sass/_homepage.scss */
 .popular-tours.tab-content .column:hover .text {
   bottom: 0;
 }
 @media only screen and (min-width: 1281px) {
-  /* line 603, ../sass/_homepage.scss */
+  /* line 609, ../sass/_homepage.scss */
   .popular-tours.tab-content .dt-sc-one-fourth {
     width: 23.9945%;
   }
@@ -1886,11 +1898,15 @@ h2.section-title:before {
 .contactus-form .container form fieldset .frm_form_field input, .contactus-form .container form fieldset .frm_form_field select {
   height: 36px;
 }
-/* line 44, ../sass/_contact-us.scss */
+/* line 43, ../sass/_contact-us.scss */
+.contactus-form .container form fieldset .frm_form_field select {
+  text-indent: 14px;
+}
+/* line 45, ../sass/_contact-us.scss */
 .contactus-form .container form fieldset .frm_form_field select option {
   color: #333;
 }
-/* line 48, ../sass/_contact-us.scss */
+/* line 49, ../sass/_contact-us.scss */
 .contactus-form .container form fieldset .frm_form_field textarea {
   height: 138px;
   text-indent: 0;
@@ -1901,7 +1917,7 @@ h2.section-title:before {
   -ms-box-sizing: border-box !important;
   box-sizing: border-box !important;
 }
-/* line 56, ../sass/_contact-us.scss */
+/* line 57, ../sass/_contact-us.scss */
 .contactus-form .container form fieldset .frm_form_field .selection-box:after {
   background: url("../images/select-2.png") no-repeat top center;
   width: 36px;
@@ -1912,19 +1928,19 @@ h2.section-title:before {
   border-radius: 0;
   top: 0;
 }
-/* line 64, ../sass/_contact-us.scss */
+/* line 65, ../sass/_contact-us.scss */
 .contactus-form .container form fieldset .frm_form_field.frm_first_half, .contactus-form .container form fieldset .frm_form_field.frm_last_half {
   width: 50% !important;
   float: left !important;
   clear: inherit;
 }
-/* line 70, ../sass/_contact-us.scss */
+/* line 71, ../sass/_contact-us.scss */
 .contactus-form .container form fieldset .frm_form_field.frm_last_half + .frm_top_container {
   width: 50% !important;
   float: left !important;
   clear: inherit;
 }
-/* line 76, ../sass/_contact-us.scss */
+/* line 77, ../sass/_contact-us.scss */
 .contactus-form .container form fieldset .frm_form_field.frm_full {
   position: absolute;
   top: 0;
@@ -1938,7 +1954,7 @@ h2.section-title:before {
   padding-right: 0;
   z-index: 2;
 }
-/* line 87, ../sass/_contact-us.scss */
+/* line 88, ../sass/_contact-us.scss */
 .contactus-form .container form fieldset .frm_submit {
   height: 67px;
   background-color: #0e8076;
@@ -1947,7 +1963,7 @@ h2.section-title:before {
   right: -30px;
   bottom: 0;
 }
-/* line 94, ../sass/_contact-us.scss */
+/* line 95, ../sass/_contact-us.scss */
 .contactus-form .container form fieldset .frm_submit input {
   min-width: 280px;
   height: 67px;
@@ -1969,13 +1985,13 @@ h2.section-title:before {
   padding: 0 10px;
   text-align: center;
 }
-/* line 108, ../sass/_contact-us.scss */
+/* line 109, ../sass/_contact-us.scss */
 .contactus-form .container form fieldset .frm_submit input:hover, .contactus-form .container form fieldset .frm_submit input:focus {
   background-color: #106e6b;
   color: #fff;
 }
 
-/* line 119, ../sass/_contact-us.scss */
+/* line 120, ../sass/_contact-us.scss */
 .contactus-tour {
   float: none;
   padding-top: 20px !important;
@@ -1994,50 +2010,50 @@ h2.section-title:before {
   clear: both;
 }
 @media only screen and (min-width: 1281px) {
-  /* line 128, ../sass/_contact-us.scss */
+  /* line 129, ../sass/_contact-us.scss */
   .contactus-tour .container .column.dt-sc-one-fourth {
     width: 24.3%;
   }
-  /* line 131, ../sass/_contact-us.scss */
+  /* line 132, ../sass/_contact-us.scss */
   .contactus-tour .container .column.dt-sc-one-half {
     width: 49.4%;
   }
 }
 @media only screen and (min-width: 960px) and (max-width: 1119px) {
-  /* line 137, ../sass/_contact-us.scss */
+  /* line 138, ../sass/_contact-us.scss */
   .contactus-tour .container .column.dt-sc-one-fourth {
     width: 24.25%;
   }
-  /* line 140, ../sass/_contact-us.scss */
+  /* line 141, ../sass/_contact-us.scss */
   .contactus-tour .container .column.dt-sc-one-half {
     width: 49.3%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  /* line 145, ../sass/_contact-us.scss */
+  /* line 146, ../sass/_contact-us.scss */
   .contactus-tour .container .column.dt-sc-one-fourth {
     width: 24.1%;
   }
-  /* line 148, ../sass/_contact-us.scss */
+  /* line 149, ../sass/_contact-us.scss */
   .contactus-tour .container .column.dt-sc-one-half {
     width: 49%;
   }
 }
-/* line 154, ../sass/_contact-us.scss */
+/* line 155, ../sass/_contact-us.scss */
 .contactus-tour img, .contactus-tour p {
   margin-bottom: 0;
 }
-/* line 157, ../sass/_contact-us.scss */
+/* line 158, ../sass/_contact-us.scss */
 .contactus-tour .text {
   position: static;
   background-color: transparent;
   padding-top: 0;
 }
-/* line 161, ../sass/_contact-us.scss */
+/* line 162, ../sass/_contact-us.scss */
 .contactus-tour .text a {
   margin-top: 0;
 }
-/* line 164, ../sass/_contact-us.scss */
+/* line 165, ../sass/_contact-us.scss */
 .contactus-tour .text h2 {
   position: absolute;
   top: 50%;
@@ -2058,7 +2074,7 @@ h2.section-title:before {
   font-size: 32px;
   margin-top: -24px;
 }
-/* line 179, ../sass/_contact-us.scss */
+/* line 180, ../sass/_contact-us.scss */
 .contactus-tour .text a i {
   display: inline-block;
   width: 25px;
@@ -2068,12 +2084,25 @@ h2.section-title:before {
   margin-right: 8px;
 }
 
-/* line 191, ../sass/_contact-us.scss */
+/* line 192, ../sass/_contact-us.scss */
 .contactus-tour-mobile {
   display: none;
 }
 
-/* line 2, ../sass/_register.scss */
+/* line 1, ../sass/_register.scss */
+.modal-backdrop {
+  z-index: 1040 !important;
+}
+
+@media screen and (max-width: 1119px) {
+  /* line 4, ../sass/_register.scss */
+  .modal {
+    position: absolute !important;
+    bottom: auto !important;
+    padding-right: 0 !important;
+  }
+}
+/* line 11, ../sass/_register.scss */
 .modal .modal-dialog {
   width: 954px;
   background-color: #13887d;
@@ -2082,7 +2111,13 @@ h2.section-title:before {
   -ms-border-radius: 0;
   border-radius: 0;
 }
-/* line 6, ../sass/_register.scss */
+@media (min-width: 768px) {
+  /* line 11, ../sass/_register.scss */
+  .modal .modal-dialog {
+    margin: 120px auto;
+  }
+}
+/* line 18, ../sass/_register.scss */
 .modal .modal-dialog .modal-content {
   background-color: #13887d;
   -webkit-border-radius: 0;
@@ -2090,13 +2125,18 @@ h2.section-title:before {
   -ms-border-radius: 0;
   border-radius: 0;
   border: none;
+  padding-left: 44px;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
 }
-/* line 10, ../sass/_register.scss */
+/* line 24, ../sass/_register.scss */
 .modal .modal-dialog .modal-content .modal-header {
   padding: 0;
   border: none;
 }
-/* line 13, ../sass/_register.scss */
+/* line 27, ../sass/_register.scss */
 .modal .modal-dialog .modal-content .modal-header button {
   width: 36px;
   height: 36px;
@@ -2122,13 +2162,14 @@ h2.section-title:before {
   transition: all ease 0.5s;
   z-index: 45;
 }
-/* line 31, ../sass/_register.scss */
+/* line 45, ../sass/_register.scss */
 .modal .modal-dialog .modal-content .modal-header button:hover {
   color: #fff;
 }
-/* line 37, ../sass/_register.scss */
+/* line 51, ../sass/_register.scss */
 .modal .modal-dialog .modal-content .modal-body {
   padding: 0;
+  position: relative;
 }
 /* line 118, ../sass/_mixin.scss */
 .modal .modal-dialog .modal-content .modal-body:before, .modal .modal-dialog .modal-content .modal-body:after {
@@ -2136,13 +2177,21 @@ h2.section-title:before {
   display: table;
   clear: both;
 }
-/* line 41, ../sass/_register.scss */
+/* line 55, ../sass/_register.scss */
+.modal .modal-dialog .modal-content .modal-body > .logo-form {
+  position: absolute;
+  top: 22px;
+  left: 2px;
+}
+/* line 61, ../sass/_register.scss */
 .modal .modal-dialog .modal-content .modal-footer {
   display: none;
 }
-/* line 47, ../sass/_register.scss */
+/* line 67, ../sass/_register.scss */
 .modal .woocommerce {
   color: #fff;
+  /* register */
+  /* login */
 }
 /* line 118, ../sass/_mixin.scss */
 .modal .woocommerce:before, .modal .woocommerce:after {
@@ -2150,32 +2199,54 @@ h2.section-title:before {
   display: table;
   clear: both;
 }
-/* line 50, ../sass/_register.scss */
+/* line 71, ../sass/_register.scss */
+.modal .woocommerce .col2-set .col-1 {
+  width: 29.01%;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  padding: 0 5px;
+  border-top: 1px solid #07575b;
+  padding-top: 36px;
+  margin-top: 84px;
+}
+/* line 79, ../sass/_register.scss */
+.modal .woocommerce .col2-set .col-2 {
+  float: right;
+  width: 65.93%;
+  background-color: #07575b;
+}
+/* line 83, ../sass/_register.scss */
+.modal .woocommerce .col2-set .col-2 h2 {
+  padding: 18px 0 0 30px;
+  margin-bottom: 0;
+}
+/* line 86, ../sass/_register.scss */
+.modal .woocommerce .col2-set .col-2 h2 + p {
+  padding-left: 30px;
+}
+/* line 92, ../sass/_register.scss */
 .modal .woocommerce h2 {
   font-family: AvenirNextLTPro, Arial, sans-serif;
   font-weight: 700;
   font-size: 22px;
   color: #fff;
   text-transform: uppercase;
+  margin: 0 0 6px;
 }
-/* line 57, ../sass/_register.scss */
+/* line 100, ../sass/_register.scss */
 .modal .woocommerce a {
   color: #fff;
 }
-/* line 60, ../sass/_register.scss */
+/* line 103, ../sass/_register.scss */
 .modal .woocommerce form.login, .modal .woocommerce form.register {
   padding: 0;
   margin: 0;
   border: none;
 }
-/* line 65, ../sass/_register.scss */
-.modal .woocommerce .u-column2.col-2 {
-  background-color: #07575b;
-}
-/* line 68, ../sass/_register.scss */
-.modal .woocommerce .form-row-wide, .modal .woocommerce .selection-box {
-  float: left;
-  width: 50%;
+/* line 108, ../sass/_register.scss */
+.modal .woocommerce .form-row-wide, .modal .woocommerce .form-row {
   -webkit-box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;
   -ms-box-sizing: border-box !important;
@@ -2184,8 +2255,8 @@ h2.section-title:before {
   margin-right: 0;
   padding: 0 10px;
 }
-/* line 75, ../sass/_register.scss */
-.modal .woocommerce .form-row-wide input, .modal .woocommerce .form-row-wide select, .modal .woocommerce .selection-box input, .modal .woocommerce .selection-box select {
+/* line 115, ../sass/_register.scss */
+.modal .woocommerce .form-row-wide input, .modal .woocommerce .form-row-wide select, .modal .woocommerce .form-row input, .modal .woocommerce .form-row select {
   color: #fff !important;
   border: none !important;
   -webkit-box-shadow: none !important;
@@ -2193,54 +2264,70 @@ h2.section-title:before {
   -ms-box-shadow: none !important;
   box-shadow: none !important;
   margin: 0;
-  padding: 0;
+  padding: 0 5px 0 0;
   text-indent: 16px;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
   -ms-border-radius: 5px !important;
   border-radius: 5px !important;
+  font-size: 14px;
+  font-family: AvenirNextLTProDemi, Arial, sans-serif;
+  font-weight: 700;
 }
 /* line 126, ../sass/_mixin.scss */
-.modal .woocommerce .form-row-wide input::-webkit-input-placeholder, .modal .woocommerce .form-row-wide select::-webkit-input-placeholder, .modal .woocommerce .selection-box input::-webkit-input-placeholder, .modal .woocommerce .selection-box select::-webkit-input-placeholder {
+.modal .woocommerce .form-row-wide input::-webkit-input-placeholder, .modal .woocommerce .form-row-wide select::-webkit-input-placeholder, .modal .woocommerce .form-row input::-webkit-input-placeholder, .modal .woocommerce .form-row select::-webkit-input-placeholder {
   color: white !important;
 }
 /* line 129, ../sass/_mixin.scss */
-.modal .woocommerce .form-row-wide input:-moz-placeholder, .modal .woocommerce .form-row-wide select:-moz-placeholder, .modal .woocommerce .selection-box input:-moz-placeholder, .modal .woocommerce .selection-box select:-moz-placeholder {
+.modal .woocommerce .form-row-wide input:-moz-placeholder, .modal .woocommerce .form-row-wide select:-moz-placeholder, .modal .woocommerce .form-row input:-moz-placeholder, .modal .woocommerce .form-row select:-moz-placeholder {
   color: white !important;
   opacity: 1;
 }
 /* line 133, ../sass/_mixin.scss */
-.modal .woocommerce .form-row-wide input::-moz-placeholder, .modal .woocommerce .form-row-wide select::-moz-placeholder, .modal .woocommerce .selection-box input::-moz-placeholder, .modal .woocommerce .selection-box select::-moz-placeholder {
+.modal .woocommerce .form-row-wide input::-moz-placeholder, .modal .woocommerce .form-row-wide select::-moz-placeholder, .modal .woocommerce .form-row input::-moz-placeholder, .modal .woocommerce .form-row select::-moz-placeholder {
   color: white !important;
   opacity: 1;
 }
 /* line 137, ../sass/_mixin.scss */
-.modal .woocommerce .form-row-wide input:-ms-input-placeholder, .modal .woocommerce .form-row-wide select:-ms-input-placeholder, .modal .woocommerce .selection-box input:-ms-input-placeholder, .modal .woocommerce .selection-box select:-ms-input-placeholder {
+.modal .woocommerce .form-row-wide input:-ms-input-placeholder, .modal .woocommerce .form-row-wide select:-ms-input-placeholder, .modal .woocommerce .form-row input:-ms-input-placeholder, .modal .woocommerce .form-row select:-ms-input-placeholder {
   color: white !important;
 }
-/* line 85, ../sass/_register.scss */
-.modal .woocommerce .form-row-wide label.inline, .modal .woocommerce .selection-box label.inline {
-  color: #fff;
+/* line 128, ../sass/_register.scss */
+.modal .woocommerce .form-row-wide label.inline, .modal .woocommerce .form-row label.inline {
+  color: #fff !important;
+  display: block !important;
 }
-/* line 88, ../sass/_register.scss */
-.modal .woocommerce .form-row-wide label, .modal .woocommerce .selection-box label {
+/* line 132, ../sass/_register.scss */
+.modal .woocommerce .form-row-wide label, .modal .woocommerce .form-row label {
   display: none;
 }
-/* line 91, ../sass/_register.scss */
-.modal .woocommerce .form-row-wide input, .modal .woocommerce .form-row-wide select, .modal .woocommerce .selection-box input, .modal .woocommerce .selection-box select {
+/* line 135, ../sass/_register.scss */
+.modal .woocommerce .form-row-wide input, .modal .woocommerce .form-row-wide select, .modal .woocommerce .form-row input, .modal .woocommerce .form-row select {
   height: 36px;
 }
-/* line 95, ../sass/_register.scss */
-.modal .woocommerce .form-row-wide select option, .modal .woocommerce .selection-box select option {
+/* line 138, ../sass/_register.scss */
+.modal .woocommerce .form-row-wide select, .modal .woocommerce .form-row select {
+  text-indent: 7px;
+}
+/* line 140, ../sass/_register.scss */
+.modal .woocommerce .form-row-wide select option, .modal .woocommerce .form-row select option {
   color: #333;
 }
-/* line 102, ../sass/_register.scss */
+/* line 144, ../sass/_register.scss */
+.modal .woocommerce .form-row-wide input[type="password"], .modal .woocommerce .form-row input[type="password"] {
+  background-image: url("../images/icons/clock.png");
+  background-repeat: no-repeat;
+  background-position: 13px center;
+  text-indent: 0;
+  padding-left: 35px;
+}
+/* line 153, ../sass/_register.scss */
 .modal .woocommerce .selection-box .selection-box {
   float: none;
   width: 100%;
   padding: 0;
 }
-/* line 107, ../sass/_register.scss */
+/* line 158, ../sass/_register.scss */
 .modal .woocommerce .selection-box:after {
   background: url("../images/select-3.png") no-repeat top center;
   width: 36px;
@@ -2251,17 +2338,21 @@ h2.section-title:before {
   border-radius: 0;
   top: 0;
 }
-/* line 117, ../sass/_register.scss */
+/* line 167, ../sass/_register.scss */
+.modal .woocommerce .form-row {
+  margin-bottom: 15px;
+}
+/* line 169, ../sass/_register.scss */
 .modal .woocommerce .form-row input[type=submit] {
-  height: 38px;
+  height: 36px;
   padding: 0;
   text-align: center;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   border-radius: 0;
-  line-height: 38px;
-  font-size: 24px;
+  line-height: 36px;
+  font-size: 22px;
   font-family: ProximaNovaAltBold, Arial, sans-serif;
   text-transform: uppercase;
   -webkit-transition: all ease 0.5s;
@@ -2269,33 +2360,325 @@ h2.section-title:before {
   -ms-transition: all ease 0.5s;
   transition: all ease 0.5s;
   float: none;
-  width: 100%;
+  width: 100% !important;
+  min-height: 1px;
+  margin-top: 0;
 }
-/* line 134, ../sass/_register.scss */
+/* line 188, ../sass/_register.scss */
+.modal .woocommerce form.register {
+  position: relative;
+  margin: 0 20px;
+  padding-bottom: 15px;
+}
+/* line 118, ../sass/_mixin.scss */
+.modal .woocommerce form.register:before, .modal .woocommerce form.register:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 193, ../sass/_register.scss */
+.modal .woocommerce form.register .register-left {
+  float: left;
+  width: 50%;
+}
+/* line 197, ../sass/_register.scss */
+.modal .woocommerce form.register .register-right {
+  float: right;
+  width: 50%;
+}
+/* line 201, ../sass/_register.scss */
+.modal .woocommerce form.register .register-slogan {
+  margin-left: 10px;
+}
+/* line 205, ../sass/_register.scss */
 .modal .woocommerce form.register .form-row-wide input, .modal .woocommerce form.register .form-row-wide select, .modal .woocommerce form.register .selection-box input, .modal .woocommerce form.register .selection-box select {
   background-color: #13887d;
 }
-/* line 139, ../sass/_register.scss */
+/* line 209, ../sass/_register.scss */
+.modal .woocommerce form.register .form-row {
+  clear: left;
+}
+/* line 211, ../sass/_register.scss */
+.modal .woocommerce form.register .form-row input[type="email"] {
+  background-image: url("../images/icons/person.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  padding-left: 35px;
+  text-indent: 0;
+}
+/* line 218, ../sass/_register.scss */
 .modal .woocommerce form.register .form-row input[type=submit] {
   background-color: rgba(19, 136, 125, 0.5);
   color: #07575b;
 }
-/* line 142, ../sass/_register.scss */
+/* line 221, ../sass/_register.scss */
 .modal .woocommerce form.register .form-row input[type=submit]:hover {
   color: #fff;
 }
-/* line 150, ../sass/_register.scss */
+/* line 228, ../sass/_register.scss */
+.modal .woocommerce form.register .regis-col2 .form-row:last-child {
+  float: none;
+}
+/* line 232, ../sass/_register.scss */
+.modal .woocommerce form.register .regis-col2 + .form-row {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  margin: 0;
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
+/* line 243, ../sass/_register.scss */
+.modal .woocommerce form.register > p.form-row:last-child {
+  padding: 0 10px;
+  width: 50%;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  float: right;
+  margin-top: -51px;
+}
+/* line 255, ../sass/_register.scss */
 .modal .woocommerce form.login .form-row-wide input, .modal .woocommerce form.login .form-row-wide select, .modal .woocommerce form.login .selection-box input, .modal .woocommerce form.login .selection-box select {
   background-color: #07575b;
 }
-/* line 155, ../sass/_register.scss */
+/* line 259, ../sass/_register.scss */
+.modal .woocommerce form.login .form-row {
+  float: none;
+  width: 100%;
+  padding: 0;
+}
+/* line 118, ../sass/_mixin.scss */
+.modal .woocommerce form.login .form-row:before, .modal .woocommerce form.login .form-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 265, ../sass/_register.scss */
+.modal .woocommerce form.login .form-row:first-child input {
+  background-image: url("../images/icons/person.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  padding-left: 35px;
+  text-indent: 0;
+}
+/* line 273, ../sass/_register.scss */
 .modal .woocommerce form.login .form-row input[type=submit] {
   background-color: rgba(9, 87, 90, 0.5);
   color: #12887d;
 }
-/* line 159, ../sass/_register.scss */
+/* line 277, ../sass/_register.scss */
 .modal .woocommerce form.login .form-row input[type=submit]:hover {
   color: #fff;
+}
+/* line 281, ../sass/_register.scss */
+.modal .woocommerce form.login .form-row .inline {
+  display: block;
+  color: #add;
+  font-weight: normal;
+}
+/* line 287, ../sass/_register.scss */
+.modal .woocommerce form.login .lost_password {
+  margin-top: -11px;
+}
+/* line 289, ../sass/_register.scss */
+.modal .woocommerce form.login .lost_password a {
+  text-transform: uppercase;
+  color: #add;
+  font-size: 12px;
+  font-family: AvenirNextLTProDemi, Arial, sans-serif;
+}
+/* line 294, ../sass/_register.scss */
+.modal .woocommerce form.login .lost_password a:hover {
+  color: #fff;
+}
+
+/* line 2, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .dt-sc-hr-invisible:empty, .woocommerce-checkout.woocommerce-page .dt-sc-hr-invisible-small:empty {
+  display: none;
+}
+/* line 6, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page h2, .woocommerce-checkout.woocommerce-page .checkout-page #order_review_heading {
+  font-size: 22px;
+  color: #10726e;
+  text-transform: uppercase;
+  font-family: ProximaNovaAltBold, Arial, sans-serif;
+  text-align: center;
+  margin: 0 0 30px;
+}
+/* line 15, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce {
+  /* form checkout */
+  /* e: form checkout */
+}
+/* line 16, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .woocommerce-info {
+  font-family: AvenirNextLTPro, Arial, sans-serif !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -ms-box-shadow: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  border: none;
+  padding: 0 !important;
+  margin: 0 0 10px 0 !important;
+  color: #333 !important;
+  text-shadow: none !important;
+  font-size: 16px !important;
+}
+/* line 26, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .woocommerce-info:after, .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .woocommerce-info:before {
+  display: none;
+}
+/* line 29, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .woocommerce-info a {
+  color: #10726e;
+}
+/* line 36, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set {
+  background: #13887d;
+  color: #fff;
+  padding: 16px 18px 21px;
+  position: relative;
+  margin-bottom: 25px;
+}
+/* line 118, ../sass/_mixin.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set:before, .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 44, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .form-row .input-text, .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .form-row .select2-container {
+  color: #fff !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -ms-box-shadow: none !important;
+  box-shadow: none !important;
+  margin: 0;
+  padding: 0 5px 0 0 !important;
+  text-indent: 16px;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  border-radius: 5px !important;
+  font-size: 14px;
+  font-family: AvenirNextLTProDemi, Arial, sans-serif;
+  font-weight: 700;
+  height: 36px;
+  background: #10726e;
+}
+/* line 126, ../sass/_mixin.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .form-row .input-text::-webkit-input-placeholder, .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .form-row .select2-container::-webkit-input-placeholder {
+  color: white !important;
+}
+/* line 129, ../sass/_mixin.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .form-row .input-text:-moz-placeholder, .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .form-row .select2-container:-moz-placeholder {
+  color: white !important;
+  opacity: 1;
+}
+/* line 133, ../sass/_mixin.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .form-row .input-text::-moz-placeholder, .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .form-row .select2-container::-moz-placeholder {
+  color: white !important;
+  opacity: 1;
+}
+/* line 137, ../sass/_mixin.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .form-row .input-text:-ms-input-placeholder, .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .form-row .select2-container:-ms-input-placeholder {
+  color: white !important;
+}
+/* line 59, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .form-row textarea.input-text {
+  height: 90px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  padding-top: 5px !important;
+}
+/* line 67, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .form-row .select2-container .select2-choice {
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 36px;
+  color: #fff;
+}
+/* line 77, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set label {
+  color: #fff;
+  font-family: AvenirNextLTProDemi, Arial, sans-serif;
+  font-weight: 700;
+}
+/* line 82, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-1 {
+  width: 100%;
+}
+/* line 118, ../sass/_mixin.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-1:before, .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 85, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-1 h3 {
+  text-transform: uppercase;
+  color: #add;
+  font-size: 16px;
+  font-family: ProximaNovaAltBold, Arial, sans-serif;
+  margin: 0 10px 5px 10px;
+}
+/* line 92, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-1 .form-row {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  padding: 0 10px;
+  float: left;
+  width: 25%;
+}
+/* line 97, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-1 .form-row.create-account {
+  clear: left;
+  position: absolute;
+  left: 18px;
+  bottom: 14px;
+}
+/* line 104, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-1 .clear {
+  display: none;
+}
+/* line 108, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-2 {
+  width: 100%;
+}
+/* line 110, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-2 label {
+  display: none;
+}
+/* line 113, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-2 h3 {
+  display: none;
+}
+/* line 116, ../sass/_checkout.scss */
+.woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-2 .form-row {
+  float: right;
+  width: 75%;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  padding: 0 10px;
+  margin-top: -42px;
 }
 
 @media only screen and (min-width: 1120px) and (max-width: 1280px) {
@@ -2333,197 +2716,280 @@ h2.section-title:before {
   .banner p {
     font-size: 14px;
   }
-
   /* line 21, ../sass/_responsive-900px.scss */
+  .banner #slider-container h3.ls-l {
+    font-size: 42px;
+  }
+
+  /* line 26, ../sass/_responsive-900px.scss */
   .scroll-down {
     display: none;
   }
 
-  /* line 26, ../sass/_responsive-900px.scss */
+  /* line 31, ../sass/_responsive-900px.scss */
   .find-a-tour .uform_title {
     font-size: 16px;
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  /* line 32, ../sass/_responsive-900px.scss */
+  /* line 37, ../sass/_responsive-900px.scss */
   .find-a-tour .uwpqsf_class select {
     font-size: 12px;
     height: 42px;
   }
-  /* line 36, ../sass/_responsive-900px.scss */
+  /* line 41, ../sass/_responsive-900px.scss */
   .find-a-tour .uwpqsf_class .selection-box:after {
     height: 41px;
   }
-  /* line 39, ../sass/_responsive-900px.scss */
+  /* line 44, ../sass/_responsive-900px.scss */
   .find-a-tour .uwpqsf_class input[type="submit"] {
     height: 42px;
   }
 
-  /* line 46, ../sass/_responsive-900px.scss */
+  /* line 51, ../sass/_responsive-900px.scss */
   .popular-tours h2.section-title {
     font-size: 16px;
   }
-  /* line 49, ../sass/_responsive-900px.scss */
+  /* line 54, ../sass/_responsive-900px.scss */
   .popular-tours .text {
     padding-right: 15px;
     padding-left: 15px;
     padding-top: 10px;
     bottom: -48px;
   }
-  /* line 54, ../sass/_responsive-900px.scss */
+  /* line 59, ../sass/_responsive-900px.scss */
   .popular-tours .text h3 {
     font-size: 11px;
     margin-bottom: 9px;
   }
-  /* line 58, ../sass/_responsive-900px.scss */
+  /* line 63, ../sass/_responsive-900px.scss */
   .popular-tours .text h2 {
     font-size: 12px;
     padding-bottom: 15px;
   }
-  /* line 62, ../sass/_responsive-900px.scss */
+  /* line 67, ../sass/_responsive-900px.scss */
   .popular-tours .text a {
     margin-top: 0;
   }
-  /* line 68, ../sass/_responsive-900px.scss */
+  /* line 73, ../sass/_responsive-900px.scss */
   .popular-tours .column:hover .text {
     bottom: 0;
   }
 
-  /* line 76, ../sass/_responsive-900px.scss */
+  /* line 81, ../sass/_responsive-900px.scss */
   .tour-type .text {
     bottom: auto;
   }
-  /* line 78, ../sass/_responsive-900px.scss */
+  /* line 83, ../sass/_responsive-900px.scss */
   .tour-type .text h2 {
     font-size: 16px;
   }
-  /* line 85, ../sass/_responsive-900px.scss */
+  /* line 90, ../sass/_responsive-900px.scss */
   .tour-type .column:hover .text h2 {
     font-size: 20px;
   }
 
-  /* line 94, ../sass/_responsive-900px.scss */
+  /* line 99, ../sass/_responsive-900px.scss */
   .testimonials h2.section-title {
     font-size: 16px;
   }
-  /* line 97, ../sass/_responsive-900px.scss */
+  /* line 102, ../sass/_responsive-900px.scss */
   .testimonials blockquote {
     font-weight: normal;
     font-size: 16px;
   }
-  /* line 101, ../sass/_responsive-900px.scss */
+  /* line 106, ../sass/_responsive-900px.scss */
   .testimonials .infor {
     font-size: 14px;
   }
 
-  /* line 106, ../sass/_responsive-900px.scss */
+  /* line 111, ../sass/_responsive-900px.scss */
   .why-travel {
     font-size: 12px;
   }
-  /* line 108, ../sass/_responsive-900px.scss */
+  /* line 113, ../sass/_responsive-900px.scss */
   .why-travel h2.section-title {
     font-size: 16px;
   }
 
-  /* line 117, ../sass/_responsive-900px.scss */
+  /* line 122, ../sass/_responsive-900px.scss */
   .fullwidth-section.tablist .container ul li a {
     font-size: 14px;
   }
 
-  /* line 126, ../sass/_responsive-900px.scss */
+  /* line 131, ../sass/_responsive-900px.scss */
   .popular-tours.tab-content .column:hover {
     bottom: 0;
   }
-  /* line 130, ../sass/_responsive-900px.scss */
+  /* line 135, ../sass/_responsive-900px.scss */
   .popular-tours.tab-content .text {
     bottom: -38px;
   }
-  /* line 132, ../sass/_responsive-900px.scss */
+  /* line 137, ../sass/_responsive-900px.scss */
   .popular-tours.tab-content .text a {
     font-size: 12px;
   }
 
-  /* line 140, ../sass/_responsive-900px.scss */
+  /* line 145, ../sass/_responsive-900px.scss */
   #footer .subcribe-form h3.widget-title {
     font-size: 18px;
   }
-  /* line 143, ../sass/_responsive-900px.scss */
+  /* line 148, ../sass/_responsive-900px.scss */
   #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_form_field input {
     font-size: 18px !important;
     height: 70px !important;
   }
-  /* line 147, ../sass/_responsive-900px.scss */
+  /* line 152, ../sass/_responsive-900px.scss */
   #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_submit button {
     font-size: 18px !important;
     height: 70px !important;
   }
-  /* line 156, ../sass/_responsive-900px.scss */
+  /* line 161, ../sass/_responsive-900px.scss */
   #footer .footer-widgets-wrapper .container .column .widget h3 {
     font-size: 12px;
   }
-  /* line 159, ../sass/_responsive-900px.scss */
+  /* line 164, ../sass/_responsive-900px.scss */
   #footer .footer-widgets-wrapper .container .column .widget:first-child {
     font-size: 12px;
   }
 
   /* about us */
-  /* line 170, ../sass/_responsive-900px.scss */
+  /* line 175, ../sass/_responsive-900px.scss */
   .about-us h2 {
     font-size: 18px;
   }
-  /* line 174, ../sass/_responsive-900px.scss */
+  /* line 179, ../sass/_responsive-900px.scss */
   .about-us ol {
     font-size: 30px;
   }
-  /* line 176, ../sass/_responsive-900px.scss */
+  /* line 181, ../sass/_responsive-900px.scss */
   .about-us ol p {
     font-size: 14px;
   }
 
-  /* line 183, ../sass/_responsive-900px.scss */
+  /* line 188, ../sass/_responsive-900px.scss */
   .what-we-do h2 {
     font-size: 18px;
   }
 
   /* e: about us */
   /* contact us */
-  /* line 191, ../sass/_responsive-900px.scss */
+  /* line 196, ../sass/_responsive-900px.scss */
   .contactus-tour {
     padding-top: 14px !important;
     padding-bottom: 0 !important;
     margin-bottom: -24px;
   }
-  /* line 195, ../sass/_responsive-900px.scss */
+  /* line 200, ../sass/_responsive-900px.scss */
   .contactus-tour .text {
     position: static;
     background-color: transparent;
     padding-top: 0;
   }
-  /* line 199, ../sass/_responsive-900px.scss */
+  /* line 204, ../sass/_responsive-900px.scss */
   .contactus-tour .text a {
     margin-top: 0;
   }
-  /* line 201, ../sass/_responsive-900px.scss */
+  /* line 206, ../sass/_responsive-900px.scss */
   .contactus-tour .text a i {
     width: 20px;
     height: 20px;
     background-size: 20px 20px;
   }
-  /* line 207, ../sass/_responsive-900px.scss */
+  /* line 212, ../sass/_responsive-900px.scss */
   .contactus-tour .text h2 {
     font-size: 20px;
     margin-top: -19px;
   }
 
   /* e: contact us */
+  /* login register */
+  /* line 223, ../sass/_responsive-900px.scss */
+  .modal .modal-dialog {
+    width: 875px;
+  }
+  /* line 227, ../sass/_responsive-900px.scss */
+  .modal .woocommerce h2 {
+    font-size: 20px;
+  }
+  /* line 230, ../sass/_responsive-900px.scss */
+  .modal .woocommerce .form-row-wide, .modal .woocommerce .form-row {
+    padding: 0 8px;
+  }
+  /* line 232, ../sass/_responsive-900px.scss */
+  .modal .woocommerce .form-row-wide input, .modal .woocommerce .form-row-wide select, .modal .woocommerce .form-row input, .modal .woocommerce .form-row select {
+    font-size: 12px;
+    height: 34px;
+  }
+  /* line 237, ../sass/_responsive-900px.scss */
+  .modal .woocommerce .form-row {
+    margin-bottom: 25px;
+  }
+  /* line 239, ../sass/_responsive-900px.scss */
+  .modal .woocommerce .form-row input[type=submit] {
+    font-size: 20px;
+    height: 34px;
+  }
+  /* line 245, ../sass/_responsive-900px.scss */
+  .modal .woocommerce .selection-box:after {
+    width: 34px;
+    height: 34px;
+    background-size: 34px 34px;
+  }
+  /* line 253, ../sass/_responsive-900px.scss */
+  .modal .woocommerce form.register > p.form-row:last-child {
+    margin-top: -60px;
+  }
+  /* line 257, ../sass/_responsive-900px.scss */
+  .modal .woocommerce form.register .regis-col2 + .form-row {
+    bottom: 40px;
+  }
+
+  /* e: login register */
+  /* checkout page */
+  /* line 270, ../sass/_responsive-900px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page h2, .woocommerce-checkout.woocommerce-page .checkout-page #order_review_heading {
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
+  /* line 276, ../sass/_responsive-900px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set {
+    font-size: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  /* line 282, ../sass/_responsive-900px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .form-row .input-text, .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .form-row .select2-container {
+    font-size: 12px;
+    height: 32px;
+  }
+  /* line 287, ../sass/_responsive-900px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .form-row .select2-container .select2-choice {
+    line-height: 32px;
+  }
+  /* line 293, ../sass/_responsive-900px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-1 .form-row {
+    padding: 0 4px;
+  }
+  /* line 295, ../sass/_responsive-900px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-1 .form-row .create-account {
+    bottom: 18px;
+  }
+  /* line 301, ../sass/_responsive-900px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-2 .form-row {
+    padding: 0 4px;
+    margin-top: -38px;
+  }
+
+  /* e: checkout page */
 }
 @media screen and (max-width: 1199px) {
-  /* line 217, ../sass/_responsive-900px.scss */
+  /* line 318, ../sass/_responsive-900px.scss */
   .testimonials .dt-sc-testimonial-carousel-wrapper .carousel-arrows .testimonial-prev {
     left: 0;
   }
 
-  /* line 220, ../sass/_responsive-900px.scss */
+  /* line 321, ../sass/_responsive-900px.scss */
   .testimonials .dt-sc-testimonial-carousel-wrapper .carousel-arrows .testimonial-next {
     right: 0;
   }
@@ -2898,140 +3364,144 @@ h2.section-title:before {
   .banner p {
     font-size: 14px;
   }
-
   /* line 111, ../sass/_responsive-710px.scss */
+  .banner #slider-container h3.ls-l {
+    font-size: 32px;
+  }
+
+  /* line 116, ../sass/_responsive-710px.scss */
   .scroll-down {
     display: none;
   }
 
-  /* line 116, ../sass/_responsive-710px.scss */
+  /* line 121, ../sass/_responsive-710px.scss */
   .find-a-tour .uform_title {
     font-size: 16px;
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  /* line 122, ../sass/_responsive-710px.scss */
+  /* line 127, ../sass/_responsive-710px.scss */
   .find-a-tour .uwpqsf_class select {
     font-size: 12px;
     height: 42px;
   }
-  /* line 126, ../sass/_responsive-710px.scss */
+  /* line 131, ../sass/_responsive-710px.scss */
   .find-a-tour .uwpqsf_class .selection-box:after {
     height: 41px;
   }
-  /* line 129, ../sass/_responsive-710px.scss */
+  /* line 134, ../sass/_responsive-710px.scss */
   .find-a-tour .uwpqsf_class input[type="submit"] {
     height: 42px;
   }
 
-  /* line 136, ../sass/_responsive-710px.scss */
+  /* line 141, ../sass/_responsive-710px.scss */
   .popular-tours h2.section-title {
     font-size: 16px;
   }
-  /* line 139, ../sass/_responsive-710px.scss */
+  /* line 144, ../sass/_responsive-710px.scss */
   .popular-tours .text {
     padding-right: 15px;
     padding-left: 15px;
     padding-top: 10px;
     bottom: -48px;
   }
-  /* line 144, ../sass/_responsive-710px.scss */
+  /* line 149, ../sass/_responsive-710px.scss */
   .popular-tours .text h3 {
     font-size: 11px;
     margin-bottom: 9px;
   }
-  /* line 148, ../sass/_responsive-710px.scss */
+  /* line 153, ../sass/_responsive-710px.scss */
   .popular-tours .text h2 {
     font-size: 12px;
     padding-bottom: 15px;
   }
-  /* line 152, ../sass/_responsive-710px.scss */
+  /* line 157, ../sass/_responsive-710px.scss */
   .popular-tours .text a {
     margin-top: 0;
   }
-  /* line 158, ../sass/_responsive-710px.scss */
+  /* line 163, ../sass/_responsive-710px.scss */
   .popular-tours .column:hover .text {
     bottom: 0;
   }
 
-  /* line 166, ../sass/_responsive-710px.scss */
+  /* line 171, ../sass/_responsive-710px.scss */
   .tour-type .text {
     bottom: auto;
   }
-  /* line 168, ../sass/_responsive-710px.scss */
+  /* line 173, ../sass/_responsive-710px.scss */
   .tour-type .text h2 {
     font-size: 16px;
   }
-  /* line 175, ../sass/_responsive-710px.scss */
+  /* line 180, ../sass/_responsive-710px.scss */
   .tour-type .column:hover .text h2 {
     font-size: 20px;
   }
 
-  /* line 184, ../sass/_responsive-710px.scss */
+  /* line 189, ../sass/_responsive-710px.scss */
   .testimonials h2.section-title {
     font-size: 16px;
   }
-  /* line 187, ../sass/_responsive-710px.scss */
+  /* line 192, ../sass/_responsive-710px.scss */
   .testimonials blockquote {
     font-weight: normal;
     font-size: 16px;
   }
-  /* line 191, ../sass/_responsive-710px.scss */
+  /* line 196, ../sass/_responsive-710px.scss */
   .testimonials .infor {
     font-size: 14px;
   }
 
-  /* line 196, ../sass/_responsive-710px.scss */
+  /* line 201, ../sass/_responsive-710px.scss */
   .why-travel {
     font-size: 12px;
   }
-  /* line 198, ../sass/_responsive-710px.scss */
+  /* line 203, ../sass/_responsive-710px.scss */
   .why-travel h2.section-title {
     font-size: 16px;
   }
 
-  /* line 207, ../sass/_responsive-710px.scss */
+  /* line 212, ../sass/_responsive-710px.scss */
   .fullwidth-section.tablist .container ul li a {
     font-size: 14px;
   }
 
-  /* line 216, ../sass/_responsive-710px.scss */
+  /* line 221, ../sass/_responsive-710px.scss */
   .popular-tours.tab-content .column:hover {
     bottom: 0;
   }
-  /* line 220, ../sass/_responsive-710px.scss */
+  /* line 225, ../sass/_responsive-710px.scss */
   .popular-tours.tab-content .text {
     bottom: -38px;
   }
-  /* line 222, ../sass/_responsive-710px.scss */
+  /* line 227, ../sass/_responsive-710px.scss */
   .popular-tours.tab-content .text a {
     font-size: 12px;
   }
 
-  /* line 231, ../sass/_responsive-710px.scss */
+  /* line 236, ../sass/_responsive-710px.scss */
   #footer .subcribe-form h3.widget-title {
     font-size: 16px;
     margin-top: 20px;
   }
-  /* line 235, ../sass/_responsive-710px.scss */
+  /* line 240, ../sass/_responsive-710px.scss */
   #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_form_field input {
     font-size: 16px !important;
     height: 60px !important;
   }
-  /* line 239, ../sass/_responsive-710px.scss */
+  /* line 244, ../sass/_responsive-710px.scss */
   #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_submit button {
     font-size: 16px !important;
     height: 60px !important;
   }
-  /* line 248, ../sass/_responsive-710px.scss */
+  /* line 253, ../sass/_responsive-710px.scss */
   #footer .footer-widgets-wrapper .container .column .widget h3 {
     font-size: 12px;
   }
-  /* line 251, ../sass/_responsive-710px.scss */
+  /* line 256, ../sass/_responsive-710px.scss */
   #footer .footer-widgets-wrapper .container .column .widget:first-child {
     font-size: 12px;
   }
-  /* line 257, ../sass/_responsive-710px.scss */
+  /* line 262, ../sass/_responsive-710px.scss */
   #footer .footer-widgets-wrapper .container .column .social-list li a {
     margin-left: 10px;
   }
@@ -3043,19 +3513,19 @@ h2.section-title:before {
     display: table;
     clear: both;
   }
-  /* line 278, ../sass/_responsive-710px.scss */
+  /* line 283, ../sass/_responsive-710px.scss */
   #header-wrapper header#header #primary-menu {
     width: 5%;
   }
-  /* line 280, ../sass/_responsive-710px.scss */
+  /* line 285, ../sass/_responsive-710px.scss */
   #header-wrapper header#header #primary-menu .dt-menu-toggle {
     top: 5px;
   }
-  /* line 283, ../sass/_responsive-710px.scss */
+  /* line 288, ../sass/_responsive-710px.scss */
   #header-wrapper header#header #primary-menu #main-menu {
     position: static;
   }
-  /* line 285, ../sass/_responsive-710px.scss */
+  /* line 290, ../sass/_responsive-710px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu {
     position: absolute;
     top: 100%;
@@ -3070,14 +3540,14 @@ h2.section-title:before {
     -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     z-index: 1;
   }
-  /* line 298, ../sass/_responsive-710px.scss */
+  /* line 303, ../sass/_responsive-710px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li {
     width: 100%;
     float: none;
     margin: 0;
     display: block;
   }
-  /* line 303, ../sass/_responsive-710px.scss */
+  /* line 308, ../sass/_responsive-710px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li > a {
     display: block;
     padding: 8px 15px 9px;
@@ -3085,68 +3555,68 @@ h2.section-title:before {
     color: #685e58;
     text-transform: uppercase;
   }
-  /* line 309, ../sass/_responsive-710px.scss */
+  /* line 314, ../sass/_responsive-710px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li > a:hover {
     color: #087dc2;
   }
-  /* line 314, ../sass/_responsive-710px.scss */
+  /* line 319, ../sass/_responsive-710px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li:first-child > a {
     padding-left: 15px;
   }
-  /* line 318, ../sass/_responsive-710px.scss */
+  /* line 323, ../sass/_responsive-710px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li .sub-menu {
     position: static;
     width: 100%;
   }
-  /* line 323, ../sass/_responsive-710px.scss */
+  /* line 328, ../sass/_responsive-710px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li:hover .sub-menu {
     display: block !important;
   }
 
   /* e: header */
   /* about us */
-  /* line 338, ../sass/_responsive-710px.scss */
+  /* line 343, ../sass/_responsive-710px.scss */
   .about-us h2 {
     font-size: 16px;
   }
-  /* line 342, ../sass/_responsive-710px.scss */
+  /* line 347, ../sass/_responsive-710px.scss */
   .about-us ol {
     font-size: 30px;
   }
-  /* line 344, ../sass/_responsive-710px.scss */
+  /* line 349, ../sass/_responsive-710px.scss */
   .about-us ol p {
     font-size: 14px;
   }
 
-  /* line 351, ../sass/_responsive-710px.scss */
+  /* line 356, ../sass/_responsive-710px.scss */
   .what-we-do h2 {
     font-size: 16px;
   }
 
   /* e: about us */
   /* contact us */
-  /* line 358, ../sass/_responsive-710px.scss */
+  /* line 363, ../sass/_responsive-710px.scss */
   .contactus-tour {
     padding-top: 14px !important;
     margin-bottom: 0;
   }
-  /* line 361, ../sass/_responsive-710px.scss */
+  /* line 366, ../sass/_responsive-710px.scss */
   .contactus-tour .text {
     position: static;
     background-color: transparent;
     padding-top: 0;
   }
-  /* line 365, ../sass/_responsive-710px.scss */
+  /* line 370, ../sass/_responsive-710px.scss */
   .contactus-tour .text a {
     margin-top: 0;
   }
-  /* line 367, ../sass/_responsive-710px.scss */
+  /* line 372, ../sass/_responsive-710px.scss */
   .contactus-tour .text a i {
     width: 16px;
     height: 16px;
     background-size: 16px 16px;
   }
-  /* line 373, ../sass/_responsive-710px.scss */
+  /* line 378, ../sass/_responsive-710px.scss */
   .contactus-tour .text h2 {
     font-size: 20px;
     margin-top: -19px;
@@ -3154,13 +3624,104 @@ h2.section-title:before {
   }
 
   /* e: contact us */
+  /* login register */
+  /* line 389, ../sass/_responsive-710px.scss */
+  .modal .modal-dialog {
+    width: 680px;
+  }
+  /* line 391, ../sass/_responsive-710px.scss */
+  .modal .modal-dialog .modal-content {
+    padding-left: 30px;
+  }
+  /* line 396, ../sass/_responsive-710px.scss */
+  .modal .woocommerce h2 {
+    font-size: 20px;
+  }
+  /* line 399, ../sass/_responsive-710px.scss */
+  .modal .woocommerce .form-row-wide, .modal .woocommerce .form-row {
+    padding: 0 8px;
+  }
+  /* line 401, ../sass/_responsive-710px.scss */
+  .modal .woocommerce .form-row-wide input, .modal .woocommerce .form-row-wide select, .modal .woocommerce .form-row input, .modal .woocommerce .form-row select {
+    font-size: 12px;
+    height: 34px;
+  }
+  /* line 406, ../sass/_responsive-710px.scss */
+  .modal .woocommerce .form-row {
+    margin-bottom: 25px;
+  }
+  /* line 408, ../sass/_responsive-710px.scss */
+  .modal .woocommerce .form-row input[type=submit] {
+    font-size: 20px;
+    height: 34px;
+  }
+  /* line 414, ../sass/_responsive-710px.scss */
+  .modal .woocommerce .selection-box:after {
+    width: 34px;
+    height: 34px;
+    background-size: 34px 34px;
+  }
+  /* line 421, ../sass/_responsive-710px.scss */
+  .modal .woocommerce form.register {
+    margin: 0 16px;
+  }
+  /* line 423, ../sass/_responsive-710px.scss */
+  .modal .woocommerce form.register > p.form-row:last-child {
+    margin-top: -60px;
+  }
+  /* line 427, ../sass/_responsive-710px.scss */
+  .modal .woocommerce form.register .regis-col2 + .form-row {
+    bottom: 40px;
+  }
+
+  /* e: login register */
+  /* checkout page */
+  /* line 440, ../sass/_responsive-710px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page h2, .woocommerce-checkout.woocommerce-page .checkout-page #order_review_heading {
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
+  /* line 446, ../sass/_responsive-710px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set {
+    font-size: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  /* line 450, ../sass/_responsive-710px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .form-row {
+    padding: 0 4px;
+  }
+  /* line 452, ../sass/_responsive-710px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .form-row .input-text, .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .form-row .select2-container {
+    font-size: 12px;
+    height: 32px;
+  }
+  /* line 457, ../sass/_responsive-710px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .form-row .select2-container .select2-choice {
+    line-height: 32px;
+  }
+  /* line 463, ../sass/_responsive-710px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-1 .form-row {
+    padding: 0 4px;
+  }
+  /* line 465, ../sass/_responsive-710px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-1 .form-row .create-account {
+    bottom: 18px;
+  }
+  /* line 471, ../sass/_responsive-710px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-2 .form-row {
+    padding: 0 4px;
+    margin-top: -38px;
+  }
+
+  /* e: checkout page */
 }
 /*----*****---- << Mobile (Landscape) >> ----*****----*/
 /* Note: Design for a width of 480px  .container { width:420px; }*/
 @media only screen and (max-width: 767px) {
   /* line 2, ../sass/_responsive-420px.scss */
   .container {
-    width: 640px !important;
+    width: 630px !important;
   }
 
   /* line 5, ../sass/_responsive-420px.scss */
@@ -3197,162 +3758,166 @@ h2.section-title:before {
     right: 0;
     bottom: 40px;
   }
+  /* line 44, ../sass/_responsive-420px.scss */
+  .banner #slider-container h3.ls-l {
+    font-size: 30px;
+  }
 
-  /* line 47, ../sass/_responsive-420px.scss */
+  /* line 50, ../sass/_responsive-420px.scss */
   .scroll-down {
     display: none;
   }
 
-  /* line 50, ../sass/_responsive-420px.scss */
+  /* line 53, ../sass/_responsive-420px.scss */
   .scrollDown-social .container .connect-us {
     display: none;
   }
 
-  /* line 55, ../sass/_responsive-420px.scss */
+  /* line 58, ../sass/_responsive-420px.scss */
   .find-a-tour .uform_title {
     font-size: 14px;
     padding: 12px 0 14px 14px;
   }
-  /* line 60, ../sass/_responsive-420px.scss */
+  /* line 63, ../sass/_responsive-420px.scss */
   .find-a-tour .uwpqsf_class select {
     font-size: 12px;
     height: 42px;
   }
-  /* line 64, ../sass/_responsive-420px.scss */
+  /* line 67, ../sass/_responsive-420px.scss */
   .find-a-tour .uwpqsf_class .selection-box:after {
     height: 41px;
   }
-  /* line 67, ../sass/_responsive-420px.scss */
+  /* line 70, ../sass/_responsive-420px.scss */
   .find-a-tour .uwpqsf_class input[type="submit"] {
     height: 42px;
   }
 
-  /* line 75, ../sass/_responsive-420px.scss */
+  /* line 78, ../sass/_responsive-420px.scss */
   .popular-tours .dt-sc-one-fourth {
     width: 23.4% !important;
   }
-  /* line 78, ../sass/_responsive-420px.scss */
+  /* line 81, ../sass/_responsive-420px.scss */
   .popular-tours .dt-sc-one-half {
     width: 48.9% !important;
   }
-  /* line 81, ../sass/_responsive-420px.scss */
+  /* line 84, ../sass/_responsive-420px.scss */
   .popular-tours h2.section-title {
     font-size: 18px;
   }
-  /* line 84, ../sass/_responsive-420px.scss */
+  /* line 87, ../sass/_responsive-420px.scss */
   .popular-tours .text {
     padding-right: 15px;
     padding-left: 15px;
     padding-top: 10px;
     bottom: -48px;
   }
-  /* line 89, ../sass/_responsive-420px.scss */
+  /* line 92, ../sass/_responsive-420px.scss */
   .popular-tours .text h3 {
     font-size: 11px;
     margin-bottom: 9px;
   }
-  /* line 93, ../sass/_responsive-420px.scss */
+  /* line 96, ../sass/_responsive-420px.scss */
   .popular-tours .text h2 {
     font-size: 12px;
     padding-bottom: 15px;
   }
-  /* line 97, ../sass/_responsive-420px.scss */
+  /* line 100, ../sass/_responsive-420px.scss */
   .popular-tours .text a {
     margin-top: 0;
   }
-  /* line 103, ../sass/_responsive-420px.scss */
+  /* line 106, ../sass/_responsive-420px.scss */
   .popular-tours .column:hover .text {
     bottom: 0;
   }
 
-  /* line 111, ../sass/_responsive-420px.scss */
+  /* line 114, ../sass/_responsive-420px.scss */
   .tour-type .text {
     bottom: auto;
   }
-  /* line 113, ../sass/_responsive-420px.scss */
+  /* line 116, ../sass/_responsive-420px.scss */
   .tour-type .text h2 {
     font-size: 16px;
   }
-  /* line 116, ../sass/_responsive-420px.scss */
+  /* line 119, ../sass/_responsive-420px.scss */
   .tour-type .text a {
     min-width: 100%;
   }
-  /* line 123, ../sass/_responsive-420px.scss */
+  /* line 126, ../sass/_responsive-420px.scss */
   .tour-type .column:hover .text h2 {
     font-size: 20px;
   }
 
-  /* line 132, ../sass/_responsive-420px.scss */
+  /* line 135, ../sass/_responsive-420px.scss */
   .testimonials h2.section-title {
     font-size: 16px;
   }
-  /* line 135, ../sass/_responsive-420px.scss */
+  /* line 138, ../sass/_responsive-420px.scss */
   .testimonials blockquote {
     font-weight: normal;
     font-size: 16px;
     padding: 0 45px;
   }
-  /* line 140, ../sass/_responsive-420px.scss */
+  /* line 143, ../sass/_responsive-420px.scss */
   .testimonials .infor {
     font-size: 14px;
   }
-  /* line 145, ../sass/_responsive-420px.scss */
+  /* line 148, ../sass/_responsive-420px.scss */
   .testimonials .dt-sc-testimonial-carousel-wrapper .carousel-arrows .testimonial-prev {
     left: 0;
   }
-  /* line 148, ../sass/_responsive-420px.scss */
+  /* line 151, ../sass/_responsive-420px.scss */
   .testimonials .dt-sc-testimonial-carousel-wrapper .carousel-arrows .testimonial-next {
     right: 0;
   }
 
-  /* line 155, ../sass/_responsive-420px.scss */
+  /* line 158, ../sass/_responsive-420px.scss */
   .why-travel {
     font-size: 12px;
   }
-  /* line 157, ../sass/_responsive-420px.scss */
+  /* line 160, ../sass/_responsive-420px.scss */
   .why-travel h2.section-title {
     font-size: 16px;
   }
 
-  /* line 166, ../sass/_responsive-420px.scss */
+  /* line 169, ../sass/_responsive-420px.scss */
   .fullwidth-section.tablist .container ul li a {
     font-size: 14px;
   }
 
-  /* line 175, ../sass/_responsive-420px.scss */
+  /* line 178, ../sass/_responsive-420px.scss */
   .popular-tours.tab-content .column:hover {
     bottom: 0;
   }
-  /* line 179, ../sass/_responsive-420px.scss */
+  /* line 182, ../sass/_responsive-420px.scss */
   .popular-tours.tab-content .text {
     bottom: -38px;
   }
-  /* line 181, ../sass/_responsive-420px.scss */
+  /* line 184, ../sass/_responsive-420px.scss */
   .popular-tours.tab-content .text a {
     font-size: 12px;
   }
 
-  /* line 190, ../sass/_responsive-420px.scss */
+  /* line 193, ../sass/_responsive-420px.scss */
   #footer .subcribe-form h3.widget-title {
     font-size: 16px;
     margin-top: 20px;
     width: 50%;
     text-align: center;
   }
-  /* line 196, ../sass/_responsive-420px.scss */
+  /* line 199, ../sass/_responsive-420px.scss */
   #footer .subcribe-form .frm_forms {
     width: 50%;
   }
-  /* line 199, ../sass/_responsive-420px.scss */
+  /* line 202, ../sass/_responsive-420px.scss */
   #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_form_field {
     width: 100%;
   }
-  /* line 202, ../sass/_responsive-420px.scss */
+  /* line 205, ../sass/_responsive-420px.scss */
   #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_form_field input {
     font-size: 16px !important;
     height: 60px !important;
   }
-  /* line 206, ../sass/_responsive-420px.scss */
+  /* line 209, ../sass/_responsive-420px.scss */
   #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_submit {
     width: 100%;
     position: absolute;
@@ -3360,12 +3925,12 @@ h2.section-title:before {
     left: 0;
     right: 0;
   }
-  /* line 213, ../sass/_responsive-420px.scss */
+  /* line 216, ../sass/_responsive-420px.scss */
   #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_submit button {
     font-size: 16px !important;
     height: 60px !important;
   }
-  /* line 217, ../sass/_responsive-420px.scss */
+  /* line 220, ../sass/_responsive-420px.scss */
   #footer .subcribe-form .widget {
     position: relative;
     padding-bottom: 60px;
@@ -3376,61 +3941,63 @@ h2.section-title:before {
     display: table;
     clear: both;
   }
-  /* line 227, ../sass/_responsive-420px.scss */
+  /* line 230, ../sass/_responsive-420px.scss */
   #footer .footer-widgets-wrapper .container .column .widget h3 {
     font-size: 12px;
   }
-  /* line 230, ../sass/_responsive-420px.scss */
+  /* line 233, ../sass/_responsive-420px.scss */
   #footer .footer-widgets-wrapper .container .column .widget:first-child {
     font-size: 12px;
   }
-  /* line 236, ../sass/_responsive-420px.scss */
+  /* line 239, ../sass/_responsive-420px.scss */
   #footer .footer-widgets-wrapper .container .column .social-list li a {
     margin-left: 10px;
   }
-  /* line 241, ../sass/_responsive-420px.scss */
+  /* line 244, ../sass/_responsive-420px.scss */
   #footer .footer-widgets-wrapper .container .column.dt-sc-one-third {
     width: 50%;
   }
-  /* line 243, ../sass/_responsive-420px.scss */
+  /* line 246, ../sass/_responsive-420px.scss */
   #footer .footer-widgets-wrapper .container .column.dt-sc-one-third:last-child {
     width: 100%;
   }
-  /* line 245, ../sass/_responsive-420px.scss */
+  /* line 248, ../sass/_responsive-420px.scss */
   #footer .footer-widgets-wrapper .container .column.dt-sc-one-third:last-child .widget_social {
     float: left;
     width: 50%;
   }
-  /* line 248, ../sass/_responsive-420px.scss */
+  /* line 251, ../sass/_responsive-420px.scss */
   #footer .footer-widgets-wrapper .container .column.dt-sc-one-third:last-child .widget_social + .widget {
     width: auto;
   }
 
   /* header */
-  /* line 269, ../sass/_responsive-420px.scss */
-  .home .banner {
-    margin-top: 0;
+  /* line 271, ../sass/_responsive-420px.scss */
+  .banner {
+    margin-top: -30px;
   }
-  /* line 272, ../sass/_responsive-420px.scss */
+
+  /* line 276, ../sass/_responsive-420px.scss */
   .home #header-wrapper {
     background-color: #10726e;
   }
 
-  /* line 277, ../sass/_responsive-420px.scss */
+  /* line 281, ../sass/_responsive-420px.scss */
   #header-wrapper {
     height: 54px;
+    margin-bottom: 30px;
   }
-  /* line 279, ../sass/_responsive-420px.scss */
+  /* line 284, ../sass/_responsive-420px.scss */
   #header-wrapper header#header {
     padding-top: 0;
   }
-  /* line 281, ../sass/_responsive-420px.scss */
+  /* line 286, ../sass/_responsive-420px.scss */
   #header-wrapper header#header .numberphone {
     position: absolute;
     top: 10px;
     left: 0;
   }
-  /* line 285, ../sass/_responsive-420px.scss */
+  /* line 290, ../sass/_responsive-420px.scss */
   #header-wrapper header#header .numberphone:before {
     content: "";
     min-height: 30px;
@@ -3441,7 +4008,7 @@ h2.section-title:before {
     display: block;
     cursor: pointer;
   }
-  /* line 298, ../sass/_responsive-420px.scss */
+  /* line 303, ../sass/_responsive-420px.scss */
   #header-wrapper header#header .numberphone ul {
     display: none;
     width: 260px;
@@ -3456,7 +4023,7 @@ h2.section-title:before {
     -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     z-index: 1;
   }
-  /* line 311, ../sass/_responsive-420px.scss */
+  /* line 316, ../sass/_responsive-420px.scss */
   #header-wrapper header#header .numberphone ul li {
     display: block;
     padding: 0px 15px;
@@ -3464,11 +4031,11 @@ h2.section-title:before {
     line-height: normal;
     color: #2c3e50;
   }
-  /* line 320, ../sass/_responsive-420px.scss */
+  /* line 325, ../sass/_responsive-420px.scss */
   #header-wrapper header#header .numberphone:hover ul {
     display: block;
   }
-  /* line 326, ../sass/_responsive-420px.scss */
+  /* line 331, ../sass/_responsive-420px.scss */
   #header-wrapper header#header #logo img {
     height: 27px !important;
     position: absolute;
@@ -3480,16 +4047,16 @@ h2.section-title:before {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
   }
-  /* line 335, ../sass/_responsive-420px.scss */
+  /* line 340, ../sass/_responsive-420px.scss */
   #header-wrapper header#header .cart-contents {
     margin-top: 12px;
   }
-  /* line 338, ../sass/_responsive-420px.scss */
+  /* line 343, ../sass/_responsive-420px.scss */
   #header-wrapper header#header .user-action:before {
     margin-top: 12px;
   }
 
-  /* line 344, ../sass/_responsive-420px.scss */
+  /* line 349, ../sass/_responsive-420px.scss */
   #primary-menu .dt-menu-toggle {
     display: block;
     background: transparent;
@@ -3501,12 +4068,12 @@ h2.section-title:before {
     right: 0;
     top: 11px;
   }
-  /* line 354, ../sass/_responsive-420px.scss */
+  /* line 359, ../sass/_responsive-420px.scss */
   #primary-menu .dt-menu-toggle .dt-menu-toggle-icon, #primary-menu .dt-menu-toggle .dt-menu-toggle-icon:before, #primary-menu .dt-menu-toggle .dt-menu-toggle-icon:after {
     background: transparent;
     display: none;
   }
-  /* line 358, ../sass/_responsive-420px.scss */
+  /* line 363, ../sass/_responsive-420px.scss */
   #primary-menu .dt-menu-toggle .dt-menu-toggle-icon {
     display: inline-block;
     background: url("../images/icons/toggle-menu-mb.png") no-repeat;
@@ -3526,11 +4093,11 @@ h2.section-title:before {
     display: table;
     clear: both;
   }
-  /* line 379, ../sass/_responsive-420px.scss */
+  /* line 384, ../sass/_responsive-420px.scss */
   #header-wrapper header#header #primary-menu #main-menu {
     position: static;
   }
-  /* line 381, ../sass/_responsive-420px.scss */
+  /* line 386, ../sass/_responsive-420px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu {
     position: absolute;
     top: 100%;
@@ -3545,80 +4112,80 @@ h2.section-title:before {
     -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     z-index: 1;
   }
-  /* line 394, ../sass/_responsive-420px.scss */
+  /* line 399, ../sass/_responsive-420px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li {
     width: 100%;
     float: none;
     margin: 0;
     display: block;
   }
-  /* line 399, ../sass/_responsive-420px.scss */
+  /* line 404, ../sass/_responsive-420px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li > a {
     display: block;
     padding: 8px 15px 9px;
     font-size: 16px;
     color: #685e58;
   }
-  /* line 404, ../sass/_responsive-420px.scss */
+  /* line 409, ../sass/_responsive-420px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li > a:hover {
     color: #087dc2;
   }
-  /* line 409, ../sass/_responsive-420px.scss */
+  /* line 414, ../sass/_responsive-420px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li:first-child > a {
     padding-left: 15px;
   }
-  /* line 413, ../sass/_responsive-420px.scss */
+  /* line 418, ../sass/_responsive-420px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li .sub-menu {
     position: static;
     width: 100%;
   }
-  /* line 418, ../sass/_responsive-420px.scss */
+  /* line 423, ../sass/_responsive-420px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li:hover .sub-menu {
     display: block !important;
   }
 
   /* e: header */
   /* about us */
-  /* line 432, ../sass/_responsive-420px.scss */
+  /* line 437, ../sass/_responsive-420px.scss */
   .about-us h2 {
     font-size: 18px;
   }
-  /* line 435, ../sass/_responsive-420px.scss */
+  /* line 440, ../sass/_responsive-420px.scss */
   .about-us ol {
     font-size: 30px;
   }
-  /* line 437, ../sass/_responsive-420px.scss */
+  /* line 442, ../sass/_responsive-420px.scss */
   .about-us ol:last-child {
     margin-bottom: 0;
   }
-  /* line 440, ../sass/_responsive-420px.scss */
+  /* line 445, ../sass/_responsive-420px.scss */
   .about-us ol p {
     font-size: 14px;
   }
-  /* line 446, ../sass/_responsive-420px.scss */
+  /* line 451, ../sass/_responsive-420px.scss */
   .about-us .container .column:last-child {
     display: none;
   }
 
-  /* line 454, ../sass/_responsive-420px.scss */
+  /* line 459, ../sass/_responsive-420px.scss */
   .what-we-do h2 {
     font-size: 18px;
   }
 
   /* e: about us */
   /* contact us */
-  /* line 461, ../sass/_responsive-420px.scss */
+  /* line 466, ../sass/_responsive-420px.scss */
   .contactus-tour {
     padding-top: 14px !important;
     padding-bottom: 0 !important;
     margin-bottom: -8px;
   }
-  /* line 465, ../sass/_responsive-420px.scss */
+  /* line 470, ../sass/_responsive-420px.scss */
   .contactus-tour .column {
     margin-right: 0;
     margin-left: 0;
   }
-  /* line 468, ../sass/_responsive-420px.scss */
+  /* line 473, ../sass/_responsive-420px.scss */
   .contactus-tour .column.dt-sc-one-fourth {
     width: 50% !important;
     padding-left: 3px;
@@ -3627,38 +4194,38 @@ h2.section-title:before {
     -ms-box-sizing: border-box !important;
     box-sizing: border-box !important;
   }
-  /* line 472, ../sass/_responsive-420px.scss */
+  /* line 477, ../sass/_responsive-420px.scss */
   .contactus-tour .column.dt-sc-one-fourth.first {
     padding-right: 3px;
     padding-left: 0;
   }
-  /* line 477, ../sass/_responsive-420px.scss */
+  /* line 482, ../sass/_responsive-420px.scss */
   .contactus-tour .column.dt-sc-one-half {
     width: 100% !important;
   }
-  /* line 480, ../sass/_responsive-420px.scss */
+  /* line 485, ../sass/_responsive-420px.scss */
   .contactus-tour .column img {
     width: 100%;
   }
-  /* line 485, ../sass/_responsive-420px.scss */
+  /* line 490, ../sass/_responsive-420px.scss */
   .contactus-tour .text {
     position: static;
     background-color: transparent;
     padding-top: 0;
   }
-  /* line 490, ../sass/_responsive-420px.scss */
+  /* line 495, ../sass/_responsive-420px.scss */
   .contactus-tour .text a {
     margin-top: 0;
     margin-left: -15px;
     margin-right: -15px;
   }
-  /* line 494, ../sass/_responsive-420px.scss */
+  /* line 499, ../sass/_responsive-420px.scss */
   .contactus-tour .text a i {
     width: 16px;
     height: 16px;
     background-size: 16px 16px;
   }
-  /* line 500, ../sass/_responsive-420px.scss */
+  /* line 505, ../sass/_responsive-420px.scss */
   .contactus-tour .text h2 {
     font-size: 16px;
     margin-top: -24px;
@@ -3671,11 +4238,11 @@ h2.section-title:before {
     display: table;
     clear: both;
   }
-  /* line 510, ../sass/_responsive-420px.scss */
+  /* line 515, ../sass/_responsive-420px.scss */
   .contactus-form .container {
     padding-right: 23px;
   }
-  /* line 513, ../sass/_responsive-420px.scss */
+  /* line 518, ../sass/_responsive-420px.scss */
   .contactus-form .container form fieldset {
     position: relative;
     padding-right: 0;
@@ -3692,7 +4259,7 @@ h2.section-title:before {
     display: table;
     clear: both;
   }
-  /* line 521, ../sass/_responsive-420px.scss */
+  /* line 526, ../sass/_responsive-420px.scss */
   .contactus-form .container form fieldset .frm_form_field.frm_full {
     position: static;
     width: 100% !important;
@@ -3702,43 +4269,263 @@ h2.section-title:before {
     box-sizing: border-box !important;
     padding: 0 7px 0 0;
   }
-  /* line 528, ../sass/_responsive-420px.scss */
+  /* line 533, ../sass/_responsive-420px.scss */
   .contactus-form .container form fieldset .frm_submit {
     position: static;
     margin: 0 -23px 0 -30px;
   }
-  /* line 531, ../sass/_responsive-420px.scss */
+  /* line 536, ../sass/_responsive-420px.scss */
   .contactus-form .container form fieldset .frm_submit input {
     float: none;
     display: block;
     width: 100% !important;
   }
 
-  /* line 542, ../sass/_responsive-420px.scss */
+  /* line 547, ../sass/_responsive-420px.scss */
   .contactus-tour-desk {
     display: none;
   }
 
-  /* line 545, ../sass/_responsive-420px.scss */
+  /* line 550, ../sass/_responsive-420px.scss */
   .contactus-tour-mobile {
     display: block;
   }
 
-  /* line 548, ../sass/_responsive-420px.scss */
-  .mg-top-mb {
-    margin-top: 25px;
+  /* e: contact us */
+  /* login register */
+  /* line 561, ../sass/_responsive-420px.scss */
+  .modal .modal-dialog {
+    width: 630px;
+    margin: 60px auto 0;
+  }
+  /* line 564, ../sass/_responsive-420px.scss */
+  .modal .modal-dialog .modal-content {
+    padding: 0;
+    background-color: #12887d;
+  }
+  /* line 568, ../sass/_responsive-420px.scss */
+  .modal .modal-dialog .modal-content .modal-body > .logo-form {
+    position: static;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 200px;
+  }
+  /* line 574, ../sass/_responsive-420px.scss */
+  .modal .modal-dialog .modal-content .modal-body > .logo-form img {
+    height: 31px;
+  }
+  /* line 582, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .col2-set {
+    padding-top: 67px;
+    position: relative;
+  }
+  /* line 585, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .col2-set:before {
+    background-color: #0d6f6b;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 52px;
+    z-index: 1;
+    top: 0;
+  }
+  /* line 596, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .col2-set .col-1 {
+    padding: 0;
+    margin-top: 0;
+    float: none;
+    border: none;
+    width: 100%;
+  }
+  /* line 602, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .col2-set .col-1 h2 {
+    left: 0;
+    background-color: #07575b;
+    color: #13887d;
+  }
+  /* line 606, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .col2-set .col-1 h2 + p {
+    text-align: center;
+  }
+  /* line 611, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .col2-set .col-2 {
+    width: 100%;
+    float: none;
+    padding: 0;
+    background-color: transparent;
+  }
+  /* line 616, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .col2-set .col-2 h2 {
+    right: 0;
+    padding: 0;
+  }
+  /* line 619, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .col2-set .col-2 h2 + p {
+    display: none;
+  }
+  /* line 626, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .col2-set.login-open .col-1 h2 {
+    background-color: #07575b;
+    color: #13887d;
+  }
+  /* line 630, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .col2-set.login-open .col-1 form.login {
+    display: block;
+  }
+  /* line 637, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .col2-set.register-open .col-1 h2 {
+    background-color: #0d6f6b;
+  }
+  /* line 639, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .col2-set.register-open .col-1 h2 + p {
+    display: none;
+  }
+  /* line 643, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .col2-set.register-open .col-1 form.login {
+    display: none;
+  }
+  /* line 648, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .col2-set.register-open .col-2 h2 {
+    background-color: #07575b;
+    color: #13887d;
+  }
+  /* line 651, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .col2-set.register-open .col-2 h2 + p {
+    display: block;
+    text-align: center;
+  }
+  /* line 656, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .col2-set.register-open .col-2 form.register {
+    display: block;
+  }
+  /* line 662, ../sass/_responsive-420px.scss */
+  .modal .woocommerce h2 {
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    text-align: center;
+    z-index: 3;
+    background-color: #0d6f6b;
+    line-height: 52px;
+  }
+  /* line 673, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .form-row-wide, .modal .woocommerce .form-row {
+    padding: 0 8px;
+  }
+  /* line 675, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .form-row-wide input, .modal .woocommerce .form-row-wide select, .modal .woocommerce .form-row input, .modal .woocommerce .form-row select {
+    background-color: #10726e !important;
+  }
+  /* line 681, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .form-row {
+    margin-bottom: 15px;
+  }
+  /* line 683, ../sass/_responsive-420px.scss */
+  .modal .woocommerce .form-row input[type=submit] {
+    font-size: 24px;
+    height: 68px;
+  }
+  /* line 697, ../sass/_responsive-420px.scss */
+  .modal .woocommerce form.register {
+    margin: 0 22px;
+    padding-bottom: 0;
+    display: none;
+  }
+  /* line 701, ../sass/_responsive-420px.scss */
+  .modal .woocommerce form.register .register-slogan {
+    text-align: center;
+  }
+  /* line 705, ../sass/_responsive-420px.scss */
+  .modal .woocommerce form.register .regis-col2 + .form-row {
+    position: static;
+    width: auto;
+    padding: 0;
+    float: none;
+    margin-right: -22px;
+    margin-left: -22px;
+  }
+  /* line 715, ../sass/_responsive-420px.scss */
+  .modal .woocommerce form.register .form-row input[type="submit"] {
+    background-color: rgba(9, 86, 90, 0.5);
+  }
+  /* line 718, ../sass/_responsive-420px.scss */
+  .modal .woocommerce form.register .form-row input[type="email"], .modal .woocommerce form.register .form-row input[type="password"] {
+    background-color: #07575b !important;
+  }
+  /* line 722, ../sass/_responsive-420px.scss */
+  .modal .woocommerce form.register > p.form-row:last-child {
+    float: none;
+    width: auto;
+    padding: 0;
+    margin: 0 -22px;
+  }
+  /* line 731, ../sass/_responsive-420px.scss */
+  .modal .woocommerce form.login {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 734, ../sass/_responsive-420px.scss */
+  .modal .woocommerce form.login .form-row-wide {
+    max-width: 280px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 740, ../sass/_responsive-420px.scss */
+  .modal .woocommerce form.login .form-row {
+    padding: 0;
+  }
+  /* line 742, ../sass/_responsive-420px.scss */
+  .modal .woocommerce form.login .form-row .inline {
+    text-align: center;
+  }
+  /* line 746, ../sass/_responsive-420px.scss */
+  .modal .woocommerce form.login .lost_password {
+    text-align: center;
   }
 
-  /* e: contact us */
+  /* e: login register */
+  /* checkout page */
+  /* line 757, ../sass/_responsive-420px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page h2, .woocommerce-checkout.woocommerce-page .checkout-page #order_review_heading {
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
+  /* line 763, ../sass/_responsive-420px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set {
+    padding-bottom: 70px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  /* line 768, ../sass/_responsive-420px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-1 .form-row {
+    width: 50%;
+  }
+  /* line 770, ../sass/_responsive-420px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-1 .form-row.create-account {
+    bottom: 30px;
+  }
+  /* line 776, ../sass/_responsive-420px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-2 .form-row {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  /* e: checkout page */
 }
 @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 192dpi) {
-  /* line 285, ../sass/_responsive-420px.scss */
+  /* line 290, ../sass/_responsive-420px.scss */
   #header-wrapper header#header .numberphone:before {
     border-image: url(../images/icons/telephone-mb-2x.png);
   }
 }
 @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-resolution: 192dpi) {
-  /* line 358, ../sass/_responsive-420px.scss */
+  /* line 363, ../sass/_responsive-420px.scss */
   #primary-menu .dt-menu-toggle .dt-menu-toggle-icon {
     background-image: url("../images/icons/toggle-menu-mb-2x.png");
   }
@@ -3746,7 +4533,7 @@ h2.section-title:before {
 
 /*----*****---- << Mobile >> ----*****----*/
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) .container { width:300px; } */
-@media only screen and (min-width: 320px) and (max-width: 640px) {
+@media only screen and (min-width: 320px) and (max-width: 639px) {
   /* line 19, ../sass/_responsive-300px.scss */
   .container {
     width: 300px !important;
@@ -3798,53 +4585,57 @@ h2.section-title:before {
     right: 0;
     bottom: 40px;
   }
+  /* line 61, ../sass/_responsive-300px.scss */
+  .banner #slider-container h3.ls-l {
+    font-size: 30px;
+  }
 
-  /* line 64, ../sass/_responsive-300px.scss */
+  /* line 67, ../sass/_responsive-300px.scss */
   .scroll-down {
     display: none;
   }
 
-  /* line 67, ../sass/_responsive-300px.scss */
+  /* line 70, ../sass/_responsive-300px.scss */
   .scrollDown-social .container .connect-us {
     display: none;
   }
 
-  /* line 72, ../sass/_responsive-300px.scss */
+  /* line 75, ../sass/_responsive-300px.scss */
   .find-a-tour .uform_title {
     font-size: 16px;
     padding: 12px 0 14px 14px;
     text-align: center;
     cursor: pointer;
   }
-  /* line 78, ../sass/_responsive-300px.scss */
+  /* line 81, ../sass/_responsive-300px.scss */
   .find-a-tour .uwpqsf_class {
     display: none;
     width: 100%;
     margin-top: 10px;
   }
-  /* line 82, ../sass/_responsive-300px.scss */
+  /* line 85, ../sass/_responsive-300px.scss */
   .find-a-tour .uwpqsf_class select {
     font-size: 12px;
     height: 42px;
   }
-  /* line 86, ../sass/_responsive-300px.scss */
+  /* line 89, ../sass/_responsive-300px.scss */
   .find-a-tour .uwpqsf_class .selection-box:after {
     height: 41px;
   }
-  /* line 89, ../sass/_responsive-300px.scss */
+  /* line 92, ../sass/_responsive-300px.scss */
   .find-a-tour .uwpqsf_class input[type="submit"] {
     height: 42px;
   }
-  /* line 96, ../sass/_responsive-300px.scss */
+  /* line 99, ../sass/_responsive-300px.scss */
   .find-a-tour + .popular-tours .container .column:nth-child(4) {
     clear: left;
   }
-  /* line 103, ../sass/_responsive-300px.scss */
+  /* line 106, ../sass/_responsive-300px.scss */
   .find-a-tour.open-form .uwpqsf_class {
     display: block;
   }
 
-  /* line 111, ../sass/_responsive-300px.scss */
+  /* line 114, ../sass/_responsive-300px.scss */
   .popular-tours .dt-sc-one-fourth {
     width: 50% !important;
     margin-left: 0 !important;
@@ -3854,165 +4645,165 @@ h2.section-title:before {
     -ms-box-sizing: border-box !important;
     box-sizing: border-box !important;
   }
-  /* line 118, ../sass/_responsive-300px.scss */
+  /* line 121, ../sass/_responsive-300px.scss */
   .popular-tours .dt-sc-one-fourth .featured-tour-content .text {
     left: 5px;
     right: 5px;
   }
-  /* line 121, ../sass/_responsive-300px.scss */
+  /* line 124, ../sass/_responsive-300px.scss */
   .popular-tours .dt-sc-one-fourth .featured-tour-content .text a {
     margin-left: -15px;
     margin-right: -15px;
     min-width: 100%;
   }
-  /* line 130, ../sass/_responsive-300px.scss */
+  /* line 133, ../sass/_responsive-300px.scss */
   .popular-tours .dt-sc-one-column .dt-sc-button {
     margin-top: 0;
   }
-  /* line 136, ../sass/_responsive-300px.scss */
+  /* line 139, ../sass/_responsive-300px.scss */
   .popular-tours .container .column.first {
     clear: inherit;
   }
-  /* line 144, ../sass/_responsive-300px.scss */
+  /* line 147, ../sass/_responsive-300px.scss */
   .popular-tours .dt-sc-one-half {
     width: 100% !important;
     margin-left: 0;
   }
-  /* line 148, ../sass/_responsive-300px.scss */
+  /* line 151, ../sass/_responsive-300px.scss */
   .popular-tours h2.section-title {
     font-size: 18px;
   }
-  /* line 151, ../sass/_responsive-300px.scss */
+  /* line 154, ../sass/_responsive-300px.scss */
   .popular-tours .text {
     padding-right: 15px;
     padding-left: 15px;
     padding-top: 10px;
     bottom: -48px;
   }
-  /* line 156, ../sass/_responsive-300px.scss */
+  /* line 159, ../sass/_responsive-300px.scss */
   .popular-tours .text h3 {
     font-size: 11px;
     margin-bottom: 9px;
   }
-  /* line 160, ../sass/_responsive-300px.scss */
+  /* line 163, ../sass/_responsive-300px.scss */
   .popular-tours .text h2 {
     font-size: 12px;
     padding-bottom: 15px;
   }
-  /* line 164, ../sass/_responsive-300px.scss */
+  /* line 167, ../sass/_responsive-300px.scss */
   .popular-tours .text a {
     margin-top: 0;
   }
-  /* line 170, ../sass/_responsive-300px.scss */
+  /* line 173, ../sass/_responsive-300px.scss */
   .popular-tours .column:hover .text {
     bottom: 0;
   }
 
-  /* line 177, ../sass/_responsive-300px.scss */
+  /* line 180, ../sass/_responsive-300px.scss */
   .tour-type {
     background-size: auto 170px;
   }
-  /* line 186, ../sass/_responsive-300px.scss */
+  /* line 189, ../sass/_responsive-300px.scss */
   .tour-type .text {
     bottom: auto;
   }
-  /* line 188, ../sass/_responsive-300px.scss */
+  /* line 191, ../sass/_responsive-300px.scss */
   .tour-type .text h2 {
     font-size: 14px;
   }
-  /* line 191, ../sass/_responsive-300px.scss */
+  /* line 194, ../sass/_responsive-300px.scss */
   .tour-type .text a {
     min-width: 100%;
   }
-  /* line 198, ../sass/_responsive-300px.scss */
+  /* line 201, ../sass/_responsive-300px.scss */
   .tour-type .column:hover .text h2 {
     font-size: 16px;
   }
 
-  /* line 207, ../sass/_responsive-300px.scss */
+  /* line 210, ../sass/_responsive-300px.scss */
   .testimonials h2.section-title {
     font-size: 16px;
   }
-  /* line 210, ../sass/_responsive-300px.scss */
+  /* line 213, ../sass/_responsive-300px.scss */
   .testimonials blockquote {
     font-weight: normal;
     font-size: 16px;
     padding: 0;
   }
-  /* line 215, ../sass/_responsive-300px.scss */
+  /* line 218, ../sass/_responsive-300px.scss */
   .testimonials .infor {
     font-size: 14px;
   }
-  /* line 220, ../sass/_responsive-300px.scss */
+  /* line 223, ../sass/_responsive-300px.scss */
   .testimonials .dt-sc-testimonial-carousel-wrapper .carousel-arrows a {
     top: 40px;
   }
-  /* line 223, ../sass/_responsive-300px.scss */
+  /* line 226, ../sass/_responsive-300px.scss */
   .testimonials .dt-sc-testimonial-carousel-wrapper .carousel-arrows .testimonial-prev {
     left: 0;
   }
-  /* line 226, ../sass/_responsive-300px.scss */
+  /* line 229, ../sass/_responsive-300px.scss */
   .testimonials .dt-sc-testimonial-carousel-wrapper .carousel-arrows .testimonial-next {
     right: 0;
   }
 
-  /* line 233, ../sass/_responsive-300px.scss */
+  /* line 236, ../sass/_responsive-300px.scss */
   .why-travel {
     font-size: 12px;
   }
-  /* line 235, ../sass/_responsive-300px.scss */
+  /* line 238, ../sass/_responsive-300px.scss */
   .why-travel h2.section-title {
     font-size: 16px;
   }
 
-  /* line 244, ../sass/_responsive-300px.scss */
+  /* line 247, ../sass/_responsive-300px.scss */
   .fullwidth-section.tablist .container ul li a {
     font-size: 11px;
     border-bottom-width: 3px;
   }
-  /* line 249, ../sass/_responsive-300px.scss */
+  /* line 252, ../sass/_responsive-300px.scss */
   .fullwidth-section.tablist .container ul li.current a {
     border-bottom-width: 3px;
   }
 
-  /* line 260, ../sass/_responsive-300px.scss */
+  /* line 263, ../sass/_responsive-300px.scss */
   .popular-tours.tab-content .container .column:nth-child(3), .popular-tours.tab-content .container .column:nth-child(4) {
     display: none;
   }
-  /* line 266, ../sass/_responsive-300px.scss */
+  /* line 269, ../sass/_responsive-300px.scss */
   .popular-tours.tab-content .column:hover {
     bottom: 0;
   }
-  /* line 270, ../sass/_responsive-300px.scss */
+  /* line 273, ../sass/_responsive-300px.scss */
   .popular-tours.tab-content .text {
     bottom: -38px;
   }
-  /* line 272, ../sass/_responsive-300px.scss */
+  /* line 275, ../sass/_responsive-300px.scss */
   .popular-tours.tab-content .text a {
     font-size: 12px;
   }
 
-  /* line 281, ../sass/_responsive-300px.scss */
+  /* line 284, ../sass/_responsive-300px.scss */
   #footer .subcribe-form h3.widget-title {
     font-size: 16px;
     margin-top: 20px;
     width: 100%;
     text-align: center;
   }
-  /* line 287, ../sass/_responsive-300px.scss */
+  /* line 290, ../sass/_responsive-300px.scss */
   #footer .subcribe-form .frm_forms {
     width: 100%;
   }
-  /* line 290, ../sass/_responsive-300px.scss */
+  /* line 293, ../sass/_responsive-300px.scss */
   #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_form_field input {
     font-size: 16px !important;
     height: 60px !important;
   }
-  /* line 294, ../sass/_responsive-300px.scss */
+  /* line 297, ../sass/_responsive-300px.scss */
   #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_form_field {
     width: 100%;
   }
-  /* line 297, ../sass/_responsive-300px.scss */
+  /* line 300, ../sass/_responsive-300px.scss */
   #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_submit {
     width: 100%;
     position: absolute;
@@ -4020,12 +4811,12 @@ h2.section-title:before {
     left: 0;
     right: 0;
   }
-  /* line 304, ../sass/_responsive-300px.scss */
+  /* line 307, ../sass/_responsive-300px.scss */
   #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_submit button {
     font-size: 16px !important;
     height: 60px !important;
   }
-  /* line 308, ../sass/_responsive-300px.scss */
+  /* line 311, ../sass/_responsive-300px.scss */
   #footer .subcribe-form .widget {
     position: relative;
     padding-bottom: 60px;
@@ -4036,82 +4827,82 @@ h2.section-title:before {
     display: table;
     clear: both;
   }
-  /* line 318, ../sass/_responsive-300px.scss */
+  /* line 321, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper .container .column .widget h3 {
     font-size: 12px;
   }
-  /* line 321, ../sass/_responsive-300px.scss */
+  /* line 324, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper .container .column .widget:first-child {
     font-size: 12px;
   }
-  /* line 327, ../sass/_responsive-300px.scss */
+  /* line 330, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper .container .column .social-list li a {
     margin-left: 10px;
   }
-  /* line 332, ../sass/_responsive-300px.scss */
+  /* line 335, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper .container .column.dt-sc-one-third {
     width: 50%;
   }
-  /* line 334, ../sass/_responsive-300px.scss */
+  /* line 337, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper .container .column.dt-sc-one-third:last-child {
     width: 100%;
   }
-  /* line 336, ../sass/_responsive-300px.scss */
+  /* line 339, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper .container .column.dt-sc-one-third:last-child .widget_social {
     float: left;
     width: 50%;
   }
-  /* line 339, ../sass/_responsive-300px.scss */
+  /* line 342, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper .container .column.dt-sc-one-third:last-child .widget_social + .widget {
     width: auto;
   }
-  /* line 356, ../sass/_responsive-300px.scss */
+  /* line 359, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper.type2 .column.first aside + aside {
     display: none;
   }
-  /* line 362, ../sass/_responsive-300px.scss */
+  /* line 365, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper.type2 .column:nth-child(2) h3 {
     padding-left: 38px !important;
     background: url(../images/icons/telephone-blue.png) no-repeat left center;
     line-height: 28px;
   }
-  /* line 368, ../sass/_responsive-300px.scss */
+  /* line 371, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper.type2 .column:nth-child(2) aside + aside {
     display: none;
   }
-  /* line 372, ../sass/_responsive-300px.scss */
+  /* line 375, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper.type2 .column:nth-child(2) > .widget:first-child > .textwidget {
     background: none;
     padding-left: 0;
   }
-  /* line 377, ../sass/_responsive-300px.scss */
+  /* line 380, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper.type2 .column:last-child {
     display: none;
   }
-  /* line 383, ../sass/_responsive-300px.scss */
+  /* line 386, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper.mobile-footer {
     display: block;
     padding-top: 0;
   }
-  /* line 386, ../sass/_responsive-300px.scss */
+  /* line 389, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper.mobile-footer .column {
     margin-left: 0;
   }
-  /* line 388, ../sass/_responsive-300px.scss */
+  /* line 391, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper.mobile-footer .column .social-list {
     margin-bottom: 0;
   }
-  /* line 391, ../sass/_responsive-300px.scss */
+  /* line 394, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper.mobile-footer .column .widget:last-child {
     padding-left: 0 !important;
     background: none !important;
     margin-top: -20px;
   }
-  /* line 398, ../sass/_responsive-300px.scss */
+  /* line 401, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper.mobile-footer .widget_social + .widget {
     margin-bottom: 0;
   }
-  /* line 400, ../sass/_responsive-300px.scss */
+  /* line 403, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper.mobile-footer .widget_social + .widget h3 {
     background: url(../images/send-email.png) no-repeat left 0;
     padding-left: 27px;
@@ -4120,36 +4911,38 @@ h2.section-title:before {
     font-size: 10px;
     margin-bottom: 6px;
   }
-  /* line 408, ../sass/_responsive-300px.scss */
+  /* line 411, ../sass/_responsive-300px.scss */
   #footer .footer-widgets-wrapper.mobile-footer .widget_social + .widget .textwidget {
     display: inline-block;
   }
 
   /* header */
-  /* line 425, ../sass/_responsive-300px.scss */
-  .home .banner {
-    margin-top: 0;
+  /* line 427, ../sass/_responsive-300px.scss */
+  .banner {
+    margin-top: -30px;
   }
-  /* line 428, ../sass/_responsive-300px.scss */
+
+  /* line 432, ../sass/_responsive-300px.scss */
   .home #header-wrapper {
     background-color: #10726e;
   }
 
-  /* line 433, ../sass/_responsive-300px.scss */
+  /* line 437, ../sass/_responsive-300px.scss */
   #header-wrapper {
     height: 54px;
+    margin-bottom: 30px;
   }
-  /* line 435, ../sass/_responsive-300px.scss */
+  /* line 440, ../sass/_responsive-300px.scss */
   #header-wrapper header#header {
     padding-top: 0;
   }
-  /* line 437, ../sass/_responsive-300px.scss */
+  /* line 442, ../sass/_responsive-300px.scss */
   #header-wrapper header#header .numberphone {
     position: absolute;
     top: 10px;
     left: 0;
   }
-  /* line 441, ../sass/_responsive-300px.scss */
+  /* line 446, ../sass/_responsive-300px.scss */
   #header-wrapper header#header .numberphone:before {
     content: "";
     min-height: 30px;
@@ -4160,7 +4953,7 @@ h2.section-title:before {
     display: block;
     cursor: pointer;
   }
-  /* line 454, ../sass/_responsive-300px.scss */
+  /* line 459, ../sass/_responsive-300px.scss */
   #header-wrapper header#header .numberphone ul {
     display: none;
     width: 260px;
@@ -4175,7 +4968,7 @@ h2.section-title:before {
     -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     z-index: 1;
   }
-  /* line 467, ../sass/_responsive-300px.scss */
+  /* line 472, ../sass/_responsive-300px.scss */
   #header-wrapper header#header .numberphone ul li {
     display: block;
     padding: 0px 15px;
@@ -4183,11 +4976,11 @@ h2.section-title:before {
     line-height: normal;
     color: #2c3e50;
   }
-  /* line 476, ../sass/_responsive-300px.scss */
+  /* line 481, ../sass/_responsive-300px.scss */
   #header-wrapper header#header .numberphone:hover ul {
     display: block;
   }
-  /* line 482, ../sass/_responsive-300px.scss */
+  /* line 487, ../sass/_responsive-300px.scss */
   #header-wrapper header#header #logo img {
     height: 23px !important;
     width: auto !important;
@@ -4199,21 +4992,21 @@ h2.section-title:before {
     -ms-transform: inherit;
     transform: inherit;
   }
-  /* line 491, ../sass/_responsive-300px.scss */
+  /* line 496, ../sass/_responsive-300px.scss */
   #header-wrapper header#header .cart-contents {
     margin-top: 12px;
     display: none;
   }
-  /* line 495, ../sass/_responsive-300px.scss */
+  /* line 500, ../sass/_responsive-300px.scss */
   #header-wrapper header#header .user-action {
     display: none;
   }
-  /* line 497, ../sass/_responsive-300px.scss */
+  /* line 502, ../sass/_responsive-300px.scss */
   #header-wrapper header#header .user-action:before {
     margin-top: 12px;
   }
 
-  /* line 505, ../sass/_responsive-300px.scss */
+  /* line 510, ../sass/_responsive-300px.scss */
   #primary-menu .dt-menu-toggle {
     display: block;
     background: transparent;
@@ -4225,12 +5018,12 @@ h2.section-title:before {
     right: 0;
     top: 11px;
   }
-  /* line 515, ../sass/_responsive-300px.scss */
+  /* line 520, ../sass/_responsive-300px.scss */
   #primary-menu .dt-menu-toggle .dt-menu-toggle-icon, #primary-menu .dt-menu-toggle .dt-menu-toggle-icon:before, #primary-menu .dt-menu-toggle .dt-menu-toggle-icon:after {
     background: transparent;
     display: none;
   }
-  /* line 519, ../sass/_responsive-300px.scss */
+  /* line 524, ../sass/_responsive-300px.scss */
   #primary-menu .dt-menu-toggle .dt-menu-toggle-icon {
     display: inline-block;
     background: url("../images/icons/toggle-menu-mb.png") no-repeat;
@@ -4250,11 +5043,11 @@ h2.section-title:before {
     display: table;
     clear: both;
   }
-  /* line 540, ../sass/_responsive-300px.scss */
+  /* line 545, ../sass/_responsive-300px.scss */
   #header-wrapper header#header #primary-menu #main-menu {
     position: static;
   }
-  /* line 542, ../sass/_responsive-300px.scss */
+  /* line 547, ../sass/_responsive-300px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu {
     position: absolute;
     top: 53px;
@@ -4269,80 +5062,84 @@ h2.section-title:before {
     -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     z-index: 1;
   }
-  /* line 555, ../sass/_responsive-300px.scss */
+  /* line 560, ../sass/_responsive-300px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li {
     width: 100%;
     float: none;
     margin: 0;
     display: block;
   }
-  /* line 560, ../sass/_responsive-300px.scss */
+  /* line 565, ../sass/_responsive-300px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li > a {
     display: block;
     padding: 8px 15px 9px;
     font-size: 16px;
     color: #685e58;
   }
-  /* line 565, ../sass/_responsive-300px.scss */
+  /* line 570, ../sass/_responsive-300px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li > a:hover {
     color: #087dc2;
   }
-  /* line 570, ../sass/_responsive-300px.scss */
+  /* line 575, ../sass/_responsive-300px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li:first-child > a {
     padding-left: 15px;
   }
-  /* line 574, ../sass/_responsive-300px.scss */
+  /* line 579, ../sass/_responsive-300px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li .sub-menu {
     position: static;
     width: 100%;
   }
-  /* line 579, ../sass/_responsive-300px.scss */
+  /* line 584, ../sass/_responsive-300px.scss */
   #header-wrapper header#header #primary-menu #main-menu > ul.menu > li:hover .sub-menu {
     display: block !important;
   }
 
   /* e: header */
   /* about us */
-  /* line 593, ../sass/_responsive-300px.scss */
+  /* line 598, ../sass/_responsive-300px.scss */
   .about-us h2 {
     font-size: 16px;
   }
-  /* line 596, ../sass/_responsive-300px.scss */
+  /* line 601, ../sass/_responsive-300px.scss */
   .about-us ol {
     font-size: 30px;
   }
-  /* line 598, ../sass/_responsive-300px.scss */
+  /* line 603, ../sass/_responsive-300px.scss */
   .about-us ol:last-child {
     margin-bottom: 0;
   }
-  /* line 601, ../sass/_responsive-300px.scss */
+  /* line 606, ../sass/_responsive-300px.scss */
   .about-us ol p {
     font-size: 14px;
   }
-  /* line 607, ../sass/_responsive-300px.scss */
+  /* line 612, ../sass/_responsive-300px.scss */
   .about-us .container .column:last-child {
     display: none;
   }
 
-  /* line 615, ../sass/_responsive-300px.scss */
+  /* line 620, ../sass/_responsive-300px.scss */
   .what-we-do h2 {
     font-size: 16px;
   }
 
   /* e: about us */
   /* contact us */
-  /* line 623, ../sass/_responsive-300px.scss */
+  /* line 628, ../sass/_responsive-300px.scss */
   .contactus-tour {
     padding-top: 14px !important;
     padding-bottom: 0 !important;
     margin-bottom: -8px;
   }
-  /* line 627, ../sass/_responsive-300px.scss */
+  /* line 632, ../sass/_responsive-300px.scss */
   .contactus-tour .column {
     margin-right: 0;
     margin-left: 0;
   }
-  /* line 630, ../sass/_responsive-300px.scss */
+  /* line 635, ../sass/_responsive-300px.scss */
+  .contactus-tour .column img {
+    max-height: 112px;
+  }
+  /* line 638, ../sass/_responsive-300px.scss */
   .contactus-tour .column.dt-sc-one-fourth {
     width: 50% !important;
     padding-left: 3px;
@@ -4351,38 +5148,38 @@ h2.section-title:before {
     -ms-box-sizing: border-box !important;
     box-sizing: border-box !important;
   }
-  /* line 634, ../sass/_responsive-300px.scss */
+  /* line 642, ../sass/_responsive-300px.scss */
   .contactus-tour .column.dt-sc-one-fourth.first {
     padding-right: 3px;
     padding-left: 0;
   }
-  /* line 639, ../sass/_responsive-300px.scss */
+  /* line 647, ../sass/_responsive-300px.scss */
   .contactus-tour .column.dt-sc-one-half {
     width: 100% !important;
   }
-  /* line 642, ../sass/_responsive-300px.scss */
+  /* line 650, ../sass/_responsive-300px.scss */
   .contactus-tour .column img {
     width: 100%;
   }
-  /* line 647, ../sass/_responsive-300px.scss */
+  /* line 655, ../sass/_responsive-300px.scss */
   .contactus-tour .text {
     position: static;
     background-color: transparent;
     padding-top: 0;
   }
-  /* line 652, ../sass/_responsive-300px.scss */
+  /* line 660, ../sass/_responsive-300px.scss */
   .contactus-tour .text a {
     margin-top: 0;
     margin-left: -15px;
     margin-right: -15px;
   }
-  /* line 656, ../sass/_responsive-300px.scss */
+  /* line 664, ../sass/_responsive-300px.scss */
   .contactus-tour .text a i {
     width: 16px;
     height: 16px;
     background-size: 16px 16px;
   }
-  /* line 662, ../sass/_responsive-300px.scss */
+  /* line 670, ../sass/_responsive-300px.scss */
   .contactus-tour .text h2 {
     font-size: 16px;
     margin-top: -24px;
@@ -4395,11 +5192,11 @@ h2.section-title:before {
     display: table;
     clear: both;
   }
-  /* line 673, ../sass/_responsive-300px.scss */
+  /* line 681, ../sass/_responsive-300px.scss */
   .contactus-form .container {
     padding: 16px 16px 0;
   }
-  /* line 676, ../sass/_responsive-300px.scss */
+  /* line 684, ../sass/_responsive-300px.scss */
   .contactus-form .container form fieldset {
     position: relative;
     padding-right: 0;
@@ -4416,19 +5213,19 @@ h2.section-title:before {
     display: table;
     clear: both;
   }
-  /* line 684, ../sass/_responsive-300px.scss */
+  /* line 692, ../sass/_responsive-300px.scss */
   .contactus-form .container form fieldset .frm_form_field.frm_first_half, .contactus-form .container form fieldset .frm_form_field.frm_last_half {
     width: 100% !important;
     float: left !important;
     clear: inherit;
   }
-  /* line 690, ../sass/_responsive-300px.scss */
+  /* line 698, ../sass/_responsive-300px.scss */
   .contactus-form .container form fieldset .frm_form_field.frm_last_half + .frm_top_container {
     width: 100% !important;
     float: left !important;
     clear: inherit;
   }
-  /* line 696, ../sass/_responsive-300px.scss */
+  /* line 704, ../sass/_responsive-300px.scss */
   .contactus-form .container form fieldset .frm_form_field.frm_full {
     position: static;
     width: 100% !important;
@@ -4438,43 +5235,258 @@ h2.section-title:before {
     box-sizing: border-box !important;
     padding: 0;
   }
-  /* line 703, ../sass/_responsive-300px.scss */
+  /* line 711, ../sass/_responsive-300px.scss */
   .contactus-form .container form fieldset .frm_submit {
     position: static;
     margin: 0 -16px;
   }
-  /* line 706, ../sass/_responsive-300px.scss */
+  /* line 714, ../sass/_responsive-300px.scss */
   .contactus-form .container form fieldset .frm_submit input {
     float: none;
     display: block;
     width: 100% !important;
   }
 
-  /* line 719, ../sass/_responsive-300px.scss */
+  /* line 727, ../sass/_responsive-300px.scss */
   .contactus-tour-desk {
     display: none;
   }
 
-  /* line 722, ../sass/_responsive-300px.scss */
+  /* line 730, ../sass/_responsive-300px.scss */
   .contactus-tour-mobile {
     display: block;
   }
 
-  /* line 726, ../sass/_responsive-300px.scss */
-  .mg-top-mb {
-    margin-top: 25px;
+  /* e: contact us */
+  /* login register */
+  /* line 742, ../sass/_responsive-300px.scss */
+  .modal .modal-dialog {
+    width: 80%;
+    margin: 60px auto 0;
+  }
+  /* line 745, ../sass/_responsive-300px.scss */
+  .modal .modal-dialog .modal-content {
+    padding: 0;
+    background-color: #12887d;
+  }
+  /* line 749, ../sass/_responsive-300px.scss */
+  .modal .modal-dialog .modal-content .modal-body > .logo-form {
+    position: static;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 200px;
+  }
+  /* line 755, ../sass/_responsive-300px.scss */
+  .modal .modal-dialog .modal-content .modal-body > .logo-form img {
+    height: 31px;
+  }
+  /* line 763, ../sass/_responsive-300px.scss */
+  .modal .woocommerce .col2-set {
+    padding-top: 67px;
+    position: relative;
+  }
+  /* line 766, ../sass/_responsive-300px.scss */
+  .modal .woocommerce .col2-set .col-1 {
+    padding: 0;
+    margin-top: 0;
+    float: none;
+    border: none;
+    width: 100%;
+  }
+  /* line 772, ../sass/_responsive-300px.scss */
+  .modal .woocommerce .col2-set .col-1 h2 {
+    left: 0;
+    background-color: #07575b;
+    color: #13887d;
+  }
+  /* line 778, ../sass/_responsive-300px.scss */
+  .modal .woocommerce .col2-set .col-2 {
+    width: 100%;
+    float: none;
+    padding: 0;
+    background-color: transparent;
+  }
+  /* line 783, ../sass/_responsive-300px.scss */
+  .modal .woocommerce .col2-set .col-2 h2 {
+    right: 0;
+    padding: 0;
+  }
+  /* line 786, ../sass/_responsive-300px.scss */
+  .modal .woocommerce .col2-set .col-2 h2 + p {
+    display: none;
+  }
+  /* line 793, ../sass/_responsive-300px.scss */
+  .modal .woocommerce .col2-set.login-open .col-1 h2 {
+    background-color: #07575b;
+    color: #13887d;
+  }
+  /* line 797, ../sass/_responsive-300px.scss */
+  .modal .woocommerce .col2-set.login-open .col-1 form.login {
+    display: block;
+  }
+  /* line 804, ../sass/_responsive-300px.scss */
+  .modal .woocommerce .col2-set.register-open .col-1 h2 {
+    background-color: #0d6f6b;
+  }
+  /* line 806, ../sass/_responsive-300px.scss */
+  .modal .woocommerce .col2-set.register-open .col-1 h2 + p {
+    display: none;
+  }
+  /* line 810, ../sass/_responsive-300px.scss */
+  .modal .woocommerce .col2-set.register-open .col-1 form.login {
+    display: none;
+  }
+  /* line 815, ../sass/_responsive-300px.scss */
+  .modal .woocommerce .col2-set.register-open .col-2 h2 {
+    background-color: #07575b;
+    color: #13887d;
+  }
+  /* line 818, ../sass/_responsive-300px.scss */
+  .modal .woocommerce .col2-set.register-open .col-2 h2 + p {
+    display: block;
+    text-align: left;
+  }
+  /* line 823, ../sass/_responsive-300px.scss */
+  .modal .woocommerce .col2-set.register-open .col-2 form.register {
+    display: block;
+  }
+  /* line 829, ../sass/_responsive-300px.scss */
+  .modal .woocommerce h2 {
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    text-align: center;
+    z-index: 3;
+    background-color: #0d6f6b;
+    line-height: 52px;
+  }
+  /* line 840, ../sass/_responsive-300px.scss */
+  .modal .woocommerce .form-row-wide, .modal .woocommerce .form-row {
+    width: 100%;
+    padding: 0;
+  }
+  /* line 843, ../sass/_responsive-300px.scss */
+  .modal .woocommerce .form-row-wide input, .modal .woocommerce .form-row-wide select, .modal .woocommerce .form-row input, .modal .woocommerce .form-row select {
+    font-size: 14px;
+    height: 34px;
+    background-color: #10726e !important;
+  }
+  /* line 849, ../sass/_responsive-300px.scss */
+  .modal .woocommerce .form-row {
+    margin-bottom: 25px;
+  }
+  /* line 851, ../sass/_responsive-300px.scss */
+  .modal .woocommerce .form-row input[type=submit] {
+    font-size: 24px;
+    height: 68px;
+  }
+  /* line 857, ../sass/_responsive-300px.scss */
+  .modal .woocommerce .selection-box:after {
+    width: 34px;
+    height: 34px;
+    background-size: 34px 34px;
+  }
+  /* line 865, ../sass/_responsive-300px.scss */
+  .modal .woocommerce form.register {
+    margin: 0 22px;
+    padding-bottom: 0;
+    display: none;
+  }
+  /* line 869, ../sass/_responsive-300px.scss */
+  .modal .woocommerce form.register .register-left, .modal .woocommerce form.register .register-right {
+    width: 100%;
+  }
+  /* line 873, ../sass/_responsive-300px.scss */
+  .modal .woocommerce form.register .regis-col2 + .form-row {
+    position: static;
+    width: auto;
+    padding: 0;
+    float: none;
+    margin-right: -22px;
+    margin-left: -22px;
+  }
+  /* line 883, ../sass/_responsive-300px.scss */
+  .modal .woocommerce form.register .form-row input[type="submit"] {
+    background-color: rgba(9, 86, 90, 0.5);
+  }
+  /* line 886, ../sass/_responsive-300px.scss */
+  .modal .woocommerce form.register .form-row input[type="email"], .modal .woocommerce form.register .form-row input[type="password"] {
+    background-color: #07575b !important;
+  }
+  /* line 893, ../sass/_responsive-300px.scss */
+  .modal .woocommerce form.login {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 896, ../sass/_responsive-300px.scss */
+  .modal .woocommerce form.login .form-row-wide {
+    max-width: 280px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 902, ../sass/_responsive-300px.scss */
+  .modal .woocommerce form.login .form-row {
+    padding: 0;
+  }
+  /* line 904, ../sass/_responsive-300px.scss */
+  .modal .woocommerce form.login .form-row .inline {
+    text-align: center;
+  }
+  /* line 908, ../sass/_responsive-300px.scss */
+  .modal .woocommerce form.login .lost_password {
+    text-align: center;
   }
 
-  /* e: contact us */
+  /* e: login register */
+  /* checkout page */
+  /* line 919, ../sass/_responsive-300px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page h2, .woocommerce-checkout.woocommerce-page .checkout-page #order_review_heading {
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
+  /* line 924, ../sass/_responsive-300px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .woocommerce-info {
+    font-size: 14px !important;
+  }
+  /* line 928, ../sass/_responsive-300px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set {
+    padding-bottom: 70px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  /* line 933, ../sass/_responsive-300px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-1 .form-row {
+    width: 100%;
+  }
+  /* line 935, ../sass/_responsive-300px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-1 .form-row.create-account {
+    bottom: 30px;
+  }
+  /* line 939, ../sass/_responsive-300px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-1 h3 {
+    text-align: center;
+    font-size: 16px;
+  }
+  /* line 945, ../sass/_responsive-300px.scss */
+  .woocommerce-checkout.woocommerce-page .checkout-page .woocommerce .checkout.woocommerce-checkout .col2-set .col-2 .form-row {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  /* e: checkout page */
 }
-@media only screen and (min-width: 320px) and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 640px) and (min-resolution: 192dpi) {
-  /* line 441, ../sass/_responsive-300px.scss */
+@media only screen and (min-width: 320px) and (max-width: 639px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 639px) and (min-resolution: 192dpi) {
+  /* line 446, ../sass/_responsive-300px.scss */
   #header-wrapper header#header .numberphone:before {
     border-image: url(../images/icons/telephone-mb-2x.png);
   }
 }
-@media only screen and (min-width: 320px) and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 640px) and (min-resolution: 192dpi) {
-  /* line 519, ../sass/_responsive-300px.scss */
+@media only screen and (min-width: 320px) and (max-width: 639px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 320px) and (max-width: 639px) and (min-resolution: 192dpi) {
+  /* line 524, ../sass/_responsive-300px.scss */
   #primary-menu .dt-menu-toggle .dt-menu-toggle-icon {
     background-image: url("../images/icons/toggle-menu-mb-2x.png");
   }

@@ -1,0 +1,301 @@
+.modal-backdrop{
+  z-index: 1040 !important;
+}
+.modal{
+  @media screen and (max-width:1119px){
+    position: absolute !important;
+    bottom: auto !important;
+    padding-right: 0 !important;
+  }
+
+  .modal-dialog{
+    width: 954px;
+    background-color: #13887d;
+    @include border-radius(0);
+    @media (min-width: 768px){
+      margin: 120px auto;
+    }
+    .modal-content{
+      background-color: #13887d;
+      @include border-radius(0);
+      border:none;
+      padding-left: 44px;
+      @include box-sizing();
+      .modal-header{
+        padding: 0;
+        border: none;
+        button{
+          width: 36px;
+          height: 36px;
+          background-color: #10726e;
+          @include AvenirNextLTPro();
+          font-weight: bold;
+          position: absolute;
+          top:0;
+          right:0;
+          font-size: 16px;
+          color:#07575b;
+          margin: 0;
+          min-height: 1px;
+          line-height: 36px;
+          padding: 0;
+          @include border-radius(0);
+          @include transition(all ease 0.5s);
+          z-index: 45;
+          &:hover{
+            color:#fff;
+          }
+        }
+      }
+
+      .modal-body{
+        @include clearfix();
+        padding: 0;
+        position: relative;
+        &>.logo-form{
+          position: absolute;
+          top:22px;
+          left: 2px;
+        }
+      }
+      .modal-footer{
+        display: none;
+      }
+    }
+  }
+
+  .woocommerce{
+    @include clearfix();
+    color:#fff;
+    .col2-set{
+      .col-1{
+        width: 29.01%;
+        @include box-sizing();
+        padding: 0 5px;
+        border-top:1px solid #07575b;
+        padding-top: 36px;
+        margin-top: 84px;
+      }
+      .col-2{
+        float: right;
+        width: 65.93%;
+        background-color: #07575b;
+        h2{
+          padding: 18px 0 0 30px;
+          margin-bottom: 0;
+          &+p{
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+    h2{
+      @include AvenirNextLTPro();
+      font-weight: 700;
+      font-size: 22px;
+      color:#fff;
+      text-transform: uppercase;
+      margin: 0 0 6px;
+    }
+    a{
+      color:#fff;
+    }
+    form.login, form.register{
+      padding: 0;
+      margin: 0;
+      border:none;
+    }
+    .form-row-wide, .form-row{
+//      float: left;
+//      width: 50%;
+      @include box-sizing();
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0 10px;
+      input, select{
+        color:#fff !important;
+        border:none !important;
+        @include box-shadow(none !important);
+        margin: 0;
+        padding: 0 5px 0 0;
+        text-indent: 16px;
+        @include border-radius(5px !important);
+        @include placeholder(#fff !important);
+        font-size: 14px;
+        @include AvenirNextLTProDemi();
+        font-weight: 700;
+      }
+      label.inline{
+        color:#fff !important;
+        display: block !important;
+      }
+      label{
+        display: none;
+      }
+      input, select{
+        height:36px;
+      }
+      select{
+        text-indent: 7px;
+        option{
+          color:#333;
+        }
+      }
+      input[type="password"]{
+        background-image: url("../images/icons/clock.png");
+        background-repeat: no-repeat;
+        background-position: 13px center;
+        text-indent: 0;
+        padding-left:35px;
+      }
+    }
+    .selection-box{
+      .selection-box{
+        float: none;
+        width: 100%;
+        padding: 0;
+      }
+      &:after{
+        background: url("../images/select-3.png") no-repeat top center;
+        width: 36px;
+        height:36px;
+        @include border-radius(0);
+        top:0;
+      }
+    }
+
+    .form-row{
+      margin-bottom: 15px;
+      input[type=submit]{
+        height: 36px;
+        padding: 0;
+        text-align: center;
+        @include border-radius(0);
+        line-height: 36px;
+//        font-size: 24px;
+        font-size: 22px;
+        @include ProximaNovaAltBold();
+        text-transform: uppercase;
+        @include transition(all ease 0.5s);
+        float: none;
+        width: 100% !important;
+        min-height: 1px;
+        margin-top: 0;
+      }
+    }
+
+    /* register */
+    form.register{
+      position: relative;
+      margin: 0 20px;
+      padding-bottom: 15px;
+      @include clearfix();
+      .register-left{
+        float: left;
+        width: 50%;
+      }
+      .register-right{
+        float: right;
+        width: 50%;
+      }
+      .register-slogan{
+        margin-left: 10px;
+      }
+      .form-row-wide, .selection-box{
+        input, select{
+          background-color: #13887d;
+        }
+      }
+      .form-row{
+        clear: left;
+        input[type="email"]{
+          background-image: url("../images/icons/person.png");
+          background-repeat: no-repeat;
+          background-position: 10px center;
+          padding-left:35px;
+          text-indent: 0;
+        }
+        input[type=submit]{
+          background-color: rgba(#13887d,0.5);
+          color: #07575b;
+          &:hover{
+            color: #fff;
+          }
+        }
+      }
+      .regis-col2{
+        .form-row{
+          &:last-child{
+            float: none;
+          }
+        }
+        &+.form-row{
+          position: absolute;
+          right: 0;
+          bottom:30px;
+          margin: 0;
+          float: left;
+          width: 50%;
+          padding: 0 10px;
+          @include box-sizing();
+        }
+      }
+      &>p.form-row:last-child{
+        padding: 0 10px;
+        width: 50%;
+        @include box-sizing();
+        float: right;
+        margin-top: -51px;
+      }
+    }
+
+    /* login */
+    form.login{
+      .form-row-wide, .selection-box{
+        input, select{
+          background-color: #07575b;
+        }
+      }
+      .form-row{
+        float: none;
+        @include clearfix();
+        width: 100%;
+        padding: 0;
+        &:first-child{
+          input{
+            background-image: url("../images/icons/person.png");
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            padding-left:35px;
+            text-indent: 0;
+          }
+        }
+        input[type=submit]{
+          background-color: rgba(#09575a,0.5);
+          color: #12887d;
+
+          &:hover{
+            color: #fff;
+          }
+        }
+        .inline{
+          display: block;
+          color:#add;
+          font-weight: normal;
+        }
+      }
+      .lost_password{
+        margin-top: -11px;
+        a{
+          text-transform: uppercase;
+          color:#add;
+          font-size: 12px;
+          @include AvenirNextLTProDemi();
+          &:hover{
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

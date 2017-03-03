@@ -113,57 +113,82 @@ function base_scripts() {
     wp_enqueue_style( 'slick-theme', '/wp-content/themes/trendytravel-child/css/slick-theme.css' );
 }
 
-/* Woo Register Form*/
-function wooc_extra_register_fields() {?>
-            
-<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
-    <label for="confirm_password">Confirm Password <span class="req">(required)</span></label>
-    <input type="password" name="confirm_password" id="confirm_password" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*Confirm Password">
-</p>
 
-<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
-    <label for="first_name">First Name <span class="req">(required)</span></label>
-    <input type="text" name="first_name" id="first_name" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*First Name">
-</p>
+function wooc_validate_extra_register_fields( $errors, $username, $email ) {
+    if ( $_POST['confirm_password'] != $_POST['password'] ) {
+        $errors->add( 'confirm_password_error', __( '<strong>Error</strong>: Confirm password and Password must same!', 'woocommerce' ) );
+    }
+    return $errors;
+}
+add_filter( 'woocommerce_registration_errors', 'wooc_validate_extra_register_fields', 10, 3 );
 
-<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
-    <label for="last_name">Last Name <span class="req">(required)</span></label>
-    <input type="text" name="last_name" id="last_name" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*Last Name">
-</p>
+/* checkout fields order*/
+add_filter("woocommerce_checkout_fields", "order_fields");
 
-<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
-    <label for="phone1">Phone Number <span class="req">(required)</span></label>
-    <input type="text" name="phone1" id="phone1" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*Phone Number">
-</p>
-<div class="regis-col2">
+function order_fields($fields) {
 
-<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
-    <label for="country">Country <span class="req">(required)</span></label>
-    <div class="selection-box">
-        <select name="country" id="country" class="dropdown">
-            <option value="">Select Your Country</option>
-            <option value="vietnam">Vietnam</option>
-            <option value="cambodia">Cambodia</option>
-            <option value="laos">Laos</option>
-        </select>
-    </div>
-</p>
-<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
-    <label for="addr1">Address <span class="req">(required)</span></label>
-    <input type="text" name="addr1" id="addr1" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*Address">
-</p>
+    $order = array(
+        "billing_email", 
+        "billing_phone",
+        "billing_country", 
+        "billing_postcode",
+        "billing_first_name", 
+        "billing_last_name", 
+        "billing_address_1", 
+        "billing_city",
+        "billing_company", 
 
-<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
-    <label for="postcode">Post Code <span class="req">(required)</span><br>
-    <input type="text" name="postcode" id="postcode" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*Post Code">
-</p>
+    );
+    foreach($order as $field)
+    {
+        $ordered_fields[$field] = $fields["billing"][$field];
+    }
 
-<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
-    <label for="city">Town &amp; City <span class="req">(required)</span></label>
-    <input type="text" name="city" id="city" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*Town & City">
-</p>
-</div>
-<?php
- }
- add_action( 'woocommerce_register_form', 'wooc_extra_register_fields' );
+    $fields["billing"] = $ordered_fields;
+    return $fields;
+
+}
+
+/* save user data */
+function wooc_save_extra_register_fields( $customer_id ) {
+    if ( isset( $_POST['billing_first_name'] ) ) {
+        // WordPress default first name field.
+        update_user_meta( $customer_id, 'first_name', sanitize_text_field( $_POST['billing_first_name'] ) );
+        // WooCommerce billing first name.
+        update_user_meta( $customer_id, 'billing_first_name', sanitize_text_field( $_POST['billing_first_name'] ) );
+    }
+    if ( isset( $_POST['billing_last_name'] ) ) {
+        // WordPress default last name field.
+        update_user_meta( $customer_id, 'last_name', sanitize_text_field( $_POST['billing_last_name'] ) );
+        // WooCommerce billing last name.
+        update_user_meta( $customer_id, 'billing_last_name', sanitize_text_field( $_POST['billing_last_name'] ) );
+    }
+    if ( isset( $_POST['billing_phone'] ) ) {
+        // WooCommerce billing phone
+        update_user_meta( $customer_id, 'billing_phone', sanitize_text_field( $_POST['billing_phone'] ) );
+    }
+    if ( isset( $_POST['billing_country'] ) ) {
+        // WooCommerce billing phone
+        update_user_meta( $customer_id, 'billing_country', sanitize_text_field( $_POST['billing_country'] ) );
+    }
+    if ( isset( $_POST['billing_postcode'] ) ) {
+        // WooCommerce billing phone
+        update_user_meta( $customer_id, 'billing_postcode', sanitize_text_field( $_POST['billing_postcode'] ) );
+    }
+    if ( isset( $_POST['billing_address_1'] ) ) {
+        // WooCommerce billing phone
+        update_user_meta( $customer_id, 'billing_address_1', sanitize_text_field( $_POST['billing_address_1'] ) );
+    }
+    if ( isset( $_POST['billing_city'] ) ) {
+        // WooCommerce billing phone
+        update_user_meta( $customer_id, 'billing_city', sanitize_text_field( $_POST['billing_city'] ) );
+    }
+    if ( isset( $_POST['billing_company'] ) ) {
+        // WooCommerce billing phone
+        update_user_meta( $customer_id, 'billing_company', sanitize_text_field( $_POST['billing_company'] ) );
+    }
+}
+add_action( 'woocommerce_created_customer', 'wooc_save_extra_register_fields' );
+
+
 ?>

@@ -42,9 +42,44 @@
                         <?php endif; ?>    
                     </div>
                 </div>
-
-
             </footer>
+
+            <!-- modal  -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <?php 
+                                $template_uri = get_template_directory_uri();
+                                $url = dt_theme_option('general', 'logo-url');
+                                $url = !empty( $url ) ? $url : $template_uri."/images/logo.png";
+    
+                                $retina_url = dt_theme_option('general','retina-logo-url');
+                                $retina_url = !empty($retina_url) ? $retina_url : $template_uri."/images/logo@2x.png";
+    
+                                $width = dt_theme_option('general','retina-logo-width');
+                                $width = !empty($width) ? $width."px;" : "234px";
+    
+                                $height = dt_theme_option('general','retina-logo-height');
+                                $height = !empty($height) ? $height."px;" : "88px";
+                            ?>
+                            <a class="logo-form" href="<?php echo home_url();?>" title="<?php bloginfo('title'); ?>">
+                                <img class="normal_logo" src="<?php echo esc_url($url);?>" alt="<?php bloginfo('title'); ?>" title"<?php bloginfo('title'); ?>" />
+                                <img class="logo-form retina_logo" src="<?php echo esc_url($retina_url);?>" alt="<?php bloginfo('title'); ?>" title="<?php bloginfo('title'); ?>" style="width:<?php echo esc_attr($width);?>; height:<?php echo esc_attr($height);?>;"/>
+                            </a>
+                            <?php echo do_shortcode("[woocommerce_my_account]"); ?>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- footer ends here -->
             <style type="text/css">
                 .tab-content {

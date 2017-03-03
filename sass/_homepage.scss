@@ -48,6 +48,12 @@
 				}
 			}
 		}
+        h3.ls-l{
+          color:#fff;
+          font-size: 62px;
+          @include ProximaNovaAltBold();
+          text-transform: uppercase;
+        }
 		.ls-nav-prev, .ls-nav-next{
 			display: block;
 			width: 24px;
@@ -128,7 +134,7 @@
 					background-size: 20px 48px;
 					font-size: 0;
 					@include retina(){
-						border-image: url('../images/icon/scroll-down-2x.png')
+						border-image: url('../images/icons/scroll-down-2x.png')
 					}
 				}
 			}
@@ -162,7 +168,7 @@
 							width: 26px;
 							height: 21px;
 						}
-						&:first-child{
+						&.facebook{
 							a{
 								background-position: 0 0;
 								&:hover{
@@ -170,7 +176,8 @@
 								}
 							}
 						}
-						&:nth-child(2){
+						&.twitter{
+                          padding-left: 7px;
 							a{
 								background-position: -38px 0;
 								&:hover{
@@ -178,15 +185,15 @@
 								}
 							}
 						}						
-						&:nth-child(3){
-							a{
-								background-position: -83px 0;
-								&:hover{
-									background-position: -83px -29px;
-								}
-							}
-						}
-						&:nth-child(4){
+//						&:nth-child(3){
+//							a{
+//								background-position: -83px 0;
+//								&:hover{
+//									background-position: -83px -29px;
+//								}
+//							}
+//						}
+						&.google{
 							a{
 								background-position: -124px 0;
 								&:hover{
@@ -194,7 +201,25 @@
 								}
 							}
 						}
-						&:nth-child(5){
+                      &.skype{
+                        a{
+                          background-position: -208px 0;
+                          &:hover{
+                            background-position: -208px -29px;
+                          }
+                        }
+                      }
+                      &.youtube{
+                        padding-left: 10px;
+                        a{
+                          background-position: -243px 0;
+                          &:hover{
+                            background-position: -243px -29px;
+                          }
+                        }
+                      }
+
+						&.tripAdvisor{
 							a{
 								background-position: -164px 0;
 								&:hover{
@@ -565,6 +590,7 @@
 }
 
 .popular-tours.tab-content{
+  margin-bottom: 0;
 	.text{
 		background-color:#07575b;
 		bottom:-55px;

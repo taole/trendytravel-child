@@ -58,7 +58,7 @@
 								$height = dt_theme_option('general','retina-logo-height');
 								$height = !empty($height) ? $height."px;" : "88px";?>
 								<a href="<?php echo home_url();?>" title="<?php bloginfo('title'); ?>">
-									<img class="normal_logo" src="<?php echo esc_url($url);?>" alt="<?php bloginfo('title'); ?>" title="<?php bloginfo('title'); ?>" />
+									<img class="normal_logo" src="<?php echo esc_url($url);?>" alt="<?php bloginfo('title'); ?>" title"<?php bloginfo('title'); ?>" />
 									<img class="retina_logo" src="<?php echo esc_url($retina_url);?>" alt="<?php bloginfo('title'); ?>" title="<?php bloginfo('title'); ?>" style="width:<?php echo esc_attr($width);?>; height:<?php echo esc_attr($height);?>;"/>
 								</a><?php
 							else: ?>
@@ -102,24 +102,6 @@
                             
                             <?php if(!is_user_logged_in()): ?>
                                 <div class="user-action" data-toggle="modal" data-target="#myModal"></div>
-                                <div id="myModal" class="modal fade" role="dialog">
-                                  <div class="modal-dialog">
-
-                                    <!-- Modal content-->
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <?php echo do_shortcode("[woocommerce_my_account]"); ?>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-
-                                  </div>
-                                </div>
                             <?php else: ?>
                                 <div class="user-action"><ul>
                                     <li><a title="<?php _e('Logout', 'iamd_text_domain'); ?>" href="<?php echo wp_logout_url(get_permalink()); ?>"><span class="fa fa-sign-out"></span> <?php _e('Logout', 'iamd_text_domain'); ?>
@@ -128,5 +110,7 @@
                             <?php endif; ?>
                         </div><!-- fuc-header -->
                     </div>
+                    <?php if(! is_user_logged_in()): ?>
+                    <?php endif; ?>
 				</header>
 			</div><!-- header-wrapper ends here -->

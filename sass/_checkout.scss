@@ -1,0 +1,104 @@
+.woocommerce-checkout.woocommerce-page{
+  .dt-sc-hr-invisible:empty, .dt-sc-hr-invisible-small:empty{
+    display: none;
+  }
+  .checkout-page{
+    h2, #order_review_heading{
+      font-size: 22px;
+      color:#10726e;
+      text-transform: uppercase;
+      @include ProximaNovaAltBold();
+      text-align: center;
+      margin: 0;
+    }
+
+    .woocommerce{
+      .woocommerce-info{
+        font-family: AvenirNextLTPro, Arial, sans-serif !important;
+        @include box-shadow(none !important);
+        background: transparent !important;
+        border:none;
+        padding: 0 !important;
+        margin: 0 !important;
+        color:#333 !important;
+        text-shadow: none !important;
+        font-size: 16px !important;
+        &:after, &:before{
+          display: none;
+        }
+        a{
+          color:#10726e;
+        }
+      }
+
+      /* form checkout */
+      .checkout.woocommerce-checkout{
+        .col2-set{
+          background: #13887d;
+          color:#fff;
+          @include clearfix();
+          .form-row{
+            .input-text{
+              color:#fff !important;
+              border:none !important;
+              @include box-shadow(none !important);
+              margin: 0;
+              padding: 0 5px 0 0;
+              text-indent: 16px;
+              @include border-radius(5px !important);
+              @include placeholder(#fff !important);
+              font-size: 14px;
+              @include AvenirNextLTProDemi();
+              font-weight: 700;
+              height: 36px;
+              background: #10726e;
+            }
+            textarea.input-text{
+              height:90px;
+              overflow-x: hidden;
+              overflow-y: auto;
+            }
+          }
+
+          label{
+            color:#fff;
+            @include AvenirNextLTProDemi();
+            font-weight: 700;
+          }
+          .col-1{
+            width: 100%;
+            @include clearfix();
+            h3{
+              text-transform: uppercase;
+              color:#add;
+              font-size: 16px;
+              @include ProximaNovaAltBold();
+            }
+            .form-row{
+              @include box-sizing();
+              padding: 0 10px;
+              float: left;
+              width: 25%;
+              &.create-account{
+                clear: left;
+              }
+            }
+            .clear{
+              display: none;
+            }
+          }
+          .col-2{
+            width: 100%;
+            label{
+              display: none;
+            }
+            h3{
+              display: none;
+            }
+          }
+        }
+      }
+      /* e: form checkout */
+    }
+  }
+}

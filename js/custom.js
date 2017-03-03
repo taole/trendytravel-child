@@ -81,4 +81,52 @@ jQuery(document).ready(function($){
     $('.find-a-tour .uform_title').click(function(){
         $(this).parents('.find-a-tour').toggleClass('open-form');
     });
+
+    /* Register submit */
+    // $('.register .woocommerce-Button').click(function(e) {
+    //     e.preventDefault();
+    //     var formData = {
+    //         'email'             : $('input[name=email]').val(),
+    //         'password'              : $('input[name=password]').val(),
+    //         'confirm_password'    : $('input[name=confirm_password]').val(),
+    //         'billing_first_name'    : $('input[name=billing_first_name]').val(),
+    //         'billing_last_name'    : $('input[name=billing_last_name]').val(),
+    //         'billing_phone'    : $('input[name=billing_phone]').val(),
+    //         'billing_country'    : $('input[name=billing_country]').val(),
+    //         'billing_address_1'    : $('input[name=billing_address_1]').val(),
+    //         'billing_postcode'    : $('input[name=billing_postcode]').val(),
+    //         'billing_city'    : $('input[name=billing_city]').val()
+    //     };
+
+    //     $.ajax({
+    //         type        : 'POST', 
+    //         url         : '', 
+    //         data        : formData,
+    //         dataType    : 'json', 
+    //         encode      : true
+    //     }).done(function(data) {
+    //         console.log(data);
+    //         if ( ! data.success) {
+    //             if (data.errors.email) { $("#reg_email").addClass('error_input'); }
+    //         } else {
+    //             $('.register').submit();
+    //         }
+
+    //     });
+    // });
+
+    /* login */
+    $('.modal .woocommerce .col2-set .col-2 h2').click(function(){
+        $(this).parents('.col2-set').removeClass('login-open');
+        $(this).parents('.col2-set').addClass('register-open');
+        console.log('123');
+
+    });
+    $('.modal .woocommerce .col2-set .col-1 h2').click(function(){
+        $(this).parents('.col2-set').removeClass('register-open');
+        $(this).parents('.col2-set').addClass('login-open');
+        console.log('456');
+
+    });
+    /* e: login */
 });

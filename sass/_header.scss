@@ -10,7 +10,7 @@
 		height:70px;
 		.container{
 			@include screen-size(lg){
-				width: 1214px;
+				width: 1214px !important;
 			}
 		}
 		#logo{

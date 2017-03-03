@@ -1,3 +1,4 @@
+/* table ngang */
 @include screen-theme(sm){
 	.gbtn{
 		min-width: 144px;
@@ -16,6 +17,11 @@
 		p{
 			font-size: 14px;
 		}
+      #slider-container{
+        h3.ls-l{
+          font-size: 42px;
+        }
+      }
 	}
 	.scroll-down{
 		display: none;
@@ -184,7 +190,82 @@
      }
   }
   /* e: about us */
+
+
+  /* contact us */
+  .contactus-tour{
+    padding-top: 14px !important;
+    padding-bottom: 0 !important;
+    margin-bottom: -24px;
+    .text{
+      position: static;
+      background-color: transparent;
+      padding-top: 0;
+      a{
+        margin-top: 0;
+        i{
+          width: 20px;
+          height: 20px;
+          background-size: 20px 20px;
+        }
+      }
+      h2{
+        font-size: 20px;
+        margin-top: -19px;
+      }
+    }
+  }
+  /* e: contact us */
+
+
+  /* login register */
+  .modal{
+    .modal-dialog{
+      width: 875px;
+    }
+    .woocommerce{
+      h2{
+        font-size: 20px;
+      }
+      .form-row-wide, .form-row{
+        padding: 0 8px;
+        input, select{
+          font-size: 12px;
+          height: 34px;
+        }
+      }
+      .form-row{
+        margin-bottom: 25px;
+        input[type=submit]{
+          font-size: 20px;
+          height: 34px;
+        }
+      }
+      .selection-box{
+        &:after{
+          width: 34px;
+          height: 34px;
+          background-size:34px 34px;
+        }
+      }
+
+      form.register{
+        &>p.form-row:last-child{
+          margin-top: -60px;
+        }
+        .regis-col2{
+          &+ .form-row{
+            bottom: 40px;
+          }
+        }
+      }
+
+    }
+  }
+  /* e: login register */
 }
+
+
 
 @media screen and (max-width: 1199px){
   .testimonials .dt-sc-testimonial-carousel-wrapper .carousel-arrows .testimonial-prev{
