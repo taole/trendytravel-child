@@ -50,8 +50,9 @@ wc_print_notices();
 			)
 		);
 		?>
+            <div class="view-basket"><a href="/cart">View Basket</a></div>
 		</div>
-		<div class="view-basket"><a href="/cart">View Basket</a></div>
+
 		<?php
 		//do_action( 'woocommerce_account_content' );
 	?>

@@ -78,6 +78,48 @@ jQuery(document).ready(function($){
                 ]
 	});
 
+    // product page gallery
+    $('.list-gallery').slick({
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         arrows: true,
+         fade: false,
+         asNavFor: '.slider-nav-thumbnails',
+        adaptiveHeight: true
+    });
+
+    $('.slider-nav-thumbnails').slick({
+         slidesToShow: 4,
+         slidesToScroll: 1,
+         asNavFor: '.list-gallery',
+         dots: false,
+        arrows:true,
+        vertical: true,
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    vertical:false
+                }
+            }
+        ]
+    });
+
+    /* e: product gallery*/
+
+    /* Product tabs*/
+    $('.product-tabs a').click(function(event) {
+        event.preventDefault();
+        $(this).parent().addClass("active");
+        $(this).parent().siblings().removeClass("active");
+        var tab = $(this).attr("href");
+        console.log(tab);
+        $(".tab-contents .tab-pane").not(tab).css("display", "none");
+        $(tab).fadeIn(1000);
+    });
+    /*end: product tabs*/
+
     $('.find-a-tour .uform_title').click(function(){
         $(this).parents('.find-a-tour').toggleClass('open-form');
     });
@@ -129,4 +171,20 @@ jQuery(document).ready(function($){
 
     });
     /* e: login */
+
+    $('.frm_style_formidable-style.with_frm_style form fieldset .frm_checkbox label').change(function(){
+        $(this).toggleClass('checked');
+    });
+
+    $('.frm_style_formidable-style.with_frm_style form fieldset .frm_radio label').change(function(){
+        $(this).parents('.form-field').find('label').removeClass('checked');
+        $(this).addClass('checked');
+    });
+
+    $('.frm_style_formidable-style.with_frm_style form fieldset .frm_last_half .form-field.custom-scroll .frm_opt_container').mCustomScrollbar();
+
+    $('.tour-enquiry .frm_style_formidable-style.with_frm_style fieldset legend.frm_hidden').click(function(){
+        $(this).parents('fieldset').toggleClass('open-form');
+    });
+
 });

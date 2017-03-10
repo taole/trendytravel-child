@@ -1,46 +1,41 @@
 <?php
 /* 
-	Template Name: Profile Template
+	Template Name: Custom Tour Template
 */
+	get_header();
 
-  get_header();
-
-  while(have_posts()): the_post();
-    
-    if(is_page()) dt_theme_slider_section($post->ID);
-    
-    //GETTING META VALUES...
-    $meta_set = get_post_meta($post->ID, '_tpl_default_settings', true);
-    $user = wp_get_current_user();
-    //BREADCRUMP...
-    if(!is_front_page() && !is_home()):
-      if(dt_theme_option('general', 'disable-breadcrumb') != "on"): ?>
+	while(have_posts()): the_post();
+		
+	  if(is_page()) dt_theme_slider_section($post->ID);
+	  
+	  //GETTING META VALUES...
+	  $meta_set = get_post_meta($post->ID, '_tpl_default_settings', true);
+	  
+	  //BREADCRUMP...
+	  if(!is_front_page() && !is_home()):
+		  if(dt_theme_option('general', 'disable-breadcrumb') != "on"): ?>
               <section class="fullwidth-background">
                 <div class="breadcrumb-wrapper">
                   <div class="container">
                       <?php new dt_theme_breadcrumb; ?>
-                      <?php if ($user): ?>
-                      <div class="breadcrumb">
-                        <span class="default"></span><h4><?php echo $user->user_email; ?></h4>
-                      </div>
-                      <?php endif; ?>
                   </div>
                 </div>
               </section><?php
-      endif;
-    endif; ?>
+		  endif;
+	  endif; ?>
       
       <div id="main">
-    <section class="content-full-width" id="primary">
+		<section class="content-full-width" id="primary">
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>><?php
                 //PAGE TOP CODE...
-        global $dt_allowed_html_tags;
+				global $dt_allowed_html_tags;
                 if(dt_theme_option('integration', 'enable-single-page-top-code') != '') echo wp_kses(stripslashes(dt_theme_option('integration', 'single-page-top-code')), $dt_allowed_html_tags);
                 the_content();
                 wp_link_pages(array('before' => '<div class="page-link"><strong>'.__('Pages:', 'iamd_text_domain').'</strong> ', 'after' => '</div>', 'next_or_number' => 'number')); ?>
                 <!-- tabs -->
                 <div class="fullwidth-section tablist ">  
                   <div class="container">
+                    <?php include 'custom-tour-form.php'; ?>
                     <ul class="dt-sc-fancy-list   arrow">
                       <li class="current"><a href=".tab-1">Travel Blog</a></li>
                       <li class=""><a href=".tab-2">Travel Videos</a></li>

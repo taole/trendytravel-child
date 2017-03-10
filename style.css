@@ -801,3 +801,24 @@ input[type="button"].btn-block {
 .modal-backdrop {
     z-index: 0;
 }
+
+.single #secondary-right {
+  width: 344px;
+}
+.single #secondary-right .tripcode {
+  width: 100%;
+}
+.single #secondary-right #CDSWIDWRL {
+  width: 100%;
+  max-width: 100%;
+}
+
+#my_custom_countries .required {
+    color: red;
+    font-weight: 700;
+    border: 0;
+}
+
+#billing_country_field {
+  width: 100%;
+}

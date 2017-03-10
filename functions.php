@@ -63,6 +63,12 @@ function re_widgets_init() {
         'id' => 'travel-guild-tab',
         'description' => __('Travel Guilds Tab')
     ));
+
+    register_sidebar(array(
+        'name' => __('Single Post Right Sidebar'),
+        'id' => 'post-right-sidebar',
+        'description' => __('Right Sidebar')
+    ));
 }
 
 add_action('widgets_init', 're_widgets_init');
@@ -109,8 +115,13 @@ function base_scripts() {
     wp_enqueue_script('customs_scripts', '/wp-content/themes/trendytravel-child/js/custom.js', array(), 1.0, true);
     wp_enqueue_script('slick_scripts', '/wp-content/themes/trendytravel-child/js/slick.js', array(), 1.0, true);
     wp_enqueue_script('bootstrap_scripts', '/wp-content/themes/trendytravel-child/js/bootstrap.min.js', array(), 1.0, true);
+
+    wp_enqueue_script('scrollbar_scripts', '/wp-content/themes/trendytravel-child/js/jquery.mCustomScrollbar.js', array(), 1.0, true);
+    wp_enqueue_script('scrollbar_concat_scripts', '/wp-content/themes/trendytravel-child/js/jquery.mCustomScrollbar.concat.min.js', array(), 1.0, true);
+
     wp_enqueue_style( 'slick', '/wp-content/themes/trendytravel-child/css/slick.css' );
     wp_enqueue_style( 'slick-theme', '/wp-content/themes/trendytravel-child/css/slick-theme.css' );
+    wp_enqueue_style( 'scrollbar', '/wp-content/themes/trendytravel-child/css/jquery.mCustomScrollbar.css' );
 }
 
 
@@ -130,8 +141,8 @@ function order_fields($fields) {
     $order = array(
         "billing_email", 
         "billing_phone",
-        "billing_country", 
         "billing_postcode",
+        "billing_country", 
         "billing_first_name", 
         "billing_last_name", 
         "billing_address_1", 
@@ -190,5 +201,19 @@ function wooc_save_extra_register_fields( $customer_id ) {
 }
 add_action( 'woocommerce_created_customer', 'wooc_save_extra_register_fields' );
 
-
+/* Filter Tiny MCE Default Settings */
+add_filter( 'tiny_mce_before_init', 'my_switch_tinymce_p_br' );
+ 
+/**
+ * Switch Default Behaviour in TinyMCE to use "<br>"
+ * On Enter instead of "<p>"
+ * 
+ * @link https://shellcreeper.com/?p=1041
+ * @link http://codex.wordpress.org/Plugin_API/Filter_Reference/tiny_mce_before_init
+ * @link http://www.tinymce.com/wiki.php/Configuration:forced_root_block
+ */
+function my_switch_tinymce_p_br( $settings ) {
+    $settings['forced_root_block'] = false;
+    return $settings;
+}
 ?>
