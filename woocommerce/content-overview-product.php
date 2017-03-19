@@ -38,10 +38,12 @@
 			 			) );
 			 		}
 			 	?>
+			 	<span class="no-people">#No. People</span>
 				<div class="pull-right">
                     <div class="price">Price <span>$<?php echo $product_meta['_sale_price'][0]; ?></span></div>
                     <div class="sale">Was <span>$<?php echo $product_meta['_regular_price'][0]; ?></span></div>
 				</div>
+                <div class="clearfix"></div>
 				<a class="add-to-cart" href='<?php echo $product->add_to_cart_url(); ?>'><i></i>add to basket</a>
 			</div>
 	        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Single Post Right Sidebar") ) : endif; ?>

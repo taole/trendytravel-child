@@ -138,6 +138,14 @@
 	}
 
 	.popular-tours{
+      .dt-sc-one-fourth{
+//        width: 48.9%;
+        width: 49.54%;
+        margin-bottom: 10px;
+        &.nth-child-3{
+          margin-left: 0;
+        }
+      }
 		h2.section-title{
 			font-size: 16px;
 		}
@@ -175,6 +183,23 @@
 			}
 		}
 		.column{
+          img{
+            width: 100%;
+          }
+          &.dt-sc-one-half{
+            width: 49.54%;
+          }
+          &.nth-child-3{
+            margin-left: 0;
+          }
+          &.nth-child-4{
+            clear: none;
+            margin-left: 0.85%;
+          }
+          &.nth-child-5{
+            clear: left;
+            margin-left: 0;
+          }
 			&:hover{
 				.text{
 					h2{
@@ -217,6 +242,16 @@
 		}
 	}
 	.popular-tours.tab-content{
+      .container{
+        .column{
+          &:first-child{
+            margin-left: 0;
+          }
+          &:nth-child(3), &:nth-child(4){
+            display: none;
+          }
+        }
+      }
 		.column{
 			&:hover{
 				bottom:0;
@@ -249,6 +284,12 @@
 		.footer-widgets-wrapper{
 			 .container{
 			 	.column{
+                  width: 32.9%;
+                  &:last-child{
+                    width: 27.9%;
+                    @include box-sizing();
+                    padding-left: 45px;
+                  }
 			 		.widget{
 			 		 	h3{
 			 		 		font-size: 12px;
@@ -363,6 +404,18 @@
   .contactus-tour{
     padding-top: 14px !important;
     margin-bottom: 0;
+    .container{
+      .column{
+        width: 32.75% !important;
+        &.dt-sc-one-half{
+          img{
+            height: 173px;
+            max-width: inherit;
+            min-width: 100%;
+          }
+        }
+      }
+    }
     .text{
       position: static;
       background-color: transparent;
@@ -433,5 +486,497 @@
     }
   }
   /* e: login register */
+
+  /* checkout page */
+  .woocommerce-checkout.woocommerce-page{
+    .checkout-page{
+      h2, #order_review_heading{
+        margin-bottom:18px;
+        font-size: 18px;
+      }
+      .woocommerce{
+        .checkout.woocommerce-checkout{
+          /* check out */
+          .col2-set{
+            font-size: 12px;
+            padding-left: 20px;
+            padding-right: 20px;
+            .form-row{
+              padding: 0 4px;
+              .input-text, .select2-container, select{
+                font-size: 12px;
+                height: 32px;
+              }
+              .select2-container{
+                .select2-choice{
+                  line-height: 32px;
+                }
+              }
+              .selection-box{
+                height:32px;
+                &:after{
+                  width: 32px;
+                  height:32px;
+                }
+              }
+            }
+            .col-1{
+              .form-row{
+                padding: 0 4px;
+                .create-account{
+                  bottom:18px;
+                }
+              }
+            }
+            .col-2{
+              .form-row{
+                padding: 0 4px;
+                margin-top: -38px;
+              }
+            }
+          }
+          /* e: check out */
+
+          /* your order */
+          .woocommerce-checkout-review-order{
+            table.woocommerce-checkout-review-order-table{
+              font-size: 12px;
+              thead{
+                th{
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+          /* e: your order */
+
+          /* payment */
+          .woocommerce-checkout-payment .place-order input[type="submit"]{
+            font-size: 12px;
+          }
+          /* e: payment */
+        }
+      }
+    }
+  }
+
+  /* e: checkout page */
+
+
+  /* profile */
+  .woocommerce-MyAccount-content{
+    margin-bottom: 6px;
+    .profile-title{
+      font-size: 16px;
+    }
+    .edit-account{
+      .form-row{
+        label{
+          font-size: 12px;
+        }
+        .input-text, .select2-container, select{
+          font-size: 12px;
+          height: 32px;
+        }
+        .select2-container{
+          .select2-choice{
+            line-height: 32px;
+          }
+        }
+        .selection-box{
+          height:32px;
+          &:after{
+            width: 32px;
+            height:32px;
+          }
+        }
+      }
+      &>p:last-child{
+        height:44px;
+        input{
+          height: 44px;
+          font-size: 16px;
+        }
+      }
+
+    }
+    .all-orders{
+      padding-right: 0;
+      @include clearfix();
+      h2{
+        margin: 0 0 10px;
+        font-size: 14px;
+      }
+      table.shop_table{
+        font-size: 12px;
+        margin: 0;
+        tbody{
+          tr{
+            td{
+              font-size: 12px;
+              &:last-child{
+                a{
+                  line-height: 32px;
+                  width: 128px;
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .view-basket{
+        position: static;
+        float: right;
+        a{
+          line-height: 42px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+
+  /* e: profile */
+
+
+  /* custom tour */
+  .custom-tour-form, #custom-tour{
+    .frm_style_formidable-style.with_frm_style{
+      form{
+        fieldset{
+          .frm_first_half{
+            .trip_use_option{
+              .form-field{
+                .frm_opt_container{
+                  padding-bottom: 7px;
+                  .frm_checkbox{
+                    width: 33.33%;
+                    margin: 0;
+                    padding: 6px 0;
+                  }
+                }
+                &:nth-child(2){
+                  .frm_opt_container{
+                    .frm_checkbox{
+                      width: 50%;
+                    }
+                  }
+                }
+                &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6){
+                  width: 100%;
+                }
+              }
+              .frm_radio{
+                width: 30%;
+                label{
+                  margin: 6px 0;
+                }
+              }
+            }
+          }
+
+          .frm_last_half{
+            .form-field{
+              .frm_opt_container{
+                padding-bottom: 7px;
+                .frm_checkbox{
+                  width: 50%;
+                  margin: 0;
+                  padding: 6px 0;
+                }
+              }
+              &.custom-scroll{
+                .frm_opt_container{
+                  max-height: 150px;
+                }
+              }
+            }
+          }
+
+          .frm_submit{
+            background: transparent;
+            padding-right: 0;
+            input[type="submit"]{
+              font-size: 18px;
+              line-height: 52px;
+              width: 45% !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* e: custom tour */
+
+  /* cart */
+  .custom-tour-form, #custom-tour{
+    .frm_style_formidable-style.with_frm_style{
+      form{
+        fieldset{
+          .frm_first_half{
+            .number_travellers{
+              .frm_left_container{
+                width: 100% !important;
+              }
+            }
+            .frm_half{
+              &.time_number_trip{
+                .form-field{
+                  &.form-date{
+                    label{
+                      margin-top: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  .woocommerce{
+    .all-orders-cart{
+      table.shop_table{
+        font-size: 12px;
+        thead{
+          th{
+            font-size: 12px;
+            padding-bottom: 10px;
+          }
+        }
+        tbody{
+          tr{
+            td{
+              font-size: 12px;
+              &.actions{
+                input{
+                  line-height: 42px;
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .cart-collaterals{
+      .cart_totals{
+        table{
+          tr{
+            th{
+              font-size: 12px;
+              line-height: 42px;
+            }
+            td{
+              font-size: 14px;
+              line-height: 42px;
+            }
+          }
+        }
+        .wc-proceed-to-checkout{
+          a{
+            line-height: 42px;
+          }
+        }
+      }
+    }
+  }
+  /* e: cart */
+
+  /* blog */
+  .blog-entry-inner{
+    font-size: 12px;
+    .entry-body{
+
+    }
+  }
+
+  .related-post{
+    .related-content{
+      ul{
+        li{
+          .img{
+            img{
+              display: block;
+            }
+          }
+          .text{
+            h2.title{
+              font-size: 12px;
+              margin: 0;
+              line-height: 16px;
+              height: 32px;
+              text-align: center;
+            }
+            a{
+              font-size: 12px;
+            }
+            .description{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .our-recommendation.related-post{
+    .related-content{
+      ul{
+        li{
+          .text{
+            h2.title{
+              margin: 0 -15px 0;
+              font-size: 12px;
+              padding: 10px 35px;
+              line-height: 16px;
+              height: 32px;
+            }
+            .location{
+              display: none;
+            }
+            .map{
+              display: none;
+            }
+            a{
+              margin-top:0;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* e: blog */
+
+  /* product */
+  .secondary-has-right-sidebar{
+    .cart{
+      font-size: 14px;
+      .price{
+        span{
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .header-selected-tour{
+    .pull-left{
+      width: 50%;
+    }
+  }
+
+  .sharedaddy.sd-sharing-enabled{
+    .sd-content{
+      ul{
+        li{
+          margin-right: 10px;
+          &:first-child{
+            margin-right:0;
+          }
+          &:last-child{
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  .selected-tour{
+    .tabs-selected-tour{
+      .tab-contents{
+        .tab-pane{
+          font-size: 14px;
+          .summary{
+            padding-top: 20px;
+            h2{
+              font-size: 14px;
+              margin-bottom: 20px;
+            }
+            .summary-left{
+              width: 100%;
+              margin-bottom: 30px;
+            }
+            .summary-right{
+              width: 100%;
+              ul{
+                li{
+                  float: left;
+                  width: 33.33%;
+                  @include box-sizing();
+                  font-size: 12px;
+                  line-height: normal;
+                  padding-right: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .tour-enquiry{
+    .frm_style_formidable-style.with_frm_style{
+      fieldset{
+        .enquiry-left, .emquiry-right{
+          input, input:focus, select, select:focus, textarea, textarea:focus{
+            font-size: 12px;
+          }
+        }
+        .emquiry-right{
+          .date{
+            label{
+              max-width: 47%
+            }
+            input{
+              max-width: 40% !important;
+            }
+          }
+          .adults{
+            label{
+              max-width: 100%;
+            }
+            input{
+              max-width: 70%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .related-tours{
+    .related-content{
+      ul{
+        li{
+          .text{
+            h2.title{
+              font-size: 12px;
+              line-height: 16px;
+              height: 32px;
+            }
+            .infomation{
+              font-size: 12px;
+              min-height: 78px;
+              div{
+                padding-top: 0;
+              }
+              .price{
+                font-size: 14px;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+  /* e: product */
 
 }

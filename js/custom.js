@@ -108,6 +108,22 @@ jQuery(document).ready(function($){
 
     /* e: product gallery*/
 
+    /* Travel guide tabs*/
+    $('.guide-tabs li:first').addClass('active');
+    $('.title-list h2:first').addClass('current');
+    $('.tab-contents .tab-pane:first').addClass('current');
+
+    $('.guide-tabs a').click(function(event) {
+        event.preventDefault();
+        $(this).parent().addClass("active");
+        $(this).parent().siblings().removeClass("active");
+        var tab = $(this).attr("href");
+        $(".tab-contents .tab-pane").not(tab).css("display", "none");
+        $(".title-list h2").not(tab).css("display", "none");
+        $(tab).fadeIn(1000);
+    });
+    /*end: product tabs*/
+
     /* Product tabs*/
     $('.product-tabs a').click(function(event) {
         event.preventDefault();
@@ -186,5 +202,8 @@ jQuery(document).ready(function($){
     $('.tour-enquiry .frm_style_formidable-style.with_frm_style fieldset legend.frm_hidden').click(function(){
         $(this).parents('fieldset').toggleClass('open-form');
     });
+
+    // only number
+    $('.phone_only_number').on('keydown', 'input', function(e){-1!==$.inArray(e.keyCode,[46,8,9,27,13,110,190])||/65|67|86|88/.test(e.keyCode)&&(!0===e.ctrlKey||!0===e.metaKey)||35<=e.keyCode&&40>=e.keyCode||(e.shiftKey||48>e.keyCode||57<e.keyCode)&&(96>e.keyCode||105<e.keyCode)&&e.preventDefault()});
 
 });

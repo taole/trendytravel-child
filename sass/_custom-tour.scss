@@ -1,0 +1,419 @@
+.custom-tour-form, .custom-tour{
+  .container{
+    background: #13887d;
+    color:#fff;
+    padding: 20px 13px 0;
+    @include box-sizing();
+    margin-bottom: 23px;
+  }
+  .section-title{
+    text-align: center;
+    color:#fff !important;
+    margin: 0;
+  }
+  .frm_style_formidable-style.with_frm_style form{
+    font-size: 12px;
+    @include AvenirNextLTProDemi();
+    .frm_description{
+      color:#add;
+      padding: 0 17px;
+      line-height: 1.2;
+      p{
+        color:#add;
+        margin-top: 4px;
+        line-height: 1.2;
+      }
+    }
+    fieldset{
+      padding: 0;
+      border: none;
+      @include clearfix();
+      line-height: normal;
+      input[type="text"], input[type="email"], input[type="number"], select, textarea,
+      input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus, select:focus, textarea:focus{
+        color:#fff !important;
+        border:none !important;
+        @include box-shadow(none !important);
+        margin: 0;
+        padding: 0 5px 0 16px !important;
+        @include box-sizing();
+        @include border-radius(5px !important);
+        @include placeholder(#fff !important);
+        font-size: 12px;
+        @include AvenirNextLTProDemi();
+        font-weight: 700;
+        height: 36px;
+        background: #10726e;
+      }
+      textarea, textarea:focus{
+        height:90px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-top: 12px !important;
+        @include box-sizing();
+      }
+      select{
+        option{
+          color:#333;
+        }
+      }
+      .selection-box{
+        height:36px;
+        &:after{
+          background: url("../images/select-2.png") no-repeat top center/100% 100%;
+          width: 36px;
+          height:36px;
+          @include border-radius(0);
+          top:0;
+        }
+      }
+      label.frm_primary_label{
+        font-weight: normal;
+        color:#fff;
+        font-size: 12px;
+      }
+      .frm_checkbox, .frm_radio{
+        label{
+          position: relative;
+          input{
+            opacity: 0;
+          }
+          &:before{
+            content: "";
+            width: 13px;
+            height: 13px;
+            background: #13887d;
+            @include border-radius(3px);
+            position: absolute;
+            left: 0;
+            top:0;
+            z-index: 2;
+            line-height: 13px;
+            text-align: center;
+            font-weight: bold;
+          }
+          &.checked{
+            &:before{
+              content: "\2713";
+            }
+          }
+        }
+      }
+//      .frm_radio{
+//        label{
+//          &.checked{
+//            &:before{
+//              content: ".";
+//            }
+//          }
+//        }
+//      }
+      .form-field{
+        .frm_opt_container{
+          @include clearfix();
+          background: #10726e;
+          padding: 7px 7px 0;
+          @include border-radius(5px);
+          .frm_checkbox{
+            float: left;
+            margin-bottom: 7px;
+            padding: 0 2px;
+            @include box-sizing();
+            label{
+              font-size: 12px;
+              color:#fff;
+              @include AvenirNextLTProDemi();
+              position: relative;
+              min-height: 13px;
+              padding-left: 18px;
+              line-height:normal;
+              display: block;
+              input{
+                vertical-align: middle;
+                position: absolute;
+                top:0;
+                left: 0;
+              }
+            }
+          }
+        }
+        .frm_radio{
+          float: left;
+          width: 50%;
+//          padding: 0 2px;
+          @include box-sizing();
+          background: #10726e;
+          padding: 5px 0 5px 9px;
+          @include border-radius(5px 0 0 5px);
+          &:last-child{
+            padding: 5px 9px 5px 0;
+            @include border-radius(0 5px 5px 0);
+          }
+          label{
+            font-weight: normal;
+            color:#fff;
+            font-size: 12px;
+            @include AvenirNextLTProDemi();
+            input{
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+      .frm_first_half{
+        float: left;
+        width: 50%;
+        padding: 0 10px;
+        @include box-sizing();
+        label.frm_primary_label{
+//          display: none;
+        }
+        .number_travellers{
+          float: left;
+          &>span:first-child{
+            padding: 0 7px;
+            display: block;
+          }
+          .frm_left_container{
+            width: 50% !important;
+            label.frm_primary_label{
+              max-width: 53%;
+              margin-top:6px;
+            }
+            input{
+              max-width: 38%;
+            }
+          }
+        }
+        .frm_half{
+          float: left;
+          width: 50%;
+          .form-field{
+            width: 100%;
+          }
+          &.time_number_trip{
+            .form-field{
+              input{
+                max-width: 100%;
+              }
+              &.form-date{
+                label{
+                  float: left;
+                  width: 50%;
+                  margin-right:0;
+                  @include box-sizing();
+                  padding-right: 10px;
+                  margin-top: 5px;
+                  max-width: 50%;
+                }
+                input{
+                  float: right;
+                  width: 50%;
+                }
+              }
+            }
+          }
+        }
+        .form-field{
+          clear: inherit;
+          float: left;
+//          width: 50%;
+          @include box-sizing();
+          padding: 0 7px;
+          margin-bottom: 15px;
+        }
+        .trip_use_option{
+          @include clearfix();
+          label.frm_primary_label{
+            display: block;
+          }
+          .form-field{
+            float: none;
+            width: 100%;
+            margin-bottom: 10px;
+            .frm_opt_container{
+              .frm_checkbox{
+                width: 16.666667%;
+                @media screen and (min-width:1120px){
+                  width: auto;
+                  display: inline-block;
+                  float: none;
+                  margin-right: 4%;
+                  &:last-child{
+                    margin-right: 0;
+                  }
+                }
+              }
+            }
+            &:nth-child(2){
+              .frm_opt_container{
+                .frm_checkbox{
+                  width: 25%;
+                  @media screen and (min-width:1120px){
+                    float: left;
+                    margin-right: 0;
+                  }
+                  &:nth-child(4n+5){
+                    @media screen and (min-width: 1120px) {
+                      clear: left;
+                    }
+                  }
+                }
+              }
+            }
+            &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6){
+              float: left;
+              width: 50%;
+              .frm_opt_container{
+                .frm_checkbox{
+                  width: 33.333%;
+                  @media screen and (min-width:1120px) {
+                    width: auto;
+                    display: inline-block;
+                    float: none;
+                    margin-right: 9%;
+                    &:last-child{
+                      margin-right: 0;
+                    }
+                  }
+                  &:nth-child(4n+5){
+                    clear: left;
+                  }
+                }
+              }
+            }
+            &:nth-child(5){
+              .frm_opt_container{
+                .frm_checkbox{
+                  width: 50%;
+                  @media screen and (min-width:1120px) {
+                    float: left;
+                    margin-right: 0;
+                  }
+
+                }
+              }
+            }
+
+          }
+
+        }
+      }
+      .frm_last_half{
+        float: left;
+        width: 50%;
+        padding: 0 10px;
+        @include box-sizing();
+        .form-field{
+          margin-bottom: 15px;
+          .frm_opt_container{
+            .frm_checkbox{
+              width: 33.333%;
+            }
+          }
+          &.category-checkbox{
+            margin-bottom: 0;
+            label{
+              text-transform: uppercase;
+              &:before{
+                background: #10726e;
+              }
+            }
+            &>label:first-child{
+              display: none;
+            }
+            .frm_opt_container{
+              background: transparent;
+              padding: 0;
+              .frm_checkbox{
+                margin-bottom: 2px;
+              }
+            }
+          }
+          &.custom-scroll{
+            .frm_opt_container{
+              max-height: 80px;
+              padding-bottom: 7px;
+              overflow-x: hidden;
+              overflow-y: auto;
+            }
+          }
+        }
+      }
+
+      .frm_submit{
+        background: rgba(#0d796f,0.5);
+        padding: 0 23px 0 43px;
+        @include clearfix();
+        margin: 0 -13px;
+        img{
+          display: none !important;
+        }
+        input[type="submit"]{
+          line-height: 67px;
+          float: right;
+          background: rgba(#09575a,0.5);
+          width: 50% !important;
+          text-transform: uppercase;
+          padding: 0;
+          color:#12887d;
+          font-size: 24px;
+          @include transition(all ease 0.5s);
+          @include ProximaNovaAltBold();
+          text-align: center;
+          border:none;
+          @include box-shadow(none !important);
+          @include border-radius(0 !important);
+          margin:0 !important;
+          &:hover{
+            color:#fff;
+            background: rgba(#09575a,1);
+          }
+        }
+      }
+
+      .error-note{
+        color:#fff;
+        width: 50%;
+        margin-bottom: -44px;
+        @include box-sizing();
+        padding: 5px 10px 0 0;
+      }
+      .frm_error{
+        font-size: 0;
+        display: inline-block;
+        vertical-align: middle;
+        &:after{
+          content: "";
+          width: 16px;
+          height:16px;
+          background: url('../images/icons/error.png') no-repeat;
+          display: inline-block;
+        }
+      }
+      .frm_blank_field{
+        input, select, textarea{
+//          border:1px solid red !important;
+        }
+      }
+    }
+
+  }
+  .mCSB_scrollTools .mCSB_draggerRail{
+    background: #13887d;
+  }
+  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    background: #07575b;
+  }
+}
+
+
+.custom-tour{
+  .frm_form_fields {
+    background: #13887d;
+    color:#fff;
+    padding: 20px 13px 0;
+    @include box-sizing();
+    margin-bottom: 23px;
+  }
+}

@@ -42,11 +42,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
 				<label for="username"><?php _e( 'Username or email address', 'woocommerce' ); ?> <span class="required">*</span></label>
-				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" value="<?php if ( ! empty( $_POST['username'] ) ) echo esc_attr( $_POST['username'] ); ?>" placeholder="*Enter Email Address" />
+				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" value="<?php if ( ! empty( $_POST['username'] ) ) echo esc_attr( $_POST['username'] ); ?>" placeholder="* Enter Email Address" />
 			</p>
 			<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
 				<label for="password"><?php _e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
-				<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" placeholder="*Enter Password" />
+				<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" placeholder="* Enter Password" />
 			</p>
 
 			<?php do_action( 'woocommerce_login_form' ); ?>
@@ -86,36 +86,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
 					<label for="reg_email"><?php _e( 'Email address', 'woocommerce' ); ?> <span class="required">*</span></label>
-					<input placeholder="*Email Address" type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" value="<?php if ( ! empty( $_POST['email'] ) ) echo esc_attr( $_POST['email'] ); ?>" />
+					<input placeholder="* Email Address" type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" value="<?php if ( ! empty( $_POST['email'] ) ) echo esc_attr( $_POST['email'] ); ?>" />
 				</p>
 
 				<?php if ( 'no' === get_option( 'woocommerce_registration_generate_password' ) ) : ?>
 
 					<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
 						<label for="reg_password"><?php _e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
-						<input placeholder="*Password" type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" />
+						<input placeholder="* Password" type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" />
 					</p>
 
 				<?php endif; ?>
 
 				<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
 				    <label for="confirm_password">Confirm Password <span class="req">(required)</span></label>
-				    <input type="password" name="confirm_password" id="confirm_password" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*Confirm Password">
+				    <input type="password" name="confirm_password" id="confirm_password" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="* Confirm Password">
 				</p>
 
 				<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
 				    <label for="billing_first_name">First Name <span class="req">(required)</span></label>
-				    <input type="text" name="billing_first_name" id="billing_first_name" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*First Name">
+				    <input type="text" name="billing_first_name" id="billing_first_name" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="* First Name">
 				</p>
 
 				<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
 				    <label for="billing_last_name">Last Name <span class="req">(required)</span></label>
-				    <input type="text" name="billing_last_name" id="billing_last_name" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*Last Name">
+				    <input type="text" name="billing_last_name" id="billing_last_name" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="* Last Name">
 				</p>
 
 				<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
 				    <label for="billing_phone">Phone Number <span class="req">(required)</span></label>
-				    <input type="text" name="billing_phone" id="billing_phone" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*Phone Number">
+				    <input type="text" name="billing_phone" id="billing_phone" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="* Phone Number">
 				</p>
 			</div>
 
@@ -151,17 +151,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 				?>
 				<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
 				    <label for="billing_address_1">Address <span class="req">(required)</span></label>
-				    <input type="text" name="billing_address_1" id="billing_address_1" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*Address">
+				    <input type="text" name="billing_address_1" id="billing_address_1" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="* Address">
 				</p>
 
 				<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
 				    <label for="billing_postcode">Post Code <span class="req">(required)</span></label>
-				    <input type="text" name="billing_postcode" id="billing_postcode" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*Post Code">
+				    <input type="text" name="billing_postcode" id="billing_postcode" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="* Post Code">
 				</p>
 
 				<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
 				    <label for="billing_city">Town &amp; City <span class="req">(required)</span></label>
-				    <input type="text" name="billing_city" id="billing_city" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="*Town & City">
+				    <input type="text" name="billing_city" id="billing_city" class="woocommerce-Input woocommerce-Input--text input-text" value="" size="25" placeholder="* Town & City">
 				</p>
 			</div>
 

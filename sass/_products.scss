@@ -1,0 +1,618 @@
+.banner-bg{
+  height: 422px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.selected-tour{
+  h2.title{
+    @extend .section-title;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .package_place{
+    color:#13887d;
+    font-size: 16px;
+    @include AvenirNextLTProDemi();
+    font-weight: 700;
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .tabs-selected-tour{
+    .product-tabs{
+      margin: 0 -1px 42px;
+      list-style: none;
+      @include clearfix();
+      li{
+        float: left;
+        width: 33.33%;
+        padding:0 1px;
+        @include box-sizing();
+        a{
+          display: block;
+          color:#aaa8a8;
+          font-size: 16px;
+          @include ProximaNovaAltBold();
+          border-bottom: 9px solid #dcdbdb;
+          @include transition(all ease 0.5s);
+          text-transform: uppercase;
+          text-align: center;
+          padding-bottom: 6px;
+          &:hover{
+            color:#10726e;
+          }
+        }
+        &.active{
+          a{
+            color:#10726e;
+            border-bottom-color:#10726e;
+          }
+        }
+      }
+    }
+
+    .tab-contents{
+      @include clearfix();
+      margin-bottom: 30px;
+      .tab-pane{
+        display: none;
+        font-size: 16px;
+        color:#a9a8a8;
+        @include clearfix();
+        &.active{
+          display: block;
+        }
+        .no_of_days{
+          background: url("../images/icons/calander.png") no-repeat;
+          color:#10726e;
+          font-size: 14px;
+          @include AvenirNextLTProDemi();
+          font-weight: 700;
+          padding: 3px 0 2px 38px;
+        }
+
+        .summary{
+          @include clearfix();
+          margin: 0 -10px;
+          padding-top: 44px;
+          h2{
+            color:#10726e;
+            text-transform: uppercase;
+            font-size: 16px;
+            @include ProximaNovaAltBold();
+            margin: 0 0 30px;
+          }
+          .summary-left, .summary-right{
+            float: left;
+            padding: 0 10px;
+            @include box-sizing();
+          }
+          .summary-left{
+            width: 66.66%;
+            color:#10726e;
+            @include AvenirNextLTProDemi();
+            font-weight: bold;
+          }
+          .summary-right{
+            width: 33.34%;
+            ul{
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              li{
+                color:#aaa8a8;
+                font-size: 14px;
+                padding: 10px 0 14px 56px;
+                @include AvenirNextLTProDemi();
+                font-weight: 700;
+                position: relative;
+                line-height: normal;
+                margin-bottom: 16px;
+                i{
+                  display: inline-block;
+                  position: absolute;
+                  left: 0;
+                  top: 50%;
+                  margin-top: -18px;
+                  background-repeat: no-repeat;
+                  width: 37px;
+                  height: 37px;
+                  &.tour-guide{
+                    background-image: url("../images/icons/tour-guide.png");
+                  }
+                  &.bus{
+                    background-image: url("../images/icons/bus.png");
+                  }
+                  &.flights{
+                    background-image: url("../images/icons/fly.png");
+                  }
+                  &.accommodation{
+                    background-image: url("../images/icons/acc.png");
+                  }
+                  &.meal{
+                    background-image: url("../images/icons/meal.png");
+                  }
+                  &.cooking{
+                    background-image: url("../images/icons/cooking.png");
+                  }
+                }
+
+              }
+            }
+          }
+        }
+        .sharedaddy.sd-sharing-enabled{
+          display: none;
+        }
+      }
+
+      .itinerary{
+        font-size: 14px;
+        p{
+          strong{
+            color: #10726e;
+            @include AvenirNextLTProDemi();
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+.secondary-has-right-sidebar{
+  .cart{
+    @include clearfix();
+    margin-bottom: 26px;
+    color:#aaa8a8;
+    font-size: 16px;
+    @include ProximaNovaAltBold();
+    text-align: right;
+    .quantity{
+      float: left;
+      input{
+        background: #f2f1f0;
+        border:none !important;
+        width: 50px !important;
+        height: 35px !important;
+        @include box-sizing();
+        @include border-radius(5px);
+        @include box-shadow(none !important);
+      }
+    }
+    .pull-right{
+
+    }
+
+    .no-people{
+      float: left;
+      margin-left: 15px;
+      margin-top: 5px;
+    }
+
+    .price{
+      span{
+        color:#0f666b;
+        font-size: 22px;
+        @include ProximaNovaAltBold();
+      }
+    }
+    .sale{
+      span{
+        text-decoration: line-through;
+      }
+    }
+
+    .add-to-cart{
+      display: block;
+      background: #0f666b;
+      line-height: 60px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 16px;
+      @include AvenirNextLTProDemi();
+      font-weight: 700;
+      clear: both;
+      color:#fff;
+      @include transition(all ease 0.5s);
+      margin-top: 30px;
+      &:hover{
+        background: #108287;
+      }
+      i{
+        display: inline-block;
+        vertical-align: text-bottom;
+        background: url("../images/icons/add-cart.png") no-repeat;
+        width: 25px;
+        height: 22px;
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+
+.related-tours{
+  .related-title{
+    @extend .section-title;
+  }
+  .related-content{
+    ul{
+      list-style: none;
+      margin: 0 -5px;
+      padding: 0;
+      li{
+        float: left;
+        width: 25%;
+        @include box-sizing();
+        padding: 0 5px;
+        position: relative;
+        overflow: hidden;
+        .img{
+          height: 167px;
+          overflow: hidden;
+          img{
+            height: 100%;
+            min-width: 100%;
+            max-width: inherit;
+          }
+        }
+        .sales{
+          line-height: 24px;
+          width: 70px;
+          color:#fff;
+          text-transform: uppercase;
+          background: #fdc010;
+          @include AvenirNextLTProDemi();
+          position: absolute;
+          right:-105px;
+          top:24px;
+          text-align: center;
+          @include transition(all ease 0.5s);
+        }
+        .img{
+          img{
+            display: block;
+          }
+        }
+        .text{
+          background: #127d76;
+          color:#fff;
+          font-size: 12px;
+          padding: 0 8px 0;
+          line-height: 1.4;
+          @include transition(all ease 0.5s);
+          @include box-sizing();
+          img{
+            margin: 0 -8px;
+          }
+          h2.title{
+            font-size: 16px;
+            color:#fff;
+            @include AvenirNextLTProDemi();
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0 -8px 0;
+            background: #10726e;
+            line-height: 20px;
+            height: 40px;
+            overflow: hidden;
+            padding: 16px 25px;
+            text-align: center;
+          }
+          .infomation{
+            text-align: center;
+            font-size: 16px;
+            @include AvenirNextLTProDemi();
+            font-weight: 700;
+            padding: 5px 0 3px;
+            min-height: 111px;
+            div{
+              padding-top: 5px;
+              padding-bottom: 5px;
+              div{
+                padding: 0;
+              }
+            }
+            .time{
+              i{
+                background: url("../images/icons/calander-white.png") no-repeat;
+                width: 21px;
+                height: 21px;
+                vertical-align: text-bottom;
+                margin-right: 10px;
+                display: inline-block;
+              }
+            }
+            .price{
+              font-size: 20px;
+              @include ProximaNovaAltBold();
+            }
+          }
+          a{
+            @extend .gbtn;
+            display: block;
+            font-weight: 700;
+            @include AvenirNextLTProDemi();
+            font-size: 14px;
+            margin: 0 -8px 0;
+            background-color: #0f666b;
+            color:#fff;
+            &:hover{
+              background-color: #13757a;
+            }
+          }
+        }
+        &:hover{
+          .sales{
+            right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.gallery{
+  margin-bottom: 26px;
+  @include clearfix();
+  .list-gallery{
+    width: 87.33%;
+    float: left;
+    img{
+      @include screen-theme(lg){
+        max-height: 576px;
+        max-width: inherit;
+        min-width: 100%;
+      }
+      @include screen-theme(md){
+        max-height: 532px;
+        max-width: inherit;
+        min-width: 100%;
+      }
+      @include screen-theme(sm){
+        max-height: 468px;
+        max-width: inherit;
+        min-width: 100%;
+      }
+      @include screen-theme(xs){
+        max-height: 364px;
+        max-width: inherit;
+        min-width: 100%;
+      }
+    }
+    .slick-arrow{
+      display: block;
+      width: 24px;
+      height:63px;
+      position: absolute;
+      top:50%;
+      @include transform(translateY(-50%));
+      z-index: 33;
+      &.slick-prev{
+        background: url('../images/icons/arrow-left.png') no-repeat 0 0;
+        left: 18px;
+        &:hover{
+          background-position: 0 -87px;
+        }
+      }
+      &.slick-next{
+        right:18px;
+        background: url('../images/icons/arrow-right.png') no-repeat 0 -87px;
+        &:hover{
+          background-position: 0 0;
+        }
+      }
+    }
+  }
+  .slider-nav-thumbnails{
+    width: 12.67%;
+    @include box-sizing();
+    padding-left: 7px;
+    float: left;
+    img{
+      display: block;
+    }
+    .item{
+      margin-bottom: 8px;
+    }
+    .slick-arrow{
+      display: block;
+      width: 35px;
+      height:13px;
+      position: absolute;
+      left:50%;
+      @include transform(translateX(-50%));
+      z-index: 33;
+      &.slick-prev{
+        background: url('../images/icons/arrow-v.png') no-repeat 0 0;
+        top: 18px;
+        &:hover{
+          background-position: -55px 0;
+        }
+      }
+      &.slick-next{
+        bottom:18px;
+        background: url('../images/icons/arrow-v.png') no-repeat 0 -18px;
+        &:hover{
+          background-position: -55px -18px;
+        }
+      }
+    }
+  }
+}
+
+.tour-enquiry{
+  background: #13887d;
+  color:#add;
+  padding: 15px 0 0;
+  margin-bottom: 35px;
+  legend.frm_hidden{
+    display: block !important;
+    @extend .section-title;
+    color:#fff;
+    padding-bottom: 15px;
+  }
+
+
+  .frm_style_formidable-style.with_frm_style{
+    fieldset{
+      padding: 0 18px;
+      .tour-description{
+        padding: 0 10px;
+        color:#add;
+        line-height: normal;
+        @include box-sizing();
+        @media screen and (max-width:1119px) {
+          font-size: 12px;
+        }
+      }
+      label{
+        color:#fff;
+        font-size: 14px;
+        @include AvenirNextLTProDemi();
+        font-weight: bold;
+      }
+      .enquiry-left, .emquiry-right{
+        float: left;
+        width: 50%;
+        @include box-sizing();
+        .form-field{
+          width: 50%;
+          @include box-sizing();
+          padding: 0 10px;
+          clear: inherit;
+          margin: 0 0 14px;
+          float: left;
+        }
+        input, input:focus, select, select:focus, textarea, textarea:focus{
+          color:#fff !important;
+          border:none !important;
+          @include box-shadow(none !important);
+          margin: 0;
+          padding: 0 5px 0 16px !important;
+          @include border-radius(5px !important);
+          @include placeholder(#fff !important);
+          font-size: 14px;
+          @include AvenirNextLTProDemi();
+          font-weight: 700;
+          height: 36px;
+          background: #10726e !important;
+          @include box-sizing();
+        }
+        textarea, textarea:focus{
+          height: 70px;
+          padding-top: 10px !important;
+        }
+        select{
+          option{
+            color: #333;
+          }
+        }
+        .selection-box{
+          height:36px;
+          select{
+            width: 100% !important;
+          }
+          &:after{
+            background: url("../images/select-2.png") no-repeat top center/100% 100%;
+            width: 36px;
+            height:36px;
+            @include border-radius(0);
+            top:0;
+          }
+        }
+      }
+      .emquiry-right{
+        @include clearfix();
+
+        .date, .adults{
+          float: left;
+          @include box-sizing();
+          width: 50%;
+          padding: 0 10px;
+          .form-field{
+            width: 100%;
+          }
+        }
+        .date{
+          line-height: normal;
+          label{
+            width: 75px !important;
+          }
+//          input{
+//            float: left;
+//            max-width: 58% !important;
+//          }
+        }
+        .adults{
+          .label{
+            @include AvenirNextLTProDemi();
+            font-size: 14px;
+            color:#fff;
+            display: block;
+          }
+          .form-field{
+            width: 50%;
+          }
+          label{
+            line-height: normal;
+            width: 130px;
+            max-width: 46%;
+            float: left;
+            margin-right: 10px;
+            color: #add;
+            font-size: 12px;
+            margin-top: 11px;
+          }
+          input{
+            max-width: 40%;
+            padding-left: 0 !important;
+            text-align: center;
+          }
+        }
+      }
+      .frm_submit{
+        text-align: right;
+        margin: 0 -18px;
+        img{
+          display: none !important;
+        }
+        input{
+          width: 25% !important;
+          @include box-sizing();
+          line-height: 68px;
+          text-align: center;
+          padding: 0;
+          font-size: 24px;
+          @include ProximaNovaAltBold();
+          text-transform: uppercase;
+          color:#12887d !important;
+          background: rgba(#09565a,0.5) !important;
+          border:none;
+          @include box-shadow(none);
+          margin: -56px 0 0 !important;
+          @include border-radius(0);
+          &:hover{
+            color:#fff !important;
+            background: rgba(#09565a,1) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.header-selected-tour{
+  @include clearfix();
+  margin-bottom: 14px;
+  .pull-left{
+    width: 60%;
+  }
+  .share{
+    float: right;
+  }
+}

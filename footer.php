@@ -20,10 +20,18 @@
                     </div>
                 <?php endif; ?>
 
-                <div class="footer-widgets-wrapper mobile-footer">
+                <div class="footer-widgets-wrapper mobile-footer mobile-footer-portrait">
                     <div class="container">
                         <div class="column">
                         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer bottom mobile Sidebar") ) : endif; ?>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-widgets-wrapper mobile-footer mobile-footer-postlandscape">
+                    <div class="container">
+                        <div class="column">
+                        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer bottom mobile Sidebar Landscape") ) : endif; ?>
                         </div>
                     </div>
                 </div>

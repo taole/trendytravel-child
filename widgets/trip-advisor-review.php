@@ -18,14 +18,12 @@ class Tripadvisor_Review_Widget extends WP_Widget {
             <div class="tripcode"><?php echo $tripcode; ?>"></div>
         <?php else: ?>
             <div class="tripcode">
-                <div id="TA_cdswritereviewlg67" class="TA_cdswritereviewlg">
-                    <ul id="nPjqexKkQ" class="TA_links oTZh29O">
-                        <li id="XJTJ3iVgek" class="TIa5xoHnts">
-                            <a target="_blank" href="https://www.tripadvisor.com/"><img src="https://www.tripadvisor.com/img/cdsi/img2/branding/medium-logo-12097-2.png" alt="TripAdvisor"/></a>
-                        </li>
+                <div id="TA_selfserveprop37" class="TA_selfserveprop">
+                    <ul id="fGcCYx7Gm" class="TA_links S2lrJkGlltQm">
+                        <li id="RL1Hypa" class="GYYemwO"><a href="https://www.tripadvisor.com/" target="_blank"><img src="https://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a></li>
                     </ul>
                 </div>
-                <script src="https://www.jscache.com/wejs?wtype=cdswritereviewlg&amp;uniq=67&amp;locationId=10514184&amp;lang=en_US&amp;lang=en_US&amp;display_version=2"></script>
+                <script src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=37&amp;locationId=10514184&amp;lang=en_US&amp;rating=true&amp;nreviews=4&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=true&amp;border=true&amp;display_version=2"></script>
             </div>
         <?php endif; ?>
         <?php

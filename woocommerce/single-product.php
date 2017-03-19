@@ -26,9 +26,12 @@
 		?>
       	<div id="main">
           	<div class="container selected-tour">
-	          	<div class="">
-	          		<h2 class="title"><?php echo get_the_title(); ?></h2>
-	          		<span class="package_place"><?php echo $_package_place; ?></span>
+	          	<div class="header-selected-tour">
+	          		<div class="pull-left">
+                        <h2 class="title"><?php echo get_the_title(); ?></h2>
+                        <span class="package_place"><?php echo $_package_place; ?></span>
+	          		</div>
+	          		<div class="share"><?php echo do_shortcode( '[jpshare]' ); ?></div>
 	          	</div>
 	            <section id="primary" class="content-full-width tabs-selected-tour">
 					<article id="post-<?php the_ID(); ?>" <?php post_class('blog-entry'); ?>>

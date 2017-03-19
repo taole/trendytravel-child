@@ -81,6 +81,9 @@
                                 else:
 									wp_nav_menu( array('theme_location' => 'primary-menu', 'container'  => false, 'menu_id' => 'menu-main-menu', 'menu_class' => 'menu', 'fallback_cb' => 'dt_theme_default_navigation', 'walker' => new DTFrontEndMenuWalker()));
 								endif; ?>
+                                <div class="numberphone number-phone-mobile"><?php
+                                    echo wp_kses(do_shortcode(stripslashes(dt_theme_option('general', 'top-bar-left-content'))), $dt_allowed_html_tags); ?>
+                                </div>
                             </nav>
                         </div>
                         <div class="fuc-header">

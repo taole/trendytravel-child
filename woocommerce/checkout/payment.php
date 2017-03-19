@@ -26,15 +26,17 @@ if ( ! is_ajax() ) {
 <div id="payment" class="woocommerce-checkout-payment">
 	<?php if ( WC()->cart->needs_payment() ) : ?>
 		<ul class="wc_payment_methods payment_methods methods">
-			<?php
-				if ( ! empty( $available_gateways ) ) {
-					foreach ( $available_gateways as $gateway ) {
-						wc_get_template( 'checkout/payment-method.php', array( 'gateway' => $gateway ) );
-					}
-				} else {
-					echo '<li>' . apply_filters( 'woocommerce_no_available_payment_methods_message', WC()->customer->get_country() ? __( 'Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.', 'woocommerce' ) : __( 'Please fill in your details above to see available payment methods.', 'woocommerce' ) ) . '</li>';
-				}
-			?>
+			<li class="wc_payment_method payment_method_paypal">
+				<input id="payment_method_paypal" type="radio" class="input-radio" name="payment_method" value="paypal" checked="checked" data-order_button_text="Proceed to PayPal">
+				<label for="payment_method_paypal">
+					<img src="/wp-content/themes/trendytravel-child/images/paypal.png" alt="PayPal Acceptance Mark">
+					<span>Pay through PayPal</span>
+					<a href="https://www.paypal.com/vn/webapps/mpp/paypal-popup" class="about_paypal" onclick="javascript:window.open('https://www.paypal.com/vn/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;" title="What is PayPal?">What is PayPal?</a>	
+				</label>
+				<div class="payment_box payment_method_paypal" style="display: block;">
+					<p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p>
+				</div>
+			</li>
 		</ul>
 	<?php endif; ?>
 	<div class="form-row place-order">

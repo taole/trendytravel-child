@@ -1,0 +1,177 @@
+.main-blog{
+  margin: 0 -5px;
+  .item{
+    width: 25%;
+    padding: 0 5px;
+    float: left;
+    @include box-sizing();
+    margin-bottom: 10px;
+    &:nth-child(4n+5){
+      @include screen-theme(lg){
+        clear: left;
+      }
+      @include screen-theme(md){
+        clear: left;
+      }
+      @include screen-theme(sm){
+        clear: left;
+      }
+      @include screen-theme(xs){
+        clear: left;
+      }
+    }
+    @include screen-theme(mbLan){
+      width: 50%;
+    }
+    @include screen-theme(mbPo){
+      width: 100%;
+    }
+    .content{
+      background: #127d76;
+      @include transition(all ease 0.5s);
+      color: #fff;
+      @include clearfix();
+      a{
+        color:#fff;
+      }
+      &:hover{
+        background: #07575b;
+        .readmore{
+          background-color: #13757a;
+        }
+      }
+      .entry-thumb, .entry-thumb-wrapper{
+        display: block;
+        float: none;
+      }
+      .entry-thumb{
+        @include screen-theme(mbLan){
+          float: left;
+          width: 42%;
+          .entry-thumb-wrapper{
+            height: 138px;
+            overflow: hidden;
+            img{
+              height: 100%;
+              min-width: 100%;
+              max-width: inherit;
+            }
+          }
+        }
+      }
+      .entry-meta, .featured-post{
+        display: none;
+      }
+      .entry-thumb-wrapper{
+        margin-bottom: 0;
+        a, img{
+          display: block;
+        }
+      }
+      .entry-details{
+        padding: 0 15px;
+        @include screen-theme(mbLan){
+          float: left;
+          width: 58%;
+          @include box-sizing();
+        }
+      }
+      .entry-body{
+        font-size: 12px;
+        height: 126px;
+        overflow: hidden;
+        margin-bottom: 15px;
+        line-height: 18px;
+        @include screen-theme(sm){
+          display: none;
+        }
+        @include screen-theme(xs){
+          display: none;
+        }
+        @include screen-theme(mbLan){
+          display: none;
+        }
+        p{
+          line-height: 18px;
+        }
+      }
+      h2{
+        font-size: 16px;
+        @include AvenirNextLTProDemi();
+        font-weight: 700;
+        margin: 15px 0 10px;
+        color:#fff;
+        line-height: 20px;
+        @include screen-theme(sm){
+          height: 36px;
+          overflow: hidden;
+          font-size: 14px;
+          line-height: 18px;
+          text-align: center;
+        }
+        @include screen-theme(xs){
+          font-size: 12px;
+          line-height: 16px;
+          height: 32px;
+          overflow: hidden;
+          text-align: center;
+        }
+        @include screen-theme(mbLan){
+          font-size: 12px;
+          text-align: center;
+        }
+        a{
+          color:#fff;
+        }
+      }
+      .entry-title{
+        @include screen-theme(mbLan){
+          height: 100px;
+          overflow: hidden;
+          display: table;
+          width: 100%;
+          h2{
+            margin:0;
+            display: table-cell;
+            height: 100px;
+            vertical-align: middle;
+            a{
+              line-height: normal;
+            }
+          }
+        }
+      }
+      .readmore{
+        @extend .gbtn;
+        background-color: #0f666b;
+        color:#fff;
+        display: block;
+        margin: 0 -15px;
+        &:hover{
+          background-color: #13757a;
+        }
+        @include screen-theme(xs){
+          font-size: 12px !important;
+        }
+        @include screen-theme(mbLan){
+          font-size: 12px !important;
+        }
+      }
+    }
+  }
+}
+
+.travel-blog{
+  h1.section-title{
+    margin-bottom: 32px;
+    @include screen-theme(sm){
+      margin-bottom: 15px;
+    }
+    @include screen-theme(xs){
+      margin-bottom: 12px;
+    }
+    @include screen-theme(mbLan){
+      margin-bottom: 0;
+    }
+  }
+}

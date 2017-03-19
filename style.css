@@ -80,7 +80,7 @@ Text Domain: iamd_text_domain
 }
 
 .why-travel-title {
-    margin-bottom: 0px;   
+    margin-bottom: 0px;
 }
 
 
@@ -98,9 +98,9 @@ li
 
 ol li:before
 {
-    content: counter(custom) " ";  
+    content: counter(custom) " ";
         float: left;
-    padding-right: 10px; 
+    padding-right: 10px;
 }
 
 ol li:first-child {
@@ -119,6 +119,9 @@ ol li:first-child {
     margin-left: 0;
 }
 
+.about-us ol p {
+  line-height: 1.5;
+}
 .about-us li
 {
     position: relative;
@@ -128,7 +131,7 @@ ol li:first-child {
 }
 .about-us ol li span {
     display: inline-block;
-    
+
 }
 
 .about-us ol li:before
@@ -136,8 +139,9 @@ ol li:first-child {
     content: counter(custom) " ";
     vertical-align: middle;
     position: absolute;
-    left: -46px;
+    left: -35px;
     top: 18%;
+    font-size: 30px;
 }
 
 .about-us ol li:first-child {
@@ -822,3 +826,147 @@ input[type="button"].btn-block {
 #billing_country_field {
   width: 100%;
 }
+
+/* travel guide tabs */
+.title-list h2,
+.tab-contents .tab-pane {
+  display: none;
+}
+.title-list h2.current,
+.tab-contents .tab-pane.current {
+  display: block;
+}
+
+/*taole fix*/
+@media only screen and (min-width: 1281px){
+  #footer .footer-widgets-wrapper .container > .column:nth-child(2) { width: 47.5%; }
+  #footer .footer-widgets-wrapper .container > .column:last-child { width: 23% }
+}
+#footer .subcribe-form .container-email { position: relative; margin: 0 15px;}
+#footer .subcribe-form .container-email:before{ content: " "; display:block;  background: #0f666b; width: 100%;display: block;height: 4px;position: absolute;bottom: 13px;}
+#footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_form_field input,
+#footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_form_field input::-webkit-input-placeholder{
+  text-decoration:none;
+}
+
+@media only screen and (min-width: 770px){
+  #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_form_field{width: 57%; }
+}
+@media only screen and (min-width: 770px)and (max-width: 1024px){
+    #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_form_field{ max-width: 355px;}
+}
+@media only screen and (min-width: 415px) and (max-width: 767px){
+    #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_form_field{ max-width: 315px; margin: 0 auto !important; float: none;}
+}
+#footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_submit button{
+  background: #12746f !important;
+}
+#footer .subcribe-form .frm_style_formidable-style-2.with_frm_style .frm_error_style { display: none; visibility: hidden;}
+#footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_form_field { position: relative;}
+#footer .subcribe-form .frm_style_formidable-style-2.with_frm_style .frm_error {position: absolute; bottom: -7px; left:8px;}
+@media only screen and (min-width: 767px){
+  #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_submit {
+    float: right; width: 35%;  background: #12746f;
+  }
+}
+@media only screen and (max-width: 767px){
+  #footer .subcribe-form .container { width: 100% !important; }
+
+  #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_submit button {
+      background: #12746f!important;
+  }
+}
+
+@media only screen and (max-width: 639px) and (min-width: 329px){
+  #footer .subcribe-form .frm_forms .frm_form_fields fieldset .frm_form_field input {
+    text-align: center;
+  }
+
+  #footer .subcribe-form .frm_style_formidable-style-2.with_frm_style .frm_error {    text-align: center !important; width: 100%;}
+
+  #footer .footer-widgets-wrapper .container > .column { width: 100% }
+}
+@media only screen and (max-width: 568px) {
+  #footer .footer-widgets-wrapper .container > .column { margin: 0 15px }
+}
+@media only screen and (min-width: 415px) and (max-width: 568px) {
+
+  #footer .subcribe-form h3.widget-title{ width: 42%; }
+  #footer .subcribe-form .frm_forms { width: 58%; }
+
+}
+
+@media only screen and (max-width: 639px) {
+  /* line 19, ../sass/_responsive-300px.scss */
+  #footer .container {
+    width: 100% !important;
+  }
+}
+#footer .footer-widgets-wrapper .container > .column:last-child .widget:last-child h3 { font-size: 12px }
+#footer .footer-widgets-wrapper.type2 { display: block !important; }
+#footer .mobile-footer-postlandscape,
+#footer .mobile-footer-portrait{ display: none !important; }
+@media only screen and  (max-width: 735px){
+  #footer .copyright.type2 .copyright-content { width: auto; margin: 0 15px; display: block; padding: 0}
+}
+
+@media only screen and (min-width: 415px) and (max-width: 736px){
+  #footer .footer-widgets-wrapper.type2 .column.dt-sc-one-third:first-child { width: 34%; }
+
+  #footer .footer-widgets-wrapper .container .column.dt-sc-one-third {    width: 65.9%;}
+  #footer .footer-widgets-wrapper.type2 .column.dt-sc-one-third:last-child .widget-tripAdvisor { width: 100%; }
+  #footer .footer-widgets-wrapper.type2 .column:nth-child(2) h3{ padding: 0!important; text-indent: 38px; }
+  #footer .footer-widgets-wrapper.type2 .column.dt-sc-one-third:last-child .widget-tripAdvisor { width: 100%; }
+  #footer .footer-widgets-wrapper .container .column.dt-sc-one-third:last-child .widget_social{ width: 40% }
+}
+@media only screen and (min-width: 568px) and (max-width: 568px){
+
+  #footer .footer-widgets-wrapper .container .column.dt-sc-one-third {    width: 55%;}
+}
+@media only screen and (max-width: 414px) {
+  #footer .footer-widgets-wrapper.type2 .column.dt-sc-one-third:last-child .widget-tripAdvisor { width: 40%; }
+  #footer .footer-widgets-wrapper .container > .column .widget-tripAdvisor ul.social-list li.tripAdvisor a { width: 120px; background-size: 100%; }
+  #footer .footer-widgets-wrapper{ padding: 0 }
+  #footer .footer-widgets-wrapper.type2 .column { margin-top: 20px; }
+  #footer .footer-widgets-wrapper.type2 .column.dt-sc-one-third:last-child .widget_text { padding-left: 31px; margin-top: 5px}
+  #footer .footer-widgets-wrapper.type2 .column.dt-sc-one-third:last-child .widget_text  a {font-size: 10px}
+}
+@media only screen and (max-width: 639px) and (min-width: 320px){
+  .popular-tours .dt-sc-one-column .dt-sc-button {
+    margin-top: 10px;
+  }
+
+  .popular-tours {
+    margin-bottom: 25px;
+  }
+  #main {
+    padding-bottom: 25px !important;
+  }
+}
+
+.contactus-tour .container .column.dt-sc-one-half{
+
+}
+
+.about-us h2 {margin: 29px 0 20px; line-height: 1;}
+.about-us p { line-height: 20px; }
+.about-us ol {font-family: Arial, sans-serif; padding-top: 0;}
+.about-us ol li {margin-bottom: 15px}
+.about-us ol li:before { top: 8px;    left: -40px; font-weight: bold;}
+.about-us ol li span { color: #a9a8a8 ; line-height: 20px; font-size: 14px; font-weight: normal; font-family: AvenirNextLTPro, Arial, sans-serif; }
+@media only screen and (min-width: 667px) and (max-width: 736px){
+  /*#footer .footer-widgets-wrapper .container .column.dt-sc-one-third:last-child .widget_social + .widget{ float: right;     margin-top: 13px;}*/
+  /*#footer .footer-widgets-wrapper .container .column.dt-sc-one-third:last-child .widget_social{ width: 29.7% }*/
+}
+.tour-type .btn-show-mobile { display: none; visibility: hidden;}
+@media only screen and  (max-width: 415px){
+  .page .tour-type .btn-show-mobile { width: 50% !important; display: block; visibility: inherit; max-width: 175px}
+  .page .tour-type .btn-show-mobile a { width: 100% !important;vertical-align: middle; text-align: center;}
+}
+
+/* id="CDSWIDSSP" */
+div#CDSWIDSSP {
+    width: 100% !important;
+    margin-bottom: 30px;
+}
+/*taole fix*/

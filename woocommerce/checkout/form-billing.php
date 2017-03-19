@@ -44,8 +44,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		?>
 	<div class="clear"></div>
 	<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
-		<label for="account_email"><?php _e( '* Email address', 'woocommerce' ); ?></label>
-		<input type="email" class="woocommerce-Input woocommerce-Input--email input-text" name="account_email" id="account_email" value="<?php echo esc_attr( $user->billing_email ); ?>" />
+		<label for="account_email"><?php _e( '* Email Address', 'woocommerce' ); ?></label>
+		<input type="email" class="woocommerce-Input woocommerce-Input--email input-text" name="billing_email" id="account_email" value="<?php echo esc_attr( $user->billing_email ); ?>" />
 	</p>
 
 	<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
@@ -76,7 +76,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</p>
 
 	<p class="woocommerce-FormRow woocommerce-FormRow--first form-row form-row-first">
-		<label for="billing_first_name"><?php _e( '* First name', 'woocommerce' ); ?></label>
+		<label for="billing_first_name"><?php _e( '* First Name', 'woocommerce' ); ?></label>
 		<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="billing_first_name" id="billing_first_name" value="<?php echo esc_attr( $user->billing_first_name ); ?>" />
 	</p>
 
@@ -105,7 +105,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php foreach ( $checkout->checkout_fields['order'] as $key => $field ) : ?>
 
-			<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
+			<?php woocommerce_form_field( $key, $field, "Order Notes - Notes about your order" ); ?>
 
 		<?php endforeach; ?>
 

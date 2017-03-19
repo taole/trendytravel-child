@@ -1,0 +1,223 @@
+.woocommerce{
+  .all-orders-cart{
+    table.shop_table{
+      border:none;
+      margin-bottom: 10px;
+      .space-td{
+        height:10px;
+        overflow: hidden;
+        padding: 0 !important;
+        border:none;
+        background: transparent !important;
+        @include ProximaNovaAltBold();
+      }
+      .mobile-title{
+        margin: 0;
+        font-size: 14px;
+        @include ProximaNovaAltBold();
+        color: #fff;
+        text-transform: uppercase;
+        text-align: left;
+        display: none;
+      }
+      thead{
+        th{
+          background: transparent;
+          color:#13887d;
+          font-size: 16px;
+          text-align: left;
+          text-transform: uppercase;
+          padding: 0 0 20px;
+          border:none;
+          width: 25%;
+          @include box-sizing();
+          &:first-child{
+            width: 30%;
+          }
+          &:nth-child(2){
+            width: 20%;
+          }
+        }
+      }
+      tbody{
+        tr.cart_item{
+          td{
+            text-align: left;
+            font-weight: 700;
+            text-transform: uppercase;
+            background: #13887d;
+            color:#fff;
+            border: none;
+            a{
+              color:#fff;
+            }
+            &:first-child{
+              @include border-radius(5px 0 0 5px);
+              @include AvenirNextLTProDemi();
+              font-weight: 700;
+              position: relative;
+              padding-left: 78px;
+              height:62px;
+              @include box-sizing();
+              width: 55%;
+              img{
+                max-width: 50px;
+                max-height:50px;
+                //                    margin-right: 16px;
+                //                    vertical-align: middle;
+                position: absolute;
+                top:50%;
+                left: 12px;
+                @include transform(translateY(-50%));
+                width: auto;
+              }
+            }
+            &:last-child{
+              @include border-radius(0 5px 5px 0);
+            }
+            &.product-quantity{
+              .quantity{
+                input{
+                  border:none;
+                  background: transparent;
+                  color:#fff;
+                  @include AvenirNextLTProDemi();
+                  font-weight: 700;
+                  @include placeholder(#fff);
+                  @include box-shadow(none);
+                }
+              }
+
+            }
+            &.product-quantity, &.product-date, &.product-total{
+//              width: 26.66666%;
+            }
+            &.product-remove{
+              text-align: right !important;
+              padding-right: 12px !important;
+              &.hidden-mobile{
+                width: 1px;
+                display: table-cell;
+                padding: 0;
+                a.remove{
+//                  display: none;
+                }
+              }
+              a.remove{
+                background: rgba(#10726e,0.5);
+                width: 32px;
+                height:32px;
+                @include border-radius(5px);
+                line-height: 32px;
+                text-align: center;
+                padding: 0;
+                &:hover{
+                  background: rgba(#10726e,1);
+                }
+              }
+            }
+          }
+        }
+        tr{
+          td{
+            &.actions{
+              padding-right: 0 !important;
+              padding-bottom: 0 !important;
+              padding-left: 0 !important;
+              border:none;
+              background: transparent;
+              input{
+                width: 24.3% !important;
+                line-height: 68px;
+                background: #0f666b;
+                text-transform: uppercase;
+                color:#fff;
+                @include ProximaNovaAltBold();
+                font-size: 14px;
+                padding: 0;
+              }
+            }
+          }
+        }
+      }
+      tfoot{
+        tr{
+          th{
+            background: transparent;
+            border: none;
+            &:nth-child(3){
+              background: #13887d;
+              color:#fff;
+              text-transform: uppercase;
+
+              @include border-radius(5px);
+            }
+          }
+          td{
+            background: #e3eae9;
+            @include border-radius(5px);
+            @include ProximaNovaAltBold();
+            color:#13887d;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+
+  .cart-collaterals{
+    .cart_totals{
+      h2{
+        display: none;
+      }
+      table{
+        border: none;
+        tr{
+          display: table-row;
+          th{
+            background: #13887d;
+            color:#fff;
+            text-transform: uppercase;
+            @include border-radius(5px);
+            display: table-cell;
+            padding-top: 0;
+            padding-bottom: 0;
+            line-height: 67px;
+          }
+          td{
+            background: #e3eae9;
+            @include border-radius(5px);
+            @include ProximaNovaAltBold();
+            color:#13887d;
+            border: none;
+            font-size: 16px;
+            display: table-cell;
+            padding-top: 0;
+            padding-bottom: 0;
+            line-height: 67px;
+          }
+          .space-td{
+            height: 10px;
+            overflow:hidden;
+            padding: 0 !important;
+            background: transparent;
+          }
+        }
+      }
+      .wc-proceed-to-checkout{
+        a{
+          width: 100% !important;
+          line-height: 68px;
+          background: #0f666b;
+          text-transform: uppercase;
+          color:#fff;
+          @include ProximaNovaAltBold();
+          font-size: 16px;
+          @include border-radius(0);
+          text-align: center;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

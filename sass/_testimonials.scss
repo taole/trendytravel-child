@@ -1,0 +1,133 @@
+.faqs-term-policy.testimonials{
+  .section-title{
+    @include screen-theme(sm){
+      margin-bottom: 25px !important;
+    }
+  }
+  .page-with-right-sidebar{
+    padding-right: 0 !important;
+  }
+  .dt-sc-testimonial{
+    padding-left: 78px;
+    margin-bottom: 27px;
+    @include screen-theme(sm){
+      margin-bottom: 7px;
+    }
+    @include screen-theme(xs){
+      padding-left: 70px;
+      margin-bottom: 7px;
+    }
+    @include screen-theme(mbLan){
+      margin-bottom: 14px;
+    }
+    .author{
+      @include screen-theme(mbLan){
+        position: absolute;
+        width: auto;
+      }
+      img{
+        max-width: 58px;
+        max-height: 58px;
+        @include border-radius(50%);
+        @include screen-theme(xs){
+          max-height: 50px;
+          max-width: 50px;
+        }
+        @include screen-theme(mbLan){
+          max-width: 48px;
+          max-height: 48px;
+        }
+      }
+    }
+    .author-name{
+      color:#096368;
+      font-weight: 700;
+      font-size: 18px;
+      @include AvenirNextLTProDemi();
+      margin: 12px 0;
+      @include screen-theme(xs){
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      @include screen-theme(mbLan){
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+    blockquote{
+      padding: 0;
+      @include AvenirNextLTProDemi();
+      font-weight: 700;
+      font-style: italic;
+      text-align: left;
+      margin-bottom: 0;
+      p{
+        margin-bottom: 10px;
+      }
+      q{
+        @include AvenirNextLTProDemi();
+        font-weight: 700;
+        font-style: italic;
+        text-align: left;
+        line-height: 1.6;
+        color:#adacac;
+        font-size: 18px;
+        @include screen-theme(sm){
+          font-size: 16px;
+        }
+        @include screen-theme(xs){
+          font-size: 14px;
+        }
+        @include screen-theme(mbLan){
+          font-size: 14px;
+          @include AvenirNextLTPro();
+          font-weight: normal;
+        }
+      }
+    }
+    .author-detail{
+      display: none;
+    }
+  }
+  .dt-sc-hr-invisible-medium{
+    display: none;
+  }
+
+  .secondary-has-right-sidebar{
+    @include screen-theme(mbPo){
+      display: block !important;
+      .tripcode{
+        display: none;
+      }
+    }
+    .column.dt-sc-one-fourth{
+      img{
+        @include screen-theme(lg){
+          width: 100%;
+        }
+      }
+      .text{
+        h2{
+          font-size: 32px !important;
+          @include screen-theme(sm){
+            font-size: 24px !important;
+          }
+          @include screen-theme(xs){
+            font-size: 20px !important;
+            margin-top: -16px !important;
+          }
+        }
+        a{
+          @include screen-theme(xs){
+            font-size: 12px !important;
+            line-height: 32px !important;
+          }
+          @include screen-theme(xs){
+            font-weight: normal !important;
+          }
+        }
+      }
+    }
+  }
+}

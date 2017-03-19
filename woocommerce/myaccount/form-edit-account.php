@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_before_edit_account_form' ); ?>
 
 <form class="woocommerce-EditAccountForm edit-account" action="" method="post">
-
+	<h3 class="your-detail">Your Details</h3>
 	<?php do_action( 'woocommerce_edit_account_form_start' ); ?>
 	<div class="clear"></div>
 

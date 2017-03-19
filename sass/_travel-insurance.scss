@@ -1,0 +1,61 @@
+.travel-insurance{
+  .secondary-has-right-sidebar{
+    @include screen-theme(mbLan){
+      display: block;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      .tripcode{
+        display: none;
+      }
+    }
+  }
+}
+.page-with-right-sidebar{
+  color:#aaa8a8;
+  line-height: 1.4;
+  h2, h3{
+    text-transform: capitalize;
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 5px;
+    padding-bottom: 0;
+    color:#0f666b;
+  }
+  p{
+    color:#aaa8a8;
+    line-height: 1.4;
+  }
+  h3{
+    @include AvenirNextLTProDemi();
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 16px;
+    &+ol{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li{
+        &:before{
+          display: none;
+        }
+        b{
+          color:#0f666b;
+          @include AvenirNextLTProDemi();
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+#wn-insurance-quote-editor #qqc .cta-button-primary{
+  margin-top: 24px !important;
+}
+#wn-insurance-quote-editor #qqc .input-group input[type="text"]{
+  margin-top: 0 !important;
+}
+
+#wn-insurance-quote-editor{
+  max-width: 100% !important;
+}

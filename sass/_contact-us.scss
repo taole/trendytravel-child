@@ -52,6 +52,7 @@
             padding-left: 15px;
             padding-right: 15px;
             @include box-sizing();
+            padding-top: 10px;
           }
           .selection-box{
             &:after{
@@ -125,12 +126,68 @@
   .container{
     @include clearfix();
     .column{
+      &.dt-sc-one-fourth{
+        @include screen-size(lg){
+          img{
+            width: 100%;
+          }
+        }
+        @include screen-size(md){
+          width: 24.7%;
+        }
+      }
+      &.dt-sc-one-half{
+        img{
+          @include screen-theme(lg){
+            height: 219px;
+            max-width: inherit;
+            min-width: 100%;
+          }
+          @include screen-theme(md){
+            height: 207px;
+            max-width: inherit;
+            min-width: 100%;
+          }
+        }
+      }
       @media only screen and (min-width:1281px) {
         &.dt-sc-one-fourth{
-          width: 24.3%;
+          width: 24.45%;
+          &.first{
+            .text{
+              text-transform: none;
+            }
+          }
         }
         &.dt-sc-one-half{
           width: 49.4%;
+        }
+      }
+
+      &.dt-sc-one-fourth{
+        &.first{
+          .text{
+            text-transform: none;
+          }
+        }
+      }
+
+      &.dt-sc-one-half{
+        .text{
+          h2{
+            @include screen-theme(lg){
+              padding: 0 180px;
+            }
+            @include screen-theme(md){
+              padding: 0 150px;
+            }
+            @include screen-theme(sm){
+              padding: 0 50px;
+            }
+            @include screen-theme(xs){
+              padding: 0 20px;
+            }
+          }
         }
       }
 
@@ -171,10 +228,17 @@
       text-align: center;
       @include box-sizing();
       @include transform(translateY(-50%));
-      padding: 0 50px;
+      padding: 0 10px;
       @include ProximaNovaAltBold();
-      font-size: 32px;
+//      font-size: 32px;
+      font-size: 20px;
       margin-top: -24px;
+      font-weight: normal;
+      span{
+        display: block;
+        text-transform: capitalize;
+        font-size: 14px;
+      }
     }
     a{
       i{

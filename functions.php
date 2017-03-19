@@ -47,9 +47,25 @@ function re_widgets_init() {
     ));
 
     register_sidebar(array(
+        'name' => __('Footer bottom mobile Sidebar Landscape'),
+        'id' => 'footer-bottom-mobile-sidebar-landscape',
+        'description' => __('Footer bottom mobile Sidebar landscape'),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
+
+    register_sidebar(array(
         'name' => __('Travel Blog Tab'),
         'id' => 'travel-blog-tab',
         'description' => __('Travel Blog Tab')
+    ));
+
+    register_sidebar(array(
+        'name' => __('Testimonial siderbar'),
+        'id' => 'testimonial-siderbar',
+        'description' => __('Testimonial siderbar')
     ));
 
     register_sidebar(array(
@@ -78,6 +94,7 @@ include ABSPATH . 'wp-content/themes/trendytravel-child/widgets/connect-with-us.
 include ABSPATH . 'wp-content/themes/trendytravel-child/widgets/featured-tour.php';
 include ABSPATH . 'wp-content/themes/trendytravel-child/widgets/trip-advisor-review.php';
 include ABSPATH . 'wp-content/themes/trendytravel-child/widgets/travel_block.php';
+include ABSPATH . 'wp-content/themes/trendytravel-child/widgets/social-slider.php';
 
 /* Category */
 function product_destination() {  
@@ -116,6 +133,7 @@ function base_scripts() {
     wp_enqueue_script('slick_scripts', '/wp-content/themes/trendytravel-child/js/slick.js', array(), 1.0, true);
     wp_enqueue_script('bootstrap_scripts', '/wp-content/themes/trendytravel-child/js/bootstrap.min.js', array(), 1.0, true);
 
+    wp_enqueue_script('jquery-mousewheel', '/wp-content/themes/trendytravel-child/js/jquery.mousewheel.js', array(), 1.0, false);
     wp_enqueue_script('scrollbar_scripts', '/wp-content/themes/trendytravel-child/js/jquery.mCustomScrollbar.js', array(), 1.0, true);
     wp_enqueue_script('scrollbar_concat_scripts', '/wp-content/themes/trendytravel-child/js/jquery.mCustomScrollbar.concat.min.js', array(), 1.0, true);
 

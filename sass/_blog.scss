@@ -1,0 +1,313 @@
+#main{
+  .page-with-sidebar.page-with-right-sidebar{
+    float: left;
+    width: 65%;
+    margin: 0;
+    padding-right: 25px;
+    @include box-sizing();
+  }
+  .secondary-sidebar.secondary-has-right-sidebar{
+    width: 35%;
+    padding-left: 25px;
+    @include box-sizing();
+    #CDSWIDWRL{
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: 18px;
+    }
+    .tripcode{
+      margin-bottom: 18px;
+    }
+    .column.dt-sc-one-fourth{
+      width: 100%;
+      margin: 0 0 12px;
+      position: relative;
+      img{
+        margin-bottom: 0;
+      }
+      .text{
+        h2{
+          font-size: 22px;
+          @include ProximaNovaAltBold();
+          text-transform: uppercase;
+          position: absolute;
+          top:50%;
+          left: 0;
+          right: 0;
+          text-align: center;
+          @include transform(translateY(-50%));
+          margin-top:-24px;
+          color:#fff;
+          padding: 0 38px;
+        }
+        a{
+          @extend .gbtn;
+          display: block;
+          font-weight: 700;
+          @include AvenirNextLTProDemi();
+          font-size: 14px;
+          margin: 0;
+          background-color: #0f666b;
+          color:#fff;
+          &:hover{
+            background-color: #13757a;
+          }
+        }
+      }
+    }
+  }
+}
+
+.blog-entry{
+  margin: 0;
+  .entry-details{
+    .entry-metadata{
+      display: none;
+    }
+  }
+}
+.entry-title{
+  h2{
+    @extend .section-title;
+    margin: 0;
+    text-align: left;
+    a{
+      color: #10726e;
+    }
+  }
+}
+.blog-entry-inner{
+  padding-left: 0;
+  background: transparent;
+  font-size: 16px;
+  color:#a9a8a8;
+  .entry-meta{
+    display: none;
+  }
+
+  .entry-body{
+
+  }
+}
+
+
+.related-post{
+  padding-top: 40px;
+  .related-title{
+    @extend .section-title;
+    margin-bottom: 25px;
+  }
+  .related-content{
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0 -5px;
+      li{
+        float: left;
+        width: 25%;
+        @include box-sizing();
+        padding: 0 5px;
+        .img{
+          img{
+            display: block;
+          }
+        }
+        .text{
+          background: #127d76;
+          color:#fff;
+          font-size: 12px;
+          padding: 15px 15px 0;
+          line-height: 1.4;
+          @include transition(all ease 0.5s);
+          img{
+            margin: 0 -15px;
+          }
+          h2.title{
+            font-size: 16px;
+            color:#fff;
+            @include AvenirNextLTProDemi();
+            font-weight: bold;
+            margin: 0 0 10px;
+            text-transform: uppercase;
+          }
+          .description{
+            line-height: 17px;
+            max-height: 119px;
+            overflow: hidden;
+          }
+          a{
+            @extend .gbtn;
+            display: block;
+            font-weight: 700;
+            @include AvenirNextLTProDemi();
+            font-size: 14px;
+            margin: 17px -15px 0;
+            background-color: #0f666b;
+            color:#fff;
+            &:hover{
+              background-color: #13757a;
+            }
+          }
+        }
+        &:hover{
+          .text{
+            background: #07575b;
+            a{
+              background-color: #13757a;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.blog-entry-inner{
+  .section-title{
+    text-align: left;
+  }
+  .star-rating-wrapper{
+    display: none;
+  }
+  .top-left-img+.sharedaddy{
+    display: none;
+  }
+  .sharedaddy{
+    padding-top: 10px;
+    padding-left: 0 !important;
+  }
+}
+
+.our-recommendation.related-post{
+  .related-content{
+    ul{
+      li{
+        .text{
+          padding-top: 0;
+          h2.title{
+            margin: 0 -15px 20px;
+            background: #10726e;
+            line-height: 20px;
+            height: 40px;
+            overflow: hidden;
+            padding: 16px 65px;
+            text-align: center;
+          }
+          .location{
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 16px;
+          }
+          a{
+            margin-top:1px;
+            i{
+              display: inline-block;
+              vertical-align: text-bottom;
+              background: url("../images/icons/map.png") no-repeat;
+              width: 16px;
+              height: 21px;
+              margin-right: 10px;
+            }
+          }
+        }
+        &:hover{
+          .text{
+            background: #127d76;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sharedaddy.sd-sharing-enabled{
+  padding-left: 10px;
+  h3.sd-title{
+    display: block;
+    border: none;
+    color:#c7c6c6;
+    font-size: 16px;
+    @include AvenirNextLTProDemi();
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    &:before{
+      display: none;
+    }
+  }
+
+  .sd-content{
+    ul{
+      li{
+        margin-right: 15px;
+        &:first-child{
+          margin-right: 5px;
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+        a{
+          display: inline-block !important;
+          background-image: url("../images/share.png") !important;
+          background-repeat: no-repeat !important;
+          height: 24px !important;
+          width: 26px !important;
+          padding: 0 !important;
+          background-color: transparent !important;
+          @include border-radius(0 !important);
+          &:before, span{
+            display: none !important;
+          }
+        }
+        .share-more{
+          display: none !important;
+        }
+        &.share-facebook{
+          a{
+            background-position: 0 0 !important;
+          }
+        }
+        &.share-twitter{
+          a{
+            background-position: -37px 0 !important;
+          }
+        }
+        &.share-linkedin{
+          a{
+            background-position: -83px 0 !important;
+          }
+        }
+        &.share-pinterest{
+          a{
+            background-position: -127px 0 !important;
+          }
+        }
+        &.share-google-plus-1{
+          a{
+            background-position: -172px 0 !important;
+          }
+        }
+        &.share-skype{
+          a{
+            background-position: -216px 0 !important;
+          }
+        }
+        &.share-pocket{
+          a{
+            background-position: -259px 0 !important;
+          }
+        }
+        &.share-print{
+          a{
+            background-position: -303px 0 !important;
+          }
+        }
+        &.share-email{
+          a{
+            background-position: -348px 0 !important;
+          }
+        }
+      }
+    }
+  }
+}

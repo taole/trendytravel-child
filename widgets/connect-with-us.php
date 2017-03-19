@@ -21,11 +21,12 @@ class Connect_Us_Widget extends WP_Widget {
         $skype = $instance['skype'];
         $youtube = $instance['youtube'];
         $tripAdvisor = $instance['tripAdvisor'];
+        $class = $instance['class'];
         ?>
         <style type="text/css">
            
         </style>
-        <aside class="widget widget_social">
+        <aside class="widget widget_social <?php if( $class ) { echo $class; }  ?>">
             <div class="connect-us">
                 <h3 class="widgettitle"><?php echo $title; ?></h3>
                 <ul class="social-list">
@@ -78,6 +79,7 @@ class Connect_Us_Widget extends WP_Widget {
         $instance['skype'] = strip_tags($new_instance['skype']);
         $instance['youtube'] = strip_tags($new_instance['youtube']);
         $instance['tripAdvisor'] = strip_tags($new_instance['tripAdvisor']);
+        $instance['class'] = strip_tags($new_instance['class']);
 
         return $instance;
     }
@@ -98,10 +100,16 @@ class Connect_Us_Widget extends WP_Widget {
         $skype = $instance['skype'];
         $youtube = $instance['youtube'];
         $tripAdvisor = $instance['tripAdvisor'];
+        $class = $instance['class'];
         ?>
         <p>
             <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
+        </p>
+
+        <p>
+            <label for="<?php echo $this->get_field_id('class'); ?>"><?php _e('Widget Class:'); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id('class'); ?>" name="<?php echo $this->get_field_name('class'); ?>" type="text" value="<?php echo esc_attr($class); ?>" />
         </p>
 
         <p>

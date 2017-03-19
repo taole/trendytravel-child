@@ -1,0 +1,365 @@
+.title.vietnam-travel-guides, .title.cambodia-travel-guides, .title.laos-travel-guides, .title.indochina-travel-guides{
+  @include AvenirNextLTPro();
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 22px;
+  color:#13887d;
+  border:none;
+  float: none;
+  text-align: center;
+  &:before{
+    display: none;
+  }
+  @include screen-theme(sm){
+    font-size: 18px;
+  }
+  @include screen-theme(xs){
+    font-size: 16px;
+    margin-bottom: 0 !important;
+  }
+  @include screen-theme(mbLan){
+    font-size: 18px;
+    margin-bottom: 10px !important;
+  }
+  @include screen-theme(mbPo){
+    font-size: 16px;
+  }
+
+}
+.title.cambodia-travel-guides, .title.laos-travel-guides, .title.indochina-travel-guides{
+  display: none;
+}
+
+.guide-tabs{
+  list-style: none;
+  margin: 0 -5px 14px;
+  padding: 0;
+  @include clearfix();
+  @include screen-theme(mbPo){
+    margin-left: -2px;
+    margin-right:-2px;
+  }
+  li{
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+    @include box-sizing();
+    @include screen-theme(mbPo){
+      padding: 0 2px;
+    }
+    a{
+      display: block;
+      border-bottom:9px solid #dcdbdb;
+      font-size: 18px;
+      color: #c7c6c6;
+      @include ProximaNovaAltBold();
+      text-align: center;
+      text-transform: uppercase;
+      padding-bottom: 13px;
+      @include screen-theme(sm){
+        font-size: 14px;
+        padding-bottom: 6px;
+        border-bottom-width: 7px;
+      }
+      @include screen-theme(xs){
+        font-size: 12px;
+        padding-bottom: 3px;
+        border-bottom-width: 7px;
+      }
+      @include screen-theme(mbLan){
+        font-size: 14px;
+        padding-bottom: 3px;
+        border-bottom-width: 4px;
+      }
+      &:hover{
+        color: #10726e;
+        border-bottom-color:#10726e;
+      }
+    }
+    &.active{
+      a{
+        color: #10726e;
+        border-bottom-color:#10726e;
+      }
+    }
+  }
+}
+
+.tab-contents .cambodia-travel-guides, .tab-contents .vietnam-travel-guides,
+.tab-contents .laos-travel-guides, .tab-contents .indochina-travel-guides{
+  margin: 0 -5px;
+  &>h2{
+    font-size: 22px;
+    color: #13887d;
+    margin-bottom: 0;
+    padding-top: 15px !important;
+    @include AvenirNextLTProDemi();
+    @include screen-theme(sm){
+      font-size: 18px;
+    }
+    @include screen-theme(xs){
+      font-size: 16px;
+      margin-bottom: 0 !important;
+    }
+    @include screen-theme(mbLan){
+      font-size: 18px;
+      margin-bottom: 10px !important;
+    }
+    @include screen-theme(mbPo){
+      font-size: 16px;
+    }
+    &+p{
+      @include AvenirNextLTProDemi();
+      font-size: 16px;
+      @include screen-theme(sm){
+        font-size: 14px;
+      }
+      @include screen-theme(xs){
+        font-size: 14px;
+      }
+      @include screen-theme(mbLan){
+        font-size: 14px;
+      }
+    }
+  }
+  .column{
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 10px;
+    width: 25%;
+    padding: 0 5px;
+    @include box-sizing();
+    @include screen-theme(mbLan){
+      width: 50%;
+      &:nth-child(2n+3){
+        clear: left;
+      }
+    }
+    @include screen-theme(mbPo){
+      width: 100%;
+    }
+    &:nth-child(4n+5){
+      @include screen-theme(lg){
+        clear: left;
+      }
+      @include screen-theme(md){
+        clear: left;
+      }
+      @include screen-theme(sm){
+        clear: left;
+      }
+      @include screen-theme(xs){
+        clear: left;
+      }
+    }
+  }
+
+  .place-item{
+    display: block;
+    margin-bottom: 0;
+    background: #127d76;
+    color:#fff;
+    @include clearfix();
+    @include screen-theme(sm){
+      background: #07575b;
+    }
+    a{
+      color: #fff;
+      &:hover{
+        color:#fff;
+      }
+    }
+    &:hover{
+      background: #07575b;
+      .place-detail-wrapper{
+        .place-title{
+          h5{
+            background: #07575b;
+            a{
+              color: #fff;
+            }
+          }
+        }
+        .place-content{
+          a{
+            background-color: #13757a;
+          }
+        }
+      }
+    }
+    .place-thumb{
+      @include screen-theme(mbLan){
+        float: left;
+        width: 42%;
+        height: 136px;
+        overflow: hidden;
+        img{
+          height: auto;
+          min-width: 100%;
+          max-width: inherit;
+        }
+      }
+      @include screen-theme(mbPo){
+        height: 132px;
+      }
+      .image-overlay{
+        display: none !important;
+      }
+    }
+
+    .place-detail-wrapper{
+      display: block;
+      border: none;
+      @include screen-theme(mbLan){
+        float: left;
+        width: 58%;
+      }
+      .place-title{
+        padding: 0;
+        font-size: 16px;
+        @include AvenirNextLTProDemi();
+        border: none;
+        h5{
+          margin: 0;
+          color:#fff;
+          font-size: 16px;
+          @include AvenirNextLTProDemi();
+          font-weight: bold;
+          overflow: hidden;
+          text-transform: uppercase;
+          text-align: center;
+          background: #10726e;
+          padding: 15px 10px;
+          @include screen-theme(lg){
+            padding-left: 75px;
+            padding-right: 75px;
+          }
+          @include screen-theme(md){
+            padding-left: 55px;
+            padding-right: 55px;
+          }
+          @include screen-theme(sm){
+            font-size: 14px;
+            background: #07575b;
+            padding: 15px 55px;
+          }
+          @include screen-theme(xs){
+            font-size: 12px;
+            padding: 8px 45px 10px;
+          }
+          @include screen-theme(mbLan){
+            font-size: 12px;
+            padding: 12px 10px 0;
+            background: transparent;
+          }
+          @include screen-theme(mbPo){
+            padding: 5px 35px;
+            background: #10726e;
+          }
+          a{
+            line-height: 20px;
+            height:40px;
+            display: block;
+            overflow: hidden;
+            @include screen-theme(sm){
+              line-height: 18px;
+              height: 36px;
+            }
+            @include screen-theme(xs){
+              line-height: 16px;
+              height: 32px;
+            }
+            @include screen-theme(mbLan){
+              font-size: 12px;
+              height: 16px;
+              line-height: 16px;
+            }
+            @include screen-theme(mbPo){
+              height: 32px;
+            }
+          }
+        }
+        .location{
+          color: #fff;
+          padding: 15px 10px 12px;
+          font-size: 16px;
+          @include AvenirNextLTProDemi();
+          @include screen-theme(sm){
+            font-size: 14px;
+            padding-top: 0;
+            padding-bottom: 7px;
+          }
+          @include screen-theme(xs){
+            font-size: 12px;
+            padding-top: 5px;
+            padding-bottom: 9px;
+          }
+          @include screen-theme(mbLan){
+            padding-bottom: 5px;
+            padding-top: 0;
+            font-size: 12px;
+          }
+          @include screen-theme(mbPo){
+            padding-bottom: 3px;
+          }
+        }
+      }
+
+      .place-content{
+        padding: 0;
+        border: none;
+        a{
+          @extend .gbtn;
+          display: block;
+          font-weight: 700;
+          @include AvenirNextLTProDemi();
+          font-size: 14px;
+          background-color: #0f666b;
+          color:#fff;
+          @include box-sizing();
+          &:hover{
+            background-color: #13757a;
+          }
+          @include screen-theme(xs){
+            font-size: 12px !important;
+            line-height: 30px !important;
+          }
+          @include screen-theme(mbLan){
+            font-size: 12px !important;
+          }
+          @include screen-theme(mbPo){
+            line-height: 30px !important;
+          }
+          &.map-marker{
+            border: none;
+            span{
+              display: inline-block;
+              vertical-align: text-bottom;
+              background: url("../images/map.png") no-repeat;
+              width: 16px;
+              height: 21px;
+              margin-right: 10px;
+              background-size: 16px 21px;
+              @include screen-theme(xs){
+                background-size: 10px 13px;
+                width: 10px;
+                height: 13px;
+              }
+              @include screen-theme(mbLan){
+                width: 11px;
+                height: 15px;
+                background-size: 11px 15px;
+              }
+              &:before, &:after{
+                display: none;
+              }
+            }
+          }
+          &.too-small{
+            margin-top: 1px;
+          }
+        }
+      }
+    }
+  }
+}

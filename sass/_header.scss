@@ -62,6 +62,7 @@
 							@include AvenirNextLTPro();
 							font-weight: 700;
 							font-size: 16px;
+                          background: transparent;
 							@include screen-theme(md){
 								font-size: 14px;
 							}

@@ -217,9 +217,11 @@
         }
         input[type=submit]{
           background-color: rgba(#13887d,0.5);
-          color: #07575b;
+          color: #07575b !important;
+          @include transition(all ease 0.5s);
           &:hover{
-            color: #fff;
+            color: #fff !important;
+            background-color: rgba(#13887d,1);
           }
         }
       }
@@ -272,10 +274,12 @@
         }
         input[type=submit]{
           background-color: rgba(#09575a,0.5);
-          color: #12887d;
+          color: #12887d !important;
+          @include transition(all ease 0.5s);
 
           &:hover{
-            color: #fff;
+            color: #fff !important;
+            background-color: rgba(#09575a,1);
           }
         }
         .inline{
