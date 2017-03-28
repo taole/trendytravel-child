@@ -82,6 +82,19 @@
                             </a>
                             <?php echo do_shortcode("[woocommerce_my_account]"); ?>
                         </div>
+                        <div class="modal-message modal-message-ok" style="display:none">
+                            <div class="content-message">
+                                <h5>THANKS FOR REGISTERING</h5>
+                                <p>Please check your emails to confirm your account</p>
+                            </div>
+                            
+                        </div>
+                        <div class="modal-message modal-message-erorr" style="display:none">
+                            <div class="content-message">
+                               
+                            </div>
+                            
+                        </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
@@ -100,10 +113,76 @@
                 .tabs-menu .current a {
                     color: #2e7da3;
                 }
+                .modal-message{ background: #1d6e6b; font-weight: bold; color: #195055; text-align: center;}
+                .modal-message-ok h5{ padding: 12px 0 11px; font-size: 24px; margin-bottom: 0;line-height: 1 }
+                .modal-message-ok p{ padding: 0 0 13px 0;font-size: 12px; line-height: 1 }
+                
+                @media only screen and (min-width: 768px) {
+                    .modal-message .content-message {margin-left: 39%;}
+                    .modal-message{ background: #1d6e6b; font-weight: bold; margin: 0 0 0 -44px; color: #195055; text-align: left;}
+                }
+                .modal-message-erorr{ padding: 20px 0  }
+                .woocommerce-error, .woocommerce-info { visibility: hidden; display: none; }
             </style>
 		</div>
     </div>
 <?php if(dt_theme_option('integration', 'enable-body-code') != '') echo '<script type="text/javascript">'.wp_kses(stripslashes(dt_theme_option('integration', 'body-code')), $dt_allowed_html_tags).'</script>';
 wp_footer(); ?>
+<?php $verify = $_SESSION["verify_email"];
+    if ($verify) { ?>
+    <script type="text/javascript">
+        jQuery( "#myModal" ).modal('show');
+            jQuery( ".modal-message-ok" ).show();
+            // sessionStorage.removeItem('PHPSESSID');
+            setCookie(name, "PHPSESSID", null , null , null, 1);
+             // document.cookie = "PHPSESSID"
+    </script>
+<?php  } ?>
+
+<script type="text/javascript">
+    function setCookie(key, value, expireDays, expireHours, expireMinutes, expireSeconds) {
+        var expireDate = new Date();
+        if (expireDays) {
+            expireDate.setDate(expireDate.getDate() + expireDays);
+        }
+        if (expireHours) {
+            expireDate.setHours(expireDate.getHours() + expireHours);
+        }
+        if (expireMinutes) {
+            expireDate.setMinutes(expireDate.getMinutes() + expireMinutes);
+        }
+        if (expireSeconds) {
+            expireDate.setSeconds(expireDate.getSeconds() + expireSeconds);
+        }
+        document.cookie = key +"="+ escape(value) +
+            ";domain="+ window.location.hostname +
+            ";path=/"+
+            ";expires="+expireDate.toUTCString();
+    }
+
+    var checkRegistterError = jQuery( "ul" ).hasClass( "woocommerce-error" );
+    var checkRegistterOk = jQuery( "ul" ).hasClass( "woocommerce-info" );
+    console.log(checkRegistterOk);
+    if( checkRegistterOk ){
+            jQuery( "#myModal" ).modal('show');
+            jQuery( ".modal-message-ok" ).show();
+            // sessionStorage.removeItem('PHPSESSID');
+            setCookie(name, "PHPSESSID", null , null , null, 1);
+             // document.cookie = "PHPSESSID"
+        }
+    if( checkRegistterError ){
+            jQuery( "#myModal" ).modal('show');
+            jQuery( ".modal-message-erorr" ).show();
+            // jQuery( ".modal-message-erorr ul li" ).text();
+            var erorr = jQuery( ".woocommerce-error li" ).text();
+            jQuery( ".modal-message-erorr .content-message" ).text(erorr);
+            // sessionStorage.removeItem('PHPSESSID');
+            jQuery( ".modal-message-ok" ).hide();
+
+            setCookie(name, "PHPSESSID", null , null , null, 1);
+
+    }
+    // if( checkRegistterError || checkRegistterOk ){}
+</script>
 </body>
 </html>

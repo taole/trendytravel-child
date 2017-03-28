@@ -60,6 +60,9 @@
               height:62px;
               @include box-sizing();
               width: 55%;
+              @include screen-theme(mbLan){
+                width: auto;
+              }
               img{
                 max-width: 50px;
                 max-height:50px;
@@ -166,6 +169,12 @@
   }
 
   .cart-collaterals{
+    @include screen-theme(mbLan){
+      padding-left: 20%;
+    }
+    @include screen-theme(mbPo){
+      padding-left: 0;
+    }
     .cart_totals{
       h2{
         display: none;
@@ -174,6 +183,9 @@
         border: none;
         tr{
           display: table-row;
+          @media screen and (max-width: 479px) {
+            display: block;
+          }
           th{
             background: #13887d;
             color:#fff;
@@ -201,6 +213,17 @@
             overflow:hidden;
             padding: 0 !important;
             background: transparent;
+            @media screen and (max-width: 479px) {
+              min-height: 1px;
+            }
+          }
+          th,td{
+            @media screen and (max-width: 479px) {
+              display: block;
+              float: left;
+              width: 50%;
+              @include box-sizing();
+            }
           }
         }
       }
@@ -216,6 +239,9 @@
           @include border-radius(0);
           text-align: center;
           padding: 0;
+          @include screen-theme(xs){
+            font-size: 12px;
+          }
         }
       }
     }

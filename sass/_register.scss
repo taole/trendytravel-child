@@ -117,8 +117,7 @@
         border:none !important;
         @include box-shadow(none !important);
         margin: 0;
-        padding: 0 5px 0 0;
-        text-indent: 16px;
+        padding: 0 5px 0 15px;
         @include border-radius(5px !important);
         @include placeholder(#fff !important);
         font-size: 14px;
@@ -136,9 +135,9 @@
         height:36px;
       }
       select{
-        text-indent: 7px;
         option{
           color:#333;
+          padding: 0;
         }
       }
       input[type="password"]{
@@ -302,4 +301,14 @@
       }
     }
   }
+}
+
+
+#main{
+  .woocommerce{
+    #customer_login{
+      display: none;
+    }
+  }
+
 }

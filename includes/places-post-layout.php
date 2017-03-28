@@ -114,7 +114,7 @@
 			while($wp_query->have_posts()): $wp_query->the_post();
 			
 			 	$temp_class = "";
-				if($i == 1) $temp_class = $li_class." first"; else $temp_class = $li_class;
+				if($i == 1) $temp_class = $li_class; else $temp_class = $li_class;
 				if($i == $column) $i = 1; else $i = $i + 1;
 				$place_meta = array();
 				$place_meta = get_post_meta(get_the_id() ,'_place_settings', true); ?>
@@ -136,7 +136,7 @@
 	                        </div>
 	                        <div class="place-content">
 	                            <a class="map-marker" href="<?php the_permalink(); ?>#place_map_<?php the_ID(); ?>"> <span class="red"></span><?php _e('View on Map', 'iamd_text_domain'); ?></a>
-	                            <a class="dt-sc-button too-small" href="<?php the_permalink(); ?>"><?php _e('View details', 'iamd_text_domain'); ?></a>
+	                            <a class="dt-sc-button too-small" href="<?php the_permalink(); ?>"><?php _e('View Travel Guide', 'iamd_text_domain'); ?></a>
 	                        </div>
 	                    </div>
 	                </div>

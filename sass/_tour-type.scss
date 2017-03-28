@@ -1,0 +1,136 @@
+.tour-type-page{
+  .related-content{
+    .item{
+      margin-bottom: 10px;
+      @include screen-theme(mbPo){
+        width: 50%;
+        float: left;
+      }
+      &:hover{
+        .text{
+          background: #07575b;
+        }
+        a{
+          background: #127d76;
+        }
+      }
+      &:nth-child(4n+5){
+        clear: left;
+        @include screen-theme(mbLan){
+          clear: inherit;
+        }
+      }
+      &:nth-child(2n+3){
+        @include screen-theme(mbLan){
+          clear: left;
+        }
+      }
+      .img{
+        height: auto;
+        @include screen-theme(mbLan){
+          width: 50%;
+          float: left;
+        }
+        @include screen-theme(mbPo){
+          width: 100%;
+          float: none;
+        }
+        img{
+          height: auto;
+          min-width: inherit;
+          max-width: 100%;
+        }
+      }
+      .text{
+        padding-top: 14px;
+        @include screen-theme(mbLan){
+          width: 50%;
+          float: left;
+          padding-top: 0;
+        }
+        @include screen-theme(mbPo){
+          width: 100%;
+          float: none;
+          padding-bottom: 0 !important;
+          padding-top: 14px;
+        }
+        .title{
+          padding: 0;
+          background: transparent;
+          font-size: 16px;
+          @include AvenirNextLTProDemi();
+          font-weight: bold;
+          line-height: normal;
+          height: auto;
+          margin: 0;
+          @include screen-theme(sm){
+            font-size: 12px;
+          }
+          @include screen-theme(xs){
+            font-size: 12px;
+          }
+          @include screen-theme(mbLan){
+            font-size: 12px;
+          }
+        }
+        .infomation{
+          min-height: inherit;
+          font-size: 16px;
+          @include AvenirNextLTProDemi();
+          font-weight: bold;
+          text-transform: uppercase;
+          line-height: normal;
+          padding: 12px 0 18px;
+          @include screen-theme(sm){
+            font-size: 12px;
+          }
+          @include screen-theme(xs){
+            font-size: 11px;
+          }
+          @include screen-theme(mbLan){
+            font-size: 12px;
+            padding: 5px 0;
+          }
+          @include screen-theme(mbPo){
+            font-size: 10px;
+            padding: 12px 0 18px;
+          }
+        }
+        a{
+          @include screen-theme(xs){
+            font-size: 12px !important;
+          }
+          @include screen-theme(mbLan){
+            font-size: 12px !important;
+            right:2px;
+          }
+          @include screen-theme(mbPo){
+            font-size: 10px !important;
+            position: static;
+            width:auto;
+            margin: 0 -8px !important;
+          }
+        }
+      }
+      .table{
+        display: table;
+        width: 100%;
+        .tr{
+          display: table-row;
+          width: 100%;
+          .td{
+            display: table-cell;
+            height: 93px;
+            vertical-align: middle;
+            @include screen-theme(mbLan){
+              height: 66px;
+            }
+            @include screen-theme(mbPo){
+              height: 93px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

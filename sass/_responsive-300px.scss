@@ -17,7 +17,11 @@
 
 @include screen-theme(mbPo){
   .container {
-    width: 300px !important;
+    width: auto !important;
+    min-width: 320px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    @include box-sizing();
   }
   .gbtn{
     min-width: 144px;
@@ -25,6 +29,19 @@
     line-height: 38px;
   }
   .banner{
+    .tp-caption{
+      h4{
+        font-size: 17px !important;
+        line-height: 17px !important;
+      }
+      h2{
+        font-size: 55px !important;
+        line-height: 55px !important;
+      }
+      p{
+        font-size: 14px !important;
+      }
+    }
     h4{
       font-size: 17px;
       line-height: 17px;
@@ -85,12 +102,14 @@
       select{
         font-size: 12px;
         height:42px;
+        min-height: 1px;
       }
       .selection-box:after{
         height: 41px;
       }
       input[type="submit"]{
         height: 42px;
+        min-height: 1px;
       }
     }
     &+.popular-tours{
@@ -136,7 +155,7 @@
     }
     .dt-sc-one-column{
       .dt-sc-button{
-          margin-top: 25px;
+          margin-top: 20px !important;
       }
     }
     .container{
@@ -218,7 +237,7 @@
     blockquote{
       font-weight: normal;
       font-size: 16px;
-      padding: 0;
+      padding: 0 30px;
     }
     .infor{
       font-size: 14px;
@@ -280,6 +299,9 @@
       a{
         font-size: 12px;
       }
+    }
+    .dt-sc-one-column .dt-sc-button{
+      margin-top: 10px !important;
     }
   }
 
@@ -520,6 +542,9 @@
         position: absolute;
         top:10px;
         left:20px;
+        @media screen and (max-width: 479px) {
+          left: 10px;
+        }
         &:before{
           content: "";
           min-height: 30px;
@@ -568,14 +593,18 @@
           top:13px;
           left:62px;
           @include transform(inherit);
+          @media  screen and (max-width: 479px) {
+            left: 50px;
+            top:17px;
+          }
         }
       }
       .cart-contents{
         margin-top:12px;
-        display: none;
+//        display: none;
       }
       .user-action{
-        display: none;
+//        display: none;
         &:before{
           margin-top: 12px;
         }
@@ -594,6 +623,11 @@
       position: absolute;
       right:20px;
       top:11px;
+      @media screen and (max-width: 479px){
+        font-size: 0;
+        right: 10px;
+        width: 30px;
+      }
       .dt-menu-toggle-icon, .dt-menu-toggle-icon:before, .dt-menu-toggle-icon:after{
         background: transparent;
         display: none;
@@ -710,7 +744,7 @@
       margin-right: 0;
       margin-left: 0;
       img{
-        max-height: 112px;
+//        max-height: 112px;
       }
       &.dt-sc-one-fourth{
         width: 100% !important;
@@ -770,19 +804,23 @@
               width: 100% !important;
               float:left !important;
               clear: inherit;
+              padding-right: 0;
             }
             &.frm_last_half{
               &+.frm_top_container{
                 width: 100% !important;
                 float:left !important;
                 clear: inherit;
+                padding-right: 0;
               }
             }
             &.frm_full{
-              position: static;
+              position: relative;
               width: 100% !important;
               @include box-sizing();
               padding: 0;
+              top: auto;
+              right: auto;
             }
           }
           .frm_submit{
@@ -811,7 +849,7 @@
   /* login register */
   .modal{
     .modal-dialog{
-      width: 80%;
+      width: 95%;
       margin: 60px auto 0;
       .modal-content{
         padding: 0;
@@ -1205,7 +1243,7 @@
 
 
   /* custom tour */
-  .custom-tour-form, #custom-tour{
+  .custom-tour-form, .custom-tour{
     margin-top: 10px;
     .container{
       padding-left: 3px;
@@ -1297,7 +1335,7 @@
   /* e: custom tour */
 
   /* cart */
-  .custom-tour-form, #custom-tour{
+  .custom-tour-form, .custom-tour{
     .frm_style_formidable-style.with_frm_style{
       form{
         fieldset{
@@ -1412,6 +1450,7 @@
             padding-bottom: 0;
           }
           tr{
+            width: 100%;
             th{
               font-size: 14px;
             }
@@ -1420,6 +1459,7 @@
 //              line-height: normal;
               padding: 0 12px;
               line-height: 52px;
+              width: 50%;
             }
           }
         }
@@ -1621,8 +1661,8 @@
                   width: 50%;
                   min-height: 37px;
                   i{
-                    top:50%;
-                    @include transform(translateY(-50%));
+//                    top:50%;
+//                    @include transform(translateY(-50%));
                   }
                 }
               }
@@ -1754,19 +1794,19 @@
           }
           .img{
             float: left;
-            width: 45%;
+            width: 50%;
             overflow: hidden;
-            height: 123px;
+//            height: 123px;
             img{
-              display: block;
-              max-width: inherit;
-              min-width: 100%;
-              height: 100%;
+//              display: block;
+//              max-width: inherit;
+//              min-width: 100%;
+//              height: 100%;
             }
           }
           .text{
             float: left;
-            width: 55%;
+            width: 50%;
             @include box-sizing();
             h2.title{
               font-size: 12px;

@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php wc_print_notices(); ?>
 
-<?php do_action( 'woocommerce_before_customer_login_form' ); ?>
+<?php //do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 <?php if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) : ?>
 
@@ -137,12 +137,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 					global $woocommerce;
 				    $countries_obj   = new WC_Countries();
 				    $countries   = $countries_obj->__get('countries');
+				    array_unshift($countries, "* Select Your Country");
+				    //var_dump($countries);
 				    //$countries   = $countries_obj->country_dropdown_options('Select Your Country');
 				    echo '<div id="my_custom_countries">';
 
 				    woocommerce_form_field('billing_country', array(
 				    'type'       => 'select',
 				    'class'      => array( 'chzn-drop' ),
+				    'label'      => __('Select a country'),
 				    'placeholder'    => __('Select Your Country'),
 				    'options'    => $countries,
 				    )

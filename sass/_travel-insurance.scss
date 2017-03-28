@@ -14,6 +14,11 @@
 .page-with-right-sidebar{
   color:#aaa8a8;
   line-height: 1.4;
+  article{
+    h2:first-child, h3:first-child{
+      padding-top: 0;
+    }
+  }
   h2, h3{
     text-transform: capitalize;
     font-size: 14px;
@@ -21,6 +26,7 @@
     margin-bottom: 5px;
     padding-bottom: 0;
     color:#0f666b;
+    padding-top: 10px;
   }
   p{
     color:#aaa8a8;
@@ -58,4 +64,5 @@
 
 #wn-insurance-quote-editor{
   max-width: 100% !important;
+  @include box-sizing();
 }

@@ -63,9 +63,9 @@
                         while ($my_query->have_posts()) : $my_query->the_post(); ?>
                           <?php 
                             $product_metas = get_post_meta($post->ID);
-                      $_package_places = $product_meta['_package_place'][0];
+                      $_package_places = $product_metas['_package_place'][0];
                       $_package_duration = $product_metas['_package_days_duration'][0];
-                      $_regular_price = $product_metas['_regular_price"'][0];
+                      $_regular_price = $product_metas['_regular_price'][0];
                       $_sale_price = $product_metas['_sale_price'][0];
 
                           ?>
@@ -80,7 +80,7 @@
                                         <h2 class="title"><?php echo get_the_title(); ?></h2>
                                         <div class="infomation">
                                           <div class="location"><?php echo $_package_places; ?></div>
-                                          <div class="time"><i></i><?php echo $_package_duration; ?></div>
+                                          <div class="time"><i></i>No of Days: <?php echo $_package_duration; ?></div>
                                         <div class="price">
                                           <?php if( $_regular_price ): ?>
                                             <div class="regular-price <?php if ( $_sale_price ) { echo 'was';} ?>">
@@ -95,7 +95,7 @@
                                           <?php endif; ?>
                                         </div>
                                         </div>
-                                        <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">Read more</a>
+                                        <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">View Tour</a>
                                     </div>
                                 </li>
                       <?php

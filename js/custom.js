@@ -134,6 +134,11 @@ jQuery(document).ready(function($){
         $(".tab-contents .tab-pane").not(tab).css("display", "none");
         $(tab).fadeIn(1000);
     });
+
+    $('.product-tabs li.itinerary a').click(function(event) {
+        var trips = $('.selected-tour .tab-contents .overview .secondary-sidebar .tripcode').html();
+        $('.selected-tour .tab-contents .itinerary .secondary-sidebar .tripcode').html(trips);
+    });
     /*end: product tabs*/
 
     $('.find-a-tour .uform_title').click(function(){
@@ -206,4 +211,51 @@ jQuery(document).ready(function($){
     // only number
     $('.phone_only_number').on('keydown', 'input', function(e){-1!==$.inArray(e.keyCode,[46,8,9,27,13,110,190])||/65|67|86|88/.test(e.keyCode)&&(!0===e.ctrlKey||!0===e.metaKey)||35<=e.keyCode&&40>=e.keyCode||(e.shiftKey||48>e.keyCode||57<e.keyCode)&&(96>e.keyCode||105<e.keyCode)&&e.preventDefault()});
 
+    /*login*/
+    var validate= false;
+    $('.login .woocommerce-Input').each(function(){
+        if($(this).val() != '' || $(this).attr('checked'))
+            validate = true;
+    });
+    if(!validate){
+        $('.login .submit').addClass('fullcontent');
+    }
+
+    $('.login .woocommerce-Input').keypress(function(){
+        var validate= false;
+        var user = $('.login #username').val();
+        var pass = $('.login #password').val();
+        if(user && pass) {
+            validate = true;
+        }
+        if(validate){
+            $('.modal .woocommerce form.login .form-row .woocommerce-Button.button').addClass('showbtn');
+        }
+    });
+
+    $('.register .woocommerce-Input').keypress(function(){
+        console.log('input enter');
+        var validate= false;
+
+        var email = $('.register #reg_email').val();
+        var pass = $('.register #reg_password').val();
+        var repass = $('.register #confirm_password').val();
+        var firstname = $('.register #billing_first_name').val();
+        var lastname = $('.register #billing_last_name').val();
+        var phone = $('.register #billing_phone').val();
+        var country = $('.register #billing_country').val();
+        var address = $('.register #billing_address_1').val();
+        var code = $('.register #billing_postcode').val();
+        var town = $('.register #billing_city').val();
+
+        if(email && pass && repass && firstname && lastname && phone && country && address && code && town) {
+            validate = true;
+        }
+
+        if(validate){
+            $('.modal .woocommerce form.register .form-row .woocommerce-Button.button').addClass('showbtn');
+        }
+    });
+
+   $('.category-tours ul.products li .text h2.title').tooltipster();
 });

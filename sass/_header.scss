@@ -20,6 +20,9 @@
     			margin-right: 50px;
     			margin-top:4px;
 			}
+          @include screen-theme(xs){
+            margin-top: 0 !important;
+          }
 		}
 		#primary-menu{
 			float: left;
@@ -36,6 +39,9 @@
 				position: static;
 				&>ul.menu{
 					float: left;
+                  @media only screen and (min-width:960px){
+                    display: block !important;
+                  }
 					@include screen-theme(xs){
 						display: none !important;
 						&.menu-toggle-open{
@@ -87,6 +93,9 @@
 				}
 			}
 		}
+      .fuc-header{
+        float: right;
+      }
 		@include screen-theme(xs){
 			.fuc-header{
 				float: right;
@@ -129,6 +138,9 @@
 				}
 				li{
 					padding:0;
+                  a{
+                    color: #fff;
+                  }
 					@include screen-theme(md){
 						font-size: 13px;
 					}
@@ -147,6 +159,14 @@
 		.cart-contents{
 			float: left;
 			color:#fff;
+          @include screen-theme(mbLan){
+            position: absolute;
+            top: 0;
+            right: 164px;
+          }
+          @media screen and (max-width: 479px) {
+            right:94px;
+          }
 			&:before{
 				content: "";
 				background-image: url('../images/icons/cart.png');
@@ -160,12 +180,12 @@
 				@include screen-theme(sm){
 					width: 24px;
 					height:22px;
-					background-size: 24px 22px;
+                  background-size: 24px 22px;
 				}
 				@include screen-theme(xs){
 					width: 24px;
 					height:22px;
-					background-size: 24px 22px;
+                  background-size: 24px 22px;
 				}
 
 				@include retina(){
@@ -178,9 +198,23 @@
 			color:#fff;
 			position: relative;
 			margin-left: 16px;
+          padding: 0;
+          line-height: 1;
+          background: transparent;
+          margin-top: 0;
+          min-height: 1px;
 			@include screen-theme(sm){
-				margin-left: 3px;
+//				margin-left: 3px;
 			}
+          @include screen-theme(mbLan){
+            position: absolute;
+            z-index: 3;
+            top:0;
+            right: 114px;
+          }
+          @media screen and (max-width: 479px) {
+            right:50px;
+          }
 			&:before{
 				content: "";
 				background-image: url('../images/icons/user.png');

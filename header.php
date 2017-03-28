@@ -104,7 +104,8 @@
                             <?php } ?>
                             
                             <?php if(!is_user_logged_in()): ?>
-                                <div class="user-action" data-toggle="modal" data-target="#myModal"></div>
+                                <!-- <div class="user-action" data-toggle="modal" data-target="#myModal"></div> -->
+                                <button class="user-action" data-toggle="modal" data-target="#myModal"></button>
                             <?php else: ?>
                                 <div class="user-action"><ul>
                                     <li><a title="<?php _e('Logout', 'iamd_text_domain'); ?>" href="<?php echo wp_logout_url(get_permalink()); ?>"><span class="fa fa-sign-out"></span> <?php _e('Logout', 'iamd_text_domain'); ?>

@@ -208,11 +208,21 @@
               height: 21px;
               margin-right: 10px;
             }
+            &:hover{
+              i{
+                background-image: url('../images/icons/map-hover.png');
+              }
+            }
           }
         }
         &:hover{
           .text{
             background: #127d76;
+            a{
+              i{
+                background-image: url('../images/icons/map-hover.png');
+              }
+            }
           }
         }
       }
@@ -255,6 +265,11 @@
           padding: 0 !important;
           background-color: transparent !important;
           @include border-radius(0 !important);
+          @include screen-theme(xs){
+            background-image: url("../images/share-tablet.png") !important;
+            height:20px !important;
+            width: 22px !important;
+          }
           &:before, span{
             display: none !important;
           }
@@ -270,44 +285,103 @@
         &.share-twitter{
           a{
             background-position: -37px 0 !important;
+            @include screen-theme(xs){
+              background-position: -31px 0 !important;
+            }
           }
         }
         &.share-linkedin{
           a{
             background-position: -83px 0 !important;
+            @include screen-theme(xs){
+              background-position: -69px 0 !important;
+            }
           }
         }
         &.share-pinterest{
           a{
             background-position: -127px 0 !important;
+            @include screen-theme(xs){
+              background-position: -106px 0 !important;
+            }
           }
         }
         &.share-google-plus-1{
           a{
             background-position: -172px 0 !important;
+            @include screen-theme(xs){
+              background-position: -144px 0 !important;
+            }
           }
         }
         &.share-skype{
           a{
             background-position: -216px 0 !important;
+            @include screen-theme(xs){
+              background-position: -180px 0 !important;
+            }
           }
         }
         &.share-pocket{
           a{
             background-position: -259px 0 !important;
+            @include screen-theme(xs){
+              background-position: -217px 0 !important;
+            }
           }
         }
         &.share-print{
           a{
             background-position: -303px 0 !important;
+            @include screen-theme(xs){
+              background-position: -254px 0 !important;
+            }
           }
         }
         &.share-email{
           a{
             background-position: -348px 0 !important;
+            @include screen-theme(xs){
+              background-position: -291px 0 !important;
+            }
           }
         }
       }
+    }
+  }
+}
+
+.find-a-tour-bottom{
+  margin-bottom: 0;
+  border-bottom:26px solid #07575b;
+  @include screen-theme(mbLan){
+    display: none;
+  }
+
+  .uwpqsf_class{
+    @include screen-theme(md){
+      width: 24.666667%;
+    }
+    @include screen-theme(sm){
+      width: 24.666667%;
+    }
+    @include screen-theme(xs){
+      width: 24.666667%;
+    }
+  }
+  .uwpqsf_submit{
+    margin-left: -1px;
+    @include screen-theme(md){
+      margin-left: 0;
+      width: 26%;
+    }
+    @include screen-theme(sm){
+      margin-left: 0;
+      width: 26%;
+    }
+    @include screen-theme(xs){
+      margin-left: 0;
+      width: 26%;
     }
   }
 }

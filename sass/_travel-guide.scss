@@ -183,6 +183,11 @@
         .place-content{
           a{
             background-color: #13757a;
+            &.map-marker{
+              span{
+                background-image: url("../images/icons/map-hover.png");
+              }
+            }
           }
         }
       }
@@ -190,13 +195,13 @@
     .place-thumb{
       @include screen-theme(mbLan){
         float: left;
-        width: 42%;
-        height: 136px;
+        width: 50%;
+//        height: 136px;
         overflow: hidden;
         img{
-          height: auto;
-          min-width: 100%;
-          max-width: inherit;
+//          height: auto;
+//          min-width: 100%;
+//          max-width: inherit;
         }
       }
       @include screen-theme(mbPo){
@@ -212,7 +217,7 @@
       border: none;
       @include screen-theme(mbLan){
         float: left;
-        width: 58%;
+        width: 50%;
       }
       .place-title{
         padding: 0;
@@ -323,9 +328,12 @@
           @include screen-theme(xs){
             font-size: 12px !important;
             line-height: 30px !important;
+
           }
           @include screen-theme(mbLan){
             font-size: 12px !important;
+            padding: 0 !important;
+            min-width: 1px !important;
           }
           @include screen-theme(mbPo){
             line-height: 30px !important;

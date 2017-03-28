@@ -899,7 +899,7 @@ input[type="button"].btn-block {
 @media only screen and (max-width: 639px) {
   /* line 19, ../sass/_responsive-300px.scss */
   #footer .container {
-    width: 100% !important;
+    width: 100% !important; padding: 0 !important;
   }
 }
 #footer .footer-widgets-wrapper .container > .column:last-child .widget:last-child h3 { font-size: 12px }
@@ -908,6 +908,7 @@ input[type="button"].btn-block {
 #footer .mobile-footer-portrait{ display: none !important; }
 @media only screen and  (max-width: 735px){
   #footer .copyright.type2 .copyright-content { width: auto; margin: 0 15px; display: block; padding: 0}
+  .selected-tour .tabs-selected-tour .tab-contents .tab-pane .summary { margin: 0!important }
 }
 
 @media only screen and (min-width: 415px) and (max-width: 736px){
@@ -961,7 +962,12 @@ input[type="button"].btn-block {
 .tour-type .btn-show-mobile { display: none; visibility: hidden;}
 @media only screen and  (max-width: 415px){
   .page .tour-type .btn-show-mobile { width: 50% !important; display: block; visibility: inherit; max-width: 175px}
-  .page .tour-type .btn-show-mobile a { width: 100% !important;vertical-align: middle; text-align: center;}
+  .page .tour-type .btn-show-mobile a { width: 100% !important;vertical-align: middle; text-align: center; padding: 12px 0; border-radius: 0; background: #1c6464; text-transform: uppercase; font-size: 14px}
+  .page .tour-type .btn-show-mobile:last-child{ float: right; }
+  .btn-hide-mobile {display: none !important; visibility: hidden;}
+}
+@media only screen and  (min-width: 320px){
+  .page .tour-type .btn-show-mobile:last-child a{    border-left: 1px solid #fff; }
 }
 
 /* id="CDSWIDSSP" */
@@ -969,4 +975,80 @@ div#CDSWIDSSP {
     width: 100% !important;
     margin-bottom: 30px;
 }
+@media only screen and (min-width: 1281px){
+  .tour-type .column.dt-sc-one-fourth img{height: 335px}
+  .tour-type .column.dt-sc-one-half{ width: auto;  }
+}
+.woocommerce-cart .woocommerce .woocommerce-message {display: none; visibility: hidden;}
+@media only screen and  (max-width: 735px){
+  .woocommerce-cart .all-orders-cart table.shop_table tbody tr td.product-quantity{width: 50%!important; }
+  .woocommerce-cart .all-orders-cart table.shop_table tbody tr td.product-date,
+  .woocommerce-cart .all-orders-cart table.shop_table tbody tr td.product-total{width: 30%!important; }
+  .woocommerce-cart .woocommerce .cart_item.visible-mobile .product-name{width: 80%!important}
+}
+@media only screen and (max-width: 639px) and (min-width: 320px){
+  .woocommerce .all-orders-cart table.shop_table .mobile-title {
+        display: block;
+        margin-bottom: 15px;
+        vertical-align: top;
+        margin-top: 5px;
+    }
+  .woocommerce-cart .all-orders-cart table.shop_table tbody tr.hidden-mobile td{ vertical-align: top; }
+  .woocommerce-cart .all-orders-cart table.shop_table tbody tr.hidden-mobile td.product-quantity .mobile-title{ margin-bottom: 0px; margin-top: 0px; }
+
+}
+
+/* .woocommerce ul.products li {
+    padding-bottom: 0;
+    width: 278px;
+    margin: 0 auto;
+} */
+/* @media only screen and  (min-width: 735px){
+    .woocommerce ul.products li {
+        padding-bottom: 0;
+        width: 278px;
+        height: 437px;
+        float: left;
+        margin-right: 10px;
+    }
+    .woocommerce ul.products li:nth-child(4){ margin-right: 0; }
+}
+.woocommerce .product.first {
+    clear: none;
+}
+.woocommerce .dt-sc-one-third { width:auto; }
+.woocommerce  .column {
+    margin: 0px;
+    float: none;
+    min-height: 1px;
+    position: relative;
+}
+.woocommerce .package-details h5 { background: #1d6e6b; font-size: 12px; text-transform: uppercase; text-align: center; }
+@media only screen and  (min-width: 735px){
+  .woocommerce .package-details h5 {font-size: 16px;}
+} */
+#main .secondary-sidebar.secondary-has-right-sidebar .column.dt-sc-one-fourth img {
+    width: 100%;
+}
+/*.woocommerce-page .find-a-tour { margin-bottom: 0 ; border-bottom: 4px solid #07575b; }*/
+.woocommerce-page .find-a-tour #uwpqsf_btn{ padding-left: 3px; }
+
+/* tour page */
+@media only screen and (max-width: 639px) and (min-width: 320px){
+    .woocommerce-page .category-tours ul.products li .img img {
+        height: auto;
+        max-width: 100%;
+        min-height: inherit;
+        height: 152px;
+    }
+    .woocommerce-page .category-tours ul.products li .text .infomation {
+        max-height: 88px;
+    }
+}
+
 /*taole fix*/
+
+#myModal .woocommerce form.login .form-row .showbtn,
+#myModal .woocommerce form.register .form-row .showbtn {
+  color: #fff !important;
+}

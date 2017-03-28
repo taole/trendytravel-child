@@ -1,9 +1,8 @@
 <?php
 /*
-	Template Name: Places Template
+	Template Name: Places Template 2
 */
 	get_header();
-
 	while(have_posts()): the_post();
 		
 	  //GETTING META VALUES...
@@ -44,10 +43,13 @@
               	  <section class="secondary-sidebar secondary-has-right-sidebar" id="secondary-right"><?php get_sidebar('right'); ?></section>
               <?php elseif($page_layout == 'with-both-sidebar'): ?>
               	  <section class="secondary-sidebar secondary-has-both-sidebar" id="secondary-right"><?php get_sidebar('right'); ?></section>
-              <?php endif;
-			  
-        endwhile; ?>
+              <?php endif; ?>
+        <?php endwhile; ?>
           </div>
       </div>
-
+      <div class="fullwidth-section find-a-tour find-a-tour-bottom" style="padding-top:10px;padding-bottom:30px;">  
+        <div class="container">
+          <?php echo do_shortcode('[ULWPQSF id=8569]'); ?>
+        </div>
+      </div>
 <?php get_footer(); ?>

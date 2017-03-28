@@ -15,8 +15,9 @@
       left: 0;
       right: 0;
       background: #07575b;
-      padding: 0 20px;
+      padding: 0 20px 12px;
       @include box-sizing();
+      display: none;
     }
     &> ul.menu{
       &> li{
@@ -127,21 +128,25 @@
         }
         &>li{
           float: left;
-          width: 16%;
+          width: 25%;
           clear: inherit;
           height: auto;
           &:first-child{
-            width: 52%;
+            width: 25%;
             &>a{
               background: transparent;
             }
             ul.sub-menu{
               position: static;
-              display: block !important;
+//              display: block !important;
+              display: none !important;
               padding: 0;
               &>li{
                 width: 50%;
                 clear: inherit;
+                &:nth-child(2n+3){
+                  clear: left;
+                }
                 &>a{
                   font-size: 12px;
                   padding-left: 0;
@@ -178,9 +183,9 @@
         padding-left: 0 !important;
         padding-right: 0 !important;
         &>li{
-          width: 33.33%;
+          width: 50%;
           &:first-child{
-            width: 100%;
+            width: 50%;
             &>a{
               padding-right: 0;
               padding-left: 0;
@@ -213,45 +218,57 @@
 
 header{
   &.menu-open{
-    #main-menu .number-phone-mobile{
-      @include screen-theme(mbLan){
-        display: block;
-        position: absolute;
-        top: 100% !important;
-        left: 52% !important;
-        z-index: 4;
-        margin-top: 58px !important;
-        &:before{
-          display: none !important;
+    #primary-menu{
+      .dt-menu-toggle .dt-menu-toggle-icon{
+        background-image: url("../images/icons/menu-close.png");
+        @include retina(){
+          background-image: url("../images/icons/menu-close.png");
         }
-        ul{
-          position: static !important;
-          display: block !important;
-          padding-left: 45px !important;
-          li{
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-          }
-        }
-      }
-      @include screen-theme(mbPo){
-        position: static !important;
-        float: none !important;
-        @include clearfix();
-        width: 100% !important;
-        margin: auto !important;
-        padding-top: 20px !important;
-        overflow: hidden;
-        ul{
-          background-position: left 5px !important;
-          li{
-            font-size: 14px !important;
-            padding-bottom: 10px !important;
-            //          font-weight: normal;
-          }
-        }
-
       }
     }
+    #main-menu{
+      display: block !important;
+      .number-phone-mobile{
+        @include screen-theme(mbLan){
+          display: block;
+          position: absolute;
+          top: 100% !important;
+          left: 20px !important;
+          z-index: 4;
+          margin-top: 58px !important;
+          &:before{
+            display: none !important;
+          }
+          ul{
+            position: static !important;
+            display: block !important;
+            padding-left: 45px !important;
+            li{
+              padding-left: 0 !important;
+              padding-right: 0 !important;
+            }
+          }
+        }
+        @include screen-theme(mbPo){
+          position: static !important;
+          float: none !important;
+          @include clearfix();
+          width: 100% !important;
+          margin: auto !important;
+          padding-top: 20px !important;
+          overflow: hidden;
+          ul{
+            background-position: left 5px !important;
+            li{
+              font-size: 14px !important;
+              padding-bottom: 10px !important;
+              //          font-weight: normal;
+            }
+          }
+
+        }
+      }
+    }
+
   }
 }

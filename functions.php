@@ -129,6 +129,7 @@ add_action( 'init', 'product_duration');
 add_action('wp_enqueue_scripts', 'base_scripts');
 
 function base_scripts() {
+    //wp_enqueue_script('jquery-ui', '/wp-content/themes/trendytravel-child/js/jquery-ui.js', array(), 1.0, false);
     wp_enqueue_script('customs_scripts', '/wp-content/themes/trendytravel-child/js/custom.js', array(), 1.0, true);
     wp_enqueue_script('slick_scripts', '/wp-content/themes/trendytravel-child/js/slick.js', array(), 1.0, true);
     wp_enqueue_script('bootstrap_scripts', '/wp-content/themes/trendytravel-child/js/bootstrap.min.js', array(), 1.0, true);
@@ -138,6 +139,7 @@ function base_scripts() {
     wp_enqueue_script('scrollbar_concat_scripts', '/wp-content/themes/trendytravel-child/js/jquery.mCustomScrollbar.concat.min.js', array(), 1.0, true);
 
     wp_enqueue_style( 'slick', '/wp-content/themes/trendytravel-child/css/slick.css' );
+    //wp_enqueue_style( 'jquery-ui-css', '/wp-content/themes/trendytravel-child/css/jquery-ui.css' );
     wp_enqueue_style( 'slick-theme', '/wp-content/themes/trendytravel-child/css/slick-theme.css' );
     wp_enqueue_style( 'scrollbar', '/wp-content/themes/trendytravel-child/css/jquery.mCustomScrollbar.css' );
 }
@@ -233,5 +235,12 @@ add_filter( 'tiny_mce_before_init', 'my_switch_tinymce_p_br' );
 function my_switch_tinymce_p_br( $settings ) {
     $settings['forced_root_block'] = false;
     return $settings;
+}
+
+add_action('frm_date_field_js', 'limit_my_date_field');
+    function limit_my_date_field($field_id) {
+        if($field_id == 231){ //change FIELDKEY to the keys of your date fields
+        echo ",dateFormat:'d M yyyy'";
+    }
 }
 ?>

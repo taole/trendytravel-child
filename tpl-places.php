@@ -1,6 +1,6 @@
 <?php
 /*
-	Template Name: Blog Template
+	Template Name: Places Template
 */
 	get_header();
 
@@ -18,7 +18,10 @@
 		  get_template_part('includes/breadcrumb_section'); ?>
 
       <div id="main">
-          <div class="container travel-blog">              
+          <div class="container">
+              <div class="dt-sc-hr-invisible"></div>
+              <div class="dt-sc-hr-invisible-small"></div>
+              
               <?php if($page_layout == 'with-left-sidebar'): ?>
               	  <section class="secondary-sidebar secondary-has-left-sidebar" id="secondary-left"><?php get_sidebar('left'); ?></section>
               <?php elseif($page_layout == 'with-both-sidebar'): ?>
@@ -34,7 +37,7 @@
                       the_content();
                       wp_link_pages(array('before' => '<div class="page-link"><strong>'.__('Pages:', 'iamd_text_domain').'</strong> ', 'after' => '</div>', 'next_or_number' => 'number'));
                       //PERFORMING BLOG LAYOUT...
-                      get_template_part('includes/blog-post-layout');
+                      get_template_part('includes/places-post-layout');
                       edit_post_link(__('Edit', 'iamd_text_domain'), '<span class="edit-link">', '</span>' ); ?>
                   </article>
               </section>

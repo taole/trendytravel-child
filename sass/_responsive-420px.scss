@@ -8,6 +8,19 @@
 		line-height: 38px;
 	}
 	.banner{
+      .tp-caption{
+        h4{
+          font-size: 17px !important;
+          line-height: 17px !important;
+        }
+        h2{
+          font-size: 70px !important;
+          line-height: 70px !important;
+        }
+        p{
+          font-size: 14px !important;
+        }
+      }
 		h4{
           font-size: 17px;
           line-height: 17px;
@@ -41,6 +54,9 @@
           right: 0;
           bottom:40px;
         }
+        .tp-bullets{
+          left: 50% !important;
+        }
         h3.ls-l{
           font-size: 30px;
         }
@@ -63,12 +79,14 @@
 			select{
 				font-size: 12px;
 				height:42px;
+              min-height: 1px;
 			}
 			.selection-box:after{
 				height: 41px;
 			}
 			input[type="submit"]{
 				height: 42px;
+              min-height: 1px;
 			}
 		}
 	}
@@ -384,6 +402,7 @@
       margin-bottom: 30px;
 		header#header{
 			padding-top: 0;
+          height: 49px;
 			.numberphone{
 				position: absolute;
 				top:10px;
@@ -1013,7 +1032,7 @@
 
 
   /* custom tour */
-  .custom-tour-form, #custom-tour{
+  .custom-tour-form, .custom-tour{
     margin-top: 35px;
     .frm_style_formidable-style.with_frm_style{
       form{
@@ -1082,7 +1101,7 @@
 
 
   /* cart */
-  .custom-tour-form, #custom-tour{
+  .custom-tour-form, .custom-tour{
     .frm_style_formidable-style.with_frm_style{
       form{
         fieldset{
@@ -1412,25 +1431,25 @@
           }
           .img{
             float: left;
-            width: 45%;
+            width: 50%;
             overflow: hidden;
-            height: 123px;
+//            height: 123px;
             img{
-              display: block;
-              max-width: inherit;
-              min-width: 100%;
-              height: 100%;
+//              display: block;
+//              max-width: inherit;
+//              min-width: 100%;
+//              height: 100%;
             }
           }
           .text{
             float: left;
-            width: 55%;
+            width: 50%;
             @include box-sizing();
             h2.title{
               font-size: 12px;
               margin: 0 -8px;
               line-height: 16px;
-              height: 32px;
+              height: 50px;
               text-align: center;
               overflow: hidden;
               padding: 5px;
@@ -1442,7 +1461,7 @@
             }
             .infomation{
               font-size: 12px;
-              min-height: 35px;
+              min-height: 61px;
               .time{
                 display: none;
               }

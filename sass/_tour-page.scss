@@ -1,0 +1,274 @@
+.woocommerce-page .category-tours{
+  ul.products{
+    @include screen-theme(mbPo){
+      margin-left: -3px;
+      margin-right: -3px;
+    }
+    li{
+      margin-bottom: 10px;
+      @include screen-theme(mbPo){
+        width: 50%;
+        padding-left: 3px;
+        padding-right: 3px;
+        .sales{
+          right:-105px;
+          top:24px;
+        }
+      }
+      &:nth-child(4n+5){
+        @include screen-theme(lg){
+          clear: left;
+        }
+        @include screen-theme(md){
+          clear: left;
+        }
+        @include screen-theme(sm){
+          clear: left;
+        }
+        @include screen-theme(xs){
+          clear: left;
+        }
+      }
+      &:nth-child(2n+3){
+        @include screen-theme(mbLan){
+          clear: left;
+        }
+      }
+      .img{
+        @include screen-theme(mbLan){
+         // height: 140px;
+        }
+        @include screen-theme(mbPo){
+          height: auto;
+          width: 100%;
+          img{
+            height: auto;
+            max-width: 100%;
+            min-height: inherit;
+            max-height: 152px;
+          }
+        }
+
+      }
+      .sales{
+        display: block !important;
+        right:5px;
+      }
+      .text{
+        @include screen-theme(mbPo){
+          width: 100%;
+		  padding-bottom:0 !important;
+        }
+		a{
+			@include screen-theme(mbPo){
+				position:static;
+				margin:0 -8px !important;
+			}
+		  }
+        .infomation{
+          @include box-sizing();
+          padding-left: 2px;
+          padding-right: 2px;
+          overflow: hidden;
+          max-height: 100% !important;
+          @include screen-theme(md){
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+          @include screen-theme(sm){
+            padding-left: 3px;
+            padding-right: 3px;
+          }
+          @include screen-theme(xs){
+            padding-left: 0;
+            padding-right: 0;
+          }
+          @include screen-theme(mbPo){
+            padding-left: 0;
+            padding-right: 0;
+          }
+          .time{
+            color:#07575b;
+            i{
+              background-image: url("../images/icons/calander.png");
+              @include screen-theme(sm){
+                background-size: 16px 16px;
+                width: 16px;
+                height: 16px;
+              }
+              @include screen-theme(xs){
+                background-size: 13px 13px;
+                width: 13px;
+                height: 13px;
+                margin-right: 2px;
+              }
+              @include screen-theme(mbPo){
+                background-size: 13px 13px;
+                width: 13px;
+                height: 13px;
+                margin-right: 2px;
+                background-image: url("../images/icons/calander-white.png");
+              }
+            }
+          }
+          @include screen-theme(lg){
+            min-height: 125px;
+            div{
+              padding-bottom: 0;
+            }
+            .time{
+              font-size: 14px;
+            }
+            .price{
+              padding-bottom: 5px;
+            }
+          }
+          @include screen-theme(md){
+            min-height: 125px;
+            .time{
+              font-size: 14px;
+            }
+            div{
+              padding-bottom: 0;
+            }
+            .price{
+              padding-bottom: 5px;
+            }
+          }
+          @include screen-theme(sm){
+            min-height: 90px;
+            div{
+              padding-bottom: 0;
+              padding-top: 5px;
+            }
+            .price{
+              padding-bottom: 5px;
+            }
+            .time{
+              font-size: 12px;
+            }
+          }
+          @include screen-theme(xs){
+            min-height: 70px;
+            div{
+              padding-bottom: 0;
+            }
+            .time{
+              font-size: 10px;
+            }
+          }
+          @include screen-theme(mbLan){
+            min-height: 60px;
+          }
+          @include screen-theme(mbPo){
+            min-height: 105px;
+            div{
+              padding: 5px 0 0;
+            }
+            .time{
+              font-size: 10px;
+              color:#fff;
+              display: block;
+            }
+          }
+          .price{
+            font-size: 16px;
+            @include clearfix();
+            @include screen-theme(sm){
+              font-size: 12px;
+            }
+            @include screen-theme(xs){
+              font-size: 10px;
+            }
+            @include screen-theme(mbPo){
+              font-size: 10px;
+            }
+            .regular-price.was{
+//              float: left;
+              color:#07575b;
+              text-decoration: line-through;
+              @include screen-theme(mbLan){
+                display: none;
+              }
+              @include screen-theme(mbPo){
+                display: none;
+              }
+            }
+            .sale-price{
+//              float: right;
+              font-size: 20px;
+              @include screen-theme(sm){
+                font-size: 14px;
+              }
+              @include screen-theme(xs){
+                font-size: 12px;
+              }
+              @include screen-theme(mbLan){
+                float: none;
+                width: 100%;
+                @include box-sizing();
+                font-size: 12px;
+              }
+              @include screen-theme(mbPo){
+                float: none;
+                width: auto;
+              }
+            }
+          }
+		  
+        }
+        h2.title{
+          @include screen-theme(lg){
+            padding-bottom: 20px;
+          }
+          @include screen-theme(md){
+            padding-bottom: 20px;
+          }
+          @include screen-theme(xs){
+            padding: 10px;
+          }
+          @include screen-theme(mbPo){
+            height: 30px;
+          }
+        }
+        a{
+          min-width: inherit;
+          @include screen-theme(xs){
+            font-size: 12px;
+            line-height: 32px;
+          }
+        }
+      }
+
+      &:hover{
+        @include screen-theme(mbPo){
+          .sales{
+            right: 5px;
+          }
+        }
+        .text{
+          background-color: #07575b;
+          h2{
+            background: #07575b;
+          }
+          .infomation{
+            .time{
+              color:#127d76;
+              i{
+                background-image: url("../images/icons/calander-hover.png");
+              }
+            }
+            .price{
+              .regular-price{
+                color: #127d76;
+              }
+            }
+          }
+          a{
+            background: #127d76;
+          }
+        }
+      }
+    }
+  }
+}

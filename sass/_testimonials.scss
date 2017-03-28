@@ -102,6 +102,15 @@
       }
     }
     .column.dt-sc-one-fourth{
+      @include screen-theme(mbLan){
+        display: none;
+      }
+      &:last-child{
+        display: none;
+        @include screen-theme(mbLan){
+          display: block;
+        }
+      }
       img{
         @include screen-theme(lg){
           width: 100%;

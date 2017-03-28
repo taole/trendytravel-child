@@ -8,7 +8,7 @@
 	}
 	h4{
 		font-size: 38px;
-		@include AvenirNextLTPro();
+		@include ProximaNovaAltBold();
 		font-weight: 700;
 		text-transform: uppercase;
 		color:#fff;
@@ -18,7 +18,7 @@
 	h2{
 		text-transform: uppercase;
 		font-size: 177px;
-		@include AvenirNextLTPro();
+      @include ProximaNovaAltBold();
 		color:#fff;
 		font-weight: 700;
 		margin: 0;
@@ -30,14 +30,34 @@
 
 	}
 	#slider-container{
-		.ls-l{
-			width: 770px !important;
-			top:50% !important;
-			left:50% !important;
-			@include transform(translate(-50%,-50%) !important);
-			text-align: center;
+      .tp-parallax-wrap{
+        width: 870px !important;
+        top:50% !important;
+        left:50% !important;
+        @include transform(translate(-50%,-50%) !important);
+        text-align: center;
+        max-width: 100%;
+        .tp-loop-wrap, .tp-mask-wrap{
+          position: static !important;
+        }
+      }
+      .tp-bullets{
+//        display: none;
+      }
+      .tp-shadow2:before, .tp-shadow2:after, .tp-shadow3:before, .tp-shadow4:after{
+        display: none;
+      }
+		.ls-l, .tp-caption{
+//			width: 790px !important;
+//			top:50% !important;
+//			left:50% !important;
+//			@include transform(translate(-50%,-50%) !important);
+//			text-align: center;
+//          max-width: 100%;
 			.title{
 				display: inline-block;
+//              width: 100%;
+//              max-width: 100%;
 				h4{
 					display: inline-block;
 					width: 100%;
@@ -47,14 +67,44 @@
 					display: inline-block;
 				}
 			}
+          p{
+            width: 870px !important;
+            max-width: 100%;
+            white-space: normal;
+            text-align: center;
+          }
+          .gbtn{
+            padding: 0 30px !important;
+            line-height: 48px !important;
+            @include AvenirNextLTPro();
+            font-weight: 700;
+            font-size: 14px !important;
+            margin-right: auto !important;
+            margin-left:auto !important;
+            width: auto !important;
+            max-width: 144px !important;
+            @include screen-theme(lg){
+              font-size: 18px !important;
+            }
+            @include screen-theme(md){
+              font-size: 18px !important;
+            }
+          }
 		}
+
         h3.ls-l{
           color:#fff;
           font-size: 62px;
           @include ProximaNovaAltBold();
           text-transform: uppercase;
+          width: 790px !important;
+          top:50% !important;
+          left:50% !important;
+          @include transform(translate(-50%,-50%) !important);
+          text-align: center;
+          max-width: 100%;
         }
-		.ls-nav-prev, .ls-nav-next{
+		.ls-nav-prev, .ls-nav-next, .tparrows{
 			display: block;
 			width: 24px;
 			height:63px;
@@ -62,26 +112,52 @@
 			top:50%;
 			@include transform(translateY(-50%));
 			z-index: 33;
+          &:before{
+            display: none;
+          }
 		}
-		.ls-nav-prev{
+		.ls-nav-prev, .tp-leftarrow{
 			background: url('../images/icons/arrow-left.png') no-repeat 0 0;
 			left: 50px;
+          @include screen-theme(mbPo){
+            left: -15px !important;
+          }
 			&:hover{
 				background-position: 0 -87px;
 			}
 		}
-		.ls-nav-next{
+		.ls-nav-next, .tp-rightarrow{
 			right:50px;
 			background: url('../images/icons/arrow-right.png') no-repeat 0 -87px;
+          @include screen-theme(mbPo){
+            left: auto !important;
+            right:-40px !important;
+          }
 			&:hover{
 				background-position: 0 0;
 			}
 		}
-		.ls-bottom-nav-wrapper{
+		.ls-bottom-nav-wrapper, .tp-bullets{
 			position: absolute;
-			left: 116px;
+//			left: 116px;
+          left: 145px !important;
 			bottom:40px;
 			display: block;
+          .tp-bullet{
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            @include border-radius(50%);
+            background-color: #fff;
+            @include box-sizing();
+            @include transition(all ease 0.5s);
+            visibility: visible;
+            margin: 0 8px;
+            &:hover, &.selected{
+              background-color: transparent;
+              border:3px solid #1c857d;
+            }
+          }
 			.ls-bottom-slidebuttons{
 				a{
 					display: inline-block;
@@ -106,6 +182,7 @@
 .scrollDown-social{
 	.container{
 		position: relative;
+      z-index: 2147483647;
 		.widget{
 			padding: 0;
 		}
@@ -128,8 +205,8 @@
 				z-index: 99;
               -webkit-animation-name:bounceOutDown;
               animation-name:bounceOutDown;
-              animation-duration: 4s;
-              animation-delay: 3s;
+              animation-duration: 2s;
+              animation-delay: 0.5s;
               animation-iteration-count: 100;
 				span{
 					display: inline-block;
@@ -225,7 +302,7 @@
                         }
                       }
 
-						&.tripAdvisor{
+						&.email{
 							a{
                               width: 31px;
 								background-position: -164px 0;
@@ -295,6 +372,7 @@
 			height:54px;
 			border:none;
 			width: 100%;
+          font-weight: bold;
 			option{
 				background: transparent;
     			text-transform: capitalize;
@@ -314,6 +392,7 @@
     		float: none;
     		margin: 0;
     		@include transition(all ease 0.5s);
+          font-weight: bold;
     		&:hover{
     			color:#fff;
     		}
@@ -336,6 +415,9 @@
   }
   @include screen-theme(xs){
     margin-bottom: 15px;
+  }
+  @include screen-theme(mbLan){
+    margin-bottom: 42px;
   }
   .container{
     @include clearfix();
@@ -595,10 +677,20 @@
             background-image: url("../images/icons/arrow-tes.png");
             width: 13px;
             height: 35px;
+            background-size: inherit;
+            @include screen-theme(mbLan){
+              top:20px;
+            }
+            @include screen-theme(mbPo){
+              top:18%;
+            }
           }
 			.testimonial-prev{
 				left: -50px;
               background-position: 0 0;
+              @include screen-theme(mbLan){
+                left:10px !important;
+              }
               &:hover{
                 background-position: 0 0;
               }
@@ -606,6 +698,9 @@
 			.testimonial-next{
 				right: -50px;
               background-position: 0 -65px;
+              @include screen-theme(mbLan){
+                right:3px !important;
+              }
               &:hover{
                 background-position: 0 -65px;
               }
@@ -660,8 +755,8 @@
   }
   .slick-arrow{
     position: absolute;
-    top:50%;
-    @include transform(translateY(-50%));
+    top:0;
+    @include transform(translateY(0));
     width: 13px;
     height:35px;
     border:none;
@@ -671,13 +766,14 @@
     text-indent: -999px;
     background-color: transparent;
     z-index: 999;
+    margin-top: 37px;
     &.slick-prev{
-      left: 0;
+      left: 10px;
       background: url('../images/icons/arrow-left-sm.png') no-repeat;
 
     }
     &.slick-next{
-      right: 0;
+      right: 10px;
       background: url('../images/icons/arrow-right-sm.png') no-repeat;
     }
   }
@@ -700,6 +796,10 @@
 			padding: 0 20px;
     		line-height: 1.3;
     		margin-bottom: 0;
+          @include screen-theme(xs){
+            padding: 0 10px;
+            font-size: 11px;
+          }
 		}
 	}
 }

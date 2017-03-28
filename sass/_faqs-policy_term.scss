@@ -1,6 +1,7 @@
 .faqs-term-policy{
   .place-heading{
     text-align: left;
+    margin-bottom: 20px;
   }
   .page-with-right-sidebar{
     font-size: 14px;
@@ -11,6 +12,8 @@
         @include AvenirNextLTProDemi();
         font-weight: bold;
         color: #0f666b;
+        display: block;
+        padding-top: 10px;
       }
     }
   }

@@ -45,7 +45,7 @@ get_header( 'shop' ); ?>
 			 * @hooked woocommerce_taxonomy_archive_description - 10
 			 * @hooked woocommerce_product_archive_description - 10
 			 */
-			//do_action( 'woocommerce_archive_description' );
+			do_action( 'woocommerce_archive_description' );
 		?>
 
 		<?php if ( have_posts() ) : ?>
@@ -57,12 +57,8 @@ get_header( 'shop' ); ?>
 				 * @hooked woocommerce_result_count - 20
 				 * @hooked woocommerce_catalog_ordering - 30
 				 */
-				//do_action( 'woocommerce_before_shop_loop' );
+				do_action( 'woocommerce_before_shop_loop' );
 			?>
-			<section class="related-tours category-tours">
-	            	<h2 class="related-title"><?php woocommerce_page_title(); ?></h2>
-			        <div class="related-content">
-			        <!-- <ul> -->
 
 			<?php woocommerce_product_loop_start(); ?>
 
@@ -70,22 +66,19 @@ get_header( 'shop' ); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php wc_get_template_part( 'content', 'cate-products' ); ?>
+					<?php wc_get_template_part( 'content', 'product' ); ?>
 
 				<?php endwhile; // end of the loop. ?>
 
 			<?php woocommerce_product_loop_end(); ?>
 
-			<!-- </ul> -->
-			        </div>
-	            </section>
 			<?php
 				/**
 				 * woocommerce_after_shop_loop hook.
 				 *
 				 * @hooked woocommerce_pagination - 10
 				 */
-				//do_action( 'woocommerce_after_shop_loop' );
+				do_action( 'woocommerce_after_shop_loop' );
 			?>
 
 		<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
@@ -111,9 +104,5 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_sidebar' );
 	?>
-	<div class="fullwidth-section find-a-tour find-a-tour-bottom">	
-		<div class="container">
-			<?php echo do_shortcode('[ULWPQSF id=8569]'); ?>
-		</div>
-	</div>
+
 <?php get_footer( 'shop' ); ?>
