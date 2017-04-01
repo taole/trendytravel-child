@@ -31,16 +31,12 @@ get_template_part('includes/breadcrumb_section');
 					    <img src="<?php echo $image;?>">
 					</div>
 					<div class="text">
-					   <div class="table">
-                           <div class="tr">
-                               <div class="td">
-                                   <h2 class="title"><?php echo $cat->name; ?></h2>
-                                   <div class="infomation">
-                                       <?php echo $cat->count; ?> Tours Available
-                                   </div>
-                               </div>
-                           </div>
-					   </div>
+
+                       <h2 class="title"><span class="auto-scroll-mr"><?php echo $cat->name; ?></span></h2>
+                       <div class="infomation">
+                           <?php echo $cat->count; ?> Tours Available
+                       </div>
+
 					    <a href="<?php echo get_category_link($cat->term_id); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">View Tours</a>
 					</div>
 				</li>

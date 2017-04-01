@@ -645,7 +645,7 @@
           padding-bottom: 0;
           .frm_form_field{
             &.frm_full{
-              position: static;
+              position: relative;
               width: 100% !important;
               @include box-sizing();
               padding: 0 7px 0 0;
@@ -1259,7 +1259,7 @@
         li{
           .img{
             img{
-              height: 135px;
+              height: 124px;
             }
           }
           .text{
@@ -1449,7 +1449,7 @@
               font-size: 12px;
               margin: 0 -8px;
               line-height: 16px;
-              height: 50px;
+//              height: 50px;
               text-align: center;
               overflow: hidden;
               padding: 5px;
@@ -1461,7 +1461,8 @@
             }
             .infomation{
               font-size: 12px;
-              min-height: 61px;
+//              min-height: 61px;
+              min-height: 100%;
               .time{
                 display: none;
               }

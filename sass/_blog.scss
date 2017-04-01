@@ -188,10 +188,15 @@
             margin: 0 -15px 20px;
             background: #10726e;
             line-height: 20px;
-            height: 40px;
+            height: auto !important;
             overflow: hidden;
-            padding: 16px 65px;
+            padding: 16px 20px;
             text-align: center;
+            span.auto-scroll-mr{
+              display: block;
+//              height: 20px;
+              overflow: hidden;
+            }
           }
           .location{
             margin-bottom: 20px;

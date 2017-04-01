@@ -282,6 +282,14 @@
               max-width: inherit;
             }
           }
+          @include screen-theme(md){
+            height: 172px;
+            img{
+              height: 100%;
+              min-width: 100%;
+              max-width: inherit;
+            }
+          }
           @include screen-theme(sm){
             height: 167px;
             img{
@@ -327,6 +335,7 @@
           line-height: 1.4;
           @include transition(all ease 0.5s);
           @include box-sizing();
+
           @include screen-theme(mbLan){
             padding-bottom: 38px !important;
           }
@@ -342,30 +351,30 @@
             margin: 0 -8px 0;
             background: #10726e;
             line-height: 20px;
-            height: 40px;
+            height: 20px;
             overflow: hidden;
             padding: 16px 25px;
             text-align: center;
             span{
               display: block;
-              height: 40px;
+              height: 20px;
               line-height: 20px;
               overflow: hidden;
               @include screen-theme(sm){
-                height: 32px;
+                height: 16px;
                 line-height: 16px;
               }
               @include screen-theme(xs){
-                height: 32px;
+                height: 16px;
                 line-height: 16px;
               }
               @include screen-theme(mblan){
-                height: 50px;
+                height: 16px;
                 line-height: 16px;
               }
               @include screen-theme(mbPo){
-                height: 30px;
-                line-height: 15px;
+//                height: 15px;
+                line-height: 30px;
               }
             }
           }
@@ -611,6 +620,14 @@
 
 
   .frm_style_formidable-style.with_frm_style{
+    .frm_error_style{
+      margin-left: 18px;
+      margin-right: 18px;
+      @include screen-theme(mbPo){
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
     fieldset{
       padding: 0 18px;
       .tour-description{
@@ -639,6 +656,7 @@
           clear: inherit;
           margin: 0 0 14px;
           float: left;
+          position: relative;
         }
         input, input:focus, select, select:focus, textarea, textarea:focus{
           color:#fff !important;
@@ -650,7 +668,7 @@
           @include placeholder(#fff !important);
           font-size: 14px;
           @include AvenirNextLTProDemi();
-          font-weight: 700;
+//          font-weight: 700;
           height: 36px;
           background: #10726e !important;
           @include box-sizing();
@@ -676,6 +694,30 @@
             @include border-radius(0);
             top:0;
           }
+          &+.frm_error{
+            right: 50px;
+          }
+        }
+        .frm_error{
+          font-size: 0;
+          display: inline-block;
+          vertical-align: middle;
+          position: absolute;
+          top:50%;
+          margin-top: -8px;
+          right: 17px;
+          &:after{
+            content: "";
+            width: 16px;
+            height:16px;
+            background: url('../images/icons/error.png') no-repeat;
+            display: inline-block;
+          }
+        }
+        textarea{
+          &+.frm_error{
+            top:15px;
+          }
         }
       }
       .emquiry-right{
@@ -692,23 +734,102 @@
         }
         .date{
           line-height: normal;
+          @include screen-theme(mbPo){
+            position: relative;
+          }
+          .form-field{
+            @include screen-theme(mbPo){
+              padding-left: 0;
+              padding-right: 0;
+              position: static;
+            }
+          }
           label{
             width: 75px !important;
+            @include screen-theme(sm){
+              max-width: 50%;
+            }
+            @include screen-theme(xs){
+              font-size: 12px;
+            }
+            @include screen-theme(mbPo){
+              width: 100% !important;
+              max-width: 100%;
+              @include box-sizing();
+              margin-right: 0;
+            }
           }
-//          input{
+          input{
 //            float: left;
 //            max-width: 58% !important;
-//          }
+            @include screen-theme(sm){
+              padding-left: 2px !important;
+//              max-width: 50% !important;
+            }
+            @include screen-theme(xs){
+              padding-left: 2px !important;
+            }
+            @include screen-theme(mbPo){
+              max-width: 100% !important;
+            }
+          }
+          .frm_error{
+            height: 16px !important;
+            right: 23px;
+            top: 17px;
+            width: 16px !important;
+            left: auto;
+            @include screen-theme(mbLan){
+              right: 29px;
+            }
+            @include screen-theme(mbPo){
+              top:40px;
+              right: 17px;
+            }
+          }
         }
         .adults{
+          @include screen-theme(mbPo){
+            position: relative;
+          }
           .label{
             @include AvenirNextLTProDemi();
             font-size: 14px;
             color:#fff;
             display: block;
+            font-weight: bold;
           }
           .form-field{
             width: 50%;
+            @include screen-theme(mbPo){
+              position: static;
+            }
+            .frm_error{
+              display: none;
+            }
+            &:last-child{
+              .frm_error{
+                display: block;
+                left: 32px;
+                top: -12px;
+                right: auto;
+                @include screen-theme(md){
+                  left: 42px;
+                }
+                @include screen-theme(sm){
+                  left: 55px;
+                }
+                @include screen-theme(xs){
+                  left: auto;
+                  right: -20px;
+                }
+                @include screen-theme(mbPo){
+                  left: 170px;
+                  margin-top: 0;
+                  top: 5px;
+                }
+              }
+            }
           }
           label{
             line-height: normal;

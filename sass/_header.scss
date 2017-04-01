@@ -106,6 +106,44 @@
 			.fuc-header{
 				float: right;
 				margin-right:104px;
+              .numberphone{
+                &:before{
+                  background: none !important;
+                }
+                &:hover{
+//                  background: url("../images/icons/telephone-mb.png") no-repeat scroll left center / 26px 26px !important;
+                }
+                ul{
+                  display: block;
+                  padding: 0;
+                  top: 0;
+                  left: 0;
+                  width: 30px;
+                  height: 30px;
+                  position: absolute;
+                  background: none;
+                  li{
+                    display: none;
+                    &:first-child{
+                      display: block;
+                      font-size: 0;
+                      a{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 30px;
+                        height: 30px;
+                        z-index: 44;
+                        background: url("../images/icons/phone-mb.png") no-repeat 0 -39px !important;
+                        &:hover{
+                          background: url("../images/icons/phone-mb.png") no-repeat 0 -39px !important;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
 			}
 		}
 		.numberphone{

@@ -129,7 +129,7 @@ add_action( 'init', 'product_duration');
 add_action('wp_enqueue_scripts', 'base_scripts');
 
 function base_scripts() {
-    //wp_enqueue_script('jquery-ui', '/wp-content/themes/trendytravel-child/js/jquery-ui.js', array(), 1.0, false);
+    wp_enqueue_script('jquery.marquee.js', '/wp-content/themes/trendytravel-child/js/jquery.marquee.js', array(), 1.0, false);
     wp_enqueue_script('customs_scripts', '/wp-content/themes/trendytravel-child/js/custom.js', array(), 1.0, true);
     wp_enqueue_script('slick_scripts', '/wp-content/themes/trendytravel-child/js/slick.js', array(), 1.0, true);
     wp_enqueue_script('bootstrap_scripts', '/wp-content/themes/trendytravel-child/js/bootstrap.min.js', array(), 1.0, true);
@@ -144,14 +144,6 @@ function base_scripts() {
     wp_enqueue_style( 'scrollbar', '/wp-content/themes/trendytravel-child/css/jquery.mCustomScrollbar.css' );
 }
 
-
-function wooc_validate_extra_register_fields( $errors, $username, $email ) {
-    if ( $_POST['confirm_password'] != $_POST['password'] ) {
-        $errors->add( 'confirm_password_error', __( '<strong>Error</strong>: Confirm password and Password must same!', 'woocommerce' ) );
-    }
-    return $errors;
-}
-add_filter( 'woocommerce_registration_errors', 'wooc_validate_extra_register_fields', 10, 3 );
 
 /* checkout fields order*/
 add_filter("woocommerce_checkout_fields", "order_fields");
@@ -243,4 +235,18 @@ add_action('frm_date_field_js', 'limit_my_date_field');
         echo ",dateFormat:'d M yyyy'";
     }
 }
+
+function wooc_validate_extra_register_fields( $username, $email, $validation_errors ) {
+
+    if ( isset( $_POST['first_name'] ) && empty( $_POST['first_name'] ) ) {
+        $validation_errors->add( 'first_name_error', __( '<strong>Error</strong>: First Name is required!.', 'woocommerce' ) );
+    }
+
+    if ( isset( $_POST['last_name'] ) && empty( $_POST['last_name'] )  ) {
+        $validation_errors->add( 'last_name_error', __( '<strong>Error</strong>: Last Name is required!.', 'woocommerce' ) );
+    }
+}
+
+add_action( 'woocommerce_register_post', 'wooc_validate_extra_register_fields', 10, 3 );
+
 ?>

@@ -312,3 +312,17 @@
   }
 
 }
+
+#my_custom_countries{
+  position: relative;
+  .frm_error{
+    right: 50px;
+    @include screen-theme(mbPo){
+      right: 32px;
+    }
+  }
+}
+
+.modal-message .content-message{
+  color: #FCB331;
+}

@@ -125,6 +125,15 @@
           width: 300%;
           height: 250px;
           position: absolute;
+          @include screen-theme(xs){
+            height: 116px;
+          }
+          @include screen-theme(mbLan){
+            height: 120px;
+          }
+          @include screen-theme(mbPo){
+            display: none;
+          }
         }
         &>li{
           float: left;

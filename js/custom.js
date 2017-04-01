@@ -1,4 +1,50 @@
 jQuery(document).ready(function($){
+
+    /* form */
+    $('.first-option-null select').prepend('<option value="" selected="selected">* Select Enquiry Subject</option>');
+    $('.country select').prepend('<option value="" selected="selected">* Country</option>');
+    $('.arrival-port select').prepend('<option value="" selected="selected">* Arrival Port</option>');
+    $('.departure-port select').prepend('<option value="" selected="selected">* Departure Port</option>');
+
+    $('.custom-tour input[type="submit"]').click(function(event) {
+        var vn = $('.vietnam-tp .frm_checkbox input:checked').length;
+        var cambodia = $('.cambodia-tp .frm_checkbox input:checked').length;
+        var laos = $('.laos-tp .frm_checkbox input:checked').length;
+        var sum = vn + cambodia + laos;
+        if( sum == 0 ) {
+            $('.trip-place p').after('<div class="frm_error">This field cannot be blank.</div>');
+        }   
+    });
+
+    if( $('#myModal form').hasClass('lost_reset_password') ) {
+        $('#myModal .logo-form').css('display', 'none');
+    }
+
+    if( $('#myModal ul').hasClass('woocommerce-error') ) {
+        console.log($('#myModal ul li').html());
+        if ($('#myModal ul li').html() == "<strong>Error:</strong> Username is required."
+            || $('#myModal ul li').html() == "<strong>Error:</strong> Password is required.") {
+            $('#myModal .login input').each(function(index, el) {
+            
+                if ($(this).val() == '') {
+                    $(this).before('<div class="frm_error">This field cannot be blank.</div>');
+                }
+            });
+        } else {
+            $('#myModal .register input').each(function(index, el) {
+            
+                if ($(this).val() == '') {
+                    $(this).after('<div class="frm_error">This field cannot be blank.</div>');
+                }
+            });
+            console.log($('#billing_country').val());
+            if ($('#billing_country').val() == '0') {
+                $('#my_custom_countries').prepend('<div class="frm_error">This field cannot be blank.</div>');
+            }
+        }
+    }
+    /*e: form*/
+    
 	$('.dt-menu-toggle').click(function(){
 		$('#header').toggleClass("menu-open");
 	})
@@ -258,4 +304,62 @@ jQuery(document).ready(function($){
     });
 
    $('.category-tours ul.products li .text h2.title').tooltipster();
+
+    // var placeholder = '* Describe Requirements: \nPlease kindly provide as much information as possible to help us manage your request.';
+    // var placeholder2 = '* Describe Requirements: <i class="frm_error"></i> \nPlease kindly provide as much information as possible to help us manage your request.';
+    // $('.custom-tour-form .frm_style_formidable-style.with_frm_style form fieldset textarea').attr('placeholder', placeholder);
+
+    $('.custom-tour-form .frm_style_formidable-style.with_frm_style form fieldset textarea').focus(function(){
+            $('.placeholder').css('display', 'none');
+    });
+
+    $('.placeholder').click(function(){
+        $('.placeholder').css('display', 'none');
+        $('.custom-tour-form .frm_style_formidable-style.with_frm_style form fieldset textarea').focus();
+    });
+
+    $('.custom-tour-form .frm_style_formidable-style.with_frm_style form fieldset textarea').blur(function(){
+        if($(this).val() ===''){
+            $('.placeholder').css('display', 'block');
+        }
+    });
+
+    $('document').click(function(e){
+        if( ! $('.placeholder').is(e.target) ){
+            if($(this).val() ===''){
+                $('.placeholder').css('display', 'block');
+            }
+        }
+    });
+
+//    $('.auto-scroll-mr').marquee({
+//        speed: 5000,
+//        gap: 50,
+//        delayBeforeStart: 0,
+//        direction: 'left',
+//        duplicated: true,
+//        pauseOnHover: true
+//    });
+//
+//    $('.auto-scroll-mr-location').marquee({
+//        speed: 5000,
+//        gap: 50,
+//        delayBeforeStart: 0,
+//        direction: 'left',
+//        duplicated: true,
+//        pauseOnHover: true
+//    });
+//
+//    $('.auto-scroll-mr-time').marquee({
+//        speed: 5000,
+//        gap: 50,
+//        delayBeforeStart: 0,
+//        direction: 'left',
+//        duplicated: true,
+//        pauseOnHover: true
+//    });
+    
+    // if( $('#frm_field_241_container').hasClass('frm_blank_field') ) {
+    //     $(this).append('<i class="frm_error"></i>');
+    // }
 });

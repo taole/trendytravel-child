@@ -39,6 +39,18 @@
           height: auto;
           min-width: inherit;
           max-width: 100%;
+          @include screen-theme(lg){
+            height: 190px;
+          }
+          @include screen-theme(md){
+            height: 176px;
+          }
+          @include screen-theme(sm){
+            height: 154px;
+          }
+          @include screen-theme(xs){
+            height: 120px;
+          }
         }
       }
       .text{

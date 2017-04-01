@@ -704,7 +704,7 @@
         .emquiry-right{
           .date{
             input{
-              max-width: 58% !important;
+              max-width: 50% !important;
             }
           }
           .adults{
@@ -728,11 +728,12 @@
             h2.title{
               font-size: 12px;
               line-height: 16px;
-              height: 32px;
+//              height: 32px;
             }
             .infomation{
               font-size: 12px;
-              min-height: 70px;
+//              min-height: 70px;
+              min-height: 74px;
               div{
                 padding-top: 0;
               }

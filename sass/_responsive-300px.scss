@@ -1546,7 +1546,8 @@
         li{
           .img{
             img{
-              height: 139px;
+//              height: 139px;
+              height: auto;
             }
           }
           .text{
@@ -1762,6 +1763,8 @@
         &.open-form{
           .enquiry-left, .emquiry-right, .frm_submit, .tour-description{
             display: block;
+            margin-left: 0;
+            margin-right: 0;
           }
         }
       }

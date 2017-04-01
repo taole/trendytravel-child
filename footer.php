@@ -84,8 +84,8 @@
                         </div>
                         <div class="modal-message modal-message-ok" style="display:none">
                             <div class="content-message">
-                                <h5>THANKS FOR REGISTERING</h5>
-                                <p>Please check your emails to confirm your account</p>
+                                <h5>THANK YOU FOR REGISTERING</h5>
+                                <p>Please check your email inbox (or spam folder) to confirm your account</p>
                             </div>
                             
                         </div>

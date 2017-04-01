@@ -31,34 +31,34 @@ class Connect_Us_Widget extends WP_Widget {
                 <h3 class="widgettitle"><?php echo $title; ?></h3>
                 <ul class="social-list">
                     <?php if( $facebook ) : ?>
-                        <li class="facebook"><a href="<?php echo $facebook; ?>">facebook</a></li>
+                        <li class="facebook"><a href="<?php echo $facebook; ?>" target="_blank">facebook</a></li>
                     <?php endif; ?>
                     <?php if( $twitter ) : ?>
-                    <li class="twitter"><a href="<?php echo $twitter; ?>">twitter</a></li>
+                    <li class="twitter"><a href="<?php echo $twitter; ?>" target="_blank">twitter</a></li>
                     <?php endif; ?>
                     
                     <?php if( $linkedin ) : ?>
-                    <li class="linked"><a href="<?php echo $linkedin; ?>">linkedin</a></li>
+                    <li class="linked"><a href="<?php echo $linkedin; ?>" target="_blank">linkedin</a></li>
                     <?php endif; ?>
                     
                     <?php if( $google ) : ?>
-                    <li class="google"><a href="<?php echo $google; ?>">google</a></li>
+                    <li class="google"><a href="<?php echo $google; ?>" target="_blank">google</a></li>
                     <?php endif; ?>
                     
                     <?php if( $pinterest ) : ?>
-                    <li class="pinterest"><a href="<?php echo $pinterest; ?>">pinterest</a></li>
+                    <li class="pinterest"><a href="<?php echo $pinterest; ?>" target="_blank">pinterest</a></li>
                     <?php endif; ?>
                     
                     <?php if( $skype ) : ?>
-                    <li class="skype"><a href="<?php echo $skype; ?>">skype</a></li>
+                    <li class="skype"><a href="<?php echo $skype; ?>" target="_blank">skype</a></li>
                     <?php endif; ?>
 
                     <?php if( $youtube ) : ?>
-                    <li class="youtube"><a href="<?php echo $youtube; ?>">youtube</a></li>
+                    <li class="youtube"><a href="<?php echo $youtube; ?>" target="_blank">youtube</a></li>
                     <?php endif; ?>
 
                      <?php if( $tripAdvisor ) : ?>
-                    <li class="tripAdvisor"><a href="<?php echo $tripAdvisor; ?>">tripAdvisor</a></li>
+                    <li class="tripAdvisor"><a href="<?php echo $tripAdvisor; ?>" target="_blank">tripAdvisor</a></li>
                     <?php endif; ?>
                 </ul>
             </div>

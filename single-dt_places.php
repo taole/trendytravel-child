@@ -201,7 +201,7 @@
                                         <img src="<?php echo get_the_post_thumbnail_url( $post->ID, 'medium' );?>">
                                     </div>
                                     <div class="text">
-                                        <h2 class="title"><?php echo get_the_title(); ?></h2>
+                                        <h2 class="title"><span class="auto-scroll-mr"><?php echo get_the_title(); ?></span></h2>
                                         <div class="location"><?php echo $location; ?></div>
                                         <div class="map"><a href="#"><i></i>View on map</a></div>
                                         <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">Read more</a>

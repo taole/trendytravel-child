@@ -770,11 +770,17 @@
     &.slick-prev{
       left: 10px;
       background: url('../images/icons/arrow-left-sm.png') no-repeat;
+      @include screen-theme(mbLan){
+        left: 20px;
+      }
 
     }
     &.slick-next{
       right: 10px;
       background: url('../images/icons/arrow-right-sm.png') no-repeat;
+      @include screen-theme(mbLan){
+        right: 20px;
+      }
     }
   }
 	h2.section-title{

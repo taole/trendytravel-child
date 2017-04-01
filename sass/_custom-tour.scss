@@ -41,7 +41,6 @@
         @include placeholder(#fff !important);
         font-size: 12px;
         @include AvenirNextLTProDemi();
-        font-weight: 700;
         height: 36px;
         background: #10726e;
       }
@@ -55,6 +54,26 @@
       select{
         option{
           color:#333;
+        }
+      }
+      input, textarea, select{
+        &::-webkit-input-placeholder { // WebKit browsers
+          color: #fff;
+          font-family: AvenirNextLTPro, Arial, sans-serif;
+        }
+        &:-moz-placeholder { // Mozilla Firefox 4 to 18
+          color: #fff;
+          opacity:  1;
+          font-family: AvenirNextLTPro, Arial, sans-serif;
+        }
+        &::-moz-placeholder { // Mozilla Firefox 19+
+          color: #fff;
+          opacity:  1;
+          font-family: AvenirNextLTPro, Arial, sans-serif;
+        }
+        &:-ms-input-placeholder { // Internet Explorer 10+
+          color: #fff;
+          font-family: AvenirNextLTPro, Arial, sans-serif;
         }
       }
       .selection-box{
@@ -71,6 +90,22 @@
         font-weight: normal;
         color:#fff;
         font-size: 12px;
+      }
+      .placeholder{
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 12px 5px 0 16px;
+        p{
+          margin: 0;
+          line-height: normal;
+          font-size: 12px;
+          color:#fff;
+          @include AvenirNextLTPro();
+          font-style: normal;
+        }
       }
       .frm_checkbox, .frm_radio{
         label{
@@ -173,6 +208,9 @@
         }
         .number_travellers{
           float: left;
+          @include screen-theme(mbPo){
+            width: 100%;
+          }
           &>span:first-child{
             padding: 0 7px;
             display: block;
@@ -190,23 +228,23 @@
             .frm_error{
               right: auto;
               margin-top: -35px;
-              left: 86px;
+              left: 90px;
               @include screen-theme(md){
                 margin-top: -40px;
               }
               @include screen-theme(sm){
-                left: 74px;
+                left: 85px;
                 margin-top: -40px;
               }
               @include screen-theme(xs){
-                left: 74px;
+                left: 85px;
                 margin-top: -40px;
               }
               @include screen-theme(mbLan){
                 margin-top: -40px;
               }
               @include screen-theme(mbPo){
-                left: 135px;
+                left: 145px;
               }
             }
             &:last-child{
@@ -262,6 +300,9 @@
                   padding-right: 10px;
                   margin-top: 5px;
                   max-width: 50%;
+                  @include screen-theme(xs){
+                    padding-right: 30px;
+                  }
                 }
                 input{
                   float: right;
@@ -296,7 +337,7 @@
             &:first-child{
               .frm_error{
 //                left: 52%;
-                left: 276px;
+                left: 285px;
 //                @include screen-theme(md){
 //                  left: 56%;
 //                }
@@ -307,7 +348,7 @@
             }
             &:nth-child(2){
               .frm_error{
-                left: 270px;
+                left: 280px;
 //                left: 50%;
 //                @include screen-theme(md){
 //                  left: 54.5%;
@@ -320,7 +361,7 @@
             &:nth-child(3){
               .frm_error{
 //                left: 80%;
-                left: 212px;
+                left: 224px;
 //                @include screen-theme(md){
 //                  left: 84.5%;
 //                }
@@ -332,7 +373,7 @@
             &:nth-child(4){
               .frm_error{
 //                left: 70%;
-                left: 187px;
+                left: 200px;
 //                @include screen-theme(md){
 //                  left: 75%;
 //                }
@@ -341,7 +382,7 @@
             &:nth-child(5){
               .frm_error{
 //                left: 88%;
-                left: 233px;
+                left: 245px;
 //                @include screen-theme(md){
 //                  left: 93%;
 //                }
@@ -421,8 +462,26 @@
         width: 50%;
         padding: 0 10px;
         @include box-sizing();
+        .trip-place{
+          position: relative;
+          .frm_error{
+            left: 320px;
+            margin-top: 0;
+            right: auto;
+            top: 6px;
+          }
+          &+.form-field{
+            .frm_error{
+              left: 245px;
+              margin-top: 0;
+              right: auto;
+              top: 2px;
+            }
+          }
+        }
         .form-field{
           margin-bottom: 15px;
+
           .frm_opt_container{
             .frm_checkbox{
               width: 33.333%;
@@ -480,9 +539,12 @@
 
       .frm_submit{
         background: rgba(#0d796f,0.5);
-        padding: 0 23px 0 43px;
+        padding: 0 33px 0 43px;
         @include clearfix();
-        margin: 0 -13px;
+        margin: 0 -26px;
+        @include screen-theme(mbLan){
+          margin: 0 -16px;
+        }
         img{
           display: none !important;
         }
@@ -510,7 +572,7 @@
       }
 
       .error-note{
-        color:#fff;
+        color:#FCB331;
         width: 50%;
         margin-bottom: -44px;
         @include box-sizing();

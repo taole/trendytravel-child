@@ -100,13 +100,16 @@ body{
       margin-top: 0;
       text-align: left;
       width: auto !important;
+      text-transform: capitalize;
       a{
         color:#c7c6c6;
+        text-transform: capitalize;
       }
       h4{
         color:#c7c6c6;
         @include AvenirNextLTProDemi();
-        font-weight: bold;
+        font-weight: normal;
+        text-transform: capitalize;
       }
       span{
         background: none;
@@ -271,3 +274,43 @@ tr.visible-mobile{
   }
 }
 
+
+.auto-scroll-mr-location, .auto-scroll-mr-time, .auto-scroll-mr{
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.frm_style_formidable-style.with_frm_style .frm_error_style{
+  p{
+    margin-bottom: 0;
+  }
+}
+
+.frm_style_formidable-style.with_frm_style .frm_left_container > p.description::before, .frm_style_formidable-style.with_frm_style .frm_left_container > div.description::before, .frm_style_formidable-style.with_frm_style .frm_left_container > div.frm_description::before, .frm_style_formidable-style.with_frm_style .frm_left_container > .frm_error::before, .frm_style_formidable-style.with_frm_style .frm_right_container > p.description::after, .frm_style_formidable-style.with_frm_style .frm_right_container > div.description::after, .frm_style_formidable-style.with_frm_style .frm_right_container > div.frm_description::after, .frm_style_formidable-style.with_frm_style .frm_right_container > .frm_error::after{
+  @include screen-theme(mbPo){
+    width: auto !important;
+  }
+}
+
+.form-field, .modal .woocommerce form.register .form-row, .modal .woocommerce .form-row-wide{
+  position: relative;
+}
+.frm_error{
+  font-size: 0;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  top:50%;
+  margin-top: -8px;
+  right: 17px;
+  z-index: 8;
+  &:after{
+    content: "";
+    width: 16px;
+    height:16px;
+    background: url('../images/icons/error.png') no-repeat;
+    display: inline-block;
+  }
+}

@@ -43,10 +43,10 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	    <img src="<?php echo get_the_post_thumbnail_url( $post->ID, 'medium' );?>">
 	</div>
 	<div class="text">
-	    <h2 class="title" title="<?php echo get_the_title(); ?>"><span><?php echo get_the_title(); ?></span></h2>
+	    <h2 class="title" title="<?php echo get_the_title(); ?>"><span class="auto-scroll-mr"><?php echo get_the_title(); ?></span></h2>
 	    <div class="infomation">
-	    	<div class="location"><?php echo $_package_places; ?></div>
-	    	<div class="time"><i></i>No of Days: <?php echo $_package_duration; ?></div>
+	    	<div class="location"><span class="auto-scroll-mr-location"><?php echo $_package_places; ?></span></div>
+	    	<div class="time"><span class="auto-scroll-mr-time"><i></i>No of Days: <?php echo $_package_duration; ?></span></div>
 			<div class="price">
 				<?php if( $_regular_price ): ?>
 					<div class="regular-price <?php if ( $_sale_price ) { echo 'was';} ?>">
